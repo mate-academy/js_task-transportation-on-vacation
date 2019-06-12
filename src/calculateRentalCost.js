@@ -12,15 +12,15 @@
  * more days, you get $50 off your total. Alternatively, if you rent
  * the car for 3 or more days, you get $20 off your total.
  *
- * Implement rentalCarCost function which returns the total
+ * Implement calculateRentalCost function which returns the total
  * amount for different count of days.
  *
  * @param {number} days
  *
  * @return {number}
  */
-function rentalCarCost(days) {
+function calculateRentalCost(days) {
   // write code here
 }
 
-module.exports = rentalCarCost;
+module.exports = calculateRentalCost;

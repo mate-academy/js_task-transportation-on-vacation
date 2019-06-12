@@ -1,6 +1,6 @@
 'use strict';
 
-const total = require('./rentalCarCost');
+const total = require('./calculateRentalCost');
 
 test(`Do not add any discount for less than 3 days`, () => {
   expect(total(2))
