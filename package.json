@@ -2,7 +2,7 @@
   "name": "js-task-boilerplate",
   "version": "1.0.0",
   "description": "js task boilerplate",
-  "main": "src/rentalCarCost.js",
+  "main": "src/calculateRentalCost.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
