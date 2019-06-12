@@ -12,7 +12,7 @@ test('Should add the discount for 3 and more days of rent', () => {
     .toBe(140);
 });
 
-test('Should add an additional discount for more than 7 days of rent', () => {
+test('Should add an additional discount for 7 and more days of rent', () => {
   expect(total(10))
     .toBe(350);
 });
