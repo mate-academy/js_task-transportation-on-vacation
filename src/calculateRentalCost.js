@@ -20,11 +20,18 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  return days < 7
-    ? days < 3
-      ? days * 40
-      : days * 40 - 20
-    : days * 40 - 50;
+  let rentalCosts;
+
+  if (days < 7) {
+    if (days < 3) {
+      rentalCosts = days * 40;
+    } else {
+      rentalCosts = days * 40 - 20;
+    }
+  } else {
+    rentalCosts = days * 40 - 50;
+  }
+  return rentalCosts;
 }
 
 module.exports = calculateRentalCost;
