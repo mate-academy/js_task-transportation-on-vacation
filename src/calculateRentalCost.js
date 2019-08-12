@@ -20,19 +20,19 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const Rent = 40;
-  let sumRent = 0;
-  const minRent = 20;
-  const maxRent = 50;
+  const costPerDay = 40;
+  let totalCost = 0;
+  const saleThreeOrMoreDays = 20;
+  const saleSevenOrMoreDays = 50;
 
   if (days < 3) {
-    sumRent = days * Rent;
+    totalCost = days * costPerDay;
   } else if (days >= 7) {
-    sumRent = (days * Rent) - maxRent;
+    totalCost = (days * costPerDay) - saleSevenOrMoreDays;
   } else {
-    sumRent = (days * Rent) - minRent;
+    totalCost = (days * costPerDay) - saleThreeOrMoreDays;
   }
-  return sumRent;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
