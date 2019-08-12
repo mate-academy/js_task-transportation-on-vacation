@@ -24,17 +24,15 @@ function calculateRentalCost(days) {
   const totalPrice = rentPrice * days;
   const fewDaysDiscount = 20;
   const weeklyDiscount = 50;
-  const order = totalPrice;
-
   if (days >= 3 && days < 7) {
-    return order - fewDaysDiscount;
+    return totalPrice - fewDaysDiscount;
   }
 
   if (days >= 7) {
-    return order - weeklyDiscount;
+    return totalPrice - weeklyDiscount;
   }
 
-  return order;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
