@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-disable */
 
 /**
  * After a hard quarter in the office you decide to get some rest
@@ -20,7 +21,14 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  if (days === 7 || days > 7) {
+    return days * 40 - 50;
+  } else if (days === 3 || days === 4 || days === 5 || days === 6) {
+    // (days === 3 || days > 3 && days < 7) - eslint doesn't like this
+    return days * 40 - 20;
+  } else {
+    return days * 40;
+  }
 }
 
 module.exports = calculateRentalCost;
