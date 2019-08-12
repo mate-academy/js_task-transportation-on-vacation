@@ -20,13 +20,14 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const priceCar = 40;
-  let totalPrice = priceCar * days;
+  const costPerDay = 40;
+  let totalPrice = costPerDay * days;
+
   if (days >= 3 && days < 7) {
-    totalPrice = totalPrice - 20;
+    totalPrice += -20;
   }
   if (days >= 7) {
-    totalPrice = totalPrice - 50;
+    totalPrice += -50;
   }
   return totalPrice;
 }
