@@ -21,14 +21,14 @@
  */
 function calculateRentalCost(days) {
   const costPerDay = 40;
-  const SALE_DAYS_MORE_7 = 50;
-  const SALE_DAYS_MORE_3 = 20;
+  const saleSevenDaysMore = 50;
+  const saleThreeDaysMore = 20;
   if (days < 3) {
     return days * costPerDay;
   } else if (days >= 7) {
-    return days * costPerDay - SALE_DAYS_MORE_7;
+    return days * costPerDay - saleSevenDaysMore;
   } else {
-    return days * costPerDay - SALE_DAYS_MORE_3;
+    return days * costPerDay - saleThreeDaysMore;
   }
 }
 
