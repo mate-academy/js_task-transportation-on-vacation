@@ -20,11 +20,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const carCosts = 40;
-  const BIG_SALE = 50;
-  const SMAL_SALE = 20;
-  return days < 3 ? days * carCosts
-    : days >= 7 ? days * carCosts - BIG_SALE : days * carCosts - SMAL_SALE;
+  const costPerDay = 40;
+  const SALE_DAYS_MORE_7 = 50;
+  const SALE_DAYS_MORE_3 = 20;
+  if (days < 3) {
+    return days * costPerDay;
+  } else if (days >= 7) {
+    return days * costPerDay - SALE_DAYS_MORE_7;
+  } else {
+    return days * costPerDay - SALE_DAYS_MORE_3;
+  }
 }
 
 module.exports = calculateRentalCost;
