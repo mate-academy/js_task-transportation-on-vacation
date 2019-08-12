@@ -20,7 +20,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let rentalCosts;
+  let rentalCosts = 0;
   const dayCost = 40;
   const threeDaysOff = 20;
   const sevenDaysOff = 50;
