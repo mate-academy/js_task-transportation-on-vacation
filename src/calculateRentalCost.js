@@ -22,7 +22,13 @@
 function calculateRentalCost(days) {
   // write code here
   const price = 40;
-  const discount = days < 3 ? 0 : days < 7 ? 20 : 50;
+  let discount = 0;
+
+  if (days >= 7) {
+    discount = 50;
+  } else if (days >= 3) {
+    discount = 20;
+  }
 
   return price * days - discount;
 }
