@@ -21,13 +21,13 @@
  */
 function calculateRentalCost(days) {
   const rentCoastOfDay = 40;
-  const minDiscount = 20;
-  const maxDiscount = 50;
+  const threeDaysDiscount = 20;
+  const sevenDaysDiscount = 50;
 
   if (days >= 3 && days < 7) {
-    return rentCoastOfDay * days - minDiscount;
+    return rentCoastOfDay * days - threeDaysDiscount;
   } else if (days >= 7) {
-    return rentCoastOfDay * days - maxDiscount;
+    return rentCoastOfDay * days - sevenDaysDiscount;
   }
 
   return rentCoastOfDay * days;
