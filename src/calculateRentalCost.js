@@ -21,44 +21,15 @@
  */
 function calculateRentalCost(days) {
   const price = 40;
-  let discountsList = [];
-  class Discount {
-    constructor(discountDays, discountValue) {
-      this.days = discountDays;
-      this.value = discountValue;
-    }
-  }
-  function createDiscountList(dList) {
-    dList.forEach(function(dItem) {
-      discountsList.push(new Discount(dItem[0], dItem[1]));
-    });
-    discountsList = sortDiscountsFromMaxToMin(discountsList);
-  }
-  function compareDiscount(a, b) {
-    if (a.days < b.days) {
-      return 1;
-    }
-    if (a.days > b.days) {
-      return -1;
-    }
-    return 0;
-  }
-  function sortDiscountsFromMaxToMin(dList) {
-    return dList.sort(compareDiscount);
-  }
-  function rentalCost(rentalDays, priceForDay) {
-    let discountValue = 0;
-    for (let i = 0; i < discountsList.length; i++) {
-      if (rentalDays >= discountsList[i]['days']) {
-        discountValue = discountsList[i]['value'];
-        break;
-      }
-    }
-    return rentalDays * priceForDay - discountValue;
+  let discount = 0;
+
+  if (days >= 7) {
+    discount = 50;
+  } else if (days >= 3) {
+    discount = 20;
   }
 
-  createDiscountList([[3, 20], [7, 50]]);
-  return rentalCost(days, price);
+  return days * price - discount;
 }
 
 module.exports = calculateRentalCost;
