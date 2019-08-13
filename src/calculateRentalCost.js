@@ -21,13 +21,15 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  if (days === 7 || days > 7) {
-    return days * 40 - 50;
-  } else if (days === 3 || days === 4 || days === 5 || days === 6) {  // (days === 3 || days > 3 && days < 7) - eslint doesn't like this
-    return days * 40 - 20;
-  } else {
-    return days * 40;
+  let saleFor7Days = 50;
+  let saleFor3Days = 20;
+  let oneDayCost = 40;
+  if (days >= 7) {
+    return days * oneDayCost - saleFor7Days;
+  } else if (days >= 3 && days <= 6) {
+    return days * oneDayCost - saleFor3Days;
   }
+    return days * oneDayCost;
 }
 
 module.exports = calculateRentalCost;
