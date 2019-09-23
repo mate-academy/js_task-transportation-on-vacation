@@ -21,21 +21,24 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  let getOff = 0;
+  let discount = 0;
+  const threeDaysDiscount = 20;
+  const sevenDaysDiscount = 50;
+  const rent = 40;
 
   switch (true) {
     case days >= 7:
-      getOff = 50;
+      discount = sevenDaysDiscount;
       break;
 
     case days >= 3:
-      getOff = 20;
+      discount = threeDaysDiscount;
       break;
 
     default:
       break;
   }
-  const sum = (days * 40) - getOff;
+  const sum = (days * rent) - discount;
 
   return sum;
 }
