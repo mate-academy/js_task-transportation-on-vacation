@@ -24,7 +24,7 @@ function calculateRentalCost(days) {
   if (days < 3) {
     return carCost * days;
   }
-  if (days >= 3 && days < 7) {
+  if (days < 7) {
     return carCost * days - 20;
   }
   if (days >= 7) {
