@@ -27,9 +27,8 @@ function calculateRentalCost(days) {
     return totalRent - 50;
   } else if (days >= 3) {
     return totalRent - 20;
-  } else {
-    return totalRent;
   }
+  return totalRent;
 }
 
 module.exports = calculateRentalCost;
