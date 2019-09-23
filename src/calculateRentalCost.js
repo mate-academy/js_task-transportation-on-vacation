@@ -20,7 +20,6 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // const standartPrice = 40;
   if (days >= 7) {
     return days * 40 - 50;
   } if (days >= 3) {
