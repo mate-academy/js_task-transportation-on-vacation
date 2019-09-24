@@ -24,18 +24,16 @@ function calculateRentalCost(days) {
   const pricePerDay = 40;
   const premiumDiscount = 20;
   const goldDiscount = 50;
-  let totalPrice = 0;
 
   if (days <= 2) {
-    totalPrice = days * pricePerDay;
+    return days * pricePerDay;
   }
-  if (days >= 3) {
-    totalPrice = (days * pricePerDay) - premiumDiscount;
+  if (days >= 3 && days < 7) {
+    return (days * pricePerDay) - premiumDiscount;
   }
   if (days >= 7) {
-    totalPrice = (days * pricePerDay) - goldDiscount;
+    return (days * pricePerDay) - goldDiscount;
   }
-  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
