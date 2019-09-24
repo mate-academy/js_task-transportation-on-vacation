@@ -23,13 +23,10 @@ function calculateRentalCost(days) {
   const totalCost = days * 40;
   const sevenMoreOff = 50;
   const threeMoreOff = 20;
-  if (days < 3) {
-    return totalCost;
-  } else if (days >= 7) {
-    return totalCost - sevenMoreOff;
-  } else if (days >= 3) {
-    return totalCost - threeMoreOff;
-  }
+
+  if (days < 3) { return totalCost; }
+  if (days >= 7) { return totalCost - sevenMoreOff; }
+  if (days >= 3) { return totalCost - threeMoreOff; }
 }
 
 module.exports = calculateRentalCost;
