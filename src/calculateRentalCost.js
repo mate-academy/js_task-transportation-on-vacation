@@ -19,6 +19,7 @@
  *
  * @return {number}
  */
+
 function calculateRentalCost(days) {
   return days >= 3 && days < 7
     ? days * 40 - 20
