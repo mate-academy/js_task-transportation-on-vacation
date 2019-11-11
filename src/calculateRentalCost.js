@@ -20,16 +20,15 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let totalRent = 0;
   const everyDayRent = 40;
   const bigDiscount = 50;
   const smallDiscount = 20;
-  totalRent = everyDayRent * days;
+  const totalRent = everyDayRent * days;
 
   if (days >= 7) {
-    return (totalRent -= bigDiscount);
+    return totalRent - bigDiscount;
   } else if (days >= 3) {
-    return (totalRent -= smallDiscount);
+    return totalRent - smallDiscount;
   }
 
   return totalRent;
