@@ -26,7 +26,7 @@ function calculateRentalCost(days) {
   const totalPrice = rent * days;
 
   if (days >= 7) {
-    return rent * days - days7Discount;
+    return totalPrice - days7Discount;
   } else if (days >= 3) {
     return totalPrice - days3Discount;
   } return totalPrice;
