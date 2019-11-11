@@ -28,9 +28,11 @@ function calculateRentalCost(days) {
   if (days >= 7) {
     return totalPayment - bigDiscount;
   }
+
   if (days >= 3 && days <= 7) {
     return totalPayment - discount;
   }
+
   return totalPayment;
 }
 
