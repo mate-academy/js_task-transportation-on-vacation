@@ -31,9 +31,8 @@ function calculateRentalCost(days) {
     return totalCostLess;
   } else if (days > 6) {
     return totalCostMore;
-  } else {
-    return totalCost;
   }
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
