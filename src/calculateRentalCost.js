@@ -19,12 +19,16 @@
  *
  * @return {number}
  */
+
 function calculateRentalCost(days) {
-  let sum = 40 * days;
+  const largeRent = 50;
+  const smallRent = 20;
+  const mainCost = 40;
+  let sum = mainCost * days;
   if (days >= 7) {
-    sum = sum - 50;
+    sum = sum - largeRent;
   } else if (days >= 3) {
-    sum = sum - 20;
+    sum = sum - smallRent;
   }
   return sum;
 }
