@@ -27,10 +27,10 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return totalPrice - days7Discount;
-  }
-  if (days >= 3) {
+  } else if (days >= 3) {
     return totalPrice - days3Discount;
   }
+
   return totalPrice;
 }
 
