@@ -22,14 +22,15 @@
 function calculateRentalCost(days) {
   let totalRent = 0;
   const everyDayRent = 40;
-  const sevenAndMoreDaysDiscount = 50;
-  const threeAndMoreDaysDiscount = 20;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  totalRent = everyDayRent * days;
 
   if (days >= 7) {
-    totalRent = everyDayRent * days - sevenAndMoreDaysDiscount;
+    return (totalRent += -bigDiscount);
   } else if (days >= 3) {
-    totalRent = everyDayRent * days - threeAndMoreDaysDiscount;
-  } else { totalRent = everyDayRent * days; }
+    return (totalRent += -smallDiscount);
+  }
 
   return totalRent;
 }
