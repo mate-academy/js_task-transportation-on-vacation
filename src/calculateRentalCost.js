@@ -24,11 +24,14 @@ function calculateRentalCost(days) {
   const discount50 = 50;
   const discount20 = 20;
   const total = days * cost;
+
   if (days >= 7) {
     return total - discount50;
   } else if (days >= 3) {
     return total - discount20;
-  } return total;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
