@@ -21,18 +21,18 @@
  */
 function calculateRentalCost(days) {
   const cost = 40;
-  let costForAll = cost * days;
-  const diffThree = 20;
-  const diffSeven = 50;
+  let totalCost = cost * days;
+  const discountThree = 20;
+  const discountSeven = 50;
   if (days <= 0) {
-    return "Can't calculate the rent";
+    return 'Can\'t calculate the rent';
   } else if (days >= 3 && days < 7) {
-    costForAll -= diffThree;
+    totalCost -= discountThree;
   } else if (days >= 7) {
-    costForAll -= diffSeven;
+    totalCost -= discountSeven;
   }
 
-  return costForAll;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
