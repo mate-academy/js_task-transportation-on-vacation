@@ -27,9 +27,9 @@ function calculateRentalCost(days) {
   totalRent = everyDayRent * days;
 
   if (days >= 7) {
-    return (totalRent += -bigDiscount);
+    return (totalRent -= bigDiscount);
   } else if (days >= 3) {
-    return (totalRent += -smallDiscount);
+    return (totalRent -= smallDiscount);
   }
 
   return totalRent;
