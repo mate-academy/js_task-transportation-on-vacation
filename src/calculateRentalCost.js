@@ -28,10 +28,8 @@ function calculateRentalCost(days) {
   if (days >= 7) {
     return rent * days - days7Discount;
   } else if (days >= 3) {
-    return rent * days - days3Discount;
-  } else {
-    return totalPrice;
-  }
+    return totalPrice - days3Discount;
+  } return totalPrice;
 }
 
 module.exports = calculateRentalCost;
