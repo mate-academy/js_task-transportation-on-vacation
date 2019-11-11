@@ -24,13 +24,14 @@ function calculateRentalCost(days) {
   const largeRent = 50;
   const smallRent = 20;
   const mainCost = 40;
-  let sum = mainCost * days;
+  let totalCost = mainCost * days;
   if (days >= 7) {
-    sum = sum - largeRent;
+    totalCost = totalCost - largeRent;
   } else if (days >= 3) {
-    sum = sum - smallRent;
+    totalCost = totalCost - smallRent;
   }
-  return sum;
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
