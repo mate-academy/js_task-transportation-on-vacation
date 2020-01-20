@@ -32,9 +32,9 @@ function calculateRentalCost(days) {
     discount = 20;
 
     return totalSum - discount;
-  } else {
-    return totalSum;
   }
+
+  return totalSum;
 }
 
 module.exports = calculateRentalCost;
