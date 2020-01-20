@@ -19,8 +19,20 @@
  *
  * @return {number}
  */
+const DAY_PRICE = 40;
+const LOW_OFF_VALUE = 20;
+const HIGH_OFF_VALUE = 50;
+const LOW_DAYS_OFF = 3;
+const HIGH_DAYS_OFF = 7;
+
 function calculateRentalCost(days) {
-  // write code here
+  if (days < LOW_DAYS_OFF) {
+    return days * DAY_PRICE;
+  } else if (days >= LOW_DAYS_OFF && days < HIGH_DAYS_OFF) {
+    return (days * DAY_PRICE) - LOW_OFF_VALUE;
+  } else {
+    return (days * DAY_PRICE) - HIGH_OFF_VALUE;
+  }
 }
 
 module.exports = calculateRentalCost;
