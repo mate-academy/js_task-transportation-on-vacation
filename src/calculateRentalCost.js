@@ -21,9 +21,9 @@
  */
 function calculateRentalCost(days) {
   const rentCost = 40;
-  let totalCost = rentCost;
   const minDiscount = 20;
   const maxDiscount = 50;
+  let totalCost = rentCost;
 
   if (days) {
     totalCost = rentCost * days;
