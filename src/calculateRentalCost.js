@@ -20,7 +20,24 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  const oneDayCarPrice = 40;
+  const regularDiscount = 20;
+  const bigDiscount = 50;
+  let totalPrice = 0;
+
+  if (days < 3) {
+    totalPrice = days * oneDayCarPrice;
+
+    return totalPrice;
+  } else if (days >= 3 && days < 7) {
+    totalPrice = (days * oneDayCarPrice) - regularDiscount;
+
+    return totalPrice;
+  } else {
+    totalPrice = (days * oneDayCarPrice) - bigDiscount;
+
+    return totalPrice;
+  }
 }
 
 module.exports = calculateRentalCost;
