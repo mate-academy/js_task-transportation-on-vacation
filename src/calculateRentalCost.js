@@ -20,7 +20,8 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const rentalCostPerPeriod = days * 40;
+  const rentalCostPerDay = 40;
+  const rentalCostPerPeriod = days * rentalCostPerDay;
 
   if (days === 0) {
     return 0;
