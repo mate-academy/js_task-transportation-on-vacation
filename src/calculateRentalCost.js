@@ -20,15 +20,18 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const REGULAR_PRICE = days * 40;
+  const carRentPerDay = 40;
+  const totalPrice = days * carRentPerDay;
+  const weekDiscount = 50;
+  const halfWeekDiscount = 20;
 
   if (days >= 7) {
-    return REGULAR_PRICE - 50;
+    return totalPrice - weekDiscount;
   } else if (days >= 3) {
-    return REGULAR_PRICE - 20;
+    return totalPrice - halfWeekDiscount;
   }
 
-  return REGULAR_PRICE;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
