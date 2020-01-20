@@ -20,12 +20,10 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
-
   const rentPriсe = 40;
-  let payment = 0;
   const sevenMoreDaysDiscount = 50;
   const threeMoreDaysDiscount = 20;
+  let payment = 0;
 
   if (days > 6) {
     payment = days * rentPriсe - sevenMoreDaysDiscount;
