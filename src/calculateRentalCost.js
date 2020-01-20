@@ -28,9 +28,9 @@ function calculateRentalCost(days) {
     return days * dayRent - discountSevenDays;
   } else if (days >= 3) {
     return days * dayRent - discountThreeDays;
-  } else {
-    return days * dayRent;
-  };
+  }
+
+  return days * dayRent;
 }
 
 module.exports = calculateRentalCost;
