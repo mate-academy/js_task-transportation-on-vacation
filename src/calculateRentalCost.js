@@ -32,7 +32,7 @@ function calculateRentalCost(days) {
   } else if (days > 2 && days < 7) {
     payment = days * rentPriсe - threeMoreDaysDiscount;
   } else {
-    payment = days * 40;
+    payment = days * rentPriсe;
   }
 
   return payment;
