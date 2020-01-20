@@ -19,19 +19,19 @@
  *
  * @return {number}
  */
-const DAY_PRICE = 40;
-const LOW_OFF_VALUE = 20;
-const HIGH_OFF_VALUE = 50;
-const LOW_DAYS_OFF = 3;
-const HIGH_DAYS_OFF = 7;
+const dayPrice = 40;
+const lowOffValue = 20;
+const highOffValue = 50;
+const lowDaysOff = 3;
+const highDaysOff = 7;
 
 function calculateRentalCost(days) {
-  if (days < LOW_DAYS_OFF) {
-    return days * DAY_PRICE;
-  } else if (days >= LOW_DAYS_OFF && days < HIGH_DAYS_OFF) {
-    return (days * DAY_PRICE) - LOW_OFF_VALUE;
+  if (days < lowDaysOff) {
+    return days * dayPrice;
+  } else if (days >= lowDaysOff && days < highDaysOff) {
+    return (days * dayPrice) - lowOffValue;
   } else {
-    return (days * DAY_PRICE) - HIGH_OFF_VALUE;
+    return (days * dayPrice) - highOffValue;
   }
 }
 
