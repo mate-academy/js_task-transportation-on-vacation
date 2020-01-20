@@ -16,8 +16,7 @@
  * amount for different count of days.
  *
  * @param {number} days
- *
- * @return {number}
+ * * @return {number}
  */
 function calculateRentalCost(days) {
   const everyDay = 40;
