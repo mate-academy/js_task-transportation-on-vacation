@@ -20,13 +20,17 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const dailyRent = 40;
+  const discontForThree = 20;
+  const discontForSeven = 50;
+
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * dailyRent - discontForSeven;
   } else {
     if (days >= 3) {
-      return days * 40 - 20;
+      return days * dailyRent - discontForThree;
     } else {
-      return days * 40;
+      return days * dailyRent;
     }
   }
 }
