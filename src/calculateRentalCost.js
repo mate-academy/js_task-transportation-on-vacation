@@ -27,13 +27,9 @@ function calculateRentalCost(days) {
 
   if (days) {
     totalCost = rentCost * days;
-  }
-
-  if (days >= 3 && days < 7) {
+  } else if (days >= 3 && days < 7) {
     totalCost -= minDiscount;
-  }
-
-  if (days >= 7) {
+  } else if (days >= 7) {
     totalCost -= maxDiscount;
   }
 
