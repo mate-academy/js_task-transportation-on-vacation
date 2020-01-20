@@ -20,14 +20,17 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const allPay = 40 * days;
+  const everyDay = 40;
+  const moreThreeDays = 20;
+  const moreSevenDays = 50;
+  const allPay = everyDay * days;
 
   if (days >= 3 && days < 7) {
-    return allPay - 20;
+    return allPay - moreThreeDays;
   } else if (days >= 7) {
-    return allPay - 50;
+    return allPay - moreSevenDays;
   } else {
-    return 40 * days;
+    return everyDay * days;
   }
 }
 
