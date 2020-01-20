@@ -20,21 +20,25 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let totalSum = days * 40;
+  const basePrice = 40;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+
+  let totalSum = days * basePrice;
 
   if (days >= 7) {
-    totalSum -= 50;
+    totalSum -= bigDiscount;
 
     return totalSum;
   }
 
   if (days >= 3) {
-    totalSum -= 20;
+    totalSum -= smallDiscount;
 
     return totalSum;
-  } else {
-    return totalSum;
   }
+
+  return totalSum;
 }
 
 module.exports = calculateRentalCost;
