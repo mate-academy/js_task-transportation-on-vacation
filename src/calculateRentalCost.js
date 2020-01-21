@@ -31,9 +31,9 @@ function calculateRentalCost(days) {
     return rentalCostPerPeriod;
   } else if (days > 2 && days < 7) {
     return rentalCostPerPeriod - basicDiscount;
-  } else {
-    return rentalCostPerPeriod - premiumDiscount;
   }
+
+  return rentalCostPerPeriod - premiumDiscount;
 }
 
 module.exports = calculateRentalCost;
