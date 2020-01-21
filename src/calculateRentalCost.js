@@ -20,16 +20,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const price = 40;
-  const miniDiscond = 20;
-  const discond = 50;
+  const rentPrice = 40;
+  const lowDiscount = 20;
+  const bigDiscount = 50;
 
   if (days < 3) {
-    return days * price;
+    return days * rentPrice;
   } else if (days < 7) {
-    return days * price - miniDiscond;
+    return days * rentPrice - lowDiscount;
   } else {
-    return days * price - discond;
+    return days * rentPrice - bigDiscount;
   }
 }
 
