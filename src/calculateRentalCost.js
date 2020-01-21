@@ -22,12 +22,12 @@ function calculateRentalCost(days) {
   const everyDay = 40;
   const moreThreeDays = 20;
   const moreSevenDays = 50;
-  const allPay = everyDay * days;
+  const totalPrice = everyDay * days;
 
   if (days >= 3 && days < 7) {
-    return allPay - moreThreeDays;
+    return totalPrice - moreThreeDays;
   } else if (days >= 7) {
-    return allPay - moreSevenDays;
+    return totalPrice - moreSevenDays;
   } else {
     return everyDay * days;
   }
