@@ -21,12 +21,17 @@
  */
 function calculateRentalCost(days) {
   const cost = 40;
+  const maximumDays = 7;
+  const minimumDays = 3;
+  let discount;
   let total = days * cost;
 
-  if (days >= 7) {
-    total -= 50;
-  } else if (days >= 3) {
-    total -= 20;
+  if (days >= maximumDays) {
+    discount = 50;
+    total -= discount;
+  } else if (days >= minimumDays) {
+    discount = 20;
+    total -= discount;
   }
 
   return total;
