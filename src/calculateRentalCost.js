@@ -20,12 +20,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const dayCarRent = 40;
+  const sevenDaysCostOff = 50;
+  const threeDaysCostOff = 20;
+
   if (days < 3) {
-    return days * 40;
+    return days * dayCarRent;
   } else if (days >= 7) {
-    return days * 40 - 50;
+    return days * dayCarRent - sevenDaysCostOff;
   } else {
-    return days * 40 - 20;
+    return days * dayCarRent - threeDaysCostOff;
   }
 }
 module.exports = calculateRentalCost;
