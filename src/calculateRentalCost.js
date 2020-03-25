@@ -24,11 +24,11 @@ function calculateRentalCost(days) {
   let allPrice = 0;
 
   if (days >= 7) {
-    allPrice = countRent * days - 50;
+    allPrice = (countRent * days) - 50;
   } else if (days >= 3) {
-    allPrice = countRent * days - 20;
+    allPrice = (countRent * days) - 20;
   } else {
-    allPrice = countRent * days;
+    allPrice = (countRent * days);
   }
 
   return allPrice;
