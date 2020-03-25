@@ -20,12 +20,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  let pricePerDay = 40;
+  let cashbackBig = 50;
+  let cashbackSmall = 20;
+  let priceTotal = days * pricePerDay;
   if (days > 6) {
-    return days * 40 - 50;
+    return priceTotal - cashbackBig;
   } else if (days > 2) {
-    return days * 40 - 20;
+    return priceTotal - cashbackSmall;
   } else {
-    return days * 40;
+    return priceTotal;
   }
 }
 
