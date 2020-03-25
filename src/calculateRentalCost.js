@@ -20,12 +20,19 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const coast = 40;
+  let off = 0;
+
   if (days < 3) {
-    return days * 40;
+    return days * coast;
   } else if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+    off = 20;
+
+    return days * coast - off;
   } else if (days >= 7) {
-    return days * 40 - 50;
+    off = 50;
+
+    return days * coast - 50;
   }
 }
 
