@@ -20,28 +20,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const CarRent = 40;
-  const BigRent = 50;
-  const LowRent = 20;
-  let CostRent = 0;
+  const carRent = 40;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  let costRent = 0;
 
   if (days < 3) {
-    CostRent = CarRent * days;
-
-    return CostRent;
+    costRent = carRent * days;
+  } else if (days <= 6) {
+    costRent = (carRent * days) - smallDiscount;
+  } else if (days >= 7) {
+    costRent = (carRent * days) - bigDiscount;
   }
 
-  if (days >= 3 && days <= 6) {
-    CostRent = CarRent * days - LowRent;
-
-    return CostRent;
-  }
-
-  if (days >= 7) {
-    CostRent = CarRent * days - BigRent;
-
-    return CostRent;
-  }
+  return costRent;
 }
 
 module.exports = calculateRentalCost;
