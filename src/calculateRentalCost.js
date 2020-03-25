@@ -24,16 +24,13 @@
  */
 function calculateRentalCost(days) {
   let sum = 0;
+  const sellFromSevenDays = 50;
+  const sellThree6Days = 20;
+  const rentCar = 40;
 
-  days > 6 ? sum -= 50 : days > 2 ? sum -= 20 : sum -= 0;
-
-  // eslint-disable-next-line no-unmodified-loop-condition
-  while (days > 0) {
-    sum += 40;
-
-    // eslint-disable-next-line no-param-reassign
-    days--;
-  }
+  days > 6 ? sum -= sellFromSevenDays
+    : days > 2 ? sum -= sellThree6Days : sum -= 0;
+  sum += days * rentCar;
 
   return sum;
 }
