@@ -26,7 +26,7 @@ function calculateRentalCost(days) {
   if (days < 3) {
     total = days * dayilyPay;
   } else if (days < 7) {
-    total = days * dayilyPay - 20;
+    total = (days * dayilyPay) - 20;
   } else {
     total = days * dayilyPay - 50;
   }
