@@ -20,12 +20,18 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const price = 40;
+  const smallDiscount = 20;
+  const discount = 50;
+
+  // Не совсем понимаю зачем нужны переменные для 3 и 7. Это же и есть дни.
+
   if (days < 3) {
-    return 40 * days;
+    return price * days;
   } else if (days >= 3 & days < 7) {
-    return 40 * days - 20;
+    return price * days - smallDiscount;
   } else if (days >= 7) {
-    return 40 * days - 50;
+    return price * days - discount;
   }
 }
 
