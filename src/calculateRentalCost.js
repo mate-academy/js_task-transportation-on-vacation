@@ -14,13 +14,28 @@
  *
  * Implement calculateRentalCost function which returns the total
  * amount for different count of days.
- *
+ *2 80
+ *3 100
+ *6 220
+ *7 230
  * @param {number} days
  *
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  let sum = 0;
+
+  days > 6 ? sum -= 50 : days > 2 ? sum -= 20 : sum -= 0;
+
+  // eslint-disable-next-line no-unmodified-loop-condition
+  while (days > 0) {
+    sum += 40;
+
+    // eslint-disable-next-line no-param-reassign
+    days--;
+  }
+
+  return sum;
 }
 
 module.exports = calculateRentalCost;
