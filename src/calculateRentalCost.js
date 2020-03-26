@@ -21,13 +21,16 @@
  */
 function calculateRentalCost(days) {
   let cost;
+  const rentalPay = 40;
+  const discountZone1 = 20;
+  const discountZone2 = 50;
 
   if (days >= 7) {
-    cost = (days * 40) - 50;
+    cost = (days * rentalPay) - discountZone2;
   } else if (days < 7 && days >= 3) {
-    cost = (days * 40) - 20;
+    cost = (days * rentalPay) - discountZone1;
   } else {
-    cost = (days * 40);
+    cost = (days * rentalPay);
   }
 
   return cost;
