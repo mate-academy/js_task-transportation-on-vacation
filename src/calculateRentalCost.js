@@ -20,7 +20,17 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  let pricePerDay = 40;
+  let cashbackBig = 50;
+  let cashbackSmall = 20;
+  let priceTotal = days * pricePerDay;
+  if (days > 6) {
+    return priceTotal - cashbackBig;
+  } else if (days > 2) {
+    return priceTotal - cashbackSmall;
+  } else {
+    return priceTotal;
+  }
 }
 
 module.exports = calculateRentalCost;
