@@ -14,13 +14,25 @@
  *
  * Implement calculateRentalCost function which returns the total
  * amount for different count of days.
- *
+ *2 80
+ *3 100
+ *6 220
+ *7 230
  * @param {number} days
  *
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  let sum = 0;
+  const sellFromSevenDays = 50;
+  const sellThree6Days = 20;
+  const rentCar = 40;
+
+  days > 6 ? sum -= sellFromSevenDays
+    : days > 2 ? sum -= sellThree6Days : sum -= 0;
+  sum += days * rentCar;
+
+  return sum;
 }
 
 module.exports = calculateRentalCost;
