@@ -20,7 +20,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  const carCostPerDay = 40;
+  const moreSevenDayOff = 50;
+  const moreThreeDayOff = 20;
+  const totalCost = carCostPerDay * days;
+  if (days >= 3 & days < 7) {
+    return totalCost - moreThreeDayOff;
+  } else if (days >= 7) {
+    return totalCost - moreSevenDayOff;
+  }
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
