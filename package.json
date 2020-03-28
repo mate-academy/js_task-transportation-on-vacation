@@ -32,5 +32,8 @@
       "pre-commit": "lint-staged",
       "pre-push": "npm run test"
     }
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
   }
 }
