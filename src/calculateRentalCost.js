@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-disable */
 
 /**
  * After a hard quarter in the office you decide to get some rest
@@ -20,7 +21,15 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  let saleFor7Days = 50;
+  let saleFor3Days = 20;
+  let oneDayCost = 40;
+  if (days >= 7) {
+    return days * oneDayCost - saleFor7Days;
+  } else if (days >= 3 && days <= 6) {
+    return days * oneDayCost - saleFor3Days;
+  }
+    return days * oneDayCost;
 }
 
 module.exports = calculateRentalCost;

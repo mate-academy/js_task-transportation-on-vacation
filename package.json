@@ -5,7 +5,8 @@
   "main": "src/calculateRentalCost.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint **/*.js --fix"
   },
   "author": "Mate academy",
   "license": "GPL-3.0",
