@@ -32,11 +32,15 @@
 
 function calculateRentalCost(days) {
   const payCh = days * 40;
+  const discSmall = 20;
+  const discMedium = 50;
+  const smallDiscTargetMinDays = 3;
+  const mediumDiscTargetMinDays = 7;
 
-  if (days >= 3 && days < 7) {
-    return payCh - 20;
-  } else if (days >= 7) {
-    return payCh - 50;
+  if (days >= smallDiscTargetMinDays && days < mediumDiscTargetMinDays) {
+    return payCh - discSmall;
+  } else if (days >= mediumDiscTargetMinDays) {
+    return payCh - discMedium;
   } else {
     return payCh;
   }
