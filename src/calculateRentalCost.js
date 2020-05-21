@@ -1,16 +1,20 @@
 'use strict';
 
 function calculateRentalCost(days) {
+  const tax3 = 20;
+  const tax7 = 50;
+  const price = 40;
+
   if (days < 3) {
-    return 40 * days;
+    return price * days;
   }
 
   if (days > 2 && days < 7) {
-    return 40 * days - 20;
+    return price * days - tax3;
   }
 
   if (days > 6) {
-    return 40 * days - 50;
+    return price * days - tax7;
   }
 }
 
