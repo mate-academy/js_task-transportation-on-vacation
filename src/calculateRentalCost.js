@@ -30,13 +30,15 @@
 
 function calculateRentalCost(days) {
   const cost = 40;
+  const mindiscount = 20;
+  const maxdiscount = 50;
 
   if (days < 3) {
     return days * cost;
-  } else if (days > 2 && days < 7) {
-    return days * cost - 20;
+  } else if (days < 7) {
+    return days * cost - mindiscount;
   } else {
-    return days * cost - 50;
+    return days * cost - maxdiscount;
   }
 }
 
