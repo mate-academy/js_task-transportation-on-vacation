@@ -25,16 +25,16 @@
 
 function calculateRentalCost(days) {
   const rentalPrice = 40;
-  const discaunts = {
+  const discounts = {
     7: 50,
     3: 20,
   };
 
   let sum = rentalPrice * days;
 
-  for (const i of Object.keys(discaunts).sort((a, b) => b - a)) {
+  for (const i of Object.keys(discounts).sort((a, b) => b - a)) {
     if (days >= i) {
-      sum = rentalPrice * days - discaunts[i];
+      sum = rentalPrice * days - discounts[i];
       break;
     }
   }
