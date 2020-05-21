@@ -30,10 +30,12 @@ function calculateRentalCost(days) {
   const shortSale = 20;
   const largeSale = 50;
   const totalSum = 40 * days;
+  const shortPeriod = 3;
+  const longPeriod = 7;
 
-  if (days >= 3 && days < 7) {
+  if (days >= shortPeriod && days < longPeriod) {
     return totalSum - shortSale;
-  } else if (days >= 7) {
+  } else if (days >= longPeriod) {
     return totalSum - largeSale;
   }
 
