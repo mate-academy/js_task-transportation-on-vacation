@@ -23,13 +23,15 @@
  */
 
 function calculateRentalCost(days) {
+  const priceFirstPeriod = 3;
+  const priceSecondPeriod = 7;
   const standartPricePerDay = 40;
   const discountPricePerDay = 20;
   const totalDiscount = 50;
 
-  if (days < 3) {
+  if (days < priceFirstPeriod) {
     return standartPricePerDay * days;
-  } else if (days < 7) {
+  } else if (days < priceSecondPeriod) {
     return standartPricePerDay * days - discountPricePerDay;
   } else {
     return standartPricePerDay * days - totalDiscount;
