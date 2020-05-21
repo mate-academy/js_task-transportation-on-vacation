@@ -4,12 +4,14 @@ function calculateRentalCost(days) {
   const rentPrice = 40;
   const smallDiscount = 20;
   const bigDiscount = 50;
+  const smallDiscountBreakpoint = 3;
+  const bigDiscountBreakpoint = 7;
 
-  if (days < 3) {
+  if (days < smallDiscountBreakpoint) {
     return days * rentPrice;
   }
 
-  if (days < 7) {
+  if (days < bigDiscountBreakpoint) {
     return days * rentPrice - smallDiscount;
   }
 
