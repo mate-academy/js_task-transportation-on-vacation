@@ -23,9 +23,15 @@
  */
 
 function calculateRentalCost(days) {
-  const result = (days > 6) ? (days * 40) - 50
-    : (days >= 3 && days <= 6) ? (days * 40) - 20
-      : (days < 3) ? days * 40 : 0;
+  const price = 40;
+  const minDays = 3;
+  const maxDays = 6;
+  const minOff = 20;
+  const maxOff = 50;
+
+  const result = (days > maxDays) ? (days * price) - maxOff
+    : (days >= minDays && days <= maxDays) ? (days * price) - minOff
+      : (days < minDays) ? days * price : 0;
 
   return result;
 }
