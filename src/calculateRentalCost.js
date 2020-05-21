@@ -9,9 +9,9 @@ function calculateRentalCost(days) {
 
   if (days < daysDiscountSmall) {
     return days * dayCost;
-  } else if (days >= daysDiscountSmall && days < daysDiscountBig) {
+  } else if (days < daysDiscountBig) {
     return days * dayCost - discountSmall;
-  } else if (days >= daysDiscountBig) {
+  } else {
     return days * dayCost - discountBig;
   }
 }
