@@ -32,11 +32,13 @@ function calculateRentalCost(days) {
   const weekDiscount = 50;
   const treeDayDiscount = 20;
   const rentCostPerDay = 40;
+  const week = 7;
+  const threeDays = 3;
   let rentCost = rentCostPerDay * days;
 
-  if (days >= 3 && days < 7) {
+  if (days >= threeDays && days < week) {
     rentCost -= treeDayDiscount;
-  } else if (days >= 7) {
+  } else if (days >= week) {
     rentCost -= weekDiscount;
   }
 
