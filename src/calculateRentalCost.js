@@ -6,7 +6,7 @@ function calculateRentalCost(days) {
   const bigDisc = 50;
 
   if (days < 3) {
-    return days * 40;
+    return days * rent;
   }
 
   if (days < 7) {
