@@ -29,12 +29,14 @@ function calculateRentalCost(days) {
   const cost = 40;
   const sailSmall = 20;
   const sailBig = 50;
+  const minDays = 3;
+  const maxDays = 7;
 
-  if (days < 3) {
+  if (days < minDays) {
     res = cost * days;
-  } else if (days < 7) {
+  } else if (days < maxDays) {
     res = (cost * days) - sailSmall;
-  } else if (days >= 7) {
+  } else if (days >= maxDays) {
     res = (cost * days) - sailBig;
   };
 
