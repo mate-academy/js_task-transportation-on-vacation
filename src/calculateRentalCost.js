@@ -30,11 +30,13 @@ function calculateRentalCost(days) {
   const costOfTheDay = 40;
   const savingAfterSecondDay = 20;
   const savingAfterSixthDay = 50;
+  const daysBigSale = 7;
+  const daysSmallSale = 3;
   let rent = days * costOfTheDay;
 
-  if (days >= 7) {
+  if (days >= daysBigSale) {
     rent -= savingAfterSixthDay;
-  } else if (days >= 3) {
+  } else if (days >= daysSmallSale) {
     rent -= savingAfterSecondDay;
   }
 
