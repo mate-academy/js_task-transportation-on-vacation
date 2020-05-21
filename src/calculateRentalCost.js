@@ -1,20 +1,22 @@
 'use strict';
 
 function calculateRentalCost(days) {
-  const tax3 = 20;
-  const tax7 = 50;
-  const price = 40;
+  const threeDaysBonus = 20;
+  const sevenDaysBonus = 50;
+  const threeDaysBonusStart = 3;
+  const sevenDaysBonusStart = 7;
+  const rentalCost = 40;
 
-  if (days < 3) {
-    return price * days;
+  if (days < threeDaysBonusStart) {
+    return rentalCost * days;
   }
 
-  if (days > 2 && days < 7) {
-    return price * days - tax3;
+  if (days >= threeDaysBonusStart && days < sevenDaysBonusStart) {
+    return rentalCost * days - threeDaysBonus;
   }
 
-  if (days > 6) {
-    return price * days - tax7;
+  if (days >= sevenDaysBonusStart) {
+    return rentalCost * days - sevenDaysBonus;
   }
 }
 
