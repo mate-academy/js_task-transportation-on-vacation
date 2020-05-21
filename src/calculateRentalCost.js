@@ -1,19 +1,19 @@
 'use strict';
 
 function calculateRentalCost(days) {
-  const rent = 40;
-  const smallDisc = 20;
-  const bigDisc = 50;
+  const rentPrice = 40;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
 
   if (days < 3) {
-    return days * rent;
+    return days * rentPrice;
   }
 
   if (days < 7) {
-    return days * rent - smallDisc;
+    return days * rentPrice - smallDiscount;
   }
 
-  return days * rent - bigDisc;
+  return days * rentPrice - bigDiscount;
 }
 
 module.exports = calculateRentalCost;
