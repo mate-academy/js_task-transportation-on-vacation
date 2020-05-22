@@ -3,5 +3,8 @@ module.exports = {
   env: {
     jest: true
   },
-  plugins: ['jest']
+  plugins: ['jest'],
+  rules: {
+    'max-len': ['error', { ignoreComments: true}]
+  }
 };
