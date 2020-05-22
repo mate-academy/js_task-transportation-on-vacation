@@ -4,9 +4,9 @@ function calculateRentalCost(days) {
   const dayRent = 40;
   let discount = 0;
   const minDiscount = 20;
-  const maxDiscount = 20;
-  const minDaysDiscount = 20;
-  const maxDaysDiscount = 20;
+  const maxDiscount = 50;
+  const minDaysDiscount = 3;
+  const maxDaysDiscount = 7;
 
   if (days >= maxDaysDiscount) {
     discount = maxDiscount;
