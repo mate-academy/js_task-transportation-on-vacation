@@ -6,7 +6,7 @@
 
 # Task
 
-After a hard quarter in the office you decide to get some rest
+After a hard quarter in ecide to get some rest
 on a vacation. So you will book a flight for you and your family
 and try to leave all the mess behind you.
 
