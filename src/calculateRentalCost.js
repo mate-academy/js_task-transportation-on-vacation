@@ -29,11 +29,7 @@
 
 function calculateRentalCost(days) {
   const cost = 40;
-  let result = 0;
-
-  for (let i = 0; i < days; i++) {
-    result += cost;
-  }
+  let result = cost * days;
 
   if (days >= 7) {
     result -= 50;
