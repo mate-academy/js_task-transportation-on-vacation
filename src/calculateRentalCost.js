@@ -29,21 +29,15 @@
 
 function calculateRentalCost(days) {
   // write code here
-  let sumCost = 0;
-
-  for (let i = 1; i <= days; i++) {
-    sumCost += 40;
-  }
+  const sumCost = days * 40;
 
   if (days >= 7) {
     return sumCost - 50;
-  }
-
-  if (days >= 3 && days < 7) {
+  } else if (days >= 3 && days < 7) {
     return sumCost - 20;
+  } else {
+    return sumCost;
   }
-
-  return sumCost;
 }
 
 module.exports = calculateRentalCost;
