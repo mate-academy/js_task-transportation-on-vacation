@@ -32,9 +32,7 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     return cost;
-  }
-
-  if (days < 7) {
+  } else if (days < 7) {
     return cost - 20;
   }
 
