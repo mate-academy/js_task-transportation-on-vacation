@@ -26,9 +26,14 @@
  *
  * @return {number}
  */
-const calculateRentalCost = (days) => {
-  return (days < 3 ? (days * 40) : days < 7
-    ? (days * 40) - 20 : (days * 40) - 50);
-};
 
+const calculateRentalCost = (days) => {
+  let res = days * 40;   // res - result
+  if (days < 3) {
+    return res;
+  } else if (days < 7) {
+    return res - 20;
+  }
+  return res - 50;
+}
 module.exports = calculateRentalCost;
