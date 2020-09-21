@@ -29,16 +29,16 @@
 
 function calculateRentalCost(days) {
   const priceOneDay = 40;
-  const saleForWeekDay = 50;
-  const saleThreeDay = 20;
+  const discountForWeekDay = 50;
+  const discountThreeDay = 20;
   const rent = priceOneDay * days;
 
   if (days >= 7) {
-    return rent - saleForWeekDay;
+    return rent - discountForWeekDay;
   }
 
   if (days >= 3) {
-    return rent - saleThreeDay;
+    return rent - discountThreeDay;
   }
 
   return rent;
