@@ -30,16 +30,15 @@
 function calculateRentalCost(days) {
   const costPerDay = 40;
 
-  switch (days) {
-    case 1:
-    case 2: return days * costPerDay;
-    case 3:
-    case 4:
-    case 5:
-    case 6: return (days * costPerDay) - 20;
-    default: return (days * costPerDay) - 50;
+  if (days < 3) {
+    return days * costPerDay;
   }
-  /* also we can use 'if else' statement */
+
+  if (days < 7) {
+    return (days * costPerDay) - 20;
+  } else {
+    return (days * costPerDay) - 50;
+  }
 }
 
 module.exports = calculateRentalCost;
