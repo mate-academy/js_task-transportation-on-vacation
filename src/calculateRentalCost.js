@@ -28,14 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  const costOfCar = days * 40;
+  const rentCost = 40;
+  const longRentDiscount = 50;
+  const middleRentDiscount = 20;
+  const longRentDuration = 7;
+  const mediumRentDuration = 3;
+  const costOfCar = days * rentCost;
 
-  if (days < 3) {
+  if (days < mediumRentDuration) {
     return costOfCar;
-  } else if (days >= 3 && days < 7) {
-    return costOfCar - 20;
+  } else if (days >= mediumRentDuration && days < longRentDuration) {
+    return costOfCar - middleRentDiscount;
   } else {
-    return costOfCar - 50;
+    return costOfCar - longRentDiscount;
   }
 }
 
