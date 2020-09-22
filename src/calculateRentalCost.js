@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   const carPrice = 40 * days;
+  const thirdSale = 20;
+  const sevenfoldSale = 50;
 
   if (days >= 7) {
-    return carPrice - 50;
+    return carPrice - sevenfoldSale;
   }
 
   if (days > 2) {
-    return carPrice - 20;
+    return carPrice - thirdSale;
   }
 
   return carPrice;
