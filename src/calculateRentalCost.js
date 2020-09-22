@@ -29,6 +29,8 @@
 
 function calculateRentalCost(days) {
   const price = 40;
+  const saleThirdDay = 20;
+  const saleSeventhDay = 50;
   let totalSum = days * price;
 
   if (days < 3) {
@@ -36,9 +38,9 @@ function calculateRentalCost(days) {
   }
 
   if (days >= 3 && days < 7) {
-    totalSum -= 20;
+    totalSum -= saleThirdDay;
   } else if (days >= 7) {
-    totalSum -= 50;
+    totalSum -= saleSeventhDay;
   }
 
   return totalSum;
