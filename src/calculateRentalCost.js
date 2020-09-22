@@ -28,19 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  const carPrice = 40 * days;
-  const thirdSale = 20;
-  const sevenfoldSale = 50;
+  const totalRentPrice = 40 * days;
+  const smallSale = 20;
+  const largeSale = 50;
 
   if (days >= 7) {
-    return carPrice - sevenfoldSale;
+    return totalRentPrice - largeSale;
   }
 
   if (days > 2) {
-    return carPrice - thirdSale;
+    return totalRentPrice - smallSale;
   }
 
-  return carPrice;
+  return totalRentPrice;
 }
 
 module.exports = calculateRentalCost;
