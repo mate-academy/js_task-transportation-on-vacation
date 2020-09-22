@@ -28,7 +28,26 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const cost = 40;
+  const minDiscaunt = 20;
+  const maxDiscaunt = 50;
+  let sum = 0;
+  let sumWithDiscaunt = 0;
+
+  for (let i = 1; i <= days; i++) {
+    if (days < 3) {
+      sum += cost;
+      sumWithDiscaunt = sum;
+    } else if (days < 7) {
+      sum += cost;
+      sumWithDiscaunt = sum - minDiscaunt;
+    } else {
+      sum += cost;
+      sumWithDiscaunt = sum - maxDiscaunt;
+    }
+  }
+
+  return sumWithDiscaunt;
 }
 
 module.exports = calculateRentalCost;
