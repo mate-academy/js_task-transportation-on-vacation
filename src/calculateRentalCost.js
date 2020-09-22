@@ -28,8 +28,12 @@
  */
 
 function calculateRentalCost(days) {
-  return (days >= 7) ? days * 40 - 50
-    : (days >= 3) ? days * 40 - 20 : days * 40;
+  const carCost = 40;
+  const cashbackAfter3Days = 20;
+  const cashbackAfter7Days = 50;
+
+  return (days >= 7) ? days * carCost - cashbackAfter7Days
+    : (days >= 3) ? days * carCost - cashbackAfter3Days : days * carCost;
 }
 
 module.exports = calculateRentalCost;
