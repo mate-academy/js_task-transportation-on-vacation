@@ -28,15 +28,17 @@
  */
 
 function calculateRentalCost(days) {
+  const startDiscauntDay = 3;
+  const boostDiscauntDay = 7;
   const cost = 40;
   const minDiscaunt = 20;
   const maxDiscaunt = 50;
 
   const totalCost = days * cost;
 
-  if (days < 3) {
+  if (days < startDiscauntDay) {
     return totalCost;
-  } else if (days < 7) {
+  } else if (days < boostDiscauntDay) {
     return totalCost - minDiscaunt;
   } else {
     return totalCost - maxDiscaunt;
