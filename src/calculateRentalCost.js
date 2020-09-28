@@ -29,16 +29,16 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const cost = 40;
-  const bigDisc = 50;
-  const smallDisc = 20;
+  const costPerDay = 40;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
 
   if (days >= 7) {
-    return (cost * days) - bigDisc;
+    return (costPerDay * days) - bigDiscount;
   } else if (days >= 3) {
-    return (cost * days) - smallDisc;
+    return (costPerDay * days) - smallDiscount;
   } else {
-    return cost * days;
+    return costPerDay * days;
   }
 }
 
