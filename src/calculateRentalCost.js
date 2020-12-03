@@ -26,14 +26,19 @@
  *
  * @return {number}
  */
+const price = 40;
+const firstDisсount = 20;
+const secondDiscount = 50;
+const minDaysForDis = 3;
+const maxDaysForDis = 7;
 
 function calculateRentalCost(days) {
-  if (days >= 3 && days < 7) {
-    return days * 40 - 20;
-  } else if (days >= 7) {
-    return days * 40 - 50;
+  if (days >= minDaysForDis && days < maxDaysForDis) {
+    return days * price - firstDisсount;
+  } else if (days >= maxDaysForDis) {
+    return days * price - secondDiscount;
   } else {
-    return days * 40;
+    return days * price;
   }
 }
 
