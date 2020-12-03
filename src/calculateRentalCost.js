@@ -1,4 +1,5 @@
-'use strict';
+// eslint-disable-next-line
+"use strict";
 
 /**
  * After a hard quarter in the office you decide to get some rest
@@ -20,7 +21,15 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  const RENT_PER_DAY = 40;
+
+  if (days >= 7) {
+    return days * RENT_PER_DAY - 50;
+  } else if (days >= 3) {
+    return days * RENT_PER_DAY - 20;
+  } else {
+    return days * RENT_PER_DAY;
+  }
 }
 
 module.exports = calculateRentalCost;
