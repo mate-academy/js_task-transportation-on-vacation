@@ -30,11 +30,17 @@
 function calculateRentalCost(days) {
   // write code here
   const rentalPrice = 40;
+  const cashBack7 = 50;
+  const cashBack3 = 20;
 
-  if (days >= 7) {
-    return (days * rentalPrice) - 50;
-  } else if (days >= 3) {
-    return (days * rentalPrice) - 20;
+  const seventhDay = 7;
+  const thirdDay = 3;
+
+  if (days >= seventhDay) {
+    return (days * rentalPrice) - cashBack7;
+  } else if (days >= thirdDay) {
+    return (days * rentalPrice) - cashBack3;
+    ;
   } else {
     return rentalPrice * days;
   }
