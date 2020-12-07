@@ -10,7 +10,9 @@
  * The manager of the car rental makes you some good offers.
  *
  * Every day you rent the car costs $40.
+ *
  * If you rent the car for 7 or more days, you get $50 off your total.
+ *
  * Alternatively, if you rent the car for 3 or more days,
  * you get $20 off your total.
  *
@@ -28,7 +30,15 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  if (days >= 3 && days < 7) {
+    return days * 40 - 20;
+  }
+
+  if (days >= 7) {
+    return days * 40 - 50;
+  }
+
+  return days * 40;
 }
 
 module.exports = calculateRentalCost;
