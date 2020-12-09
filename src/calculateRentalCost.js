@@ -34,14 +34,14 @@ function calculateRentalCost(days) {
   const discountMax = 50;
 
   if (days >= 7) {
-    return days * dailyPrice - discountMax;
-  } else if (days >= 3) {
-    return days * dailyPrice - discountMin;
-  } else if (days >= 1) {
-    return days * dailyPrice;
-  } else {
-    return 'something is wrong';
+    return (days * dailyPrice) - discountMax;
   }
+
+  if (days >= 3) {
+    return (days * dailyPrice) - discountMin;
+  }
+
+  return days * dailyPrice;
 }
 
 module.exports = calculateRentalCost;
