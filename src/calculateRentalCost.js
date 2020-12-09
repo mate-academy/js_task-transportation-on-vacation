@@ -28,14 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const fixPrise = days * 40;
+  const regularPrice = 40;
+  const fixPrise = days * regularPrice;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
 
   if (days >= 3 && days < 7) {
-    return fixPrise - 20;
+    return fixPrise - smallDiscount;
   }
 
   if (days >= 7) {
-    return fixPrise - 50;
+    return fixPrise - bigDiscount;
   }
 
   return fixPrise;
