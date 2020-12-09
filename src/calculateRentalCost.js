@@ -28,14 +28,11 @@
  */
 
 function calculateRentalCost(days) {
-  let count = 0;
   const oneDayCost = 40;
   const sevenDaysDiscount = 50;
   const threeDaysDiscount = 20;
 
-  for (let i = 0; i < days; i++) {
-    count += oneDayCost;
-  }
+  let count = oneDayCost * days;
 
   if (days >= 3 && days < 7) {
     count -= threeDaysDiscount;
