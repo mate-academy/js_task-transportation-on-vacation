@@ -22,13 +22,21 @@
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
- * @param {number} days
+ * @param {number} days the length of the vacation.
  *
- * @return {number}
+ * @return {number} the total cost of the vacation.
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let cost = 40 * days;
+
+  if (days >= 7) {
+    cost -= 50;
+  } else if (days >= 3) {
+    cost -= 20;
+  }
+
+  return cost;
 }
 
 module.exports = calculateRentalCost;
