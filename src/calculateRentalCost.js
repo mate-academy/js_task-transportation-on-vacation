@@ -28,7 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const totalPrice = days * 40;
+  const minDisc = 20;
+  const maxDisc = 50;
+
+  if (days < 3) {
+    return totalPrice;
+  }
+
+  if (days < 7) {
+    return (totalPrice - minDisc);
+  }
+
+  return (totalPrice - maxDisc);
 }
 
 module.exports = calculateRentalCost;
