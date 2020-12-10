@@ -33,7 +33,7 @@ function calculateRentalCost(days) {
   const discountBig = 50;
   const totalPrice = days * dayilyPay;
 
-  if (days > 2 && days < 7) {
+  if (days >= 3 && days < 7) {
     return (totalPrice - discountSmall);
   };
 
