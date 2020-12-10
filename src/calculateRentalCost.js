@@ -28,25 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
-  let sum;
   const dayilyPay = 40;
   const discountSmall = 20;
   const discountBig = 50;
-
-  if (days < 3) {
-    sum = days * dayilyPay;
-  };
+  const totalPrice = days * dayilyPay;
 
   if (days > 2 && days < 7) {
-    sum = days * dayilyPay - discountSmall;
+    return (totalPrice - discountSmall);
   };
 
   if (days > 6) {
-    sum = days * dayilyPay - discountBig;
+    return (totalPrice - discountBig);
   }
 
-  return sum;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
