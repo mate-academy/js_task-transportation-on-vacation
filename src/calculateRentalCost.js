@@ -16,7 +16,7 @@ function calculateRentalCost(days) {
     return (totalCost - shortTermDiscount);
   }
 
-  return totalCost - longTermDiscount;
+  return (totalCost - longTermDiscount);
 }
 
 module.exports = calculateRentalCost;
