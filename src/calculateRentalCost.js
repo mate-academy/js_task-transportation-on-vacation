@@ -29,17 +29,20 @@
 
 function calculateRentalCost(days) {
   let result = 0;
+  const discountSmall = 20;
+  const discountLarge = 50;
+  const fullPrice = days * 40;
 
   if (days >= 7) {
-    result = days * 40 - 50;
+    result = fullPrice - discountLarge;
 
     return result;
   } else if (days >= 3) {
-    result = days * 40 - 20;
+    result = fullPrice - discountSmall;
 
     return result;
   } else {
-    result = days * 40;
+    result = fullPrice;
 
     return result;
   }
