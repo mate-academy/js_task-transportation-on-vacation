@@ -37,7 +37,7 @@ function calculateRentalCost(days) {
     return (totalPrice - discountSmall);
   };
 
-  if (days > 6) {
+  if (days >= 7) {
     return (totalPrice - discountBig);
   }
 
