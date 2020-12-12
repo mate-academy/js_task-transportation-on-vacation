@@ -28,7 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const dailyCarRental = 40;
+  const smallDiscount = 20;
+  const BigDiscount = 50;
+
+  let amount = days * dailyCarRental;
+
+  if (days >= 7) {
+    amount -= BigDiscount;
+  } else if (days >= 3) {
+    amount -= smallDiscount;
+  }
+
+  return amount;
 }
 
 module.exports = calculateRentalCost;
