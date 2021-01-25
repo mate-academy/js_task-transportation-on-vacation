@@ -31,12 +31,12 @@ function calculateRentalCost(days) {
   let result = 0;
   const taxDay = 40;
   const saleSevenDay = 50;
-  const treeSevenDay = 20;
+  const saleTreeDay = 20;
 
   if (days >= 7) {
     result = days * taxDay - saleSevenDay;
   } else if (days >= 3) {
-    result = days * taxDay - treeSevenDay;
+    result = days * taxDay - saleTreeDay;
   } else {
     result = days * taxDay;
   }
