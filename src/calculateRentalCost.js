@@ -29,17 +29,19 @@
 
 function calculateRentalCost(days) {
   const totalPrice = days * 40;
-  const treeDays = 3;
-  const sevenDays = 7;
-  const smallDiscount = totalPrice - 20;
-  const bigDiscount = totalPrice - 50;
+  const minDaysForDiscount = 3;
+  const maxDaysForDiscount = 7;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+  const priceAfterSmallDiscount = totalPrice - smallDiscount;
+  const priceAfterBigDiscount = totalPrice - bigDiscount;
 
-  if (days < treeDays) {
+  if (days < minDaysForDiscount) {
     return totalPrice;
-  } else if (days < sevenDays) {
-    return smallDiscount;
+  } else if (days < maxDaysForDiscount) {
+    return priceAfterSmallDiscount;
   } else {
-    return bigDiscount;
+    return priceAfterBigDiscount;
   }
 }
 
