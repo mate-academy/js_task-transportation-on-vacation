@@ -28,6 +28,8 @@
  */
 
 function calculateRentalCost(days) {
+  const twoDays = 2;
+  const sixDays = 6;
   const regularPrice = 40;
   const smallDiscount = 20;
   const bigDiscount = 50;
@@ -35,9 +37,9 @@ function calculateRentalCost(days) {
   const middleRent = days * regularPrice - smallDiscount;
   const longRent = days * regularPrice - bigDiscount;
 
-  if (days < 3) {
+  if (days <= twoDays) {
     return shortRent;
-  } else if (days < 7) {
+  } else if (days <= sixDays) {
     return middleRent;
   } else {
     return longRent;
