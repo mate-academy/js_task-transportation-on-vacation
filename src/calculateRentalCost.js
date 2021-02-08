@@ -28,22 +28,24 @@
  */
 
 function calculateRentalCost(days) {
-  const noDiscount = 40;
+  const priceWithoutDiscount = 40;
   const smallDiscount = 20;
   const bigDiscount = 50;
+  const shortPeriodForDiscount = 3;
+  const longPeriodForDiscount = 7;
 
-  if (days < 3) {
-    return days * noDiscount;
+  if (days < shortPeriodForDiscount) {
+    return days * priceWithoutDiscount;
   }
 
-  if (days >= 3 && days < 7) {
-    const lessWeek = (days * noDiscount) - smallDiscount;
+  if (days >= shortPeriodForDiscount && days < longPeriodForDiscount) {
+    const lessWeek = (days * priceWithoutDiscount) - smallDiscount;
 
     return lessWeek;
   }
 
-  if (days >= 7) {
-    const moreWeek = (days * noDiscount) - bigDiscount;
+  if (days >= longPeriodForDiscount) {
+    const moreWeek = (days * priceWithoutDiscount) - bigDiscount;
 
     return moreWeek;
   }
