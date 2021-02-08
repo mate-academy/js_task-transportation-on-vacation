@@ -28,15 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const shortStay = 40 * days;
-  const standartStay = (40 * days) - 20;
-  const longStay = (40 * days) - 50;
+  const threeDays = 3;
+  const sevenDays = 7;
+  const pricePerDay = 40;
+  const discount = 20;
+  const extraDiscount = 50;
+  const shortStay = pricePerDay * days;
+  const standartStay = (pricePerDay * days) - discount;
+  const longStay = (pricePerDay * days) - extraDiscount;
 
-  if (days < 3) {
+  if (days < threeDays) {
     return shortStay;
-  } else if (days > 2 & days < 7) {
+  } else if (days >= threeDays & days < sevenDays) {
     return standartStay;
-  } else if (days > 6) {
+  } else if (days >= sevenDays) {
     return longStay;
   }
 }
