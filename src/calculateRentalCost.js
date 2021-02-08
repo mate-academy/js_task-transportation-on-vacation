@@ -41,7 +41,7 @@ function calculateRentalCost(days) {
     return shortStay;
   } else if (days >= threeDays & days < sevenDays) {
     return standartStay;
-  } else if (days >= sevenDays) {
+  } else {
     return longStay;
   }
 }
