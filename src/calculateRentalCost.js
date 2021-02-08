@@ -29,12 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
-  if (days < 3) {
-    return days * 40;
-  } else if (days >= 3 && days < 7) {
-    return (days * 40) - 20;
-  } else if (days >= 7) {
-    return (days * 40) - 50;
+
+  const smallNumDays = 3;
+  const bigNumDays = 7;
+  const standartRentalCost = 40;
+  const standartRentalSeil = 20;
+  const bigRentalSeil = 50;
+
+  if (days < smallNumDays) {
+    return days * standartRentalCost;
+  } else if (days >= smallNumDays && days < bigNumDays) {
+    return (days * standartRentalCost) - standartRentalSeil;
+  } else if (days >= bigNumDays) {
+    return (days * standartRentalCost) - bigRentalSeil;
   }
 }
 
