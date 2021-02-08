@@ -28,16 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  let total;
+  let total = 0;
+  const rentPerDay = 40;
+  const discountMin = 20;
+  const discountMax = 50;
+  const periodShort = 3;
+  const periodLong = 7;
 
-  if (days < 3) {
-    total = days * 40;
-  } else
-
-  if ((days >= 3) && (days < 7)) {
-    total = days * 40 - 20;
+  if (days < periodShort) {
+    total = days * rentPerDay;
+  } else if ((days >= periodShort) && (days < periodLong)) {
+    total = days * rentPerDay - discountMin;
   } else {
-    total = days * 40 - 50;
+    total = days * rentPerDay - discountMax;
   }
 
   return total;
