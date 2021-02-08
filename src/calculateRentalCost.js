@@ -34,14 +34,14 @@ function calculateRentalCost(days) {
   const maxDiscount = 50;
   const cost = 40;
 
-  const sum = cost * days;
+  const costWithoutDiscount = cost * days;
 
   if (days >= daysForMinDiscount && days < daysForMaxDiscount) {
-    return sum - minDiscount;
+    return costWithoutDiscount - minDiscount;
   } else if (days >= daysForMaxDiscount) {
-    return sum - maxDiscount;
+    return costWithoutDiscount - maxDiscount;
   } else {
-    return sum;
+    return costWithoutDiscount;
   }
 }
 
