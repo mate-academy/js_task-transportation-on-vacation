@@ -31,12 +31,12 @@ function calculateRentalCost(days) {
   const priceInDay = 40;
   const discontSevenDay = 50;
   const discontThreeDay = 20;
-  const restDaysThree = 3;
-  const restDaysSeven = 7;
+  const minDaysDiscont = 3;
+  const maxDaysDiscont = 7;
 
-  if (days < restDaysThree) {
+  if (days < minDaysDiscont) {
     return days * priceInDay;
-  } else if (days >= restDaysSeven) {
+  } else if (days >= maxDaysDiscont) {
     return (days * priceInDay) - discontSevenDay;
   } else {
     return (days * priceInDay) - discontThreeDay;
