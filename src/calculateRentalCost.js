@@ -29,7 +29,7 @@
 
 function calculateRentalCost(days) {
   const minDaysForDiscount = 3;
-  const maxDaysForDiscount = 7;
+  const minDaysForExtraDiscount = 7;
   const pricePerDay = 40;
   const discount = 20;
   const extraDiscount = 50;
@@ -39,7 +39,7 @@ function calculateRentalCost(days) {
 
   if (days < minDaysForDiscount) {
     return shortStay;
-  } else if (days < maxDaysForDiscount) {
+  } else if (days < minDaysForExtraDiscount) {
     return standartStay;
   } else {
     return longStay;
