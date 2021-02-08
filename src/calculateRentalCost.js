@@ -29,17 +29,17 @@
 
 function calculateRentalCost(days) {
   const priceInDay = 40;
-  const maxDiscont = 50;
-  const minDiscont = 20;
-  const minDaysForDiscont = 3;
-  const maxDaysForDiscont = 7;
+  const maxDiscount = 50;
+  const minDiscount = 20;
+  const minDaysForDiscount = 3;
+  const maxDaysForDiscount = 7;
 
-  if (days < minDaysForDiscont) {
+  if (days < minDaysForDiscount) {
     return days * priceInDay;
-  } else if (days >= maxDaysForDiscont) {
-    return (days * priceInDay) - maxDiscont;
+  } else if (days >= maxDaysForDiscount) {
+    return (days * priceInDay) - maxDiscount;
   } else {
-    return (days * priceInDay) - minDiscont;
+    return (days * priceInDay) - minDiscount;
   }
 }
 
