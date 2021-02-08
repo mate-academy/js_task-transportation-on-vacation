@@ -28,7 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const shortStay = 40 * days;
+  const standartStay = (40 * days) - 20;
+  const longStay = (40 * days) - 50;
+
+  if (days < 3) {
+    return shortStay;
+  } else if (days > 2 & days < 7) {
+    return standartStay;
+  } else if (days > 6) {
+    return longStay;
+  }
 }
 
 module.exports = calculateRentalCost;
