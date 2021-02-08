@@ -28,12 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const regularPrice = 40;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+  const shortRent = days * regularPrice;
+  const middleRent = days * regularPrice - smallDiscount;
+  const longRent = days * regularPrice - bigDiscount;
+
   if (days < 3) {
-    return days * 40;
+    return shortRent;
   } else if (days < 7) {
-    return days * 40 - 20;
+    return middleRent;
   } else {
-    return days * 40 - 50;
+    return longRent;
   }
 }
 
