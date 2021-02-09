@@ -32,12 +32,12 @@ function calculateRentalCost(days) {
   const price = 40;
   const baseDiscount = 20;
   const bigDiscount = 50;
-  const baseTime = 3;
-  const longTime = 7;
+  const daysforBaseDiscount = 3;
+  const daysforBigDiscount = 7;
 
-  if (days < baseTime) {
+  if (days < daysforBaseDiscount) {
     return days * price;
-  } else if (days >= baseTime && days < longTime) {
+  } else if (days >= daysforBaseDiscount && days < daysforBigDiscount) {
     return days * price - baseDiscount;
   }
 
