@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+  const rate = 40;
+  const bigOffer = 7;
+  const smallOffer = 3;
+  const price = rate * days;
+
+  if (days >= bigOffer) {
+    return price - bigDiscount;
+  }
+
+  if (days >= smallOffer) {
+    return price - smallDiscount;
+  }
+
+  return price;
 }
 
 module.exports = calculateRentalCost;
