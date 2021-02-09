@@ -28,16 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const week = 7;
-  const threeDays = 3;
-  const rentalCost = days * 40;
-  const weekDiscount = 50;
-  const threeDaysDiscount = 20;
+  const pricePerDay = 40;
+  const longTerm = 7;
+  const shortTerm = 3;
+  const rentalCost = days * pricePerDay;
+  const longTermDiscount = 50;
+  const shortTermDiscount = 20;
 
-  if (days >= week) {
-    return rentalCost - weekDiscount;
-  } else if (days >= threeDays) {
-    return rentalCost - threeDaysDiscount;
+  if (days >= longTerm) {
+    return rentalCost - longTermDiscount;
+  } else if (days >= shortTerm) {
+    return rentalCost - shortTermDiscount;
   } else {
     return rentalCost;
   }
