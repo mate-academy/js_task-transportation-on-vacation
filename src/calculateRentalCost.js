@@ -32,12 +32,14 @@ function calculateRentalCost(days) {
   const discountSmall = 20;
   const discountBig = 50;
   const totalPrice = days * dayilyPay;
+  const minDaysforDiscount = 3;
+  const maxDaysforDiscount = 7;
 
-  if (days >= 3 && days < 7) {
+  if (days >= minDaysforDiscount && days < maxDaysforDiscount) {
     return (totalPrice - discountSmall);
   }
 
-  if (days >= 7) {
+  if (days >= maxDaysforDiscount) {
     return (totalPrice - discountBig);
   }
 
