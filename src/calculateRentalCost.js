@@ -28,15 +28,30 @@
  */
 
 function calculateRentalCost(days) {
-  let off = 0;
+  const options = { // всі умови оренди
+    rent: 40, // вартість доби оренди
+    discounts: [ // перелік умов знижок
+      // ! умови знижки мають бути впорядковані по duration за спаданням
+      {
+        duration: 7,
+        sum: 50,
+      },
+      {
+        duration: 3,
+        sum: 20,
+      },
+    ],
+  };
+  let discountSum = 0; // тут буде сума знижки
 
-  if (days >= 7) {
-    off = 50;
-  } else if (days >= 3) {
-    off = 20;
+  for (const discount of options.discounts) {
+    if (days >= discount.duration) {
+      discountSum = discount.sum;
+      break;
+    }
   }
 
-  const cost = (days * 40) - off;
+  const cost = (days * options.rent) - discountSum;
 
   return cost;
 }
