@@ -28,12 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const cost = days * 40;
+  const SEVEN_DAYS_DISCOUNT = 50;
+  const THREE_DAYS_DISCOUNT = 20;
+  const SEVEN_DAYS = 7;
+  const THREE_DAYS = 3;
+  const PRICE_FOR_DAY = 40;
+  const cost = days * PRICE_FOR_DAY;
 
-  if (days >= 7) {
-    return cost - 50;
-  } else if (days >= 3) {
-    return cost - 20;
+  if (days >= SEVEN_DAYS) {
+    return cost - SEVEN_DAYS_DISCOUNT;
+  } else if (days >= THREE_DAYS) {
+    return cost - THREE_DAYS_DISCOUNT;
   }
 
   return cost;
