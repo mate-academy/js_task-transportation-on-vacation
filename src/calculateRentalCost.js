@@ -29,7 +29,7 @@
 
 function calculateRentalCost(days) {
   const SEVEN_DAYS_DISCOUNT = 50;
-  const THREE_DAYS_DISCOUNT = 20;
+  const SMALL_DISCOUNT = 20;
   const SEVEN_DAYS = 7;
   const THREE_DAYS = 3;
   const PRICE_FOR_DAY = 40;
