@@ -28,18 +28,21 @@
  */
 
 function calculateRentalCost(days) {
+  const costsDay = 40;
+  const saleSevenDay = 50;
+  const saleTreeDay = 20;
   let result = 0;
 
   if (days <= 2) {
-    result = days * 40;
+    result = days * costsDay;
   }
 
-  if (days < 7 && days >= 3) {
-    result = days * 40 - 20;
+  if (days >= 3) {
+    result = days * costsDay - saleTreeDay;
   }
 
   if (days >= 7) {
-    result = days * 40 - 50;
+    result = days * costsDay - saleSevenDay;
   }
 
   return result;
