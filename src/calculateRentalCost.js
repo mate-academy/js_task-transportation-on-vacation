@@ -28,14 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let rentalCost = days * 40;
+  const basicDiscount = 20;
+  const additionalDiscount = 50;
+
   if (days >= 7) {
-    return (days * 40 - 50);
+    rentalCost -= additionalDiscount;
   } else if (days >= 3) {
-    return (days * 40 - 20);
-  } else {
-    return (days * 40);
+    rentalCost -= basicDiscount;
   }
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
