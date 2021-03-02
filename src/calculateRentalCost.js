@@ -27,7 +27,18 @@
  * @return {number}
  */
 
-const calculateRentalCost = (days) =>
-  (days >= 7) ? days * 40 - 50 : (days >= 3) ? days * 40 - 20 : days * 40;
+const calculateRentalCost = (days) => {
+  const rentalPrice = 40;
+  const regularDiscountDays = 3;
+  const additionalDiscountDays = 7;
+  const regularDiscount = 20;
+  const additionalDiscount = 50;
+
+  return (days >= additionalDiscountDays)
+    ? days * rentalPrice - additionalDiscount
+    : (days >= regularDiscountDays)
+      ? days * rentalPrice - regularDiscount
+      : days * rentalPrice;
+};
 
 module.exports = calculateRentalCost;
