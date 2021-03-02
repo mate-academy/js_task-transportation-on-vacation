@@ -28,7 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const sumForDay = 40;
+  const cashBackForTreeDays = 20;
+  const cashBackForSevenDays = 50;
+
+  if (days >= 3 && days < 7) {
+    return sumForDay * days - cashBackForTreeDays;
+  } else if (days >= 7) {
+    return days * sumForDay - cashBackForSevenDays;
+  }
+
+  return days * sumForDay;
 }
 
 module.exports = calculateRentalCost;
