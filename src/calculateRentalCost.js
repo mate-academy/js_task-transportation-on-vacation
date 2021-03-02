@@ -27,18 +27,22 @@
  * @return {number}
  */
 
-const calculateRentalCost = (days) => {
+function calculateRentalCost(days) {
   const rentalPrice = 40;
   const regularDiscountDays = 3;
   const additionalDiscountDays = 7;
   const regularDiscount = 20;
   const additionalDiscount = 50;
 
-  return (days >= additionalDiscountDays)
-    ? days * rentalPrice - additionalDiscount
-    : (days >= regularDiscountDays)
-      ? days * rentalPrice - regularDiscount
-      : days * rentalPrice;
-};
+  if (days >= additionalDiscountDays) {
+    return days * rentalPrice - additionalDiscount;
+  };
+
+  if (days >= regularDiscountDays) {
+    return days * rentalPrice - regularDiscount;
+  };
+
+  return days * rentalPrice;
+}
 
 module.exports = calculateRentalCost;
