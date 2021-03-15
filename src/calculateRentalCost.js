@@ -30,20 +30,16 @@ function calculateRentalCost(days) {
   const minSale = 20;
   const maxSale = 50;
   const bigWeekend = 3;
-  const weekend = 7;
+  const week = 7;
 
-  if (days >= bigWeekend && days < weekend) {
+  if (days >= bigWeekend && days < week) {
     return days * dailyCost - minSale;
   }
 
-  if (days >= weekend) {
+  if (days >= week) {
     return days * dailyCost - maxSale;
-  }
-
-  if (days < bigWeekend && days > 0) {
-    return days * dailyCost;
   } else {
-    return 0;
+    return days * dailyCost;
   }
 }
 module.exports = calculateRentalCost;
