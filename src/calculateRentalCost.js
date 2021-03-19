@@ -40,4 +40,4 @@ function calculateRentalCost(days) {
 
   return count;
 }
-module.exports = calculateRentalCost;
+module.exports = calculateRentalCost; 
