@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const threeDaysDiscount = 20;
+  const sevenDaysDiscount = 50;
+  const threeDays = 3;
+  const sevenDays = 7;
+  const rentalPrice = 40;
+  let result = 0;
+
+  if (days >= threeDays && days < sevenDays) {
+    result = days * rentalPrice - threeDaysDiscount;
+  } else if (days >= sevenDays) {
+    result = days * rentalPrice - sevenDaysDiscount;
+  } else {
+    result = days * rentalPrice;
+  }
+
+  return result;
 }
 
 module.exports = calculateRentalCost;
