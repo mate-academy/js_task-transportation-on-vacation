@@ -28,19 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  let totalPrice = 0;
-  const carRental = 40;
+  const costPerDay = 40;
   const discout20 = 20;
   const discout50 = 50;
 
   if (days < 7 && days >= 3) {
-    totalPrice = days * carRental - discout20;
+    return days * costPerDay - discout20;
   } else if (days >= 7) {
-    totalPrice = days * carRental - discout50;
+    return days * costPerDay - discout50;
   } else {
-    totalPrice = days * carRental;
+    return days * costPerDay;
   }
-
-  return totalPrice;
-}
-module.exports = calculateRentalCost;
+}module.exports = calculateRentalCost;
