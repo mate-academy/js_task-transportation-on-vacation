@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const price = 40;
+  const cashbackSmall = 20;
+  const cashbackLarge = 50;
+  const amaunt = price * days;
+
+  if (days >= 7) {
+    return amaunt - cashbackLarge;
+  }
+
+  if (days >= 3) {
+    return amaunt - cashbackSmall;
+  }
+
+  return amaunt;
 }
 
 module.exports = calculateRentalCost;
