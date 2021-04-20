@@ -40,9 +40,9 @@ function calculateRentalCost(days) {
 
   if (days < maxDays) {
     return (days * costPerDay) - smallDiscount;
-  } else {
-    return (days * costPerDay) - bigDiscount;
   }
+
+  return (days * costPerDay) - bigDiscount;
 }
 
 module.exports = calculateRentalCost;
