@@ -35,16 +35,14 @@ function calculateRentalCost(days) {
     return null;
   }
 
-  switch (true) {
-    case (days < 3):
-      totalCost = costPerDay * days;
-      break;
-    case (days >= 3 && days < 7):
+  if (days < 3) {
+    totalCost = costPerDay * days;
+  } else {
+    if (days >= 3 && days < 7) {
       totalCost = costPerDay * days - 20;
-      break;
-    case (days >= 7):
+    } else {
       totalCost = costPerDay * days - 50;
-      break;
+    }
   }
 
   return totalCost;
