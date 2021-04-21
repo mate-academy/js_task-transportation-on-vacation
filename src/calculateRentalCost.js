@@ -29,16 +29,22 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const currentRentalCost = days * 40;
+
+  if (days < 1) {
+    return 'Error';
+  }
+
   if (days < 3) {
-    return days * 40;
+    return currentRentalCost;
   }
 
   if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+    return currentRentalCost - 20;
   }
 
   if (days >= 7) {
-    return days * 40 - 50;
+    return currentRentalCost - 50;
   }
 }
 
