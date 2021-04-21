@@ -29,13 +29,13 @@
 
 function calculateRentalCost(days) {
   const carRent = 40;
-  const youGetAfterThreeDays = 20;
-  const youGetAfterSevenDays = 50;
+  const minBonuses = 20;
+  const maxBonuses = 50;
 
   if (days >= 7) {
-    return carRent * days - youGetAfterSevenDays;
+    return carRent * days - maxBonuses;
   } else if (days >= 3) {
-    return days * carRent - youGetAfterThreeDays;
+    return days * carRent - minBonuses;
   }
 
   return carRent * days;
