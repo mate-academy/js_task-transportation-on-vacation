@@ -29,24 +29,28 @@
 
 function calculateRentalCost(days) {
   // write code here
-  let fullCosts = 0;
-  const dayCost = 40;
+  let finalCost = 0;
+
+  const costPerday = 40;
+
   const firsCashBack = 20;
   const secondCachBack = 50;
 
+  const fullcost = costPerday * days;
+
   if (days < 3) {
-    fullCosts = days * dayCost;
+    finalCost = fullcost;
   }
 
   if (days >= 3) {
-    fullCosts = (days * dayCost) - firsCashBack;
+    finalCost = fullcost - firsCashBack;
   }
 
   if (days >= 7) {
-    fullCosts = (days * dayCost) - secondCachBack;
+    finalCost = fullcost - secondCachBack;
   }
 
-  return fullCosts;
+  return finalCost;
 }
 
 module.exports = calculateRentalCost;
