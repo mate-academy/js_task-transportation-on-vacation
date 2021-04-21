@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const dayRent = 40;
+  const smallDisc = 20;
+  const bigDisc = 50;
+  const total = dayRent * days;
+
+  if (days < 3) {
+    return total;
+  }
+
+  if (days < 7) {
+    return total - smallDisc;
+  }
+
+  return total - bigDisc;
 }
 
 module.exports = calculateRentalCost;
