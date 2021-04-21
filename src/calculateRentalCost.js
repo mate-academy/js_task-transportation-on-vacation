@@ -36,18 +36,18 @@ function calculateRentalCost(days) {
   const firsCashBack = 20;
   const secondCachBack = 50;
 
-  const fullcost = costPerday * days;
+  const fullCost = costPerday * days;
 
   if (days < 3) {
-    finalCost = fullcost;
+    finalCost = fullCost;
   }
 
   if (days >= 3) {
-    finalCost = fullcost - firsCashBack;
+    finalCost = fullCost - firsCashBack;
   }
 
   if (days >= 7) {
-    finalCost = fullcost - secondCachBack;
+    finalCost = fullCost - secondCachBack;
   }
 
   return finalCost;
