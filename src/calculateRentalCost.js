@@ -29,6 +29,28 @@
 
 function calculateRentalCost(days) {
   // write code here
+  let finalCost = 0;
+
+  const costPerday = 40;
+
+  const firstCashBack = 20;
+  const secondCachBack = 50;
+
+  const fullCost = costPerday * days;
+
+  if (days < 3) {
+    finalCost = fullCost;
+  }
+
+  if (days >= 3) {
+    finalCost = fullCost - firstCashBack;
+  }
+
+  if (days >= 7) {
+    finalCost = fullCost - secondCachBack;
+  }
+
+  return finalCost;
 }
 
 module.exports = calculateRentalCost;
