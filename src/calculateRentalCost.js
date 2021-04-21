@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const currentRentalCost = days * 40;
+  const smallCashbackStart = 3;
+  const largeCashbackStart = 7;
+  const smallCashbackValue = 20;
+  const largeCashbackValue = 50;
+
+  if (days < 1) {
+    return 'Invalid data';
+  } else if (days < smallCashbackStart) {
+    return currentRentalCost;
+  } else if (days < largeCashbackStart) {
+    return currentRentalCost - smallCashbackValue;
+  }
+
+  return currentRentalCost - largeCashbackValue;
 }
 
 module.exports = calculateRentalCost;
