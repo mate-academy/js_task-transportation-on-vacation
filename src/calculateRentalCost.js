@@ -38,9 +38,9 @@ function calculateRentalCost(days) {
     return ((days * price) - secondDiscountValue);
   } else if (days >= firstDiscountDay) {
     return ((days * price) - firstDiscountValue);
-  } else {
-    return (days * price);
   }
+
+  return (days * price);
 }
 
 module.exports = calculateRentalCost;
