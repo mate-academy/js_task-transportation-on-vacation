@@ -34,7 +34,7 @@ function calculateRentalCost(days) {
   const maxDiscount = 50;
 
   if (days < 1) {
-    return 'Invalid Date';
+    return 'Invalid Data';
   }
 
   if (days < 3) {
