@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let total;
+  const costPerDay = 40;
+  const daysToGetFirstOff = 3;
+  const daysToGetMaxOff = 7;
+  const FirstOff = 20;
+  const MaxOff = 50;
+
+  if (days < daysToGetFirstOff) {
+    total = days * costPerDay;
+  } else if (days >= daysToGetFirstOff && days < daysToGetMaxOff) {
+    total = (days * costPerDay) - FirstOff;
+  } else {
+    total = (days * costPerDay) - MaxOff;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
