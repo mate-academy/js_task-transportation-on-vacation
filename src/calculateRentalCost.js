@@ -29,16 +29,17 @@
 
 function calculateRentalCost(days) {
   const costPerDay = 40;
+  const costAllDay = days * costPerDay;
   const saleAfter3Days = 20;
   const saleAfter7Days = 50;
   let totalAmount = 0;
 
   if (days >= 7) {
-    totalAmount = days * costPerDay - saleAfter7Days;
+    totalAmount = costAllDay - saleAfter7Days;
   } else if (days >= 3) {
-    totalAmount = days * costPerDay - saleAfter3Days;
+    totalAmount = costAllDay - saleAfter3Days;
   } else {
-    totalAmount = days * costPerDay;
+    totalAmount = costAllDay;
   }
 
   return totalAmount;
