@@ -30,13 +30,17 @@
 function calculateRentalCost(days) {
   let total;
   const costPerDay = 40;
+  const daysToGetFirstOff = 3;
+  const daysToGetMaxOff = 7;
+  const FirstOff = 20;
+  const MaxOff = 50;
 
-  if (days < 3) {
+  if (days < daysToGetFirstOff) {
     total = days * costPerDay;
-  } else if (days >= 3 && days < 7) {
-    total = (days * costPerDay) - 20;
+  } else if (days >= daysToGetFirstOff && days < daysToGetMaxOff) {
+    total = (days * costPerDay) - FirstOff;
   } else {
-    total = (days * costPerDay) - 50;
+    total = (days * costPerDay) - MaxOff;
   }
 
   return total;
