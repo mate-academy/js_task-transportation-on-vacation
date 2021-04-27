@@ -9,7 +9,7 @@
  * You will need a rental car in order for you to get around in your vacation.
  * The manager of the car rental makes you some good offers.
  *
- * Every day you rent the car costs $40.
+ * Every day you rent the car costs $costPerDay.
  * If you rent the car for 7 or more days, you get $50 off your total.
  * Alternatively, if you rent the car for 3 or more days,
  * you get $20 off your total.
@@ -18,7 +18,7 @@
  * which returns the total amount for different count of days.
  *
  * Examples:
- *  - calculateRentalCost(1) === 40
+ *  - calculateRentalCost(1) === costPerDay
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
@@ -28,12 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  let result = days * 40;
+  const costPerDay = 40;
+  const DiscountFrom3To6Days = 20;
+  const DiscountFrom7Days = 50;
+  let result = days * costPerDay;
 
   if (days >= 7) {
-    result = result - 50;
+    result = result - DiscountFrom7Days;
   } else if (days >= 3) {
-    result = (days * 40) - 20;
+    result = result - DiscountFrom3To6Days;
   }
 
   return result;
