@@ -28,14 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  switch (true) {
-    case (days <= 2):
-      return days * 40;
-    case (days <= 6):
-      return days * 40 - 20;
-    default:
-      return days * 40 - 50;
+  const costPerDay = 40;
+  const skidka3Day = 20;
+  const skidka7Day = 50;
+
+  if (days <= 2) {
+    return days * costPerDay;
   }
+
+  if (days <= 6) {
+    return days * costPerDay - skidka3Day;
+  }
+
+  return days * costPerDay - skidka7Day;
 }
 
 module.exports = calculateRentalCost;
