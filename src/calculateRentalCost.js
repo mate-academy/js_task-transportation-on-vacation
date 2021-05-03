@@ -32,11 +32,11 @@ function calculateRentalCost(days) {
   const skidka3Day = 20;
   const skidka7Day = 50;
 
-  if (days <= 2) {
+  if (days < 3) {
     return days * costPerDay;
   }
 
-  if (days <= 6) {
+  if (days < 7) {
     return days * costPerDay - skidka3Day;
   }
 
