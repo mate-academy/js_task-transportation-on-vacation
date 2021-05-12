@@ -36,7 +36,7 @@ function calculateRentalCost(days) {
     return (days * carRentalCostPerDay) - sevenOrMoreDaysDiscount;
   }
 
-  if (days >= 3) {
+  if (days >= 3 && days <= 7) {
     return (days * carRentalCostPerDay) - fromThreeToSixDaysDiscount;
   }
 
