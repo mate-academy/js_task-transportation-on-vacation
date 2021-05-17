@@ -31,12 +31,14 @@ function calculateRentalCost(days) {
   const CarCost = 40;
   const SmallDiscount = 20;
   const BigDiscount = 50;
+  const DayCount = 3;
+  const DayLimit = 7;
 
-  if (days < 3) {
+  if (days < DayCount) {
     return days * CarCost;
   };
 
-  if ((days >= 3) && (days < 7)) {
+  if ((days >= DayCount) && (days < DayLimit)) {
     return (days * CarCost) - SmallDiscount;
   };
 
