@@ -37,10 +37,10 @@ function calculateRentalCost(days) {
   };
 
   if ((days >= 3) && (days < 7)) {
-    return days * CarCost - SmallDiscount;
+    return (days * CarCost) - SmallDiscount;
   };
 
-  return days * CarCost - BigDiscount;
+  return (days * CarCost) - BigDiscount;
 }
 
 module.exports = calculateRentalCost;
