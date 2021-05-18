@@ -32,13 +32,13 @@ function calculateRentalCost(days) {
   const SmallDiscount = 20;
   const BigDiscount = 50;
   const DayCount = 3;
-  const BorderDay = 7;
+  const DayLimit = 7;
 
   if (days < DayCount) {
     return days * CarCost;
   };
 
-  if ((days >= DayCount) && (days < BorderDay)) {
+  if ((days >= DayCount) && (days < DayLimit)) {
     return (days * CarCost) - SmallDiscount;
   };
 
