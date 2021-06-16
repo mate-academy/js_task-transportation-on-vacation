@@ -29,14 +29,16 @@
 
 function calculateRentalCost(days) {
   const rentPerDay = 40;
+  const longTimeRent = 6;
+  const averageTimeRent = 2;
   const bigDiscount = 50;
   const smallDiscount = 20;
 
-  if (days > 6) {
+  if (days > longTimeRent) {
     return (rentPerDay * days) - bigDiscount;
   }
 
-  if (days > 2) {
+  if (days > averageTimeRent) {
     return (rentPerDay * days) - smallDiscount;
   }
 
