@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const rentPerDay = 40;
+  const longTimeRent = 6;
+  const averageTimeRent = 2;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+
+  if (days > longTimeRent) {
+    return (rentPerDay * days) - bigDiscount;
+  }
+
+  if (days > averageTimeRent) {
+    return (rentPerDay * days) - smallDiscount;
+  }
+
+  return rentPerDay * days;
 }
 
 module.exports = calculateRentalCost;
