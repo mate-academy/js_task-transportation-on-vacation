@@ -27,20 +27,26 @@
  * @return {number}
  */
 
+// my pull request
+
 function calculateRentalCost(days) {
   // write code here
   const rentCost = 40;
   const totalRentCost = rentCost * days;
+  const bigRentDiscount = 50;
+  const smallRentDiscount = 20;
+  const firstDaysCount = 3;
+  const secondDaysCount = 7;
 
-  if (days >= 3 && days < 7) {
-    return totalRentCost - 20;
+  if (days < firstDaysCount) {
+    return totalRentCost;
   }
 
-  if (days >= 7) {
-    return totalRentCost - 50;
+  if (days < secondDaysCount) {
+    return totalRentCost - smallRentDiscount;
   }
 
-  return totalRentCost;
+  return totalRentCost - bigRentDiscount;
 }
 
 module.exports = calculateRentalCost;
