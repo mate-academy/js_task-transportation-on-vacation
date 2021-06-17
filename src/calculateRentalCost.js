@@ -31,12 +31,14 @@ function calculateRentalCost(days) {
   const carRentalCost = 40;
   const weekDiscount = 50;
   const threeDaysDiscount = 20;
+  const threeDays = 3;
+  const week = 7;
 
-  if (days < 7 && days > 2) {
+  if (days < week && days >= threeDays) {
     return (days * carRentalCost) - threeDaysDiscount;
   }
 
-  if (days > 6) {
+  if (days >= week) {
     return (days * carRentalCost) - weekDiscount;
   }
 
