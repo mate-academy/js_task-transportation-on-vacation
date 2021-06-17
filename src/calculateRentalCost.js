@@ -28,15 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  let costWithOff = days * 40;
+  const costWithoutOff = days * 40;
+  const weekOff = 50;
+  const threeDayOff = 20;
+  const minDaysForOff = 3;
+  const minDaysForWeekOff = 7;
 
-  if (days >= 7) {
-    costWithOff -= 50;
-  } else if (days >= 3) {
-    costWithOff -= 20;
+  if (days >= minDaysForWeekOff) {
+    return costWithoutOff - weekOff;
+  } else if (days >= minDaysForOff) {
+    return costWithoutOff - threeDayOff;
+  } else {
+    return costWithoutOff;
   }
-
-  return costWithOff;
 }
 
 module.exports = calculateRentalCost;
