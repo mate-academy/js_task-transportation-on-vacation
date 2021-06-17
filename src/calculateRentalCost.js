@@ -31,12 +31,12 @@ function calculateRentalCost(days) {
   const price = days * 40;
   const discountSmall = 20;
   const discountBig = 50;
-  const minForSmall = 3;
-  const minForBig = 7;
+  const minDaysForDiscountSmall = 3;
+  const minDaysForDiscountBig = 7;
 
-  if (days >= minForBig) {
+  if (days >= minDaysForDiscountBig) {
     return price - discountBig;
-  } else if (days >= minForSmall) {
+  } else if (days >= minDaysForDiscountSmall) {
     return price - discountSmall;
   } else {
     return price;
