@@ -30,7 +30,6 @@
 function calculateRentalCost(days) {
   const sevenDays = 7;
   const threeDays = 3;
-  const oneDay = 1;
   const payForOneDay = 40;
   const payForMoreSevenDays = 50;
   const payForMoreThreeDays = 20;
@@ -43,9 +42,7 @@ function calculateRentalCost(days) {
     return days * payForOneDay - payForMoreThreeDays;
   }
 
-  if (days >= oneDay && days < threeDays) {
-    return days * payForOneDay;
-  }
+  return days * payForOneDay;
 }
 
 module.exports = calculateRentalCost;
