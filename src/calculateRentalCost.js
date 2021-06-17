@@ -28,18 +28,18 @@
  */
 
 const calculateRentalCost = (days) => {
-  const threeDays = 3;
-  const sevenDays = 7;
-  const fortyDollars = 40;
-  const fiftyDollars = 50;
-  const twentyDollars = 20;
+  const carRent = 40;
+  const minDays = 3;
+  const maxDays = 7;
+  const maxDiscont = 50;
+  const minDiscont = 20;
 
-  if (days >= sevenDays) {
-    return days * fortyDollars - fiftyDollars;
-  } else if (days >= threeDays) {
-    return days * fortyDollars - twentyDollars;
+  if (days >= maxDays) {
+    return days * carRent - maxDiscont;
+  } else if (days >= minDays) {
+    return days * carRent - minDiscont;
   } else {
-    return days * fortyDollars;
+    return days * carRent;
   }
 };
 
