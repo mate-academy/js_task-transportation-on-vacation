@@ -30,13 +30,15 @@
 function calculateRentalCost(days) {
   // write code here
   const pay = days * 40;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
 
   if (days >= 3 & days < 7) {
-    return pay - 20;
+    return pay - smallDiscount;
   }
 
   if (days >= 7) {
-    return pay - 50;
+    return pay - bigDiscount;
   } else {
     return pay;
   }
