@@ -28,7 +28,19 @@
  */
 
 const calculateRentalCost = (days) => {
-  return days >= 7 ? days * 40 - 50 : days >= 3 ? days * 40 - 20 : days * 40;
+  const threeDays = 3;
+  const sevenDays = 7;
+  const fortyDollars = 40;
+  const fiftyDollars = 50;
+  const twentyDollars = 20;
+
+  if (days >= sevenDays) {
+    return days * fortyDollars - fiftyDollars;
+  } else if (days >= threeDays) {
+    return days * fortyDollars - twentyDollars;
+  } else {
+    return days * fortyDollars;
+  }
 };
 
 module.exports = calculateRentalCost;
