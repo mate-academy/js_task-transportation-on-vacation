@@ -27,8 +27,22 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  // write code here
-}
+function calculateRentalCost(days = 0) {
+  const longPeriod = 7;
+  const smallPeriod = 3;
+  const pricePerDay = 40;
+  const discLongPeriod = 50;
+  const discSmallPeriod = 20;
+
+  if (days < smallPeriod) {
+    return days * pricePerDay;
+  };
+
+  if (days < longPeriod) {
+    return (days * pricePerDay) - discSmallPeriod;
+  }
+
+  return (days * pricePerDay) - discLongPeriod;
+};
 
 module.exports = calculateRentalCost;
