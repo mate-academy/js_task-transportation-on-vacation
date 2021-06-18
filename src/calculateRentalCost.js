@@ -28,23 +28,21 @@
  */
 
 function calculateRentalCost(days = 0) {
-  const sevenDays = 7;
-  const threeDays = 3;
+  const longPeriod = 7;
+  const smallPeriod = 3;
   const pricePerDay = 40;
-  const discFromSevenDays = 50;
-  const discFromThreeDays = 20;
+  const discLongPeriod = 50;
+  const discSmallPeriod = 20;
 
-  if (days < threeDays) {
+  if (days < smallPeriod) {
     return days * pricePerDay;
   };
 
-  if (days >= threeDays && days < sevenDays) {
-    return (days * pricePerDay) - discFromThreeDays;
+  if (days < longPeriod) {
+    return (days * pricePerDay) - discSmallPeriod;
   }
 
-  if (days >= sevenDays) {
-    return (days * pricePerDay) - discFromSevenDays;
-  }
+  return (days * pricePerDay) - discLongPeriod;
 };
 
 module.exports = calculateRentalCost;
