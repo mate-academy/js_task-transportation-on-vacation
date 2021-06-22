@@ -30,14 +30,14 @@
 const daysBigDiscount = 7;
 const sumBigDiscount = 50;
 const daysMiddleDiscount = 3;
-const summiddleDiscount = 20;
+const sumMiddleDiscount = 20;
 const pricePerDay = 40;
 
 function calculateRentalCost(days) {
   if (days >= daysBigDiscount) {
     return days * pricePerDay - sumBigDiscount;
   } else if (days >= daysMiddleDiscount) {
-    return days * pricePerDay - summiddleDiscount;
+    return days * pricePerDay - sumMiddleDiscount;
   } else {
     return days * pricePerDay;
   }
