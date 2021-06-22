@@ -42,7 +42,7 @@ function calculateRentalCost(days) {
     return days * rent - minDiscount;
   }
 
-  if (days >= 7) {
+  if (days >= daysForMaxDiscount) {
     return days * rent - maxDiscount;
   }
 }
