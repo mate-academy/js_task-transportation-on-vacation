@@ -40,7 +40,7 @@ function calculateRentalCost(days) {
     return days * dayPrice - smallDiscount;
   }
 
-  return days * 40;
+  return days * dayPrice;
 }
 
 module.exports = calculateRentalCost;
