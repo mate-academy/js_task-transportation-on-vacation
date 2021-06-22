@@ -32,10 +32,10 @@ function calculateRentalCost(days) {
   const cost = days * costOneDay;
   const higherDiscount = 50;
   const lowerDiscount = 20;
-  const daysBiggerDiscount = 7;
+  const daysForBiggerDiscount = 7;
   const minDaysForDiscount = 3;
 
-  if (days >= daysBiggerDiscount) {
+  if (days >= daysForBiggerDiscount) {
     return cost - higherDiscount;
   }
 
