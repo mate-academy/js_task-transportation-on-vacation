@@ -31,16 +31,16 @@ function calculateRentalCost(days) {
   // write code here
   const price = 40;
   const total = price * days;
-  const weekDiscount = 50;
+  const fullDiscount = 50;
   const altDiscount = 20;
-  const week = 7;
-  const alt = 3;
+  const fullDiscountDays = 7;
+  const altDiscountDays = 3;
 
-  if (days >= week) {
-    return total - weekDiscount;
+  if (days >= fullDiscountDays) {
+    return total - fullDiscount;
   }
 
-  if (days >= alt) {
+  if (days >= altDiscountDays) {
     return total - altDiscount;
   }
 
