@@ -33,9 +33,7 @@ function calculateRentalCost(days) {
   const secondDiscount = 50;
   const firstDiscountDayNumber = 3;
   const secondDiscountDayNumber = 7;
-  let totalRent = 0;
-
-  totalRent = rentPerDay * days;
+  const totalRent = rentPerDay * days;
 
   if (days >= secondDiscountDayNumber) {
     return totalRent - secondDiscount;
