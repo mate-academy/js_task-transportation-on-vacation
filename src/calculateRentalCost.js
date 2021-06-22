@@ -31,14 +31,14 @@ function calculateRentalCost(days) {
   const cost = 40;
   const firstDiscount = 20;
   const secondDiscount = 50;
-  const firstAmount = 3;
-  const secondAmount = 7;
+  const daysForFirstDiscount = 3;
+  const daysForSecondDiscount = 7;
 
-  if (days < firstAmount) {
+  if (days < daysForFirstDiscount) {
     return cost * days;
-  } else if (days < secondAmount) {
+  } else if (days < daysForSecondDiscount) {
     return cost * days - firstDiscount;
-  } else if (days >= secondAmount) {
+  } else if (days >= daysForSecondDiscount) {
     return cost * days - secondDiscount;
   }
 }
