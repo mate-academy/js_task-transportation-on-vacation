@@ -29,18 +29,22 @@
 
 function calculateRentalCost(days) {
   const priceRent = 40;
-  const discountFor3days = 20;
-  const discountFor7days = discountFor3days + 30;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+  const daysForSmallDiscount = 3;
+  const daysForBigDiscount = 7;
+
+  const pay = days * priceRent;
 
   switch (true) {
-    case days < 3 :
-      return days * priceRent;
+    case days < daysForSmallDiscount :
+      return pay;
 
-    case days >= 3 && days < 7 :
-      return days * priceRent - discountFor3days;
+    case days >= daysForSmallDiscount && days < daysForBigDiscount:
+      return pay - smallDiscount;
 
     case days >= 7 :
-      return days * priceRent - discountFor7days;
+      return pay - bigDiscount;
   }
 }
 
