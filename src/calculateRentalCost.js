@@ -27,13 +27,19 @@
  * @return {number}
  */
 
+const daysBigDiscount = 7;
+const sumBigDiscount = 50;
+const daysMiddleDiscount = 3;
+const summiddleDiscount = 20;
+const pricePerDay = 40;
+
 function calculateRentalCost(days) {
-  if (days >= 7) {
-    return days * 40 - 50;
-  } else if (days >= 3) {
-    return days * 40 - 20;
+  if (days >= daysBigDiscount) {
+    return days * pricePerDay - sumBigDiscount;
+  } else if (days >= daysMiddleDiscount) {
+    return days * pricePerDay - summiddleDiscount;
   } else {
-    return days * 40;
+    return days * pricePerDay;
   }
 }
 
