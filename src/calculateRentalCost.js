@@ -31,13 +31,15 @@ function calculateRentalCost(days) {
   const costPerDay = 40;
   const calculatePerPeriod = days * costPerDay;
   let totalSum = calculatePerPeriod;
+  const minDiscount = 20;
+  const maxDiscount = 50;
 
   if (days >= 7) {
-    totalSum = calculatePerPeriod - 50;
+    totalSum = calculatePerPeriod - maxDiscount;
   }
 
   if (days >= 3 && days < 7) {
-    totalSum = calculatePerPeriod - 20;
+    totalSum = calculatePerPeriod - minDiscount;
   }
 
   return totalSum;
