@@ -33,17 +33,15 @@ function calculateRentalCost(days) {
   const maxSale = 50;
   const minDaysForSale = 3;
   const maxDaysForSale = 7;
-  let sum = 0;
+  let sum = rentPrice * days;
 
   switch (true) {
     case (days >= minDaysForSale && days < maxDaysForSale):
-      sum = (rentPrice * days) - minSale;
+      sum -= minSale;
       break;
     case (days >= maxDaysForSale):
-      sum = (rentPrice * days) - maxSale;
+      sum -= maxSale;
       break;
-    default:
-      sum = rentPrice * days;
   }
 
   return sum;
