@@ -29,20 +29,19 @@
 
 function calculateRentalCost(days) {
   const price = 40;
-  let discount = 0;
-  const shortTermRent = days >= 1 && days < 3;
-  const middleTermRent = days >= 3 && days < 7;
-  const longTermRent = days >= 7;
+  const discount = 20;
+  const bigDiscount = 50;
+  const minTerm = 1;
+  const minTermWithDiscoint = 3;
+  const minTermWithBigDiscount = 7;
 
-  if (shortTermRent) {
-    discount = 0;
-  } else if (middleTermRent) {
-    discount = 20;
-  } else if (longTermRent) {
-    discount = 50;
+  if (days >= minTerm && days < minTermWithDiscoint) {
+    return price * days;
+  } else if (days >= minTermWithDiscoint && days < minTermWithBigDiscount) {
+    return price * days - discount;
+  } else if (days >= minTermWithBigDiscount) {
+    return price * days - bigDiscount;
   }
-
-  return price * days - discount;
 }
 
 module.exports = calculateRentalCost;
