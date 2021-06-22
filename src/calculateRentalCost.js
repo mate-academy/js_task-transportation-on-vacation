@@ -29,18 +29,19 @@
 
 function calculateRentalCost(days) {
   const normalRent = 40;
-  const threeDaysDiscount = 20;
-  const weekDiscount = 50;
-  const result = normalRent * days;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
   const discountSmallCondition = 3;
   const discountBigCondition = 7;
 
+  const result = normalRent * days;
+
   if (days >= discountBigCondition) {
-    return result - weekDiscount;
+    return result - bigDiscount;
   }
 
   if (days >= discountSmallCondition) {
-    return result - threeDaysDiscount;
+    return result - smallDiscount;
   }
 
   return result;
