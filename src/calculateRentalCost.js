@@ -43,7 +43,7 @@ function calculateRentalCost(days) {
     case days >= daysForSmallDiscount && days < daysForBigDiscount:
       return pay - smallDiscount;
 
-    case days >= 7 :
+    case days >= daysForBigDiscount :
       return pay - bigDiscount;
   }
 }
