@@ -33,12 +33,14 @@ function calculateRentalCost(days) {
   let totalSum = calculatePerPeriod;
   const minDiscount = 20;
   const maxDiscount = 50;
+  const maxDaysDiscount = 7;
+  const minDaysDiscount = 3;
 
-  if (days >= 7) {
+  if (days >= maxDaysDiscount) {
     totalSum = calculatePerPeriod - maxDiscount;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days >= minDaysDiscount && days < maxDaysDiscount) {
     totalSum = calculatePerPeriod - minDiscount;
   }
 
