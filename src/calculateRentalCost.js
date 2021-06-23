@@ -32,12 +32,14 @@ function calculateRentalCost(days) {
   const totalPrice = days * pricePerDay;
   const bigDiscount = 50;
   const smallDiscount = 20;
+  const bigDiscountThreshold = 7;
+  const smallDiscountThreshold = 3;
 
-  if (days > 6) {
+  if (days >= bigDiscountThreshold) {
     return totalPrice - bigDiscount;
   }
 
-  if (days > 2) {
+  if (days >= smallDiscountThreshold) {
     return totalPrice - smallDiscount;
   }
 
