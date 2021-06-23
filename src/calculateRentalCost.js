@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const rent = 40;
+  const maxDiscount = 50;
+  const minDiscount = 20;
+  const firstTerm = 3;
+  const secondTerm = 7;
+  const sum = rent * days;
+
+  if (days >= firstTerm && days < secondTerm) {
+    return sum - minDiscount;
+  }
+
+  if (days >= secondTerm) {
+    return sum - maxDiscount;
+  } else {
+    return sum;
+  }
 }
 
 module.exports = calculateRentalCost;
