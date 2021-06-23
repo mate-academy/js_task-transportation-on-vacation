@@ -28,12 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return days * 40;
-  } else if (days < 7) {
-    return days * 40 - 20;
+  const expencies = 40 * days;
+  const lowDiscount = 20;
+  const largeDiscount = 50;
+  const lowerDiscount = 3;
+  const largerDiscount = 7;
+
+  if (days < lowerDiscount) {
+    return expencies;
+  } else if (days < largerDiscount) {
+    return expencies - lowDiscount;
   } else {
-    return days * 40 - 50;
+    return expencies - largeDiscount;
   }
 };
 
