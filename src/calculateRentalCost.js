@@ -36,15 +36,16 @@ function calculateRentalCost(days) {
 
   const pay = days * priceRent;
 
-  switch (true) {
-    case days < daysForSmallDiscount :
-      return pay;
+  if (days < daysForSmallDiscount) {
+    return pay;
+  }
 
-    case days >= daysForSmallDiscount && days < daysForBigDiscount:
-      return pay - smallDiscount;
+  if (days >= daysForSmallDiscount && days < daysForBigDiscount) {
+    return pay - smallDiscount;
+  }
 
-    case days >= daysForBigDiscount :
-      return pay - bigDiscount;
+  if (days >= daysForBigDiscount) {
+    return pay - bigDiscount;
   }
 }
 
