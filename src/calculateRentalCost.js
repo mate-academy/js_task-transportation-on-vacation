@@ -29,16 +29,18 @@
 
 function calculateRentalCost(days) {
   const rent = 40;
-  const max = 50;
-  const min = 20;
+  const maxDiscount = 50;
+  const minDiscount = 20;
+  const firstTerm = 3;
+  const secondTerm = 7;
   const sum = rent * days;
 
-  if (days >= 3 && days < 7) {
-    return sum - min;
+  if (days >= firstTerm && days < secondTerm) {
+    return sum - minDiscount;
   }
 
-  if (days >= 7) {
-    return sum - max;
+  if (days >= secondTerm) {
+    return sum - maxDiscount;
   } else {
     return sum;
   }
