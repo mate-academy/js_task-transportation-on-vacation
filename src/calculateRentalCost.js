@@ -7,8 +7,7 @@
  * and your family and try to leave all the mess behind you.
  *
  * You will need a rental car in order for you to get around in your vacation.
- * The manager of the car rental makes you some good offers.
- *
+ * The manager of the car rental makes you some good offer *
  * Every day you rent the car costs $40.
  * If you rent the car for 7 or more days, you get $50 off your total.
  * Alternatively, if you rent the car for 3 or more days,
@@ -28,7 +27,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const price = 40;
+  const minDiscount = 20;
+  const maxDiscount = 50;
+  let result = 0;
+  const totalPrice = days * price;
+
+  if (days < 3) {
+    result = totalPrice;
+  } else if (days < 7) {
+    result = totalPrice - minDiscount;
+  } else {
+    result = totalPrice - maxDiscount;
+  }
+
+  return result;
 }
 
 module.exports = calculateRentalCost;
