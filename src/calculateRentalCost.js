@@ -30,7 +30,7 @@
 function calculateRentalCost(days) {
   let rentalCost;
 
-  if (days === 3) {
+  if (days === 0) {
     rentalCost = 0;
   }
 
