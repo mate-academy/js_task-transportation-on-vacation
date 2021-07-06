@@ -23,12 +23,22 @@
  *  - calculateRentalCost(7) === 230
  *
  * @param {number} days
- *
- * @return {number}
+ * * @return {number}
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const everyDay = 40;
+  const moreThreeDays = 20;
+  const moreSevenDays = 50;
+  const totalPrice = everyDay * days;
+
+  if (days >= 3 && days < 7) {
+    return totalPrice - moreThreeDays;
+  } else if (days >= 7) {
+    return totalPrice - moreSevenDays;
+  }
+
+  return everyDay * days;
 }
 
 module.exports = calculateRentalCost;
