@@ -32,15 +32,19 @@ function calculateRentalCost(days) {
   const everyDayCosts = 40;
   const littlebonus = 20;
   const bigBonus = 50;
-  let result = 0;
+  const result = 0;
   const bill = days * everyDayCosts;
 
   if (days < 3) {
-    result = bill;
-  } else if (days < 7) {
-    result = bill - littlebonus;
-  } else {
-    result = bill - bigBonus;
+    return bill;
+  }
+
+  if (days < 7) {
+    return bill - littlebonus;
+  }
+
+  if (days >= 7) {
+    return bill - bigBonus;
   }
 
   return result;
