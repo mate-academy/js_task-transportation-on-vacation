@@ -29,6 +29,22 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const everyDayCosts = 40;
+  const littlebonus = 20;
+  const bigBonus = 50;
+  const bill = days * everyDayCosts;
+
+  if (days < 3) {
+    return bill;
+  }
+
+  if (days < 7) {
+    return bill - littlebonus;
+  }
+
+  if (days >= 7) {
+    return bill - bigBonus;
+  }
 }
 
 module.exports = calculateRentalCost;
