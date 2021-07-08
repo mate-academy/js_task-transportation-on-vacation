@@ -37,11 +37,13 @@ function calculateRentalCost(days) {
 
   if (days >= smallPeriod && days < bigPeriod) {
     return cost - smallDiscount;
-  } else if (days >= bigPeriod) {
-    return cost - bigDiscount;
-  } else {
-    return cost;
   }
+
+  if (days >= bigPeriod) {
+    return cost - bigDiscount;
+  }
+
+  return cost;
 }
 
 module.exports = calculateRentalCost;
