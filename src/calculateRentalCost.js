@@ -29,17 +29,19 @@
 
 function calculateRentalCost(days) {
   const rentalCost = 40;
-  const threeDaysTotal = 20;
-  const WeekTotal = 50;
-  let total = 0;
+  const discount = 20;
+  const daysToGetDiscount = 3;
+  const vipDiscount = 50;
+  const daysToGetVipDiscount = 7;
+  let totalDiscount = 0;
 
-  if (days < 7 && days >= 3) {
-    total = threeDaysTotal;
-  } else if (days >= 7) {
-    total = WeekTotal;
+  if (days < daysToGetVipDiscount && days >= daysToGetDiscount) {
+    totalDiscount = discount;
+  } else if (days >= daysToGetVipDiscount) {
+    totalDiscount = vipDiscount;
   }
 
-  return (days * rentalCost) - total;
+  return (days * rentalCost) - totalDiscount;
 }
 
 module.exports = calculateRentalCost;
