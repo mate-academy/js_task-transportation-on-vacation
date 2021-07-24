@@ -26,17 +26,24 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   const rentCost = 40;
 
   if (days < 3) {
     return days * rentCost;
+<<<<<<< HEAD
   };
 
   if (days < 7) {
     return days * rentCost - 20;
   };
+=======
+  }
+
+  if (days < 7) {
+    return days * rentCost - 20;
+  }
+>>>>>>> 66fa5495aa2634910bd8f305e1260c240e5f0ded
 
   return days * rentCost - 50;
 }
