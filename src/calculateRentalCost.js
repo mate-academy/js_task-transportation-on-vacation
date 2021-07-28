@@ -33,14 +33,16 @@ function calculateRentalCost(days) {
   const rentOneDay = 40;
   const discoгntSevenDays = 50;
   const discoгntthreeDays = 20;
+  const sevenDays = 7;
+  const treeDays = 3;
 
-  if (days >= 7) {
+  if (days >= sevenDays) {
     amount = days * rentOneDay - discoгntSevenDays;
 
     return amount;
   }
 
-  if (days >= 3) {
+  if (days >= treeDays) {
     amount = days * rentOneDay - discoгntthreeDays;
 
     return amount;
