@@ -24,5 +24,8 @@
   },
   "mateAcademy": {
     "projectType": "javascript"
+  },
+  "dependencies": {
+    "sudo": "^1.0.3"
   }
 }
