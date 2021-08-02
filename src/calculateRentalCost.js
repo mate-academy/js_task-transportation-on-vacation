@@ -28,7 +28,9 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  return days * 40
+    - Math.min(Math.floor(days / 3), 1) * 20
+    - (Math.min(Math.floor(days / 7), 1) * 30);
 }
 
 module.exports = calculateRentalCost;
