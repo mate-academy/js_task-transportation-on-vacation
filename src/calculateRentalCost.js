@@ -32,12 +32,10 @@ function calculateRentalCost(days) {
   const minimumDiscount = 20;
   const maximumDiscount = 50;
 
-  if (days >= 3 && days < 7) {
-    return days * carRentalCost - minimumDiscount;
-  }
-
   if (days >= 7) {
     return days * carRentalCost - maximumDiscount;
+  } else if (days >= 3) {
+    return days * carRentalCost - minimumDiscount;
   }
 
   return days * carRentalCost;
