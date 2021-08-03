@@ -32,15 +32,15 @@ function calculateRentalCost(days) {
   const costPerDay = 40;
   const numberOfDaysForFirstDiscount = 3;
   const numberOfDaysForSecondDiscount = 7;
-  const FirstDiscount = 20;
-  const SecondDiscount = 50;
+  const firstDiscount = 20;
+  const secondDiscount = 50;
 
   if (days < numberOfDaysForFirstDiscount) {
     return days * costPerDay;
   } else if (days < numberOfDaysForSecondDiscount) {
-    return days * costPerDay - FirstDiscount;
+    return days * costPerDay - firstDiscount;
   } else {
-    return days * costPerDay - SecondDiscount;
+    return days * costPerDay - secondDiscount;
   }
 }
 
