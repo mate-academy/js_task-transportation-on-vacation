@@ -31,17 +31,13 @@ function calculateRentalCost(days) {
   // write code here
   let discount = 0;
   const dayRentCost = 40;
+  const firstLevelDiscount = 20;
+  const secondLevelDiscount = 50;
 
-  switch (true) {
-    case days < 3:
-      discount = 0;
-      break;
-    case days < 7:
-      discount = 20;
-      break;
-    default:
-      discount = 50;
-      break;
+  if (days >= 7) {
+    discount = secondLevelDiscount;
+  } else if (days >= 3) {
+    discount = firstLevelDiscount;
   }
 
   const rentVocationCost = days * dayRentCost - discount;
