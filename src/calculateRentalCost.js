@@ -36,13 +36,11 @@ function calculateRentalCost(days) {
 
   if (days >= manyDaysCount) {
     return (days * perDayCost - manyDaysOff);
+  } else if (days >= fewDaysCount) {
+    return (days * perDayCost - fewDaysOff);
   }
 
-  if (days >= fewDaysCount && days < manyDaysCount) {
-    return (days * perDayCost - fewDaysOff);
-  } else {
-    return (days * perDayCost);
-  }
+  return (days * perDayCost);
 }
 
 module.exports = calculateRentalCost;
