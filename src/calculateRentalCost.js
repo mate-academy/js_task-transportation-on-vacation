@@ -28,12 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  let cost = days * 40;
+  const perDayRentCost = 40;
+  const discountForLongPeriod = 50;
+  const discountForSmallPeriod = 20;
+  let cost = days * perDayRentCost;
 
   if (days >= 7) {
-    cost -= 50;
+    cost -= discountForLongPeriod;
   } else if (days >= 3) {
-    cost -= 20;
+    cost -= discountForSmallPeriod;
   }
 
   return cost;
