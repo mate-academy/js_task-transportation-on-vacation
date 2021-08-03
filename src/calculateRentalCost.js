@@ -28,14 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const perDayCost = 40;
+  const maxDiscount = 50;
+  const minDiscount = 20;
   let totalCoast = 0;
 
   if (days < 3) {
-    totalCoast = days * 40;
-  } else if (days < 7) {
-    totalCoast = (days * 40) - 20;
+    totalCoast = days * perDayCost;
+  }
+
+  if (days < 7) {
+    totalCoast = (days * perDayCost) - minDiscount;
   } else {
-    totalCoast = (days * 40) - 50;
+    totalCoast = (days * perDayCost) - maxDiscount;
   }
 
   return totalCoast;
