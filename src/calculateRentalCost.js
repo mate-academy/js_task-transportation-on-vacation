@@ -28,7 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const perDayCost = 40;
+  const manyDaysOff = 50;
+  const fewDaysOff = 20;
+  const manyDaysCount = 7;
+  const fewDaysCount = 3;
+
+  if (days >= manyDaysCount) {
+    return (days * perDayCost - manyDaysOff);
+  } else if (days >= fewDaysCount) {
+    return (days * perDayCost - fewDaysOff);
+  }
+
+  return (days * perDayCost);
 }
 
 module.exports = calculateRentalCost;
