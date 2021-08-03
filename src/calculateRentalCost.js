@@ -28,19 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const d = days;
   const cost = 40;
+  const discountUpTreeDays = 20;
+  const discountUpFiveDays = 50;
 
-  if (d < 3) {
-    return d * cost;
+  if (days < 3) {
+    return days * cost;
   }
 
-  if (d >= 3 && d < 7) {
-    return d * cost - 20;
+  if (days >= 3 && days < 7) {
+    return days * cost - discountUpTreeDays;
   }
 
-  if (d >= 7) {
-    return d * cost - 50;
+  if (days >= 7) {
+    return days * cost - discountUpFiveDays;
   }
 }
 
