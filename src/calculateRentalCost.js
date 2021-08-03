@@ -28,12 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return days * 40;
-  } else if (days > 6) {
-    return days * 40 - 50;
+  const rentalCarCost = 40;
+  const discountMoreThen7days = 50;
+  const discountMoreThen3days = 20;
+
+  if (days <= 2) {
+    return days * rentalCarCost;
+  } else if (days >= 7) {
+    return days * rentalCarCost - discountMoreThen7days;
   } else {
-    return days * 40 - 20;
+    return days * rentalCarCost - discountMoreThen3days;
   }
 }
 
