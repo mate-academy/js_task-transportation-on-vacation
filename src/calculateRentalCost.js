@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /**
@@ -28,7 +29,18 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const smallCashBack = 20;
+  const largeCashBack = 50;
+  const priceDayRentCar = 40;
+  const wholeAmount = days * priceDayRentCar;
+
+  if (days >= 7) {
+    return wholeAmount - largeCashBack;
+  } else if (days >= 3) {
+    return wholeAmount - smallCashBack;
+  }
+
+  return days * priceDayRentCar;
 }
 
 module.exports = calculateRentalCost;
