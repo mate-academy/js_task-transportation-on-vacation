@@ -30,21 +30,22 @@
 function calculateRentalCost(days) {
   let rentalDays = days;
   let costRental = 0;
+  const perDayCost = 40;
+  const getInSevenDays = 50;
+  const getInThreeDays = 20;
 
   while (rentalDays > 0) {
     if (rentalDays >= 7) {
-      costRental = (40 * 7) - 50;
+      costRental = (perDayCost * 7) - getInSevenDays;
       rentalDays -= 7;
     }
 
     if (rentalDays >= 3 && rentalDays < 7) {
-      costRental = (40 * rentalDays) - 20;
-
-      return costRental;
+      return (perDayCost * rentalDays) - getInThreeDays;
     }
 
     if (rentalDays < 3 && rentalDays > 0) {
-      return rentalDays * 40;
+      return rentalDays * perDayCost;
     }
   }
 
