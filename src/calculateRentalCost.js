@@ -28,20 +28,22 @@
  */
 
 function calculateRentalCost(days) {
+  const smallCashBack = 20;
+  const largeCashBack = 50;
   const priceDayRentCar = 40;
   const wholeAmount = days * priceDayRentCar;
   let priceRentCar = 0;
 
-  if (days >= 7) {
-    priceRentCar = wholeAmount - 50;
-  }
-
-  if (days <= 6) {
-    priceRentCar = wholeAmount - 20;
+  if (days >= 3) {
+    priceRentCar = wholeAmount - smallCashBack;
   }
 
   if (days < 3) {
     priceRentCar = wholeAmount;
+  }
+
+  if (days >= 7) {
+    priceRentCar = wholeAmount - largeCashBack;
   }
 
   return priceRentCar;
