@@ -28,20 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  let result = 0;
   const payPerDay = 40;
   const discountAfterThreeDays = 20;
   const discountAfterSevenDays = 50;
 
   if (days < 3) {
-    result = days * payPerDay;
-  } else if (days >= 3 && days < 7) {
-    result = (days * payPerDay) - discountAfterThreeDays;
-  } else {
-    result = (days * payPerDay) - discountAfterSevenDays;
+    return days * payPerDay;
+  } else if (days < 7) {
+    return (days * payPerDay) - discountAfterThreeDays;
   }
 
-  return result;
+  return (days * payPerDay) - discountAfterSevenDays;
 }
 
 module.exports = calculateRentalCost;
