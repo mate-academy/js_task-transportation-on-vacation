@@ -34,13 +34,15 @@ function calculateRentalCost(days) {
   const totalRentSum = days * rentOneDay;
   const daysFromParameters = days;
 
-  if (daysFromParameters < 3) {
-    return totalRentSum;
-  } else if (daysFromParameters < 7) {
-    return totalRentSum - rentSmallDiscount;
-  } else {
+  if (daysFromParameters >= 7) {
     return totalRentSum - rentBigDiscount;
   }
+
+  if (daysFromParameters >= 3) {
+    return totalRentSum - rentSmallDiscount;
+  }
+
+  return totalRentSum;
 }
 
 module.exports = calculateRentalCost;
