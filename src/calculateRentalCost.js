@@ -38,11 +38,11 @@ function calculateRentalCost(days) {
   }
 
   if (days >= 3 && days < 7) {
-    payAmount = days * costPerDay - smallDiscount;
+    payAmount = (days * costPerDay) - smallDiscount;
   }
 
   if (days >= 7) {
-    payAmount = days * costPerDay - bigDiscount;
+    payAmount = (days * costPerDay) - bigDiscount;
   }
 
   return payAmount;
