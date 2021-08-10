@@ -29,20 +29,20 @@
 
 function calculateRentalCost(days) {
   let payAmount = 0;
-  const costPerday = 40;
+  const costPerDay = 40;
   const smallDiscount = 20;
   const bigDiscount = 50;
 
   if (days >= 1 && days < 3) {
-    payAmount = days * costPerday;
+    payAmount = days * costPerDay;
   }
 
   if (days >= 3 && days < 7) {
-    payAmount = days * costPerday - smallDiscount;
+    payAmount = days * costPerDay - smallDiscount;
   }
 
   if (days >= 7) {
-    payAmount = days * costPerday - bigDiscount;
+    payAmount = days * costPerDay - bigDiscount;
   }
 
   return payAmount;
