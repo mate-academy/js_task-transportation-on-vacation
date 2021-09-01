@@ -29,13 +29,17 @@
 
 function calculateRentalCost(days) {
   let rentalCost = days * 40;
+  const minDiscount = 20;
+  const maxDiscount = 50;
+  const timeMaxDiscount = 7;
+  const timeMinDiscount = 3;
 
-  if (days >= 3 & days < 7) {
-    rentalCost -= 20;
+  if (days >= timeMinDiscount & days < timeMaxDiscount) {
+    rentalCost -= minDiscount;
   }
 
-  if (days >= 7) {
-    rentalCost -= 50;
+  if (days >= timeMaxDiscount) {
+    rentalCost -= maxDiscount;
   }
 
   return rentalCost;
