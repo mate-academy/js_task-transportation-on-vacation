@@ -26,15 +26,21 @@
  *
  * @return {number}
  */
+const dayPrice = 40;
+const eligibleDayForFirstDiscount = 3;
+const eligibleDayForSecondDiscount = 7;
+const thirdDaysDiscount = 20;
+const seventhDaysDiscount = 50;
 
 function calculateRentalCost(days) {
   // write code here
-  let result = days * 40;
+  let result = days * dayPrice;
 
-  if (days >= 3 && days < 7) {
-    result -= 20;
-  } else if (days >= 7) {
-    result -= 50;
+  if (days >= eligibleDayForFirstDiscount
+      && days < eligibleDayForSecondDiscount) {
+    result -= thirdDaysDiscount;
+  } else if (days >= eligibleDayForSecondDiscount) {
+    result -= seventhDaysDiscount;
   }
 
   return result;
