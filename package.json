@@ -2,7 +2,7 @@
   "name": "js-task-boilerplate",
   "version": "1.0.0",
   "description": "js task boilerplate",
-  "main": "calculateRentalCost.js",
+  "main": "src/calculateRentalCost.js",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
