@@ -30,10 +30,12 @@
 function calculateRentalCost(days) {
   let result = 0;
   const everydayCost = 40;
+  const days3 = 3;
+  const days7 = 7;
 
-  if (days < 3) {
+  if (days < days3) {
     result = days * everydayCost;
-  } else if (days < 7) {
+  } else if (days < days7) {
     result = (days * everydayCost) - 20;
   } else {
     result = (days * everydayCost) - 50;
