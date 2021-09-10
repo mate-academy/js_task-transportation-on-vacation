@@ -29,13 +29,14 @@
 
 function calculateRentalCost(days) {
   const price = 40;
+  const count = days * price;
 
-  if (days > 0 && days < 3) {
-    return days * price;
-  } else if (days >= 3 && days < 7) {
-    return days * price - 20;
+  if (days < 3) {
+    return count;
+  } else if (days < 7) {
+    return count - 20;
   } else {
-    return days * price - 50;
+    return count - 50;
   };
 };
 
