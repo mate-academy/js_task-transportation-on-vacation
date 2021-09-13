@@ -29,17 +29,22 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const dayPrice = 40;
+  const weekDiscount = 50;
+  const daysDiscount = 20;
+  const countDays = 3;
+  const countWeek = 7;
 
-  const totalSum = days * 40;
+  const totalSum = days * dayPrice;
 
-  if (days < 3) {
+  if (days < countDays) {
     return totalSum;
   }
 
-  if ((days >= 3) && (days < 7)) {
-    return totalSum - 20;
+  if ((days >= countDays) && (days < countWeek)) {
+    return totalSum - daysDiscount;
   } else {
-    return totalSum - 50;
+    return totalSum - weekDiscount;
   }
 }
 
