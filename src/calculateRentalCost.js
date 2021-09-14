@@ -35,6 +35,7 @@ function calculateRentalCost(days) {
     return fullPrice;
   } else if (days < 7) {
     return fullPrice - 20;
+  }
   return fullPrice - 50;
 }
 
