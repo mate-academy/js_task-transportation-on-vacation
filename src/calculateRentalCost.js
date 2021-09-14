@@ -29,13 +29,14 @@
 
 function calculateRentalCost(days) {
   const costOneDay = 40;
+  const fullPrice = days * costOneDay;
 
   if (days < 3) {
-    return days * costOneDay;
+    return fullPrice;
   } else if (days < 7) {
-    return days * costOneDay - 20;
+    return fullPrice - 20;
   } else {
-    return days * costOneDay - 50;
+    return fullPrice - 50;
   }
 }
 
