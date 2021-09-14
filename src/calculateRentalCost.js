@@ -35,9 +35,7 @@ function calculateRentalCost(days) {
     return fullPrice;
   } else if (days < 7) {
     return fullPrice - 20;
-  } else {
-    return fullPrice - 50;
-  }
+  return fullPrice - 50;
 }
 
 module.exports = calculateRentalCost;
