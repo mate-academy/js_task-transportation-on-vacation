@@ -33,15 +33,15 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     return count;
-  }
+  };
 
   if (days < 7) {
     return count - 20;
-  }
+  };
 
   if (days >= 7) {
     return count - 50;
-  }
+  };
 }
 
 module.exports = calculateRentalCost;
