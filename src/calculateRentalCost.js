@@ -36,13 +36,9 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     result = tottal;
-  }
-
-  if (days < 7) {
+  } else if (days < 7) {
     result = tottal - dayThree;
-  }
-
-  if (days >= 7) {
+  } else if (days >= 7) {
     result = tottal - daySeven;
   }
 
