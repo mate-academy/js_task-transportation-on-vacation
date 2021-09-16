@@ -29,16 +29,16 @@
 
 function calculateRentalCost(days) {
   const oneDayPrice = 40;
-  const sevenDays = 7;
-  const threeDays = 3;
+  const longTerm = 7;
+  const shortTerm = 3;
   const totalPrice = oneDayPrice * days;
-  const totalDiscountedPrice20 = totalPrice - 20;
-  const totalDiscountedPrice50 = totalPrice - 50;
+  const smallBonus = totalPrice - 20;
+  const largeBonus = totalPrice - 50;
 
-  if (days >= sevenDays) {
-    return totalDiscountedPrice50;
-  } else if (days >= threeDays) {
-    return totalDiscountedPrice20;
+  if (days >= longTerm) {
+    return largeBonus;
+  } else if (days >= shortTerm) {
+    return smallBonus;
   } else {
     return totalPrice;
   }
