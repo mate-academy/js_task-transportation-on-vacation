@@ -28,7 +28,26 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const restDays = days;
+  let rent = 0;
+
+  switch (restDays) {
+    case 1:
+    case 2:
+      rent = restDays * 40;
+      break;
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      rent = (restDays * 40) - 20;
+      break;
+
+    default:
+      rent = (restDays * 40) - 50;
+  }
+
+  return rent;
 }
 
 module.exports = calculateRentalCost;
