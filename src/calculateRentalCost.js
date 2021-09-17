@@ -30,7 +30,16 @@
 function calculateRentalCost(days) {
   const rentPerDay = 40;
   const amount = days * rentPerDay;
-  const cashback = days >= 3 && days < 7 ? 20 : days >= 7 ? 50 : 0;
+  let cashback = 0;
+  // const cashback = days >= 3 && days < 7 ? 20 : days >= 7 ? 50 : 0;
+
+  if (days >= 3 && days < 7) {
+    cashback = 20;
+  } else if (days >= 7) {
+    cashback = 50;
+  } else {
+    cashback = 0;
+  }
 
   return amount - cashback;
 }
