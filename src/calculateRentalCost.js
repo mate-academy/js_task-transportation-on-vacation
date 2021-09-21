@@ -28,21 +28,27 @@
  */
 
 function calculateRentalCost(days) {
-  let cost = 40;
+  const weekDiscount = 50;
+  const threePlusDaysDiscount = 20;
+  const firstThreshold = 3;
+  const secondThreshold = 7;
+
+  let costPerDay = 40;
+  const totalCost = costPerDay * days;
 
   switch (true) {
-    case days >= 7
-      : cost = (cost * days) - 50;
+    case days >= secondThreshold
+      : costPerDay = totalCost - weekDiscount;
       break;
-    case days >= 3 && days < 7
-      : cost = (cost * days) - 20;
+    case days >= firstThreshold
+      : costPerDay = totalCost - threePlusDaysDiscount;
       break;
     default
-      : cost = days * cost;
+      : costPerDay = totalCost;
       break;
   }
 
-  return cost;
+  return costPerDay;
 }
 
 module.exports = calculateRentalCost;
