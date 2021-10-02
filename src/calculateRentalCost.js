@@ -30,17 +30,15 @@
 function calculateRentalCost(days) {
   const withoutCashback = days * 40;
 
-  if (days <= 2) {
-    return withoutCashback;
-  }
-
-  if (days >= 3 && days < 7) {
-    return withoutCashback - 20;
-  }
-
   if (days >= 7) {
     return withoutCashback - 50;
   }
+
+  if (days >= 3) {
+    return withoutCashback - 20;
+  }
+
+  return withoutCashback;
 }
 
 module.exports = calculateRentalCost;
