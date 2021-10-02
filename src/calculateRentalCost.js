@@ -28,7 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const withoutCashback = days * 40;
+
+  if (days <= 2) {
+    return withoutCashback;
+  }
+
+  if (days >= 3 && days < 7) {
+    return withoutCashback - 20;
+  }
+
+  if (days >= 7) {
+    return withoutCashback - 50;
+  }
 }
 
 module.exports = calculateRentalCost;
