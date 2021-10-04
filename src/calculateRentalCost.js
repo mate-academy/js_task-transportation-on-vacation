@@ -31,25 +31,19 @@ function calculateRentalCost(days) {
   const carRent = 40;
   const maxDiscount = 50;
   const minDiscount = 20;
-  let rent = 0;
 
   switch (days) {
     case 1:
     case 2:
-      rent = days * carRent;
-      break;
+      return days * carRent;
     case 3:
     case 4:
     case 5:
     case 6:
-      rent = days * carRent - minDiscount;
-      break;
-
+      return days * carRent - minDiscount;
     default:
-      rent = days * carRent - maxDiscount;
+      return days * carRent - maxDiscount;
   }
-
-  return rent;
 }
 
 module.exports = calculateRentalCost;
