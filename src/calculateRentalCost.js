@@ -39,11 +39,11 @@ function calculateRentalCost(days) {
   }
 
   if (days >= minDaysForBasicDiscount && days < minDaysForAdditionalDiscount) {
-    return (dailyCost * days) - basicDiscount;
+    return dailyCost * days - basicDiscount;
   }
 
   if (days >= minDaysForAdditionalDiscount) {
-    return (dailyCost * days) - additionalDiscount;
+    return dailyCost * days - additionalDiscount;
   }
 }
 
