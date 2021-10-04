@@ -28,12 +28,14 @@
  */
 
 function calculateRentalCost(days) {
+  let discountForOver7Days = 50;
+  let discountForOver3Days = 20;
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * 40 - discountForOver7Days;
   }
 
   if (days >= 3) {
-    return days * 40 - 20;
+    return days * 40 - discountForOver3Days;
   } else {
     return days * 40;
   }
