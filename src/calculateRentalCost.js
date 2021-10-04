@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   const carRentCostDay = 40;
+  const rentLowestDiscount = days >= 3 && days < 7;
+  const rentHighestDiscount = days >= 7;
   let carRentDiscount = 0;
 
-  if (days >= 3 && days < 7) {
+  if (rentLowestDiscount) {
     carRentDiscount = 20;
   }
 
-  if (days >= 7) {
+  if (rentHighestDiscount) {
     carRentDiscount = 50;
   }
 
