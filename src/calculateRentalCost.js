@@ -28,18 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  const rent = 40;
-  const daysSmall = 3;
-  const daysMany = 7;
-  const discountSmall = 20;
-  const discountMany = 50;
+  const rentDayCost = 40;
+  const daysMin = 3;
+  const daysMax = 7;
+  const discountMinDay = 20;
+  const discountMaxDay = 50;
+  const rentalPrice = days * rentDayCost;
 
-  if (days >= daysMany) {
-    return (days * rent - discountMany);
-  } else if (days >= daysSmall) {
-    return (days * rent - discountSmall);
+  if (days >= daysMax) {
+    return (rentalPrice - discountMaxDay);
+  } else if (days >= daysMin) {
+    return (rentalPrice - discountMinDay);
   } else {
-    return days * rent;
+    return rentalPrice;
   }
 }
 
