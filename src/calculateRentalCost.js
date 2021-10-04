@@ -29,13 +29,18 @@
 
 function calculateRentalCost(days) {
   const withoutCashback = days * 40;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  const manyDays = 7;
+  const fewDays = 3;
 
-  if (days >= 7) {
-    return withoutCashback - 50;
+  if (days >= manyDays) {
+    return withoutCashback - bigDiscount;
   }
 
-  if (days >= 3) {
-    return withoutCashback - 20;
+  if (days >= fewDays) {
+    return withoutCashback - smallDiscount;
+    ;
   }
 
   return withoutCashback;
