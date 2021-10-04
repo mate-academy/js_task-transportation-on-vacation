@@ -30,13 +30,15 @@
 const pay = 40;
 const discauntAfterSevenDays = 50;
 const discauntAfterThreeDays = 20;
+const minDaysForBasicDiscaunt = 3;
+const minDaysForAdvancedDiscaunt = 7;
 
 function calculateRentalCost(days) {
-  if (days >= 7) {
+  if (days >= minDaysForAdvancedDiscaunt) {
     return days * pay - discauntAfterSevenDays;
   }
 
-  if (days > 2 && days < 8) {
+  if (days >= minDaysForBasicDiscaunt && days <= minDaysForAdvancedDiscaunt) {
     return days * pay - discauntAfterThreeDays;
   }
 
