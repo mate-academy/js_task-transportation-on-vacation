@@ -27,17 +27,20 @@
  * @return {number}
  *
  */
+const pay = 40;
+const discauntAfterSevenDays = 50;
+const discauntAfterThreeDays = 20;
 
 function calculateRentalCost(days) {
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * pay - discauntAfterSevenDays;
   }
 
   if (days > 2 && days < 8) {
-    return days * 40 - 20;
+    return days * pay - discauntAfterThreeDays;
   }
 
-  return days * 40;
+  return days * pay;
 }
 
 module.exports = calculateRentalCost;
