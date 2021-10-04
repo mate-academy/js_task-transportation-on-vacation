@@ -33,17 +33,18 @@ function calculateRentalCost(days) {
   const additionalDiscount = 50;
   const minDaysForBasicDiscount = 3;
   const minDaysForAdditionalDiscount = 7;
+  const totalCost = dailyCost * days;
 
   if (days < minDaysForBasicDiscount) {
-    return dailyCost * days;
+    return totalCost;
   }
 
   if (days >= minDaysForBasicDiscount && days < minDaysForAdditionalDiscount) {
-    return dailyCost * days - basicDiscount;
+    return totalCost - basicDiscount;
   }
 
   if (days >= minDaysForAdditionalDiscount) {
-    return dailyCost * days - additionalDiscount;
+    return totalCost - additionalDiscount;
   }
 }
 
