@@ -28,16 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  let discountForOver7Days = 50;
-  let discountForOver3Days = 20;
-  if (days >= 7) {
-    return days * 40 - discountForOver7Days;
+  const minLongPeriod = 7;
+  const minMediumPeriod = 3;
+  const minLongPeriodDiscount = 50;
+  const minMediumPeriodDiscount = 20;
+  const priceADay = 40;
+
+  if (days >= minLongPeriod) {
+    return days * priceADay - minLongPeriodDiscount;
   }
 
-  if (days >= 3) {
-    return days * 40 - discountForOver3Days;
+  if (days >= minMediumPeriod) {
+    return days * priceADay - minMediumPeriodDiscount;
   } else {
-    return days * 40;
+    return days * priceADay;
   }
 }
 
