@@ -29,12 +29,15 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const rentalCostWithoutDiscount = days * 40;
+  const dayCost = 40;
+  const discountPerWeek = 50;
+  const discountPerThreeDays = 20;
+  const rentalCostWithoutDiscount = days * dayCost;
 
   if (days >= 7) {
-    return rentalCostWithoutDiscount - 50;
+    return rentalCostWithoutDiscount - discountPerWeek;
   } else if (days >= 3) {
-    return rentalCostWithoutDiscount - 20;
+    return rentalCostWithoutDiscount - discountPerThreeDays;
   } else {
     return rentalCostWithoutDiscount;
   }
