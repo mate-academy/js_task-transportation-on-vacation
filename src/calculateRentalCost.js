@@ -42,7 +42,7 @@ function calculateRentalCost(days) {
 
   if (days >= minDaysDiscount) {
     return totalPrice - minDiscount;
-  }
+  };
 
   return totalPrice;
 }
