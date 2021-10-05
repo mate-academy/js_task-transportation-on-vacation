@@ -33,18 +33,18 @@ function calculateRentalCost(days) {
   const rentalCostOneDay = 40;
   const minDiscount = 20;
   const maxDiscount = 50;
-  const daysMinDiscount = 3;
-  const daysMaxDiscount = 7;
+  const minDaysForDiscount = 3;
+  const maxDaysForMaxDiscount = 7;
 
-  if (days < daysMinDiscount) {
+  if (days < minDaysForDiscount) {
     rentalCost = rentalCostOneDay * days;
   }
 
-  if (days >= daysMinDiscount && days < daysMaxDiscount) {
+  if (days >= minDaysForDiscount && days < maxDaysForMaxDiscount) {
     rentalCost = rentalCostOneDay * days - minDiscount;
   }
 
-  if (days >= daysMaxDiscount) {
+  if (days >= maxDaysForMaxDiscount) {
     rentalCost = rentalCostOneDay * days - maxDiscount;
   }
 
