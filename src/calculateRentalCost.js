@@ -31,21 +31,20 @@ function calculateRentalCost(days) {
   const rentCost = 40;
   const minDiscount = 20;
   const maxDiscount = 50;
-  let totalCost = 0;
+  const daysCountMinDiscount = 3;
+  const daysCountMaxDiscount = 7;
 
-  if (days < 3) {
-    totalCost = rentCost * days;
+  if (days < daysCountMinDiscount) {
+    return rentCost * days;
   }
 
-  if (days >= 3 && days < 7) {
-    totalCost = rentCost * days - minDiscount;
+  if (days >= daysCountMinDiscount && days < daysCountMaxDiscount) {
+    return rentCost * days - minDiscount;
   }
 
-  if (days >= 7) {
-    totalCost = rentCost * days - maxDiscount;
+  if (days >= daysCountMaxDiscount) {
+    return rentCost * days - maxDiscount;
   }
-
-  return totalCost;
 }
 
 module.exports = calculateRentalCost;
