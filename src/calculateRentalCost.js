@@ -31,17 +31,19 @@ function calculateRentalCost(days) {
   const costPerDay = 40;
   const daysForMinDiscount = 3;
   const daysForMaxDiscount = 7;
-  const discountPerThreeDays = 20;
-  const discountPerWeek = 50;
+  const minDiscount = 20;
+  const maxDiscount = 50;
   const rentalPriceWithoutDiscount = days * costPerDay;
 
   if (days >= daysForMaxDiscount) {
-    return rentalPriceWithoutDiscount - discountPerWeek;
-  } else if (days >= daysForMinDiscount) {
-    return rentalPriceWithoutDiscount - discountPerThreeDays;
-  } else {
-    return rentalPriceWithoutDiscount;
+    return rentalPriceWithoutDiscount - maxDiscount;
   }
+
+  if (days >= daysForMinDiscount) {
+    return rentalPriceWithoutDiscount - minDiscount;
+  }
+
+  return rentalPriceWithoutDiscount;
 }
 
 module.exports = calculateRentalCost;
