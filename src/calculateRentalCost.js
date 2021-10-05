@@ -37,11 +37,13 @@ function calculateRentalCost(days) {
 
   if (days >= rentalDaysMax) {
     return (rentalPrice - discountMaxDay);
-  } else if (days >= rentalDaysMin) {
+  };
+
+  if (days >= rentalDaysMin) {
     return (rentalPrice - discountMinDay);
-  } else {
-    return rentalPrice;
-  }
+  };
+
+  return rentalPrice;
 }
 
 module.exports = calculateRentalCost;
