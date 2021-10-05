@@ -28,9 +28,10 @@
  */
 
 function calculateRentalCost(days) {
-  const calculatePriceOne = (days * 40);
-  const calculatePriceTwo = (days * 40) - 20;
-  const calculatePriceThree = (days * 40) - 50;
+  const daysCost = days * 40;
+  const calculatePriceOne = daysCost;
+  const calculatePriceTwo = daysCost - 20;
+  const calculatePriceThree = daysCost - 50;
 
   if (days < 3) {
     return calculatePriceOne;
