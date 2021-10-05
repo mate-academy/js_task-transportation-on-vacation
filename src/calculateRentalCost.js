@@ -29,19 +29,18 @@
 
 function calculateRentalCost(days) {
   const carRentCostDay = 40;
-  const rentLowestDiscount = days >= 3 && days < 7;
-  const rentHighestDiscount = days >= 7;
-  let carRentDiscount = 0;
+  const isLowestDiscount = days >= 3 && days < 7;
+  const isHighestDiscount = days >= 7;
 
-  if (rentLowestDiscount) {
-    carRentDiscount = 20;
+  if (isLowestDiscount) {
+    return days * carRentCostDay - 20;
   }
 
-  if (rentHighestDiscount) {
-    carRentDiscount = 50;
+  if (isHighestDiscount) {
+    return days * carRentCostDay - 50;
   }
 
-  return days * carRentCostDay - carRentDiscount;
+  return days * carRentCostDay;
 }
 
 module.exports = calculateRentalCost;
