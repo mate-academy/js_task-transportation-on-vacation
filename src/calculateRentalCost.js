@@ -42,9 +42,7 @@ function calculateRentalCost(days) {
     return rentCost * days - minDiscount;
   }
 
-  if (days >= daysCountMaxDiscount) {
-    return rentCost * days - maxDiscount;
-  }
+  return rentCost * days - maxDiscount;
 }
 
 module.exports = calculateRentalCost;
