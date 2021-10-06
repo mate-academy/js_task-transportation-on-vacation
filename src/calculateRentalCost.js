@@ -31,22 +31,22 @@ function calculateRentalCost(days) {
   const dayRent = 40;
   const weekRentOff = 50;
   const threeDaysOff = 20;
-  const threeDays = 3;
-  const week = 7;
+  const threeDaysRent = 3;
+  const weekRent = 7;
 
   if (days < 0) {
     return 0;
   }
 
-  if (days < threeDays) {
+  if (days < threeDaysRent) {
     return days * dayRent;
   }
 
-  if (days >= threeDays && days < week) {
+  if (days >= threeDaysRent && days < weekRent) {
     return days * dayRent - threeDaysOff;
   }
 
-  if (days >= week) {
+  if (days >= weekRent) {
     return days * dayRent - weekRentOff;
   }
 }
