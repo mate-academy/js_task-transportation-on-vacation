@@ -25,10 +25,39 @@
  * @param {number} days
  *
  * @return {number}
+ *
  */
+/*  const charlie = {
+  serial: 100,
+  chipVer: 12,
+  wheels: 6,
+}
+
+const marlie = createRobotCopy(charlie);
+
+ function createRobotCopy(robot) {
+  const copyRobot = Object.assign({}, robot);
+
+  copyRobot.serial = +robot.serial + 1;
+} */
 
 function calculateRentalCost(days) {
-  // write code here
+  const pay = 40;
+  const fullDiscount = 50;
+  const partialDiscount = 20;
+  const minDaysForBasicDiscount = 3;
+  const minDaysForAdvancedDiscount = 7;
+  const fullPrice = days * pay;
+
+  if (days >= minDaysForAdvancedDiscount) {
+    return fullPrice - fullDiscount;
+  }
+
+  if (days >= minDaysForBasicDiscount && days <= minDaysForAdvancedDiscount) {
+    return fullPrice - partialDiscount;
+  }
+
+  return fullPrice;
 }
 
 module.exports = calculateRentalCost;
