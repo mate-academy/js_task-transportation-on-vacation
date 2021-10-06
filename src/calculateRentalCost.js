@@ -27,13 +27,14 @@
  * @return {number}
  *
  */
-const pay = 40;
-const FullDiscaunt = 50;
-const GetOffTotal = 20;
-const minDaysForBasicDiscaunt = 3;
-const minDaysForAdvancedDiscaunt = 7;
 
 function calculateRentalCost(days) {
+  const pay = 40;
+  const FullDiscaunt = 50;
+  const GetOffTotal = 20;
+  const minDaysForBasicDiscaunt = 3;
+  const minDaysForAdvancedDiscaunt = 7;
+
   if (days >= minDaysForAdvancedDiscaunt) {
     return days * pay - FullDiscaunt;
   }
