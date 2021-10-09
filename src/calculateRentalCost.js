@@ -26,9 +26,17 @@
  *
  * @return {number}
  */
-
+const first = [1,2]
+const second = [3,4,5,6]
+const third = []
 function calculateRentalCost(days) {
-  // write code here
-}
+  if (days == first){
+    return first * days;
+  } else if (days == second) {
+    return second * days - 20
+  } else (days == third) {
+    return days * third - 50
+  }
+};
 
 module.exports = calculateRentalCost;
