@@ -28,7 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const prisePerDay = 40;
+
+  if (days < 0) {
+    return 'System error';
+  } else if (days < 3) {
+    return days * prisePerDay;
+  } else if (days >= 3 && days < 7) {
+    return (days * prisePerDay) - 20;
+  }
+
+  return (days * prisePerDay) - 50;
 }
 
 module.exports = calculateRentalCost;
