@@ -29,6 +29,17 @@
 
 function calculateRentalCost(days) {
   // write code here
+  let discountTotal = 0;
+
+  //
+  if ((days >= 3) && (days < 7)) {
+    discountTotal = 20;
+  } else
+  if (days >= 7) {
+    discountTotal = 50;
+  }
+
+  return days * 40 - discountTotal;
 }
 
 module.exports = calculateRentalCost;
