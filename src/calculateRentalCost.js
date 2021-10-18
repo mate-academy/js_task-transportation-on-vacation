@@ -33,13 +33,14 @@ function calculateRentalCost(days) {
   const week = 7;
   const smallDiscount = 20;
   const bigDiscount = 50;
+  const sumOfDays = cost * days;
 
   if (days >= midDays && days < week) {
-    return cost * days - smallDiscount;
+    return sumOfDays - smallDiscount;
   } else if (days >= week) {
-    return cost * days - bigDiscount;
+    return sumOfDays - bigDiscount;
   } else {
-    return cost * days;
+    return sumOfDays;
   }
 }
 
