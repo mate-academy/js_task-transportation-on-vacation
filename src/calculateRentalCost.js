@@ -30,20 +30,20 @@
 function calculateRentalCost(days) {
   const dayRent = 40;
   const sumRent = dayRent * days;
-  const threeDay = 3;
-  const sevenDay = 7;
-  const sale20 = 20;
-  const sale50 = 50;
+  const littleTerm = 3;
+  const longTerm = 7;
+  const smallSale = 20;
+  const bigSale = 50;
 
-  if (days < threeDay) {
+  if (days < littleTerm) {
     return sumRent;
   }
 
-  if (days < sevenDay) {
-    return sumRent - sale20;
+  if (days < longTerm) {
+    return sumRent - smallSale;
   }
 
-  return sumRent - sale50;
+  return sumRent - bigSale;
 }
 
 module.exports = calculateRentalCost;
