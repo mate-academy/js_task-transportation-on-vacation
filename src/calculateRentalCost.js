@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const minLongPeriod = 7;
+  const minMediumPeriod = 3;
+  const minLongPeriodDiscount = 50;
+  const minMediumPeriodDiscount = 20;
+  const pricePerDay = 40;
+
+  if (days >= minLongPeriod) {
+    return days * pricePerDay - minLongPeriodDiscount;
+  }
+
+  if (days >= minMediumPeriod) {
+    return days * pricePerDay - minMediumPeriodDiscount;
+  }
+
+  return days * pricePerDay;
 }
 
 module.exports = calculateRentalCost;
