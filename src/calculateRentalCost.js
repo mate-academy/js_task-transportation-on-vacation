@@ -28,11 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  switch (days < 7 && days >= 3) {
-    case true: return days * 40 - 20;
-    case false: return days < 3 ? days * 40 : days * 40 - 50;
-    default: return days * 40;
+  let totalAmount = 0;
+
+  const price = 40;
+  const smallTerms = 3;
+  const bigTerms = 7;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+
+  if (days < smallTerms) {
+    totalAmount = days * price;
+  } else if (days < bigTerms) {
+    totalAmount = days * price - smallDiscount;
+  } else {
+    totalAmount = days * price - bigDiscount;
   }
+
+  return totalAmount;
 }
 
 module.exports = calculateRentalCost;
