@@ -27,7 +27,6 @@
  * @return {number}
  */
 
-// Неверная версия форка
 function calculateRentalCost(days) {
   const rentPrice = 40;
 
