@@ -28,7 +28,7 @@
  */
 
 function calculateRentalCost(days) {
-  const price = 40;
+  const dailyPrice = 40;
   const bigDiscount = 50;
   const smallDiscount = 20;
 
