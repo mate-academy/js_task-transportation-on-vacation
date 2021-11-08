@@ -32,15 +32,21 @@ function calculateRentalCost(days) {
   const half = 20;
   const week = 50;
 
-  if (days >= 7) {
-    return cost - week;
-  }
+  // if (days >= 7) {
+  //   return cost - week;
+  // }
 
-  if (days >= 3) {
-    return cost - half;
-  } else {
-    return cost;
-  }
+  // if (days >= 3) {
+  //   return cost - half;
+  // } else {
+  //   return cost;
+  // }
+
+  return days >= 7
+    ? cost - week
+    : days >= 3
+      ? cost - half
+      : cost;
 }
 
 module.exports = calculateRentalCost;
