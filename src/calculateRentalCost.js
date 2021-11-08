@@ -28,16 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  if (days <= 2) {
-    return days * 40;
+  const carPrice = 40;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+
+  if (days < 3) {
+    return days * carPrice;
   }
 
   if (days > 6) {
-    return (days * 40) - 50;
+    return days * carPrice - bigDiscount;
   }
 
   if (days > 2) {
-    return (days * 40) - 20;
+    return days * carPrice - smallDiscount;
   }
 }
 
