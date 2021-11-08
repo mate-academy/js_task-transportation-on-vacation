@@ -28,25 +28,25 @@
  */
 
 function calculateRentalCost(days) {
-  const cost = days * 40;
-  const half = 20;
-  const week = 50;
+  const totalDailyCost = days * 40;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
 
-  // if (days >= 7) {
-  //   return cost - week;
-  // }
+  if (days >= 7) {
+    return totalDailyCost - bigDiscount;
+  }
 
-  // if (days >= 3) {
-  //   return cost - half;
-  // } else {
-  //   return cost;
-  // }
+  if (days >= 3) {
+    return totalDailyCost - smallDiscount;
+  }
 
-  return days >= 7
-    ? cost - week
-    : days >= 3
-      ? cost - half
-      : cost;
+  return totalDailyCost;
+
+  // return days >= 7
+  //   ? totalDailyCost - bigDiscount
+  //   : days >= 3
+  //     ? totalDailyCost - smallDiscount
+  //     : totalDailyCost;
 }
 
 module.exports = calculateRentalCost;
