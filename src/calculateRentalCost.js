@@ -28,14 +28,18 @@
  */
 
 const calculateRentalCost = (days) => {
-  const rent = days * 40;
+  const rentalCost = 40;
+  const discountFifty = 50;
+  const discountTwenty = 20;
+
+  const rent = days * rentalCost;
 
   if (days >= 7) {
-    return rent - 50;
+    return rent - discountFifty;
   }
 
   if (days >= 3) {
-    return rent - 20;
+    return rent - discountTwenty;
   }
 
   return rent;
