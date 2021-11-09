@@ -28,7 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const rentPayment = days * 40;
+  const dayPayment = 40;
+  const rentPayment = days * dayPayment;
   const discountAfterThree = 20;
   const discountAfterSeven = 50;
 
