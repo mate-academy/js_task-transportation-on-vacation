@@ -31,21 +31,15 @@ function calculateRentalCost(days) {
   const price = 40;
   const discontSmall = 20;
   const discontBig = 50;
-  let finalPrice = 0;
+  let finalPrice = price * days;
 
   if (days >= 7) {
-    finalPrice = price * days - discontBig;
-
-    return finalPrice;
+    return finalPrice - discontBig;
   }
 
   if (days >= 3) {
-    finalPrice = price * days - discontSmall;
-
-    return finalPrice;
+    return finalPrice - discontSmall;
   }
-
-  finalPrice = days * price;
 
   return finalPrice;
 }
