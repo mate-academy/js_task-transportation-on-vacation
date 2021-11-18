@@ -1,13 +1,17 @@
 'use strict';
 
 function calculateRentalCost(days) {
+  const daysThree = 3;
+  const daysSeven = 7;
+  const getOffTwenty = 20;
+  const getOffFifty = 50;
   const oneDayPay = 40;
   let result = oneDayPay * days;
 
-  if (days >= 7) {
-    result = oneDayPay * days - 50;
-  } else if (days >= 3) {
-    result = oneDayPay * days - 20;
+  if (days >= daysSeven) {
+    result = oneDayPay * days - getOffFifty;
+  } else if (days >= daysThree) {
+    result = oneDayPay * days - getOffTwenty;
   }
 
   return result;
