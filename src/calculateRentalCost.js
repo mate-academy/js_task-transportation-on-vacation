@@ -28,7 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const minBonusRent = 3;
+  const maxBonusRent = 7;
+  let counter = 0;
+
+  if (days < minBonusRent) {
+    counter = days * 40;
+  } else if (days < maxBonusRent) {
+    counter = days * 40 - 20;
+  } else {
+    counter = days * 40 - 50;
+  };
+
+  return counter;
 }
 
 module.exports = calculateRentalCost;
