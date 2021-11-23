@@ -28,12 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const costRent = 40 * days;
+  const threeDay = 3;
+  const oneWeek = 7;
+  const perDay = 40;
+  const discPerWeek = 50;
+  const discPerThreeDay = 20;
+  const costRent = perDay * days;
 
-  if (days >= 7) {
-    return costRent - 50;
-  } else if (days >= 3) {
-    return costRent - 20;
+  if (days >= oneWeek) {
+    return costRent - discPerWeek;
+  } else if (days >= threeDay) {
+    return costRent - discPerThreeDay;
   } else {
     return costRent;
   }
