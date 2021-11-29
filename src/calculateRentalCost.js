@@ -29,11 +29,16 @@
 
 function calculateRentalCost(days) {
   const rentPrice = 40;
+  const discount3 = 20;
+  const discount7 = 50;
 
   switch (true) {
-    case days < 3: return rentPrice * days;
-    case days < 7: return rentPrice * days - 20;
-    case days >= 7: return rentPrice * days - 50;
+    case days < 3:
+      return rentPrice * days;
+    case days < 7:
+      return rentPrice * days - discount3;
+    case days >= 7:
+      return rentPrice * days - discount7;
   }
 }
 
