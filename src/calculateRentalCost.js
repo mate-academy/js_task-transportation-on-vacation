@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const smallPeriod = 3;
+  const bigPeriod = 7;
+  const perDay = 40;
+  const discPerWeek = 50;
+  const discPerThreeDay = 20;
+  const costRent = perDay * days;
+
+  if (days >= bigPeriod) {
+    return costRent - discPerWeek;
+  }
+
+  if (days >= smallPeriod) {
+    return costRent - discPerThreeDay;
+  }
+
+  return costRent;
 }
 
 module.exports = calculateRentalCost;
