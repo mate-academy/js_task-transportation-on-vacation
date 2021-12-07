@@ -38,7 +38,7 @@ function calculateRentalCost(days) {
   switch (true) {
     case days >= minDaysForMinDiscount && days < minDaysForMaxDiscount:
       return total - minDiscount;
-    case days >= 7:
+    case days >= minDaysForMaxDiscount:
       return total - maxDiscount;
     default:
       return total;
