@@ -30,12 +30,16 @@
 function calculateRentalCost(days) {
   // write code here
   const total = days * 40;
+  const minDaysForMinDiscount = 3;
+  const minDaysForMaxDiscount = 7;
+  const minDiscount = 20;
+  const maxDiscount = 50;
 
   switch (true) {
-    case days >= 3 && days < 7:
-      return total - 20;
+    case days >= minDaysForMinDiscount && days < minDaysForMaxDiscount:
+      return total - minDiscount;
     case days >= 7:
-      return total - 50;
+      return total - maxDiscount;
     default:
       return total;
   }
