@@ -9,6 +9,7 @@
     "lint": "mate-scripts lint",
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",
+    "deploy": "mate-scripts deploy",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },
