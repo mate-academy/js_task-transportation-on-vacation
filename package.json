@@ -9,6 +9,7 @@
     "lint": "mate-scripts lint",
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",
+    "deploy": "mate-scripts deploy",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },
@@ -16,7 +17,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "*",
-    "@mate-academy/scripts": "^0.3.5",
+    "@mate-academy/scripts": "^0.9.13",
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-node": "^8.0.1",
