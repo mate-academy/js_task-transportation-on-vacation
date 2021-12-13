@@ -28,7 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const noOfferPrice = days * 40;
+  let finalPrice = 0;
+
+  if (days >= 7) {
+    finalPrice = noOfferPrice - 50;
+  } else if (days >= 3) {
+    finalPrice = noOfferPrice - 20;
+  } else {
+    return noOfferPrice;
+  }
+
+  return finalPrice;
 }
 
 module.exports = calculateRentalCost;
