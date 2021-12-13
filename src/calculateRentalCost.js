@@ -28,16 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  const discountLessWeek = 20;
-  const discountMoreWeek = 50;
+  const basicDiscount = 20;
+  const extendedDiscount = 50;
 
   switch (true) {
     case days < 3:
       return days * 40;
     case days >= 3 && days < 7:
-      return days * 40 - discountLessWeek;
+      return days * 40 - basicDiscount;
     case days >= 7:
-      return days * 40 - discountMoreWeek;
+      return days * 40 - extendedDiscount;
   }
 }
 
