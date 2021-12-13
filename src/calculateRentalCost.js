@@ -31,19 +31,17 @@ function calculateRentalCost(days) {
   const PRISE = 40;
   const SMALLSALE = 20;
   const BIGSALE = 50;
-  let total = 0;
-
-  total = days * PRISE;
+  const TOTAL = days * PRISE;
 
   if (days >= 7) {
-    return total - BIGSALE;
+    return TOTAL - BIGSALE;
   }
 
   if (days >= 3) {
-    return total - SMALLSALE;
+    return TOTAL - SMALLSALE;
   }
 
-  return total;
+  return TOTAL;
 }
 
 module.exports = calculateRentalCost;
