@@ -28,21 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  if (days === 0) {
-    return 0;
-  };
+  const basicDiscount = 20;
+  const preferDiscount = 50;
+  const dayPrice = 40;
 
   if (days < 3) {
-    return days * 40;
+    return days * dayPrice;
   };
 
   if (days < 7) {
-    return days * 40 - 20;
+    return days * dayPrice - basicDiscount;
   };
 
-  if (days > 6) {
-    return days * 40 - 50;
-  }
+  return days * dayPrice - preferDiscount;
 }
 
 module.exports = calculateRentalCost;
