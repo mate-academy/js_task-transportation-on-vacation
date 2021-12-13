@@ -29,7 +29,7 @@
 
 function calculateRentalCost(days) {
   const rentPerDay = 40;
-  const discountTreeDays = 20;
+  const discountThreeDays = 20;
   const discountSevenDays = 50;
 
   switch (true) {
@@ -37,7 +37,7 @@ function calculateRentalCost(days) {
       return days * rentPerDay;
 
     case days < 7:
-      return days * rentPerDay - discountTreeDays;
+      return days * rentPerDay - discountThreeDays;
 
     case days >= 7:
       return days * rentPerDay - discountSevenDays;
