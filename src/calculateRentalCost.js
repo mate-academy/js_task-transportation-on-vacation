@@ -31,10 +31,10 @@ function calculateRentalCost(days) {
   const totalRent = days * 40;
 
   switch (true) {
-    case (days >= 7):
+    case days >= 7:
       return totalRent - 50;
 
-    case (days >= 3):
+    case days >= 3:
       return totalRent - 20;
 
     default:
