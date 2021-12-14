@@ -28,14 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const calcPayment = days * 40;
+  const paymentPerDay = 40;
+  const threeDaysDiscount = 20;
+  const weekDiscount = 50;
+  const calcPayment = days * paymentPerDay;
 
   if (days >= 7) {
-    return calcPayment - 50;
+    return calcPayment - weekDiscount;
   }
 
   if (days >= 3) {
-    return calcPayment - 20;
+    return calcPayment - threeDaysDiscount;
   }
 
   return calcPayment;
