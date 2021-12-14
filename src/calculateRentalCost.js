@@ -28,17 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  let rent = 40 * days;
+  let fullCost = 40 * days;
+  const shortStay = 3;
+  const longStay = 7;
+  const shortStaySale = 20;
+  const longStaySale = 50;
 
-  if (days >= 3 && days < 7) {
-    rent -= 20;
+  if (days >= shortStay && days < longStay) {
+    fullCost -= shortStaySale;
   }
 
   if (days >= 7) {
-    rent -= 50;
+    fullCost -= longStaySale;
   }
 
-  return rent;
+  return fullCost;
 }
 
 module.exports = calculateRentalCost;
