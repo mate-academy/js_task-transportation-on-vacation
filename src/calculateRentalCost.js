@@ -28,15 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  const totalPrice = days * 40;
+  const priceForDay = 40;
+  const totalPrice = days * priceForDay;
+  const payOffSmall = 20;
+  const payOffBig = 50;
+  const smallLimit = 3;
+  const bigLimit = 7;
 
-  if (days < 3) {
+  if (days < smallLimit) {
     return totalPrice;
-  } else if (days < 7) {
-    return totalPrice - 20;
   }
 
-  return totalPrice - 50;
+  if (days < bigLimit) {
+    return totalPrice - payOffSmall;
+  }
+
+  return totalPrice - payOffBig;
 }
 
 module.exports = calculateRentalCost;
