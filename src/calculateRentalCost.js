@@ -31,11 +31,18 @@ function calculateRentalCost(days) {
   const dayPrice = 40;
   const defaultDiscount = 20;
   const maxDiscount = 50;
+  const shortRentPeriod = 3;
+  const longRentPeriod = 7;
 
-  return days < 3 ? days * dayPrice
-    : days >= 3 && days <= 6
-      ? days * dayPrice - defaultDiscount
-      : days * dayPrice - maxDiscount;
+  if (days < shortRentPeriod) {
+    return days * dayPrice;
+  }
+
+  if (days >= shortRentPeriod && days < longRentPeriod) {
+    return days * dayPrice - defaultDiscount;
+  }
+
+  return days * dayPrice - maxDiscount;
 }
 
 module.exports = calculateRentalCost;
