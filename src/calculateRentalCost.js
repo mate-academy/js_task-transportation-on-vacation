@@ -34,8 +34,7 @@ function calculateRentalCost(days) {
   const weekDiscount = 50;
   const total = days * price;
 
-  switch (true){
-
+  switch (true) {
     case days > 6 :
       return total - weekDiscount;
 
@@ -45,8 +44,8 @@ function calculateRentalCost(days) {
     case days > 0 :
       return total;
 
-    case true :
-      return 0;
+    default :
+      return total;
   }
 }
 
