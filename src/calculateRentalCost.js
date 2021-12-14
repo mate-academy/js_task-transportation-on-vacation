@@ -28,8 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const smallPeriod = 3;
-  const bigperiod = 7;
+  const shortPeriodDays = 3;
+  const longPeriodDays = 7;
 
   const costOfDay = 40;
   const costOfAllPeriod = days * costOfDay;
@@ -37,9 +37,11 @@ function calculateRentalCost(days) {
   const basicDiscount = 20;
   const extendedDiscount = 50;
 
-  if (days < smallPeriod) {
+  if (days < shortPeriodDays) {
     return costOfAllPeriod;
-  } else if (days >= smallPeriod && days < bigperiod) {
+  }
+
+  if (days >= shortPeriodDays && days < longPeriodDays) {
     return costOfAllPeriod - basicDiscount;
   }
 
