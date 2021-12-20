@@ -27,8 +27,22 @@
  * @return {number}
  */
 
+const TERM1 = 3;
+const TERM2 = 7;
+const DISCOUNT1 = 20;
+const DISCOUNT2 = 50;
+const PRICE = 40;
+
 function calculateRentalCost(days) {
-  // write code here
+  if (days >= TERM1 && days < TERM2) {
+    return days * PRICE - DISCOUNT1;
+  }
+
+  if (days >= TERM2) {
+    return days * PRICE - DISCOUNT2;
+  }
+
+  return days * PRICE;
 }
 
 module.exports = calculateRentalCost;
