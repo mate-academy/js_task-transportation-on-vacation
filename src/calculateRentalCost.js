@@ -28,17 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  const sumWithoutDiscont = 40 * days;
+  const sumWithoutDiscount = 40 * days;
+  const lessThenSevenDays = 6;
+  const lessThenThreeDays = 2;
+  const offForSevenAndMoreDays = 50;
+  const offForLessThenSevenDays = 20;
 
-  if (days > 6) {
-    return sumWithoutDiscont - 50;
+  if (days > lessThenSevenDays) {
+    return sumWithoutDiscount - offForSevenAndMoreDays;
   }
 
-  if (days > 2) {
-    return sumWithoutDiscont - 20;
+  if (days > lessThenThreeDays) {
+    return sumWithoutDiscount - offForLessThenSevenDays;
   }
 
-  return sumWithoutDiscont;
+  return sumWithoutDiscount;
 }
 
 module.exports = calculateRentalCost;
