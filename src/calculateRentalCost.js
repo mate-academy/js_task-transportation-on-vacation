@@ -29,17 +29,17 @@
 
 function calculateRentalCost(days) {
   const sumWithoutDiscount = 40 * days;
-  const lessThenSevenDays = 6;
-  const lessThenThreeDays = 2;
-  const offForSevenAndMoreDays = 50;
-  const offForLessThenSevenDays = 20;
+  const longTerm = 6;
+  const shortTerm = 2;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
 
-  if (days > lessThenSevenDays) {
-    return sumWithoutDiscount - offForSevenAndMoreDays;
+  if (days > longTerm) {
+    return sumWithoutDiscount - bigDiscount;
   }
 
-  if (days > lessThenThreeDays) {
-    return sumWithoutDiscount - offForLessThenSevenDays;
+  if (days > shortTerm) {
+    return sumWithoutDiscount - smallDiscount;
   }
 
   return sumWithoutDiscount;
