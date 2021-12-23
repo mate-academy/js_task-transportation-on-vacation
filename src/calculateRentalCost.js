@@ -27,8 +27,23 @@
  * @return {number}
  */
 
+const everyDayCost = 40;
+const shortTerm = 2;
+const midTerm = 6;
+const longTerm = 7;
+
 function calculateRentalCost(days) {
-  // write code here
+  if (days <= shortTerm) {
+    return everyDayCost * days;
+  }
+
+  if (days <= midTerm) {
+    return everyDayCost * days - 20;
+  }
+
+  if (days >= longTerm) {
+    return everyDayCost * days - 50;
+  }
 }
 
 module.exports = calculateRentalCost;
