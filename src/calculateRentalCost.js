@@ -28,13 +28,20 @@
  */
 
 const everyDayCost = 40;
+const shortTerm = 2;
+const midTerm = 6;
+const longTerm = 7;
 
 function calculateRentalCost(days) {
-  if (days <= 2) {
+  if (days <= shortTerm) {
     return everyDayCost * days;
-  } else if (days >= 3 && days <= 6) {
+  }
+
+  if (days <= midTerm) {
     return everyDayCost * days - 20;
-  } else if (days >= 7) {
+  }
+
+  if (days >= longTerm) {
     return everyDayCost * days - 50;
   }
 }
