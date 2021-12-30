@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let total = 0;
+  const carPrice = 40;
+  const cost = days * carPrice;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const takeOffLot = 50;
+  const takeOffMin = 20;
+
+  if (days >= 1 && days < shortTerm) {
+    total = cost;
+  } else if (days < longTerm) {
+    total = cost - takeOffMin;
+  } else {
+    total = cost - takeOffLot;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
