@@ -30,13 +30,18 @@
 function calculateRentalCost(days) {
   let total = 0;
   const carPrice = 40;
+  const cost = days * carPrice;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const takeOffLot = 50;
+  const takeOffMin = 20;
 
-  if (days >= 1 && days < 3) {
-    total = days * carPrice;
-  } else if (days < 7) {
-    total = days * carPrice - 20;
+  if (days >= 1 && days < shortTerm) {
+    total = cost;
+  } else if (days < longTerm) {
+    total = cost - takeOffMin;
   } else {
-    total = days * carPrice - 50;
+    total = cost - takeOffLot;
   }
 
   return total;
