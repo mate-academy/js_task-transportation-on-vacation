@@ -28,12 +28,16 @@
  */
 
 function calculateRentalCost(days) {
+  const multiDays = days * 40;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+
   if (days <= 2) {
-    return days * 40;
-  } else if (days > 2 && days <= 6) {
-    return (days * 40) - 20;
+    return multiDays;
+  } else if (days <= 6) {
+    return multiDays - smallDiscount;
   } else {
-    return (days * 40) - 50;
+    return multiDays - bigDiscount;
   }
 }
 
