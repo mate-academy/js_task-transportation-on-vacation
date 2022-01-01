@@ -34,13 +34,13 @@ function calculateRentalCost(days) {
   const three = 3;
   const seven = 7;
 
-  if (days < three) {
-    return dayPrice;
-  } else if (days >= three && days < seven) {
+  if (days >= three && days < seven) {
     return (dayPrice) - minTwenty;
   } else if (days >= seven) {
     return (dayPrice) - minFifty;
   }
+
+  return dayPrice;
 }
 
 module.exports = calculateRentalCost;
