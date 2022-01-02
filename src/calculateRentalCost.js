@@ -23,6 +23,7 @@
  *  - calculateRentalCost(7) === 230
  *  - calculateRentalCost(7) === 230
  *  - calculateRentalCost(7) === 230
+ *  *  - calculateRentalCost(7) === 230
  *
  * @param {number} days
  *
