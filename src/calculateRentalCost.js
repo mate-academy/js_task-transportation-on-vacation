@@ -29,12 +29,12 @@
 
 function calculateRentalCost(days) {
   const base = days * 40;
-  const mediumDuration = 3;
+  const smallDuration = 3;
   const longDuration = 7;
   const minDiscount = 20;
   const maxDiscount = 50;
 
-  if (days >= mediumDuration && days < longDuration) {
+  if (days >= smallDuration && days < longDuration) {
     return base - minDiscount;
   }
 
