@@ -29,14 +29,14 @@
 
 function calculateRentalCost(days) {
   const cost = 40 * days;
-  const threeDays = 3;
-  const sevenDays = 7;
+  const minSalePeriod = 3;
+  const MaxSalePeriod = 7;
   const smallSale = 20;
   const bigSale = 50;
 
-  if (days >= sevenDays) {
+  if (days >= MaxSalePeriod) {
     return (cost - bigSale);
-  } else if (days >= threeDays) {
+  } else if (days >= minSalePeriod) {
     return (cost - smallSale);
   } else {
     return cost;
