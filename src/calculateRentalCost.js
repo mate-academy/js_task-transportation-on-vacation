@@ -29,18 +29,23 @@
 
 function calculateRentalCost(days) {
   let total = 0;
+  const fullTotal = 40 * days;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
 
   switch (true) {
-    case days < 3:
-      total = 40 * days;
+    case days < shortTerm:
+      total = fullTotal;
 
       return total;
-    case days >= 3 && days < 7:
-      total = 40 * days - 20;
+    case days < longTerm:
+      total = fullTotal - smallDiscount;
 
       return total;
-    case days >= 7:
-      total = 40 * days - 50;
+    case days >= longTerm:
+      total = fullTotal - bigDiscount;
 
       return total;
   }
