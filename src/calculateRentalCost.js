@@ -32,18 +32,18 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const onePeriod = 3;
-  const twoPeriod = 7;
+  const shortPeriod = 3;
+  const longPeriod = 7;
   const rentCar = 40;
   const priceRent = (rentCar * days);
   const discountShortTerm = 20;
   const discountLongTerm = 50;
 
-  if (days >= onePeriod && days < twoPeriod) {
+  if (days >= shortPeriod && days < longPeriod) {
     return priceRent - discountShortTerm;
   }
 
-  if (days >= twoPeriod) {
+  if (days >= longPeriod) {
     return priceRent - discountLongTerm;
   }
 
