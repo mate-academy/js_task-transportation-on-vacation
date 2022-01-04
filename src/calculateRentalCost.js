@@ -29,15 +29,15 @@
 
 function calculateRentalCost(days) {
   const dailyCharge = 40 * days;
-  const threeDays = 3;
-  const sevenDays = 7;
-  const twentyOff = 20;
-  const fiftyOff = 50;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const minDiscount = 20;
+  const maxDiscount = 50;
 
-  if (days >= sevenDays) {
-    return (dailyCharge - fiftyOff);
-  } else if (days >= threeDays) {
-    return (dailyCharge - twentyOff);
+  if (days >= longTerm) {
+    return (dailyCharge - maxDiscount);
+  } else if (days >= shortTerm) {
+    return (dailyCharge - minDiscount);
   } else {
     return dailyCharge;
   }
