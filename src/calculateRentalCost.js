@@ -28,16 +28,18 @@
  */
 
 function calculateRentalCost(days) {
+  const totalCost = days * 40;
+  const costDisc20 = totalCost - 20;
+  const costDisc50 = totalCost - 50;
+
   if (days < 3) {
-    return (days * 40);
+    return totalCost;
   }
 
   if (days < 7) {
-    return (days * 40) - 20;
-  }
-
-  if (days >= 7) {
-    return (days * 40) - 50;
+    return costDisc20;
+  } else {
+    return costDisc50;
   }
 }
 
