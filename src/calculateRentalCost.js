@@ -28,16 +28,20 @@
  */
 
 function calculateRentalCost(days) {
+  const sumPrice = days * 40;
+  const exchange1 = 20;
+  const exchange2 = 50;
+
   if (days < 3) {
-    return days * 40;
+    return sumPrice;
   }
 
   if (days >= 3 && days < 7) {
-    return (days * 40) - 20;
+    return sumPrice - exchange1;
   }
 
   if (days >= 7) {
-    return (days * 40) - 50;
+    return sumPrice - exchange2;
   }
 }
 
