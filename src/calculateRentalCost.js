@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const fee = 40;
+  const calc = fee * days;
+  const disc1 = 20;
+  const disc2 = 50;
+  const short = 3;
+  const long = 7;
+
+  if (days < short) {
+    return calc;
+  } else if (days >= short && days < long) {
+    return calc - disc1;
+  } else if (days >= long) {
+    return calc - disc2;
+  }
 }
 
 module.exports = calculateRentalCost;
