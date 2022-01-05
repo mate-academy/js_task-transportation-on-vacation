@@ -28,17 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const rentUsual = days * 40;
+  const rentWithDiscount = days * 40 - 20;
+  const rentAfterWeek = days * 40 - 50;
+
   if (days < 3) {
-    return days * 40;
+    return rentUsual;
   }
 
-  if (days >= 3 && days <= 6) {
-    return (days * 40) - 20;
+  if (days <= 6) {
+    return rentWithDiscount;
   }
 
-  if (days >= 7) {
-    return (days * 40) - 50;
-  }
+  return rentAfterWeek;
 }
 
 module.exports = calculateRentalCost;
