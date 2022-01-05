@@ -32,13 +32,21 @@ function calculateRentalCost(days) {
     return 0;
   }
 
-  if (days < 3) {
-    return days * 40;
-  } else if (days >= 3 && days < 7) {
-    return days * 40 - 20;
-  } else {
-    return days * 40 - 50;
+  const rentPay = days * 40;
+  const minDaysOff = 3;
+  const maxDaysOff = 7;
+  const minDiscount = rentPay - 20;
+  const maxDiscount = rentPay - 50;
+
+  if (days < minDaysOff) {
+    return rentPay;
   }
+
+  if (days < maxDaysOff) {
+    return minDiscount;
+  }
+
+  return maxDiscount;
 }
 
 module.exports = calculateRentalCost;
