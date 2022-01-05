@@ -34,21 +34,15 @@ function calculateRentalCost(days) {
   const firstLine = 3;
   const secondLine = 7;
 
-  if (days === 0) {
-    return 0;
-  }
-
   if (days < firstLine) {
     return days * perDay;
   }
 
-  if (days >= firstLine && days < secondLine) {
+  if (days < secondLine) {
     return (days * perDay) - firstOff;
   }
 
-  if (days >= secondLine) {
-    return (days * perDay) - secondOff;
-  }
+  return (days * perDay) - secondOff;
 }
 
 module.exports = calculateRentalCost;
