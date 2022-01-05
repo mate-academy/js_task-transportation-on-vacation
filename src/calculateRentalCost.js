@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
-}
+  const sumPrice = days * 40;
+  const smallDiscount = 20;
+  const largeDiscount = 50;
+  /// Можете пожалуйста объяснить поподробней, зачем добавлять эти переменные?
+  const threeDays = 3;
+  const sevenDays = 7;
 
+  if (days < threeDays) {
+    return sumPrice;
+  }
+
+  if (days >= threeDays && days < sevenDays) {
+    return sumPrice - smallDiscount;
+  }
+
+  if (days >= sevenDays) {
+    return sumPrice - largeDiscount;
+  }
+}
 module.exports = calculateRentalCost;
