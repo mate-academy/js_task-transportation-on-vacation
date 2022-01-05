@@ -29,23 +29,25 @@
 
 function calculateRentalCost(days) {
   const perDay = 40;
-  const threeOff = 20;
-  const sevenOff = 50;
+  const firstOff = 20;
+  const secondOff = 50;
+  const firstLine = 3;
+  const secondLine = 7;
 
   if (days === 0) {
     return 0;
   }
 
-  if (days < 3) {
+  if (days < firstLine) {
     return days * perDay;
   }
 
-  if (days >= 3 && days < 7) {
-    return (days * perDay) - threeOff;
+  if (days >= firstLine && days < secondLine) {
+    return (days * perDay) - firstOff;
   }
 
-  if (days >= 7) {
-    return (days * perDay) - sevenOff;
+  if (days >= secondLine) {
+    return (days * perDay) - secondOff;
   }
 }
 
