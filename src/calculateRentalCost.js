@@ -28,12 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  let result = 40 * days;
+  const dayRate = 40;
+  const firstBoundaryDaysCount = 3;
+  const firstBoundaryDiscount = 20;
+  const secondBoundaryDaysCount = 7;
+  const secondBoundaryDiscount = 50;
 
-  if (days >= 7) {
-    result = result - 50;
-  } else if (days >= 3) {
-    result = result - 20;
+  let result = dayRate * days;
+
+  if (days >= secondBoundaryDaysCount) {
+    result = result - secondBoundaryDiscount;
+  } else if (days >= firstBoundaryDaysCount) {
+    result = result - firstBoundaryDiscount;
   }
 
   return result;
