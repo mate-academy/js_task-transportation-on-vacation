@@ -31,11 +31,6 @@ function calculateRentalCost(days) {
   let result = 0;
   const rentCostPerDay = 40;
 
-  // if (days <= 0) {
-  //   return 'Error';
-  // } else if (days.isFinite !== true) {
-  //   return 'Error';
-  // } else
   if (days > 0 && days < 3) {
     result = rentCostPerDay * days;
 
