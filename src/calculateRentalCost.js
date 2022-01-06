@@ -47,4 +47,5 @@ function calculateRentalCost(days) {
   return amount - type2DayDiscount;
 }
 
+
 module.exports = calculateRentalCost;
