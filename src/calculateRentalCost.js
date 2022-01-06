@@ -26,11 +26,10 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   const dailyCosts = 40;
-  const type1DayDiscount = 20;
-  const type2DayDiscount = 50;
+  const shortTermDayDiscount = 20;
+  const bigTermDayDiscount = 50;
   const type1Days = 3;
   const type2Days = 7;
 
@@ -41,11 +40,9 @@ function calculateRentalCost(days) {
   }
 
   if (days < type2Days) {
-    return amount - type1DayDiscount;
+    return amount - shortTermDayDiscount;
   }
 
-  return amount - type2DayDiscount;
+  return amount - bigTermDayDiscount;
 }
-
-
 module.exports = calculateRentalCost;
