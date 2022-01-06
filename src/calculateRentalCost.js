@@ -29,20 +29,20 @@
 
 function calculateRentalCost(days) {
   const perDay = 40;
-  const firstOff = 20;
-  const secondOff = 50;
-  const firstLine = 3;
-  const secondLine = 7;
+  const smallDisc = 20;
+  const bigDisc = 50;
+  const smallDiscTerm = 3;
+  const bigDiscTerm = 7;
 
-  if (days < firstLine) {
+  if (days < smallDiscTerm) {
     return days * perDay;
   }
 
-  if (days < secondLine) {
-    return (days * perDay) - firstOff;
+  if (days < bigDiscTerm) {
+    return (days * perDay) - smallDisc;
   }
 
-  return (days * perDay) - secondOff;
+  return (days * perDay) - bigDisc;
 }
 
 module.exports = calculateRentalCost;
