@@ -29,13 +29,17 @@
 
 function calculateRentalCost(days) {
   const cost = days * 40;
+  const i = 3; // граничне значення днів для знижки
+  const j = 7; // граничне значення днів для знижки
+  const startDisc = 20; // розмір знижки від 3-х днів
+  const lastDisc = 50; // розмір знижки від 7-х днів
 
-  if (days < 3) {
+  if (days < i) {
     return cost;
-  } else if (days < 7) {
-    return (cost - 20);
+  } else if (days < j) {
+    return (cost - startDisc);
   } else {
-    return (cost - 50);
+    return (cost - lastDisc);
   }
 }
 
