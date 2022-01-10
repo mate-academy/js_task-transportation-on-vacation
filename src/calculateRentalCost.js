@@ -31,15 +31,15 @@ function calculateRentalCost(days) {
   const cost = days * 40;
   const threeDays = 3;
   const sevenDays = 7;
-  const startDisc = 20;
-  const lastDisc = 50;
+  const minDiscount = 20;
+  const maxDiscount = 50;
 
   if (days < threeDays) {
     return cost;
   } else if (days < sevenDays) {
-    return (cost - startDisc);
+    return (cost - minDiscount);
   } else {
-    return (cost - lastDisc);
+    return (cost - maxDiscount);
   }
 }
 
