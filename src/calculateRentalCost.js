@@ -29,17 +29,20 @@
 
 function calculateRentalCost(days) {
   let cost;
+  const costRent = 40;
+  const totalRent1 = 50;
+  const totalRent2 = 20;
+  const days1 = 7;
+  const days2 = 3;
 
-  if (days < 7) {
-    cost = (days * 40) - 20;
-  } else {
-    if (days >= 7) {
-      cost = (days * 40) - 50;
-    }
+  if (days < days1) {
+    cost = (days * costRent) - totalRent2;
+  } else if (days >= days1) {
+    cost = (days * costRent) - totalRent1;
   }
 
-  if (days < 3) {
-    cost = days * 40;
+  if (days < days2) {
+    cost = days * costRent;
   }
 
   return cost;
