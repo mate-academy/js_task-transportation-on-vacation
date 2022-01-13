@@ -29,6 +29,8 @@
 
 function calculateRentalCost(days) {
   const rentPrice = 40;
+  const discount20 = 20;
+  const discount50 = 50;
   let totalAmount = 0;
 
   if (days < 3) {
@@ -36,11 +38,11 @@ function calculateRentalCost(days) {
   }
 
   if (days >= 3) {
-    totalAmount = days * rentPrice - 20;
+    totalAmount = days * rentPrice - discount20;
   }
 
   if (days >= 7) {
-    totalAmount = days * rentPrice - 50;
+    totalAmount = days * rentPrice - discount50;
   }
 
   return totalAmount;
