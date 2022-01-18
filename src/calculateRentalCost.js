@@ -28,8 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const lessThanThreeDays = 3;
-  const moreOrEqualsThanSevenDays = 7;
+  const smallDiscountPeriod = 3;
+  const bigDiscountPeriod = 7;
   const rentDiscount = 20;
   const rentMaxDiscount = 50;
   const rent = 40;
