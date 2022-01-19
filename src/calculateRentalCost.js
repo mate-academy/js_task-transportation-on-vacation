@@ -33,17 +33,18 @@ function calculateRentalCost(days) {
   const oneDayRent = 40;
   const shortTermDiscount = 20;
   const longTermDiscount = 50;
+  const fixedRentPrice = days * oneDayRent;
 
   if (days < 3) {
-    return days * oneDayRent;
+    return fixedRentPrice;
   }
 
   if (days >= 3 && days < 7) {
-    return days * oneDayRent - shortTermDiscount;
+    return fixedRentPrice - shortTermDiscount;
   }
 
   if (days >= 7) {
-    return days * oneDayRent - longTermDiscount;
+    return fixedRentPrice - longTermDiscount;
   }
 }
 
