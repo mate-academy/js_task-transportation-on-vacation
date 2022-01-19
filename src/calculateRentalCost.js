@@ -27,14 +27,14 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  const totalCost = days * 40;
+function calculateRentalCost(days, price = 40, bigOff = 50, smallOff = 20) {
+  const totalCost = days * price;
 
   switch (true) {
     case days >= 7:
-      return totalCost - 50;
+      return totalCost - bigOff;
     case days >= 3:
-      return totalCost - 20;
+      return totalCost - smallOff;
     default:
       return totalCost;
   }
