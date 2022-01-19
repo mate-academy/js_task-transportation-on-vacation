@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const dallyRent = 40;
+  const offsevenDays = 50;
+  const offthreeDays = 20;
+  const maxOffPeriod = 7;
+  const minOffPeriod = 3;
+
+  if (days >= maxOffPeriod) {
+    return days * dallyRent - offsevenDays;
+  }
+
+  if (days >= minOffPeriod) {
+    return days * dallyRent - offthreeDays;
+  }
+
+  return days * dallyRent;
 }
 
 module.exports = calculateRentalCost;
