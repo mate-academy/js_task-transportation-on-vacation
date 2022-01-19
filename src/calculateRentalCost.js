@@ -29,13 +29,18 @@
 
 function calculateRentalCost(days) {
   let totalAmount = 0;
+  const rentEveryDay = 40;
+  const threeDays = 3;
+  const week = 7;
+  const getOffWeek = 50;
+  const getOffThreeDays = 20;
 
-  if (days >= 7) {
-    totalAmount = (40 * days) - 50;
-  } else if (days >= 3) {
-    totalAmount = (40 * days) - 20;
+  if (days >= week) {
+    totalAmount = (rentEveryDay * days) - getOffWeek;
+  } else if (days >= threeDays) {
+    totalAmount = (rentEveryDay * days) - getOffThreeDays;
   } else {
-    totalAmount = 40 * days;
+    totalAmount = rentEveryDay * days;
   }
 
   return totalAmount;
