@@ -35,10 +35,10 @@ function calculateRentalCost(days) {
   const basicDiscount = 50;
   let result = days * priceForDay;
 
-  if (days >= additionalDays && days < basicDays) {
-    result -= additionalDiscount;
-  } else if (days >= basicDays) {
+  if (days >= basicDays) {
     result -= basicDiscount;
+  } else if (days >= additionalDays) {
+    result -= additionalDiscount;
   }
 
   return result;
