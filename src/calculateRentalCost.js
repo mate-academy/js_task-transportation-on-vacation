@@ -30,17 +30,18 @@
 function calculateRentalCost(days) {
   let totalAmount = 0;
   const rentEveryDay = 40;
-  const threeDays = 3;
-  const week = 7;
-  const getOffWeek = 50;
-  const getOffThreeDays = 20;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  const totalSum = (rentEveryDay * days);
 
-  if (days >= week) {
-    totalAmount = (rentEveryDay * days) - getOffWeek;
-  } else if (days >= threeDays) {
-    totalAmount = (rentEveryDay * days) - getOffThreeDays;
+  if (days >= longTerm) {
+    totalAmount = totalSum - bigDiscount;
+  } else if (days >= shortTerm) {
+    totalAmount = totalSum - smallDiscount;
   } else {
-    totalAmount = rentEveryDay * days;
+    totalAmount = totalSum;
   }
 
   return totalAmount;
