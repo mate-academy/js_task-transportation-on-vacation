@@ -38,14 +38,12 @@ function calculateRentalCost(days) {
   let discount = 0;
 
   if (days >= bigRent) {
-    discount = bigDiscount;
+    return totalPrice - bigDiscount;
   } else if (days >= smallRent) {
-    discount = smallDiscount;
+    return totalPrice - smallDiscount;
   }
 
-  const finalPrice = totalPrice - discount;
-
-  return finalPrice;
+  return totalPrice - discount;
 }
 
 module.exports = calculateRentalCost;
