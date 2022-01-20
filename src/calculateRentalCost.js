@@ -29,16 +29,27 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const oneDayPay = 40;
+  let rentCost = 0;
+  const more7DaysSale = 50;
+  const more3DaysSale = 20;
+
   if (days < 3) {
-    return days * 40;
+    rentCost = days * oneDayPay;
+
+    return rentCost;
   }
 
   if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+    rentCost = days * oneDayPay - more3DaysSale;
+
+    return rentCost;
   }
 
   if (days >= 7) {
-    return days * 40 - 50;
+    rentCost = days * oneDayPay - more7DaysSale;
+
+    return rentCost;
   }
 }
 
