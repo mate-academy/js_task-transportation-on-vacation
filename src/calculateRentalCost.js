@@ -29,6 +29,8 @@
 
 function calculateRentalCost(days) {
   const oneDayCost = 40;
+  const treeDaysDiscount = 20;
+  const sevenDaysDiscount = 50;
   let totalCost = 0;
 
   if (days < 3) {
@@ -36,11 +38,12 @@ function calculateRentalCost(days) {
   }
 
   if (days >= 3) {
-    totalCost = oneDayCost * days - 20;
+    totalCost = oneDayCost * days - treeDaysDiscount;
+    ;
   }
 
   if (days >= 7) {
-    totalCost = oneDayCost * days - 50;
+    totalCost = oneDayCost * days - sevenDaysDiscount;
   }
 
   return totalCost;
