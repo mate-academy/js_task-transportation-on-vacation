@@ -28,8 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const smallDisc = 20;
-  const bigDisc = 50;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
   const price = 40;
   const allPrice = days * price;
   
