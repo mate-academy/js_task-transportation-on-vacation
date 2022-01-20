@@ -38,11 +38,11 @@ function calculateRentalCost(days) {
   }
 
   if (days >= 3 && days < 7) {
-    return allPrice - smallDisc;
+    return allPrice - smallDiscount;
   }
 
   if (days >= 7) {
-    return allPrice - bigDisc;
+    return allPrice - bigDiscount;
   }
 }
 
