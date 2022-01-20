@@ -29,19 +29,19 @@
 
 function calculateRentalCost(days) {
   const oneDayCost = 40;
-  const treeDaysDiscount = 20;
-  const sevenDaysDiscount = 50;
-  const termRequested = oneDayCost * days;
+  const basicDiscount = 20;
+  const furtherDiscount = 50;
+  const requestedDaysCost = oneDayCost * days;
 
   if (days < 3) {
-    return termRequested;
+    return requestedDaysCost;
   }
 
   if (days < 7) {
-    return termRequested - treeDaysDiscount;
+    return requestedDaysCost - basicDiscount;
   }
 
-  return termRequested - sevenDaysDiscount;
+  return requestedDaysCost - furtherDiscount;
 }
 
 module.exports = calculateRentalCost;
