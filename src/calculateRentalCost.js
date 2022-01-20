@@ -28,21 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  let totalRentalCost = 0;
   const dayRentOfCar = 40;
   const discountFromThirdDay = 20;
   const discountFromWeek = 50;
+  const totalRentalCost = dayRentOfCar * days;
 
-  if (days < 3) {
-    totalRentalCost = (dayRentOfCar * days);
+  if (days >= 7) {
+    return totalRentalCost - discountFromWeek;
   }
 
   if (days >= 3) {
-    totalRentalCost = (dayRentOfCar * days) - discountFromThirdDay;
-  }
-
-  if (days >= 7) {
-    totalRentalCost = (dayRentOfCar * days) - discountFromWeek;
+    return totalRentalCost - discountFromThirdDay;
   }
 
   return totalRentalCost;
