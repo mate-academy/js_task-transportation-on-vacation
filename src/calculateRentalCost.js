@@ -28,13 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  let rent = 0;
+  const DayPay = 40;
+  const smallSale = 20;
+  const bigSale = 50;
+  const rent = days * DayPay;
 
-  days < 3 ? (rent = days * 40)
-    : days < 7 ? (rent = (days * 40) - 20)
-      : rent = ((days * 40) - 50);
-
-  return rent;
+  if (days < 3) {
+    return rent;
+  } else if (days >= 3 && days < 7) {
+    return rent - smallSale;
+  } else {
+    return rent - bigSale;
+  }
 }
 
 module.exports = calculateRentalCost;
