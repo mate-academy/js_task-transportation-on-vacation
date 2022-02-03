@@ -28,7 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const rent = days * 40;
+  const rentalPrice = 40;
+  const rent = days * rentalPrice;
   const numberOfDays1 = 3;
   const numberOfDays2 = 7;
   const discount1 = 20;
