@@ -29,19 +29,19 @@
 
 function calculateRentalCost(days) {
   const cost = days * 40;
-  const discountDayThree = 3;
-  const discountDaySeven = 7;
-  const cashbackDayThree = 20;
-  const cashbackDaySeven = 50;
+  const smallDiscount = 3;
+  const largeDiscount = 7;
+  const smallCashback = 20;
+  const smlargeCashback = 50;
 
   // write code here
   switch (true) {
-    case days < discountDayThree:
+    case days < smallDiscount:
       return cost;
-    case days >= discountDayThree && days < discountDaySeven:
-      return cost - cashbackDayThree;
-    case days >= discountDaySeven:
-      return cost - cashbackDaySeven;
+    case days >= smallDiscount && days < largeDiscount:
+      return cost - smallCashback;
+    case days >= largeDiscount:
+      return cost - smlargeCashback;
     default:
       break;
   }
