@@ -28,6 +28,26 @@
  */
 
 function calculateRentalCost(days) {
+  let total = 0;
+  const rent = 40;
+
+  if (days < 3) {
+    total = rent * days;
+
+    return total;
+  }
+
+  if (days >= 3 && days <= 6) {
+    total = rent * days - 20;
+
+    return total;
+  }
+
+  if (days > 6) {
+    total = rent * days - 50;
+
+    return total;
+  }
   // write code here
 }
 
