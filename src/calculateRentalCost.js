@@ -29,6 +29,17 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const fare = 40;
+
+  if (days >= 7) {
+    return ((days * fare) - 50);
+  } else {
+    if (days >= 3) {
+      return ((days * fare) - 20);
+    }
+  }
+
+  return days * fare;
 }
 
 module.exports = calculateRentalCost;
