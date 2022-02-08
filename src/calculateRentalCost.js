@@ -31,14 +31,15 @@ function calculateRentalCost(days) {
   const cost = 40;
   const threeDaysOff = 20;
   const sevenDaysOff = 50;
-  const woOff = days * cost;
-  const total = days < 3
-    ? woOff
-    : days < 7
-      ? woOff - threeDaysOff
-      : woOff - sevenDaysOff;
+  const total = days * cost;
 
-  return total;
+  if (days < 3) {
+    return total;
+  } else if (days < 7) {
+    return total - threeDaysOff;
+  } else {
+    return total - sevenDaysOff;
+  }
 }
 
 module.exports = calculateRentalCost;
