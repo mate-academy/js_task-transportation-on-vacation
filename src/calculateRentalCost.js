@@ -39,7 +39,7 @@ function calculateRentalCost(days) {
     return (totalAmount - smallDiscount);
   }
 
-  return days * fare;
+  return totalAmount;
 }
 
 module.exports = calculateRentalCost;
