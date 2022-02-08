@@ -26,27 +26,26 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
-  let total = 0;
-  const rent = 40;
+  let totalVacationValue = 0;
+  const rentByDay = 40;
 
   if (days < 3) {
-    total = rent * days;
+    totalVacationValue = rentByDay * days;
 
-    return total;
+    return totalVacationValue;
   }
 
   if (days >= 3 && days <= 6) {
-    total = rent * days - 20;
+    totalVacationValue = rentByDay * days - 20;
 
-    return total;
+    return totalVacationValue;
   }
 
   if (days > 6) {
-    total = rent * days - 50;
+    totalVacationValue = rentByDay * days - 50;
 
-    return total;
+    return totalVacationValue;
   }
   // write code here
 }
