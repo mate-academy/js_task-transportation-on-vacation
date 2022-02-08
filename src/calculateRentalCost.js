@@ -31,11 +31,12 @@ function calculateRentalCost(days) {
   const cost = 40;
   const threeDaysOff = 20;
   const sevenDaysOff = 50;
+  const woOff = days * cost;
   const total = days < 3
-    ? days * cost
+    ? woOff
     : days < 7
-      ? days * cost - threeDaysOff
-      : days * cost - sevenDaysOff;
+      ? woOff - threeDaysOff
+      : woOff - sevenDaysOff;
 
   return total;
 }
