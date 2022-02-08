@@ -28,17 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const carCost = 40 * days;
+  const carCostPerDay = 40;
+  const carCost = carCostPerDay * days;
   const weekCostOff = 50;
   const threeDaysCostOff = 20;
 
   if (days >= 7) {
     return carCost - weekCostOff;
-  } else if (days >= 3) {
-    return carCost - threeDaysCostOff;
-  } else {
-    return carCost;
   }
+
+  if (days >= 3) {
+    return carCost - threeDaysCostOff;
+  }
+
+  return carCost;
 }
 
 module.exports = calculateRentalCost;
