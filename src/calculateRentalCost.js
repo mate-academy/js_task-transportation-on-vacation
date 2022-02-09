@@ -4,11 +4,11 @@ function calculateRentalCost(days) {
   const price = 40;
   const totalSum = days * price;
 
-  if (Math.trunc(days / 7)) {
+  if (days / 7 >= 1) {
     return totalSum - 50;
   }
 
-  if (Math.trunc(days / 3)) {
+  if (days / 3 >= 1) {
     return totalSum - 20;
   }
 
