@@ -26,8 +26,31 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
+  let totalVacationValue = 0;
+  const rentByDay = 40;
+  const minNumberOfDays = 3;
+  const maxNumberOfDays = 6;
+  const minOff = 20;
+  const maxOff = 50;
+
+  if (days < minNumberOfDays) {
+    totalVacationValue = rentByDay * days;
+
+    return totalVacationValue;
+  }
+
+  if (days >= minNumberOfDays && days <= maxNumberOfDays) {
+    totalVacationValue = rentByDay * days - minOff;
+
+    return totalVacationValue;
+  }
+
+  if (days > maxNumberOfDays) {
+    totalVacationValue = rentByDay * days - maxOff;
+
+    return totalVacationValue;
+  }
   // write code here
 }
 
