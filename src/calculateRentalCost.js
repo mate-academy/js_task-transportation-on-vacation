@@ -28,23 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  let suma = 0;
-
   const discountThreeDays = 20;
   const discountSevenDays = 50;
   const prise = 40;
+  const totalSuma = prise * days;
 
   if (days < 3) {
-    suma = days * prise;
+    return totalSuma;
   } else {
     if (days < 7) {
-      suma = days * prise - discountThreeDays;
+      return totalSuma - discountThreeDays;
     } else {
-      suma = days * prise - discountSevenDays;
+      return totalSuma - discountSevenDays;
     }
   }
-
-  return suma;
 }
 
 module.exports = calculateRentalCost;
