@@ -9,16 +9,16 @@ function calculateRentalCost(days) {
   const rentThreeDays = rentDays - bonusThree;
   const rentSevenDays = rentDays - bonusSeven;
 
-  const dayThree = 3;
-  const daySeven = 7;
+  const firstStageBonus = 3;
+  const secondStageBonus = 7;
 
   let result = rentDays;
 
-  if (days >= daySeven) {
+  if (days >= secondStageBonus) {
     result = rentSevenDays;
   }
 
-  if (days >= dayThree && days < daySeven) {
+  if (days >= firstStageBonus && days < secondStageBonus) {
     result = rentThreeDays;
   }
 
