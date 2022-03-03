@@ -2,12 +2,12 @@
 
 function calculateRentalCost(days) {
   const cost = 40;
-  const bonusThree = 20;
-  const bonusSeven = 50;
+  const secondStageCost = 20;
+  const thirdStageCost = 50;
 
   const rentDays = days * cost;
-  const rentThreeDays = rentDays - bonusThree;
-  const rentSevenDays = rentDays - bonusSeven;
+  const rentDaysSecondStage = rentDays - secondStageCost;
+  const rentDaysThirdStage = rentDays - thirdStageCost;
 
   const firstStageBonus = 3;
   const secondStageBonus = 7;
@@ -15,11 +15,11 @@ function calculateRentalCost(days) {
   let result = rentDays;
 
   if (days >= secondStageBonus) {
-    result = rentSevenDays;
+    result = rentDaysThirdStage;
   }
 
   if (days >= firstStageBonus && days < secondStageBonus) {
-    result = rentThreeDays;
+    result = rentDaysSecondStage;
   }
 
   return result;
