@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-  let result = 0;
   const weekOff = 50;
   const threeDaysOff = 20;
   const dayRent = 40;
