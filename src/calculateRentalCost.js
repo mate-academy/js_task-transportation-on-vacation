@@ -34,13 +34,13 @@ function calculateRentalCost(days) {
 
   if (days < 3 && days > 0) {
     return rentalCost;
-  } else if (days >= 3 && days < 7) {
-    return threeDaysOff;
-  } else if (days >= 7) {
-    return sevenDaysOff;
   }
 
-  return 0;
+  if (days >= 3 && days < 7) {
+    return threeDaysOff;
+  }
+
+  return sevenDaysOff;
 }
 
 module.exports = calculateRentalCost;
