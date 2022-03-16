@@ -27,6 +27,7 @@
  * @return {number}
  */
 
+
 function calculateRentalCost(days) {
   if (days >= 7) {
     return days * 40 - 50;
