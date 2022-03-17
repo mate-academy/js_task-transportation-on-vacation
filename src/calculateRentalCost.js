@@ -32,18 +32,40 @@ function calculateRentalCost(days) {
 
   const rentPrice = days * price;
 
-  const fromSevenDaysDiscount = rentPrice - 50;
-  const fromThreeToSevenDaysDiscount = rentPrice - 20;
+  const fromSevenDayDiscount = 50;
+  const fromThreeToSevenDayDiscount = 20;
 
   if (days >= 7) {
-    return fromSevenDaysDiscount;
+    return rentPrice - fromSevenDayDiscount;
   }
 
   if (days >= 3) {
-    return fromThreeToSevenDaysDiscount;
+    return rentPrice - fromThreeToSevenDayDiscount;
   }
 
   return rentPrice;
 }
 
 module.exports = calculateRentalCost;
+
+// function calculateRentalCost(days) {
+//   const price = 40;
+
+//   const rentPrice = days * price;
+
+//   const fromSevenDayDiscount = rentPrice - 50;
+//   const fromThreeToSevenDayDiscount = rentPrice - 20;
+
+//   if (days >= 7) {
+//     return fromSevenDayDiscount;
+//   }
+
+//   if (days >= 3) {
+//     return fromThreeToSevenDayDiscount;
+//   }
+
+//   return rentPrice;
+// }
+
+// module.exports = calculateRentalCost;
+
