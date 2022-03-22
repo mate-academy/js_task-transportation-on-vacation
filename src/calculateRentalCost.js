@@ -28,15 +28,7 @@
  */
 
 function calculateRentalCost(days) {
-  let RentaSum = 40 * days;
-
-  if (days >= 7) {
-    RentaSum -= 50;
-  } else if (days >= 3) {
-    RentaSum -= 20;
-  }
-
-  return RentaSum;
+  // write code here
 }
 
 module.exports = calculateRentalCost;
