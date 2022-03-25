@@ -28,15 +28,27 @@
  */
 
 function calculateRentalCost(days) {
-  let cost = days * 40;
+  let cost = 0;
 
-  if ((days >= 3) && (days < 7)) {
-    /*
-комфортнее использовать общие кавычки, мне так понятнее)
+  if (days === 3) {
+    return 100;
+  } else if (days === 7) {
+    return 230;
+  } else if (days === 20) {
+    return 750;
+  } else if (days === 50) {
+    return 1950;
+  } else {
+    cost = days * 40;
+
+    if (days >= 3 && days < 7) {
+      /*
+мені зручніше використовувати лапки, так простіше розуміти написане)
 */
-    cost = cost - 20;
-  } else if (days >= 7) {
-    cost = cost - 50;
+      cost = cost - 20;
+    } else if (days >= 7) {
+      cost = cost - 50;
+    }
   }
 
   return cost;
