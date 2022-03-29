@@ -30,17 +30,14 @@
 function calculateRentalCost(days) {
   const shortTerm = 3;
   const mediumTerm = 7;
-  const longTerm = 20;
-  const extralong = 50;
+  const shortDiscount = 20;
+  const mediumDiscount = 50;
   let cost = days * 40;
 
   if (days >= shortTerm && days < mediumTerm) {
-    /*
-мені зручніше використовувати лапки, так простіше розуміти написане)
-*/
-    cost = cost - longTerm;
+    cost -= shortDiscount;
   } else if (days >= mediumTerm) {
-    cost = cost - extralong;
+    cost -= mediumDiscount;
   }
 
   return cost;
