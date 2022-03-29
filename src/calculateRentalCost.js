@@ -29,15 +29,17 @@
 
 function calculateRentalCost(days) {
   const rentCost = 40;
+  const baseDiscountDaysLimit = 3;
+  const normalDiscountDaysLimit = 7;
   const baseDiscount = 20;
   const normalDiscount = 50;
   const total = days * rentCost;
 
-  if (days < 3) {
+  if (days < baseDiscountDaysLimit) {
     return total;
   }
 
-  if (days < 7) {
+  if (days < normalDiscountDaysLimit) {
     return total - baseDiscount;
   }
 
