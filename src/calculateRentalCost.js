@@ -29,7 +29,8 @@
 
 function calculateRentalCost(days) {
   // write code
-  const fullPrice = days * 40;
+  const priceForDay = 40;
+  const fullPrice = days * priceForDay;
   const discountForThreeDays = 20;
   const discountForSevenDays = 50;
 
