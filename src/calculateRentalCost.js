@@ -35,7 +35,9 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return carCosts * days - bigDiscount;
-  } else if (days >= 3) {
+  }
+
+  if (days >= 3) {
     return carCosts * days - smallDiscount;
   }
 
