@@ -30,17 +30,17 @@
 function calculateRentalCost(days) {
   // write code here
   const carCosts = days * 40;
-  const smallDiscount = 20;
-  const bigDiscount = 50;
-  const periodForBigDiscount = 7;
-  const periodForSmallDiscount = 3;
+  const basicDiscount = 20;
+  const extendedDiscount = 50;
+  const periodForextendedDiscount = 7;
+  const periodForbasicDiscount = 3;
 
-  if (days >= periodForBigDiscount) {
-    return carCosts - bigDiscount;
+  if (days >= periodForextendedDiscount) {
+    return carCosts - extendedDiscount;
   }
 
-  if (days >= periodForSmallDiscount) {
-    return carCosts - smallDiscount;
+  if (days >= periodForbasicDiscount) {
+    return carCosts - basicDiscount;
   }
 
   return carCosts;
