@@ -29,16 +29,16 @@
 
 function calculateRentalCost(days) {
   const fullCost = 40 * days;
-  const smallDisc = 20;
-  const bigDisc = 50;
+  const smallDiscount = 20;
+  const bigDisccount = 50;
 
   if (days >= 3 && days < 7) {
-    return fullCost - smallDisc;
+    return fullCost - smallDiscount;
   } else if (days >= 7) {
-    return fullCost - bigDisc;
-  } else {
-    return fullCost;
+    return fullCost - bigDisccount;
   }
+
+  return fullCost;
 }
 
 module.exports = calculateRentalCost;
