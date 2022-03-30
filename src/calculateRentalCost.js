@@ -28,19 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  let totalCount = 0;
+  let rentalCost = 40 * days;
+  let discount;
 
-  if (days === 0) {
-    return totalCount;
-  } else if (days < 3) {
-    totalCount = days * 40;
-  } else if (days < 7) {
-    totalCount = days * 40 - 20;
+  if (days < 3) {
+    discount = 0;
+  } else if (days >= 3 && days < 7) {
+    discount = 20;
   } else {
-    totalCount = days * 40 - 50;
+    discount = 50;
   }
+  rentalCost = rentalCost - discount;
 
-  return totalCount;
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
