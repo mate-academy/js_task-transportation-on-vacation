@@ -31,14 +31,17 @@ function calculateRentalCost(days) {
   const price = 40;
   const minDiscount = 20;
   const maxDiscount = 50;
+  const sum = days * price;
 
-  if (days < 3) {
-    return days * price;
-  } else if (days >= 3 && days < 7) {
-    return days * price - minDiscount;
-  } else if (days >= 7) {
-    return days * price - maxDiscount;
+  if (days >= 7) {
+    return sum - maxDiscount;
   }
+
+  if (days >= 3) {
+    return sum - minDiscount;
+  }
+
+  return sum;
 }
 
 module.exports = calculateRentalCost;
