@@ -28,12 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const sum = 40 * days;
+  const costForDay = 40;
+  const fiftyDisc = 50;
+  const twentyDisc = 20;
+  const sum = costForDay * days;
 
   if (days >= 7) {
-    return sum - 50;
-  } else if (days >= 3) {
-    return sum - 20;
+    return sum - fiftyDisc;
+  }
+
+  if (days >= 3) {
+    return sum - twentyDisc;
   }
 
   return sum;
