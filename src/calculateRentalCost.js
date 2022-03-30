@@ -31,17 +31,18 @@ function calculateRentalCost(days) {
   const oneDayRent = 40;
   const discountFreeAndMoreDays = 20;
   const discountSevenAndMoreDays = 50;
+  const sumOfTotalDays = days * oneDayRent;
 
   if (days < 3) {
-    return days * oneDayRent;
+    return sumOfTotalDays;
   }
 
   if (days >= 3 && days < 7) {
-    return days * oneDayRent - discountFreeAndMoreDays;
+    return sumOfTotalDays - discountFreeAndMoreDays;
   }
 
   if (days >= 7) {
-    return days * oneDayRent - discountSevenAndMoreDays;
+    return sumOfTotalDays - discountSevenAndMoreDays;
   }
 }
 
