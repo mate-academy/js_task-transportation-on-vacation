@@ -30,13 +30,15 @@
 function calculateRentalCost(days) {
   let amount = 0;
   const amountOfDays = days * 40;
+  const smallDisc = 20;
+  const bigDisc = 50;
 
   if (days < 3) {
     amount = amountOfDays;
   } else if (days < 7) {
-    amount = amountOfDays - 20;
+    amount = amountOfDays - smallDisc;
   } else {
-    amount = amountOfDays - 50;
+    amount = amountOfDays - bigDisc;
   }
 
   return amount;
