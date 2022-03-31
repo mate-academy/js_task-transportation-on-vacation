@@ -30,13 +30,16 @@
 function calculateRentalCost(days) {
   const costs = 40;
   let total = 0;
+  const silverDiscount = 20;
+  const goldDiscount = 50;
+  const price = days * costs;
 
   if (days < 3) {
-    total = days * costs;
+    total = price;
   } else if (days > 2 && days < 7) {
-    total = days * costs - 20;
+    total = price - silverDiscount;
   } else if (days > 6) {
-    total = days * costs - 50;
+    total = price - goldDiscount;
   };
 
   return total;
