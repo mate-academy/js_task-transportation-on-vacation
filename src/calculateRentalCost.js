@@ -28,16 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  const ONE_DAY_COST = 40;
-  const THREE_DAYS_OFF = 20;
-  const SEVEN_DAYS_OFF = 50;
+  const oneDayCost = 40;
+  const threeDaysCost = 20;
+  const sevenDaysOff = 50;
 
-  const costWithoutOff = ONE_DAY_COST * days;
+  const costWithoutOff = oneDayCost * days;
 
   if (days > 6) {
-    return costWithoutOff - SEVEN_DAYS_OFF;
+    return costWithoutOff - sevenDaysOff;
   } else if (days > 2) {
-    return costWithoutOff - THREE_DAYS_OFF;
+    return costWithoutOff - threeDaysCost;
   }
 
   return costWithoutOff;
