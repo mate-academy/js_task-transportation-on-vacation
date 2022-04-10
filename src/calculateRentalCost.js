@@ -28,25 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  let cost1day = 40;
-  let cost3days = 100;
-  let cost7days = 230;
+  const cost1day = 40;
+  const cost3days = 100;
+  const cost7days = 230;
   let mainCost1 = 0;
   let mainCost3 = 0;
   let mainCost7 = 0;
   let totalCost = 0;
 
-  switch (days) {
-    case 1:
-      return cost1day;
-    case 2:
-      totalCost += cost1day * 2;
+  switch (days / 1 - days) {
+    case days % 3:
+      totalCost += (days / 3) * cost3days;
 
       return totalCost;
-    case 3:
-      return cost3days;
-    case 7:
-      return cost7days;
+    case days % 7:
+      totalCost += (days / 7) * cost7days;
+
+      return totalCost;
   }
 
   switch (days % 7) {
