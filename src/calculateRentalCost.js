@@ -30,22 +30,22 @@
 function calculateRentalCost(days) {
   let costs = 0;
   const day = 1;
-  const threeDays = 3;
-  const sevenDays = 7;
+  const weekend = 3;
+  const week = 7;
   const daysRent = (days * 40);
-  const bonusRentThreeDays = 20;
-  const bonusRentSevenDays = 50;
+  const bonusRentWeekend = 20;
+  const bonusRentWeek = 50;
 
   if (days >= day) {
     costs = daysRent;
+  }
 
-    if (days >= threeDays) {
-      costs = daysRent - bonusRentThreeDays;
+  if (days >= weekend) {
+    costs = daysRent - bonusRentWeekend;
+  }
 
-      if (days >= sevenDays) {
-        costs = daysRent - bonusRentSevenDays;
-      }
-    }
+  if (days >= week) {
+    costs = daysRent - bonusRentWeek;
   }
 
   return costs;
