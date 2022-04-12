@@ -31,61 +31,24 @@ function calculateRentalCost(days) {
   const cost1day = 40;
   const cost3days = 100;
   const cost7days = 230;
-  let mainCost1 = 0;
-  let mainCost3 = 0;
-  let mainCost7 = 0;
-  let totalCost = 0;
+  let total = 0;
 
-  switch (days / 1 - days) {
-    case days % 3:
-      totalCost += (days / 3) * cost3days;
+  if (days >= 7) {
+    total += ((days - 7) * cost1day) + cost7days;
 
-      return totalCost;
-    case days % 7:
-      totalCost += (days / 7) * cost7days;
-
-      return totalCost;
+    return total;
   }
 
-  switch (days % 7) {
-    case 1:
-      mainCost7 += ((days - 1) / 7) * cost7days;
-      mainCost1 += 1 * cost1day;
-      totalCost += mainCost7 + mainCost1;
+  if (days > 2 && days < 8) {
+    total += ((days - 3) * cost1day) + cost3days;
 
-      return totalCost;
-    case 2:
-      mainCost7 += ((days - 2) / 7) * cost7days;
-      mainCost1 += 2 * cost1day;
-      totalCost += mainCost7 + mainCost1;
+    return total;
+  }
 
-      return totalCost;
-    case 3:
-      mainCost7 += ((days - 3) / 7) * cost7days;
-      mainCost3 += 3 * cost3days;
-      totalCost += mainCost7 + mainCost3;
+  if (days < 3) {
+    total += days * cost1day;
 
-      return totalCost;
-    case 4:
-      mainCost7 += ((days - 4) / 7) * cost7days;
-      mainCost3 += (4 - 1) * cost3days;
-      mainCost1 += 1 * cost1day;
-      totalCost += mainCost7 + mainCost3 + mainCost1;
-
-      return totalCost;
-    case 5:
-      mainCost7 += ((days - 5) / 7) * cost7days;
-      mainCost3 += (5 - 2) * cost3days;
-      mainCost1 += 2 * cost1day;
-      totalCost += mainCost7 + mainCost3 + mainCost1;
-
-      return totalCost;
-    case 6:
-      mainCost7 += ((days - 6) / 7) * cost7days;
-      mainCost3 += 6 * cost3days;
-      totalCost += mainCost7 + mainCost3;
-
-      return totalCost;
+    return total;
   }
 }
 
