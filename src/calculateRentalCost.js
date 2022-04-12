@@ -29,13 +29,16 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const carRent = 40;
+  const longRent = days * carRent - 20;
+  const weekRent = days * carRent - 50;
 
   if (days < 3) {
-    return days * 40;
+    return days * carRent;
   } else if (days >= 7) {
-    return days * 40 - 50;
+    return weekRent;
   } else {
-    return days * 40 - 20;
+    return longRent;
   }
 }
 
