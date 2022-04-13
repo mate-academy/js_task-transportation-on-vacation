@@ -33,13 +33,14 @@ function calculateRentalCost(days) {
   const perDay = 40;
   const threeOff = 20;
   const sevenOff = 50;
+  const multiDays = days * perDay;
 
   if (days >= sevenDays) {
-    return (days * perDay) - sevenOff;
+    return (multiDays) - sevenOff;
   } else if (days >= threeDays) {
-    return (days * perDay) - threeOff;
+    return (multiDays) - threeOff;
   } else {
-    return days * perDay;
+    return multiDays;
   }
 }
 
