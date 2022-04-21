@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * After a hard quarter in the office you decide
@@ -29,20 +29,20 @@
 
 function calculateRentalCost(days) {
   const standartCost = 40;
-  const rentDays3 = 3;
-  const discountDays3 = 20;
-  const rentDays7 = 7;
-  const discountDays7 = 50;
+  const smallRentTime = 3;
+  const smallDiscount = 20;
+  const largeRentTime = 7;
+  const largeDiscount = 50;
 
-  if (rentDays3 > days) {
+  if (smallRentTime > days) {
     return standartCost * days;
   }
 
-  if (rentDays7 > days) {
-    return standartCost * days - discountDays3;
+  if (largeRentTime > days) {
+    return standartCost * days - smallDiscount;
   }
 
-  return standartCost * days - discountDays7;
+  return standartCost * days - largeDiscount;
 }
 
 module.exports = calculateRentalCost;
