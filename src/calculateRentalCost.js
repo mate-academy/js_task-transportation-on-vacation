@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
   const totalAmount = days * 40;
   let bonus = 0;
 
