@@ -42,9 +42,7 @@ function calculateRentalCost(days) {
     return rentalAmount - threeDayDiscount;
   }
 
-  if (days >= 7) {
-    return rentalAmount - sevenDayDiscount;
-  }
+  return rentalAmount - sevenDayDiscount;
 }
 
 module.exports = calculateRentalCost;
