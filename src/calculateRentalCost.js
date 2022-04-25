@@ -36,7 +36,7 @@ function calculateRentalCost(days) {
     return perDay - biggestDiscount;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days >= 3) {
     return perDay - midDiscount;
   }
 
