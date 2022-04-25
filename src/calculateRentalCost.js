@@ -29,6 +29,7 @@
 
 function calculateRentalCost(days) {
   // write code here
+  // just the fork
 }
 
 module.exports = calculateRentalCost;
