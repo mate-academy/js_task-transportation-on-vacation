@@ -28,15 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  const cost = 40;
+  const cost = days * 40;
 
   switch (true) {
     case days < 3:
-      return days * cost;
+      return cost;
     case days < 7:
-      return days * cost - 20;
+      return cost - 20;
     case days >= 7:
-      return days * cost - 50;
+      return cost - 50;
   }
 }
 
