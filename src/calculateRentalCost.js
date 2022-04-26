@@ -34,6 +34,10 @@ function calculateRentalCost(days) {
   const maxNumberOfDays = 7;
   const maxDiscount = 50;
 
+  if (days === 0 || days === '') {
+    return 0;
+  }
+
   if (days < minNumberOfDays) {
     return days * perDay;
   }
