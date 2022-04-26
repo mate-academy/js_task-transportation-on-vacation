@@ -32,13 +32,14 @@ function calculateRentalCost(days) {
   const longPerid = 50;
   const shortPeriod = 20;
   const everyDayPay = 40;
+  const account = days * everyDayPay;
 
   if (days >= 7) {
-    total = (days * everyDayPay) - longPerid;
+    total = account - longPerid;
   } else if (days >= 3 && days < 7) {
-    total = (days * everyDayPay) - shortPeriod;
+    total = account - shortPeriod;
   } else {
-    total = days * everyDayPay;
+    total = account;
   }
 
   return total;
