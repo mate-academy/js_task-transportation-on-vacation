@@ -31,22 +31,20 @@ function calculateRentalCost(days) {
   // write code here
   const dayRentCost = 40;
   const threeDayBonus = 20;
-  const fiveDayBonus = 50;
+  const sevenDayBonus = 50;
 
   if (days <= 0) {
     return 0;
   }
 
-  if (days < 3) {
-    return (dayRentCost * days);
+  if (days >= 7) {
+    return (dayRentCost * days - sevenDayBonus);
   }
 
-  if (((days > 3) || (days === 3)) && (days < 7)) {
+  if (days >= 3) {
     return (dayRentCost * days - threeDayBonus);
   }
 
-  if ((days > 7) || (days === 7)) {
-    return (dayRentCost * days - fiveDayBonus);
-  }
+  return (dayRentCost * days);
 }
 module.exports = calculateRentalCost;
