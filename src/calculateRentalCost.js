@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let total = 0;
+  const longPerid = 50;
+  const shortPeriod = 20;
+  const everyDayPay = 40;
+  const account = days * everyDayPay;
+
+  if (days >= 7) {
+    total = account - longPerid;
+  } else if (days >= 3 && days < 7) {
+    total = account - shortPeriod;
+  } else {
+    total = account;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
