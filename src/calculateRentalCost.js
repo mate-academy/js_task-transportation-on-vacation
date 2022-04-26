@@ -29,20 +29,22 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const everyDayPrice = 40;
+  const everyDayPrice = days * 40;
   const threeDayGet = 20;
   const sevenDayGet = 50;
+  const sevenDaysRent = 7;
+  const threeDeysRent = 3;
 
   if ((days === '') || (days === 0)) {
     return 0;
   }
 
-  if (days >= 7) {
-    return (days * everyDayPrice - sevenDayGet);
-  } else if (days >= 3) {
-    return (days * everyDayPrice - threeDayGet);
+  if (days >= sevenDaysRent) {
+    return (everyDayPrice - sevenDayGet);
+  } else if (days >= threeDeysRent) {
+    return (everyDayPrice - threeDayGet);
   } else {
-    return (days * everyDayPrice);
+    return (everyDayPrice);
   }
 }
 
