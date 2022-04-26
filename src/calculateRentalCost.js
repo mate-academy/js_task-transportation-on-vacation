@@ -29,14 +29,17 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const total = days * 40;
+  const carCosts = 40;
+  const minDiscount = 20;
+  const maxDiscount = 50;
+  const total = days * carCosts;
 
   if (days >= 7) {
-    return total - 50;
+    return total - maxDiscount;
   }
 
   if (days >= 3) {
-    return total - 20;
+    return total - minDiscount;
   }
 
   return total;
