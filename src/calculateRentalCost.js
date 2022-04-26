@@ -32,17 +32,18 @@ function calculateRentalCost(days) {
   const discountBasic = 40;
   const discountWeek = 50;
   const discountThree = 20;
+  const multDaysBasic = days * discountBasic;
 
   if ((days === '') || (days === 0)) {
     return 0;
   }
 
   if (days >= 7) {
-    return (days * discountBasic - discountWeek);
+    return (multDaysBasic - discountWeek);
   } else if (days >= 3) {
-    return (days * discountBasic - discountThree);
+    return (multDaysBasic - discountThree);
   } else {
-    return (days * discountBasic);
+    return (multDaysBasic);
   }
 }
 
