@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   let cost = 0;
+  const carRent = 40;
+  const sumRent = carRent * days;
 
   if (days > 0 && days < 3) {
-    cost = 40 * days;
+    cost = sumRent;
   } else if (days >= 3 && days < 7) {
-    cost = 40 * days - 20;
+    cost = sumRent - 20;
   } else {
-    cost = 40 * days - 50;
+    cost = sumRent - 50;
   }
 
   return cost;
