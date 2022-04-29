@@ -35,12 +35,14 @@ function calculateRentalCost(days) {
 
   for (let i = 0; i <= days; i++) {
     if (days <= 2) {
-      cost = 40 * days;
-    } else if (days > 2 && days < 7) {
-      cost = 40 * days - threeDayoff;
-    } else {
-      cost = 40 * days - sevenDayoff;
+      return (cost = 40 * days);
     }
+
+    if (days > 2 && days < 7) {
+      return (cost = 40 * days - threeDayoff);
+    }
+
+    return (cost = 40 * days - sevenDayoff);
   }
 
   return cost;
