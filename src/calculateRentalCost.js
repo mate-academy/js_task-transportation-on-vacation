@@ -28,25 +28,25 @@
  */
 
 function calculateRentalCost(days) {
-  const day3 = 3;
-  const day7 = 7;
-  const discount1 = 20;
-  const number1 = 40;
-  const discount2 = 50;
-  const totalAmount1 = days * number1;
-  const totalAmount2 = days * number1 - discount1;
-  const totalAmount3 = days * number1 - discount2;
+  const shortPeriod = 3;
+  const longPeriod = 7;
+  const discountFirst = 20;
+  const numberFirst = 40;
+  const discountSecond = 50;
+  const totalAmountOne = days * numberFirst;
+  const totalAmountTwo = days * numberFirst - discountFirst;
+  const totalAmountThree = days * numberFirst - discountSecond;
 
-  if (days < day3) {
-    return totalAmount1;
+  if (days < shortPeriod) {
+    return totalAmountOne;
   }
 
-  if (days >= day3 && days < day7) {
-    return totalAmount2;
+  if (days >= shortPeriod && days < longPeriod) {
+    return totalAmountTwo;
   }
 
-  if (days >= day7) {
-    return totalAmount3;
+  if (days >= longPeriod) {
+    return totalAmountThree;
   }
 }
 
