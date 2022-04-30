@@ -30,12 +30,12 @@
 function calculateRentalCost(days) {
   const shortPeriod = 3;
   const longPeriod = 7;
-  const discountFirst = 20;
-  const numberFirst = 40;
-  const discountSecond = 50;
-  const totalAmountOne = days * numberFirst;
-  const totalAmountTwo = days * numberFirst - discountFirst;
-  const totalAmountThree = days * numberFirst - discountSecond;
+  const discountForShortPeriod = 20;
+  const baseCost = 40;
+  const discountForLongPeriod = 50;
+  const totalAmountOne = days * baseCost;
+  const totalAmountTwo = days * baseCost - discountForShortPeriod;
+  const totalAmountThree = days * baseCost - discountForLongPeriod
 
   if (days < shortPeriod) {
     return totalAmountOne;
@@ -44,10 +44,7 @@ function calculateRentalCost(days) {
   if (days >= shortPeriod && days < longPeriod) {
     return totalAmountTwo;
   }
-
-  if (days >= longPeriod) {
     return totalAmountThree;
-  }
 }
 
 module.exports = calculateRentalCost;
