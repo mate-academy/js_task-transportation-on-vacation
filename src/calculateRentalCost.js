@@ -35,7 +35,7 @@ function calculateRentalCost(days) {
   const discountForLongPeriod = 50;
   const totalAmountOne = days * baseCost;
   const totalAmountTwo = days * baseCost - discountForShortPeriod;
-  const totalAmountThree = days * baseCost - discountForLongPeriod
+  const totalAmountThree = days * baseCost - discountForLongPeriod;
 
   if (days < shortPeriod) {
     return totalAmountOne;
@@ -44,7 +44,8 @@ function calculateRentalCost(days) {
   if (days >= shortPeriod && days < longPeriod) {
     return totalAmountTwo;
   }
-    return totalAmountThree;
+
+  return totalAmountThree;
 }
 
 module.exports = calculateRentalCost;
