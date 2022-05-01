@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const commonRate = days * 40;
+  const superDiscount = commonRate - 50;
+  const basicDiscount = commonRate - 20;
+
+  switch (true) {
+    case days >= 7 :
+      return superDiscount;
+
+    case days >= 3 && days < 7:
+
+      return basicDiscount;
+
+    default:
+      return commonRate;
+  }
 }
 
 module.exports = calculateRentalCost;
