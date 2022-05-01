@@ -28,16 +28,20 @@
  */
 
 function calculateRentalCost(days) {
+  const commonRate = days * 40;
+  const superDiscount = commonRate - 50;
+  const basicDiscount = commonRate - 20;
+
   switch (true) {
     case days >= 7 :
-      return ((days * 40) - 50);
+      return superDiscount;
 
     case days >= 3 && days < 7:
 
-      return ((days * 40) - 20);
+      return basicDiscount;
 
     default:
-      return days * 40;
+      return commonRate;
   }
 }
 
