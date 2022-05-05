@@ -26,9 +26,21 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   // write code here
+  const firstDiscount = 20;
+  const secondDiscount = 50;
+  const total = days * 40;
+
+  if (days < 3) {
+    return total;
+  }
+
+  if (days >= 3 && days <= 6) {
+    return total - firstDiscount;
+  }
+
+  return total - secondDiscount;
 }
 
 module.exports = calculateRentalCost;
