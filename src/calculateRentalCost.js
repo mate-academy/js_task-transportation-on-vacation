@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
   let total = 0;
   const pricePerDay = 40;
   const threeDayDiscount = 20;
