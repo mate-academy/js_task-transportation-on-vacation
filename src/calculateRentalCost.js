@@ -31,13 +31,15 @@ function calculateRentalCost(days) {
   const rentCost = 40;
   const shortPeriodDiscount = 20;
   const longPeriodDiscount = 50;
+  const shotrPeriod = 3;
+  const longPeriod = 7;
   const totalRentCost = days * rentCost;
 
-  if (days < 3) {
+  if (days < shotrPeriod) {
     return totalRentCost;
   }
 
-  if (days < 7) {
+  if (days < longPeriod) {
     return totalRentCost - shortPeriodDiscount;
   }
 
