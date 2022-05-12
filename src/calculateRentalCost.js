@@ -29,17 +29,18 @@
 
 function calculateRentalCost(days) {
   let totalCount = 0;
+  const payDay = days * 40;
 
   if (days < 3) {
-    totalCount = days * 40;
+    totalCount = payDay;
   }
 
   if (days >= 3) {
-    totalCount = (days * 40) - 20;
+    totalCount = payDay - 20;
   }
 
   if (days >= 7) {
-    totalCount = (days * 40) - 50;
+    totalCount = payDay - 50;
   }
 
   return totalCount;
