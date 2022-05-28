@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   const priceRent = days * 40;
+  const shotrDiscount = 20;
+  const longDiscount = 50;
 
   if (days < 3) {
     return priceRent;
   } else if (days >= 3 && days < 7) {
-    return priceRent - 20;
+    return priceRent - shotrDiscount;
   } else if (days >= 7) {
-    return priceRent - 50;
+    return priceRent - longDiscount;
   }
 }
 
