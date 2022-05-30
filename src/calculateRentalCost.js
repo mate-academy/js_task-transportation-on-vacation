@@ -34,11 +34,13 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     return days * oneDayPrice;
-  } else if (days < 7) {
-    return days * oneDayPrice - discountFor3Days;
-  } else {
-    return days * oneDayPrice - discountFor7Days;
   }
+
+  if (days < 7) {
+    return days * oneDayPrice - discountFor3Days;
+  }
+
+  return days * oneDayPrice - discountFor7Days;
 }
 
 module.exports = calculateRentalCost;
