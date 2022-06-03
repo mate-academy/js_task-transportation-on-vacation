@@ -33,24 +33,16 @@ function calculateRentalCost(days) {
   const bigDiscount = 50;
   let amount = 0;
 
-  switch (days) {
-    case 1:
-    case 2:
-      return amount + price * days;
+  if (days <= 2) {
+    return amount + price * days;
+  } else if (days >= 3 && days <= 6) {
+    amount += price * days - litleDiscount;
 
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      amount += price * days - litleDiscount;
+    return amount;
+  } else if (days >= 7) {
+    amount += price * days - bigDiscount;
 
-      return amount;
-
-    case 7:
-    default:
-      amount += price * days - bigDiscount;
-
-      return amount;
+    return amount;
   }
 }
 
