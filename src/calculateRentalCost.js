@@ -28,21 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  let sum = 0;
   const smallDiscount = 20;
   const bigDiscount = 30;
-  const payPerMonth = 40;
+  const payPerDays = 40;
+  let sum = payPerDays * days;
 
-  for (let q = 1; q <= days; q++) {
-    sum += payPerMonth;
+  if (sum >= 3) {
+    sum -= smallDiscount;
+  }
 
-    if (q === 3) {
-      sum -= smallDiscount;
-    }
-
-    if (q === 7) {
-      sum -= bigDiscount;
-    }
+  if (sum >= 7) {
+    sum -= bigDiscount;
   }
 
   return sum;
