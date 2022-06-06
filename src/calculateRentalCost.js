@@ -30,15 +30,15 @@
 function calculateRentalCost(days) {
   const rentPrice = 40;
   const discount = 50;
-  const altentaiveDiscount = 20;
+  const alterntaiveDiscount = 20;
   const sum = days * rentPrice;
 
   switch (true) {
-    case days > 6:
+    case days >= 7:
       return sum - discount;
 
-    case days > 2:
-      return sum - altentaiveDiscount;
+    case days >= 3:
+      return sum - alterntaiveDiscount;
 
     default:
       return sum;
