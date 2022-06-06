@@ -1,5 +1,4 @@
 'use strict';
-// debugger;
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
@@ -28,22 +27,18 @@
  */
 
 function calculateRentalCost(days) {
-  let cost = 0;
+  const price = 40;
+  const discountFor3Days = 20;
+  const discountFor7Days = 50;
+  const noDiscountPrice = price * days;
 
-  switch (true) {
-    case days < 3 :
-      cost = days * 40;
-      break;
-    case days >= 3 && days < 7 :
-      cost = days * 40 - 20;
-      break;
-    case days >= 7 :
-      cost = days * 40 - 50;
+  if (days >= 3 && days <= 6) {
+    return noDiscountPrice - discountFor3Days;
+  } else if (days >= 7) {
+    return noDiscountPrice - discountFor7Days;
+  } else {
+    return noDiscountPrice;
   }
-
-  return cost;
 }
-
-// console.log(calculateRentalCost(7));
 
 module.exports = calculateRentalCost;
