@@ -1,5 +1,5 @@
 'use strict';
-
+// debugger;
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let cost = 0;
+
+  switch (true) {
+    case days < 3 :
+      cost = days * 40;
+      break;
+    case days >= 3 && days < 7 :
+      cost = days * 40 - 20;
+      break;
+    case days >= 7 :
+      cost = days * 40 - 50;
+  }
+
+  return cost;
 }
+
+// console.log(calculateRentalCost(7));
 
 module.exports = calculateRentalCost;
