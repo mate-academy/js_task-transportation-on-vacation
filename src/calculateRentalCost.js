@@ -28,15 +28,14 @@
  */
 
 function calculateRentalCost(days) {
-  const rentDay = 40;
-  let total = days * rentDay;
+  const total = days * 40;
 
-  if (days >= 3) {
-    total = total - 20;
+  if (days >= 3 && days < 7) {
+    return total - 20;
   }
 
   if (days >= 7) {
-    total = total - 30;
+    return total - 50;
   }
 
   return total;
