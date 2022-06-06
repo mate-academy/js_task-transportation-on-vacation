@@ -28,16 +28,24 @@
  */
 
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return days * 40;
-  };
+  const rentalCostPerDay = 40;
+  const basicDiscount = 20;
+  const hugeDiscaunt = 50;
+  const basicDiscountDay = 3;
+  const hugeDiscauntDay = 7;
+  const rentalCost = days * rentalCostPerDay;
+  const rentalCostBasicDiscount = rentalCost - basicDiscount;
+  const rentalCostHugeDiscaunt = rentalCost - hugeDiscaunt;
 
-  if (days >= 3 && days < 7) {
-    return (days * 40) - 20;
-  };
+  switch (true) {
+    case days < basicDiscountDay:
+      return rentalCost;
 
-  if (days >= 7) {
-    return (days * 40) - 50;
+    case days >= basicDiscountDay && days < hugeDiscauntDay:
+      return rentalCostBasicDiscount;
+
+    case days >= hugeDiscauntDay :
+      return rentalCostHugeDiscaunt;
   };
 };
 
