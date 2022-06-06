@@ -29,20 +29,17 @@
 
 function calculateRentalCost(days) {
   const pricePerDay = 40;
-  const fullPrise = days * pricePerDay;
-  const cashbackForTreeDays = 20;
-  const cashbackForSevenDays = 50;
-  let total = 0;
+  const fullPrice = days * pricePerDay;
+  const basicDiscount = 20;
+  const advancedDiscount = 50;
 
   if (days >= 7) {
-    total = fullPrise - cashbackForSevenDays;
+    return fullPrice - advancedDiscount;
   } else if (days >= 3) {
-    total = fullPrise - cashbackForTreeDays;
-  } else {
-    total = fullPrise;
+    return fullPrice - basicDiscount;
   }
 
-  return total;
+  return fullPrice;
 }
 
 module.exports = calculateRentalCost;
