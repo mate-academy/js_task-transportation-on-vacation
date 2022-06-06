@@ -30,16 +30,19 @@
 function calculateRentalCost(days) {
   const carCostDay = 40;
   const rentDays = days;
+  const basicDiscount = 50;
+  const minDiscount = 20;
+  let total = carCostDay * rentDays;
 
-  if (rentDays > 2) {
-    if (rentDays > 6) {
-      return carCostDay * rentDays - 50;
-    }
-
-    return carCostDay * rentDays - 20;
+  if (rentDays > 2 && rentDays <= 6) {
+    total -= minDiscount;
   }
 
-  return carCostDay * rentDays;
+  if (rentDays > 6) {
+    total -= basicDiscount;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
