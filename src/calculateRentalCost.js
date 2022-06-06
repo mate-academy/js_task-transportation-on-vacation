@@ -29,19 +29,18 @@
 
 function calculateRentalCost(days) {
   const carCost = 40;
-  const minRent = carCost * days;
-  const mediumRent = carCost * days - 20;
-  const largeRent = carCost * days - 50;
+  const mediumRent = 20;
+  const largeRent = 50;
 
   if (days >= 7) {
-    return largeRent;
+    return carCost * days - largeRent;
   }
 
   if (days >= 3) {
-    return mediumRent;
+    return carCost * days - mediumRent;
   }
 
-  return minRent;
+  return carCost * days;
 }
 
 module.exports = calculateRentalCost;
