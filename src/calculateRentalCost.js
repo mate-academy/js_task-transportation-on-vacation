@@ -34,15 +34,15 @@ function calculateRentalCost(days) {
   const minDiscount = 20;
   const total = carCostDay * rentDays;
 
-  if (rentDays > 2 && rentDays <= 6) {
+  if (rentDays < 3) {
+    return total;
+  }
+
+  if (rentDays < 7) {
     return total - minDiscount;
   }
 
-  if (rentDays > 6) {
-    return total - basicDiscount;
-  }
-
-  return total;
+  return total - basicDiscount;
 }
 
 module.exports = calculateRentalCost;
