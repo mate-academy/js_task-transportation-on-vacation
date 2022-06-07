@@ -28,15 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const payDay = days * 40;
+  const payMore3Day = 20;
+  const payWeek = 50;
+
   if (days < 3) {
-    return days * 40;
+    return payDay;
   }
 
-  if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+  if (days < 7) {
+    return payDay - payMore3Day;
   }
 
-  return days * 40 - 50;
+  return payDay - payWeek;
 }
 
 module.exports = calculateRentalCost;
