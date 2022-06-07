@@ -28,7 +28,7 @@
  */
 
 function calculateRentalCost(days) {
-  const price = 40 * days;
+  const price = days * 40;
   const discountBasic = 20;
   const discountBonus = 50;
 
