@@ -29,23 +29,23 @@
 
 function calculateRentalCost(days) {
   // write code here
-  let finalPrice = 0;
-  const fullPrice = days * 40;
+  const priceOneDay = 40;
+  const fewDays = 3;
+  const fewDaysSale = 20;
+  const manyDays = 7;
+  const manyDaysSale = 50;
+  const fullPrice = days * priceOneDay;
 
-  if (days < 3) {
+  if (days < fewDays) {
     return fullPrice;
   }
 
-  if (days < 7) {
-    finalPrice = fullPrice - 20;
-
-    return finalPrice;
+  if (days < manyDays) {
+    return fullPrice - fewDaysSale;
   }
 
-  if (days >= 7) {
-    finalPrice = fullPrice - 50;
-
-    return finalPrice;
+  if (days >= manyDays) {
+    return fullPrice - manyDaysSale;
   }
 }
 
