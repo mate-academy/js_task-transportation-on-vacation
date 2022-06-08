@@ -37,7 +37,7 @@ function calculateRentalCost(days) {
     return basicSum - maxDiscount;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days >= 3) {
     return basicSum - basicDiscount;
   }
 
