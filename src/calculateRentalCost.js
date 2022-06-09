@@ -28,26 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  let total = 0;
   const payment = 40;
-
-  if (days <= 0) {
-    return 0;
-  }
+  const total = days * payment;
 
   if (days >= 7) {
-    total = (days * payment) - 50;
-
-    return total;
+    return total - 50;
   }
 
   if (days >= 3) {
-    total = (days * payment) - 20;
-
-    return total;
+    return total - 20;
   } else {
-    total = (days * payment);
-
     return total;
   }
 }
