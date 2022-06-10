@@ -33,20 +33,19 @@ function calculateRentalCost(days) {
   const bigDiscount = 50;
   let amount = 0;
   const priceMultDays = price * days;
+  const numberOfDays = days;
+  const threeDays = 3;
+  const sevenDays = 7;
 
-  if (days <= 2) {
-    return amount + priceMultDays;
-  }
-
-  if (days >= 3 && days <= 6) {
+  if (numberOfDays < threeDays) {
+    amount += amount + priceMultDays;
+  } else if (numberOfDays >= threeDays && numberOfDays < sevenDays) {
     amount += priceMultDays - litleDiscount;
-
-    return amount;
-  } else if (days >= 7) {
+  } else if (numberOfDays >= sevenDays) {
     amount += priceMultDays - bigDiscount;
-
-    return amount;
   }
+
+  return amount;
 }
 
 module.exports = calculateRentalCost;
