@@ -28,21 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  const multiplier = () => {
-    return days * 40;
-  };
+  const multiplier = days * 40;
 
   // write code here
   if (days < 3) {
-    return multiplier();
+    return multiplier;
   }
 
   if (days >= 3 && days < 7) {
-    return multiplier() - 20;
+    return multiplier - 20;
   }
 
   if (days >= 7) {
-    return multiplier() - 50;
+    return multiplier - 50;
   }
 }
 
