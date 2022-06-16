@@ -29,18 +29,16 @@
 
 function calculateRentalCost(days) {
   const carCost = 40;
-  let allCost = days * carCost;
+  const allCost = days * carCost;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
 
   if (days >= 7) {
-    allCost -= 50;
-
-    return allCost;
+    return allCost - bigDiscount;
   }
 
   if (days >= 3) {
-    allCost -= 20;
-
-    return allCost;
+    return allCost - smallDiscount;
   }
 
   return allCost;
