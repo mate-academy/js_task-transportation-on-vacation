@@ -31,12 +31,17 @@ function calculateRentalCost(days) {
   const dailyRent = 40;
   const totalPrice = days * dailyRent;
 
-  if (days >= 7) {
-    return totalPrice - 50;
+  const firstLevelDiscountDays = 3;
+  const firstLevelDiscountAmount = 20;
+  const secondLevelDiscountDays = 7;
+  const secondLevelDiscountAmount = 50;
+
+  if (days >= secondLevelDiscountDays) {
+    return totalPrice - secondLevelDiscountAmount;
   }
 
-  if (days >= 3) {
-    return totalPrice - 20;
+  if (days >= firstLevelDiscountDays) {
+    return totalPrice - firstLevelDiscountAmount;
   }
 
   return totalPrice;
