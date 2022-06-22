@@ -31,15 +31,16 @@ function calculateRentalCost(days) {
   const carCosts = 40;
   const discount1 = 20;
   const discount2 = 50;
-  const rent = 1;
+  const middlePeriod = 3;
+  const longPeriod = 7;
 
   const costs = days * carCosts;
 
-  if (days >= rent + 2 && days < rent + 6) {
+  if (days >= middlePeriod && days < longPeriod) {
     return costs - discount1;
   }
 
-  if (days >= rent + 6) {
+  if (days >= longPeriod) {
     return costs - discount2;
   }
 
