@@ -31,12 +31,14 @@ function calculateRentalCost(days) {
   const totalBasic = days * 40;
   const totalPlus = days * 40 - 20;
   const totalPro = days * 40 - 50;
+  const weekendPlus = 3;
+  const oneWeek = 7;
 
-  if (days >= 7) {
+  if (days >= oneWeek) {
     return totalPro;
   }
 
-  if (days >= 3) {
+  if (days >= weekendPlus) {
     return totalPlus;
   }
 
