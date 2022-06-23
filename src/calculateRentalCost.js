@@ -29,16 +29,10 @@
 
 function calculateRentalCost(days) {
   const total = days * 40;
+  const totalPlus = days * 40 - 20;
+  const totalPro = days * 40 - 50;
 
-  if (days >= 7) {
-    return total - 50;
-  }
-
-  if (days >= 3) {
-    return total - 20;
-  }
-
-  return total;
+  return (days >= 7) ? totalPro : (days >= 3) ? totalPlus : total;
 }
 
 module.exports = calculateRentalCost;
