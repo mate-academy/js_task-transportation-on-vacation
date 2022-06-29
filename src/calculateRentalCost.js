@@ -28,12 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  let total = days * 40;
+  const price = 40;
+  const smallDiscountDays = 3;
+  const smallDiscountSum = 20;
+  const bigDiscountDays = 7;
+  const bigDiscountSum = 50;
 
-  if (days > 6) {
-    total -= 50;
-  } else if (days > 2) {
-    total -= 20;
+  let total = days * price;
+
+  if (days >= bigDiscountDays) {
+    total -= bigDiscountSum;
+  } else if (days >= smallDiscountDays) {
+    total -= smallDiscountSum;
   }
 
   return total;
