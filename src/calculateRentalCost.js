@@ -28,14 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const total = 40 * days;
+  const COST_PER_DAY = 40;
+  const FIRST_DISCOUNT_THRESHOLD = 3;
+  const FIRST_DISCOUNT = 20;
+  const SECOND_DISCOUNT_THRESHOLD = 7;
+  const SECOND_DISCOUNT = 50;
 
-  if (days >= 7) {
-    return total - 50;
+  const total = COST_PER_DAY * days;
+
+  if (days >= SECOND_DISCOUNT_THRESHOLD) {
+    return total - SECOND_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return total - 20;
+  if (days >= FIRST_DISCOUNT_THRESHOLD) {
+    return total - FIRST_DISCOUNT;
   }
 
   return total;
