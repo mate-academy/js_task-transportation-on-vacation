@@ -22,13 +22,38 @@
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
- * @param {number} days
+ * @param {number} rentDays
  *
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  // write code here
+function calculateRentalCost(rentDays) {
+  const costRentCar = 40;
+  const discountUpper3Days = 20;
+  const discountUpper7Days = 50;
+  let total = 0;
+  const errorMessage
+    = 'Incorrect input data! The quantity of days must be a number';
+
+  if (rentDays < 3) {
+    total = rentDays * costRentCar;
+
+    return total;
+  }
+
+  if (rentDays < 7) {
+    total = rentDays * costRentCar - discountUpper3Days;
+
+    return total;
+  }
+
+  if (rentDays >= 7) {
+    total = rentDays * costRentCar - discountUpper7Days;
+
+    return total;
+  }
+
+  throw new Error(errorMessage);
 }
 
 module.exports = calculateRentalCost;
