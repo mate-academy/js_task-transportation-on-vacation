@@ -34,19 +34,17 @@ function calculateRentalCost(days) {
   const week = 7;
   const weekend = 3;
 
-  const weekendRent = days * dailyValue - threeDaysSale;
-  const weekRent = days * dailyValue - weekSale;
-  const dayRent = days * dailyValue;
+  const total = days * dailyValue;
 
   if (days >= week) {
-    return weekRent;
+    return total - weekSale;
   }
 
-  if (days >= weekend && days < week) {
-    return weekendRent;
+  if (days >= weekend) {
+    return total - threeDaysSale;
   }
 
-  return dayRent;
+  return total;
 }
 
 module.exports = calculateRentalCost;
