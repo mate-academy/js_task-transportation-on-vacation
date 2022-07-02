@@ -29,16 +29,21 @@
 
 function calculateRentalCost(days) {
   let rental = 0;
-  const d = days;
+  const daysRental = days;
+  const daysForBigDiscount = 7;
+  const daysForAlternativelDiscount = 3;
+  const bigDiscount = 50;
+  const alternativelDiscount = 20;
 
-  rental = d * 40;
+  rental = daysRental * 40;
 
-  if (d >= 3 && d < 7) {
-    rental -= 20;
+  if (daysRental >= daysForBigDiscount) {
+    rental -= bigDiscount;
   }
 
-  if (d >= 7) {
-    rental -= 50;
+  if (daysRental >= daysForAlternativelDiscount
+    && daysRental < daysForBigDiscount) {
+    rental -= alternativelDiscount;
   }
 
   return rental;
