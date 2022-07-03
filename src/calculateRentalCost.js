@@ -29,14 +29,14 @@
 
 function calculateRentalCost(days) {
   const rentCost = 40;
-  const daysWithoutSale = 3;
-  const daysWithMaxSale = 7;
+  const daysBeforeMinSale = 2;
+  const daysBeforeMaxSale = 6;
   const middleSale = 20;
   const maxSale = 50;
 
-  if (days < daysWithoutSale) {
+  if (days <= daysBeforeMinSale) {
     return days * rentCost;
-  } else if (days >= daysWithMaxSale) {
+  } else if (days > daysBeforeMaxSale) {
     return days * rentCost - maxSale;
   }
 
