@@ -30,16 +30,16 @@
 function calculateRentalCost(days) {
   const rentPricePerDay = 40;
   const firstDiscountDays = 3;
-  const secondDescountDays = 7;
-  const firstDiscount = 50;
-  const secondDiscount = 20;
+  const secondDiscountDays = 7;
+  const firstDiscount = 20;
+  const secondDiscount = 50;
 
   let count = days * rentPricePerDay;
 
-  if (days >= secondDescountDays) {
-    count -= firstDiscount;
-  } else if (days >= firstDiscountDays) {
+  if (days >= secondDiscountDays) {
     count -= secondDiscount;
+  } else if (days >= firstDiscountDays) {
+    count -= firstDiscount;
   }
 
   return count;
