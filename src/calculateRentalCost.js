@@ -39,7 +39,7 @@ function calculateRentalCost(days) {
     return amount;
   }
 
-  if (days > 2 && days < 7) {
+  if (days < 7) {
     amount += days * rent - discountForWeek;
 
     return amount;
