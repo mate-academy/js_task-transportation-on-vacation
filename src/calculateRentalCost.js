@@ -30,15 +30,15 @@
 function calculateRentalCost(days) {
   // write code here
   const costs = 40 * days;
-  const firstDiscount = 50;
-  const secondDiscount = 20;
-  const firstTerm = 7;
-  const secondTerm = 3;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  const longTerm = 7;
+  const shortTerm = 3;
 
-  if (days >= firstTerm) {
-    return costs - firstDiscount;
-  } else if (days >= secondTerm) {
-    return costs - secondDiscount;
+  if (days >= longTerm) {
+    return costs - bigDiscount;
+  } else if (days >= shortTerm) {
+    return costs - smallDiscount;
   } else {
     return costs;
   }
