@@ -31,16 +31,18 @@ function calculateRentalCost(days) {
   const price = 40;
   const discountLow = 20;
   const discountHigh = 50;
+  const periodMin = 3;
+  const periodMax = 7;
 
-  if (days <= 2) {
+  if (days < periodMin) {
     return days * price;
   }
 
-  if (days < 7) {
+  if (days < periodMax) {
     return days * price - discountLow;
   }
 
-  if (days >= 7) {
+  if (days >= periodMax) {
     return days * price - discountHigh;
   }
 }
