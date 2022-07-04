@@ -29,12 +29,17 @@
 
 function calculateRentalCost(days) {
   const price = 40;
+  const discount20 = 20;
+  const discount50 = 50;
+  const minDaysDisc20 = 3;
+  const maxDaysDisc20 = 7;
+  const minDaysDisc50 = 7;
   let amount = days * price;
 
-  if (days >= 3 && days < 7) {
-    amount -= 20;
-  } else if (days >= 7) {
-    amount -= 50;
+  if (days >= minDaysDisc20 && days < maxDaysDisc20) {
+    amount -= discount20;
+  } else if (days >= minDaysDisc50) {
+    amount -= discount50;
   }
 
   return amount;
