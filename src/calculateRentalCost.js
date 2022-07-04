@@ -29,16 +29,16 @@
 
 function calculateRentalCost(days) {
   const amoutPerDay = 40;
-  const conditionToGet20off = 3;
+  const conditionToGetSmallDiscount = 3;
   const smallDiscount = 20;
-  const conditionToGet50off = 7;
+  const conditionToGetBigDiscount = 7;
   const bigDiscount = 50;
 
-  if (days >= conditionToGet50off) {
+  if (days >= conditionToGetBigDiscount) {
     return (days * amoutPerDay) - bigDiscount;
   }
 
-  if (days >= conditionToGet20off) {
+  if (days >= conditionToGetSmallDiscount) {
     return (days * amoutPerDay) - smallDiscount;
   }
 
