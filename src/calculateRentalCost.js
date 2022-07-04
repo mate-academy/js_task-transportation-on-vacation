@@ -21,14 +21,23 @@
  *  - calculateRentalCost(1) === 40
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
- *
- * @param {number} days
- *
- * @return {number}
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const dailyCost = 40;
+  const weekDisc = 50;
+  const threeDDisc = 20;
+  const days3 = 3;
+  const days7 = 7;
+  let rentalCost = (days * dailyCost);
+
+  if (days >= days7) {
+    rentalCost = (days * dailyCost) - weekDisc;
+  } else if (days >= days3) {
+    rentalCost = (days * dailyCost) - threeDDisc;
+  }
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
