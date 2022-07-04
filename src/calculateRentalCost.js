@@ -30,15 +30,15 @@
 function calculateRentalCost(days) {
   const rentCost = 40;
   let result = days * rentCost;
-  const firstDiscountThreshold = 3;
-  const secondDiscountThreshold = 7;
-  const firstDiscount = 20;
-  const secondDiscount = 50;
+  const minDiscountPeriod = 3;
+  const maxDiscountPeriod = 7;
+  const minDiscount = 20;
+  const maxDiscount = 50;
 
-  if (days >= secondDiscountThreshold) {
-    result -= secondDiscount;
-  } else if (days >= firstDiscountThreshold) {
-    result -= firstDiscount;
+  if (days >= maxDiscountPeriod) {
+    result -= maxDiscount;
+  } else if (days >= minDiscountPeriod) {
+    result -= minDiscount;
   }
 
   return result;
