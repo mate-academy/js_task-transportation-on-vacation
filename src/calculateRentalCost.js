@@ -29,10 +29,14 @@
 
 function calculateRentalCost(days) {
   const rentPerDay = 40;
+  const longRentTerm = 7;
+  const longTermDiscount = 50;
+  const shortRentTerm = 3;
+  const shortTermDiscount = 20;
 
   switch (true) {
-    case (days >= 7): return days * rentPerDay - 50;
-    case (days >= 3): return days * rentPerDay - 20;
+    case (days >= longRentTerm): return days * rentPerDay - longTermDiscount;
+    case (days >= shortRentTerm): return days * rentPerDay - shortTermDiscount;
     default: return days * rentPerDay;
   }
 }
