@@ -29,21 +29,23 @@
 
 function calculateRentalCost(days) {
   let totalAmount = 0;
-  let daysCount = 0;
-  const threeDaysDiscount = 20;
-  const sevenDaysDiscount = 50;
+  const rentPriceForDay = 40;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+  const daysForSmallDiscount = 3;
+  const daysForBigDiscount = 7;
 
   for (let i = 1; i <= days; i++) {
-    totalAmount += 40;
-    daysCount++;
+    totalAmount += rentPriceForDay;
   }
 
-  if (daysCount >= 3 && daysCount < 7) {
-    totalAmount -= threeDaysDiscount;
+  if (days >= daysForSmallDiscount
+    && days < daysForBigDiscount) {
+    totalAmount -= smallDiscount;
   }
 
-  if (daysCount >= 7) {
-    totalAmount -= sevenDaysDiscount;
+  if (days >= daysForBigDiscount) {
+    totalAmount -= bigDiscount;
   }
 
   return totalAmount;
