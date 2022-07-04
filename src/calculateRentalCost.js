@@ -14,7 +14,7 @@
  * Alternatively, if you rent the car for 3 or more days,
  * you get $20 off your total.
  *
- * Implement calculateRentalCost function
+//  * Implement calculateRentalCost function
  * which returns the total amount for different count of days.
  *
  * Examples:
@@ -28,7 +28,27 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let totalAmount = 0;
+  const rentPriceForDay = 40;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+  const daysForSmallDiscount = 3;
+  const daysForBigDiscount = 7;
+
+  for (let i = 1; i <= days; i++) {
+    totalAmount += rentPriceForDay;
+  }
+
+  if (days >= daysForSmallDiscount
+    && days < daysForBigDiscount) {
+    totalAmount -= smallDiscount;
+  }
+
+  if (days >= daysForBigDiscount) {
+    totalAmount -= bigDiscount;
+  }
+
+  return totalAmount;
 }
 
 module.exports = calculateRentalCost;
