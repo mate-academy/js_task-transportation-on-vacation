@@ -36,11 +36,15 @@ function calculateRentalCost(days) {
 
   const discountAfterSevenDays = 50;
 
-  if (days < 3) {
+  const minNumberOfDaysForTheTwentyDollarDiscount = 3;
+
+  const minNumberOfDaysForTheFiftyDollarDiscount = 7;
+
+  if (days < minNumberOfDaysForTheTwentyDollarDiscount) {
     return rentCost;
   }
 
-  if (days < 7) {
+  if (days < minNumberOfDaysForTheFiftyDollarDiscount) {
     return rentCost - discountAfterThreeDays;
   }
 
