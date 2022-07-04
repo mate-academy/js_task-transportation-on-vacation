@@ -32,11 +32,13 @@ function calculateRentalCost(days) {
   const unDiscountRent = days * rentPerDay;
   const extraDiscount = 50;
   const usualDiscount = 20;
+  const longRentTerm = 7;
+  const shortRentTerm = 3;
 
   switch (true) {
-    case days >= 7:
+    case days >= longRentTerm:
       return unDiscountRent - extraDiscount;
-    case days >= 3:
+    case days >= shortRentTerm:
       return unDiscountRent - usualDiscount;
     default:
       return unDiscountRent;
