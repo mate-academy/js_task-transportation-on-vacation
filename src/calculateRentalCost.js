@@ -28,14 +28,16 @@
  */
 
 function calculateRentalCost(days) {
+  const basicDiscountDays = 3;
+  const additionalDiscountDays = 7;
   const basicDiscount = 20;
   const additionalDiscount = 50;
-  const coast = 40;
-  let total = coast * days;
+  const cost = 40;
+  let total = cost * days;
 
-  if (days >= 7) {
+  if (days >= additionalDiscountDays) {
     total -= additionalDiscount;
-  } else if (days >= 3) {
+  } else if (days >= basicDiscountDays) {
     total -= basicDiscount;
   }
 
