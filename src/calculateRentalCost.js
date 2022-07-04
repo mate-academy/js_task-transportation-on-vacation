@@ -34,15 +34,18 @@ function calculateRentalCost(days) {
   const discount = 20;
   const wholesaleDiscount = 50;
 
-  if (days >= 7) {
+  const daysForDiscount = 3;
+  const daysForWholesaleDiscount = 7;
+
+  if (days >= daysForWholesaleDiscount) {
     return (dayCost * days) - wholesaleDiscount;
   }
 
-  if (days >= 3) {
+  if (days >= daysForDiscount) {
     return (dayCost * days) - discount;
   }
 
-  if (days < 3) {
+  if (days < daysForDiscount) {
     return dayCost * days;
   }
 }
