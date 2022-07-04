@@ -44,12 +44,9 @@ function calculateRentalCost(days) {
 
     return amount;
   }
+  amount += days * rent - discountMoreWeek;
 
-  if (days >= 7) {
-    amount += days * rent - discountMoreWeek;
-
-    return amount;
-  }
+  return amount;
 }
 
 module.exports = calculateRentalCost;
