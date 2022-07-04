@@ -43,9 +43,7 @@ function calculateRentalCost(days) {
     return (days * rentaOneDay - firstPeriodDiscount);
   }
 
-  if (days >= secondPeriod) {
-    return (days * rentaOneDay - secondPeriodDiscount);
-  }
+  return (days * rentaOneDay - secondPeriodDiscount);
 }
 
 module.exports = calculateRentalCost;
