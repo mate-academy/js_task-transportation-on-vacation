@@ -37,21 +37,17 @@ function calculateRentalCost(days) {
 
   if (days < conditionToGet20off) {
     totalAmout = days * amoutPerDay;
-
-    return totalAmout;
   }
 
   if (days < conditionToGet50off) {
     totalAmout = (days * amoutPerDay) - smallDiscount;
-
-    return totalAmout;
   }
 
   if (days >= conditionToGet50off) {
     totalAmout = (days * amoutPerDay) - bigDiscount;
-
-    return totalAmout;
   }
+
+  return totalAmout;
 }
 
 module.exports = calculateRentalCost;
