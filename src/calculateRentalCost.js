@@ -36,7 +36,9 @@ function calculateRentalCost(days) {
 
   if (days <= daysBeforeMinSale) {
     return days * rentCost;
-  } else if (days > daysBeforeMaxSale) {
+  }
+
+  if (days > daysBeforeMaxSale) {
     return days * rentCost - maxSale;
   }
 
