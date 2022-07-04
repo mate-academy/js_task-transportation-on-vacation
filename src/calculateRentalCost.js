@@ -33,9 +33,9 @@ function calculateRentalCost(days) {
   const bigSale = 50;
   let fullCost = days * rentalCost;
 
-  if (days % 3 === 0) {
+  if (days >= 3 && days < 7) {
     fullCost -= littleSale;
-  } else if (days % 7 === 0) {
+  } else if (days >= 7) {
     fullCost -= bigSale;
   }
 
