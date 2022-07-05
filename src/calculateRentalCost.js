@@ -36,11 +36,9 @@ function calculateRentalCost(days) {
     return (days * 40) - 20;
   }
 
-  if(days >= 7){
-    return (days * 40) - 50;
-  }
+  return (days * 40) - 50;
   
 }
-console.log(calculateRentalCost(7));
+
 
 module.exports = calculateRentalCost;
