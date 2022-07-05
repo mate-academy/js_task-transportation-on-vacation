@@ -34,16 +34,17 @@ function calculateRentalCost(days) {
   const maxDaysForDiskount = 7;
   const minDiskount = 20;
   const maxDiskount = 50;
+  const totalPrice = days * priceForOneDay;
 
   if (days < minDaysForDiskount) {
-    return days * priceForOneDay;
+    return totalPrice;
   }
 
   if (days < maxDaysForDiskount) {
-    return days * priceForOneDay - minDiskount;
+    return totalPrice - minDiskount;
   }
 
-  return days * priceForOneDay - maxDiskount;
+  return totalPrice - maxDiskount;
 }
 
 module.exports = calculateRentalCost;
