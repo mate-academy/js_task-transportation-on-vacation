@@ -28,19 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  let sum = days * 40;
+  let sumRentals = days * 40;
+  const rentalplusseven = 50;
+  const rentalplusthree = 20;
 
   if (days >= 7) {
-    sum -= 50;
+    sumRentals -= rentalplusseven;
 
-    return sum;
+    return sumRentals;
   }
 
   if (days >= 3) {
-    sum -= 20;
+    sumRentals -= rentalplusthree;
   }
 
-  return sum;
+  return sumRentals;
 }
 
 module.exports = calculateRentalCost;
