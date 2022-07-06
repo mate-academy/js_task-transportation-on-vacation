@@ -32,12 +32,14 @@ function calculateRentalCost(days) {
   const discountAfterSeventhDay = 50;
   const discountAfterThirdDay = 20;
   const totalAmount = days * costPerDay;
+  const threeDays = 3;
+  const sevenDays = 7;
 
-  if (days >= 7) {
+  if (days >= sevenDays) {
     return totalAmount - discountAfterSeventhDay;
   }
 
-  if (days >= 3) {
+  if (days >= threeDays) {
     return totalAmount - discountAfterThirdDay;
   }
 
