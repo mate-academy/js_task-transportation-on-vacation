@@ -28,14 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  let sum = 0;
+  const rentalCost = 40;
+  const discount1 = 50;
+  const discount2 = 20;
+  let sum = days * rentalCost;
 
-  if (days >= 7) {
-    sum = days * 40 - 50;
-  } else if (days >= 3) {
-    sum = days * 40 - 20;
+  if (days < 3) {
+    return sum;
+  } else if (days < 7) {
+    sum = sum - discount2;
   } else {
-    sum = days * 40;
+    sum = sum - discount1;
   }
 
   return sum;
