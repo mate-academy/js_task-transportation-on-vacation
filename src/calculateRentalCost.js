@@ -29,19 +29,19 @@
 
 function calculateRentalCost(days) {
   const rentalCost = 40;
-  const discount1 = 50;
-  const discount2 = 20;
-  let sum = days * rentalCost;
+  const discountBig = 50;
+  const discountSmall = 20;
+  const sum = days * rentalCost;
 
   if (days < 3) {
     return sum;
-  } else if (days < 7) {
-    sum = sum - discount2;
-  } else {
-    sum = sum - discount1;
   }
 
-  return sum;
+  if (days < 7) {
+    return (sum - discountSmall);
+  }
+
+  return (sum - discountBig);
 }
 
 module.exports = calculateRentalCost;
