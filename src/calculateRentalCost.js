@@ -28,7 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const sumWOdisc = days * 40;
+  const disc20 = 20;
+  const disc50 = 50;
+
+  if (days >= 3 && days < 7) {
+    return (sumWOdisc - disc20);
+  } else if (days >= 7) {
+    return (sumWOdisc - disc50);
+  } else {
+    return sumWOdisc;
+  }
 }
 
 module.exports = calculateRentalCost;
