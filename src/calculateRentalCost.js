@@ -29,14 +29,19 @@
 
 function calculateRentalCost(days) {
   let costs = 0;
+  const countDays = days;
+  const rentPriceOneDay = 40;
+  let amount = countDays * rentPriceOneDay;
 
-  if (days >= 7) {
+  if (countDays >= 7) {
     costs = 50;
-  } else if (days < 7 & days >= 3) {
-    costs = 20;
+    amount = (countDays * rentPriceOneDay) - costs;
   }
 
-  const amount = (days * 40) - costs;
+  if (countDays < 7 & countDays >= 3) {
+    costs = 20;
+    amount = (countDays * rentPriceOneDay) - costs;
+  }
 
   return amount;
 }
