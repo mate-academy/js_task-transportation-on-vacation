@@ -28,17 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  const sumWOdisc = days * 40;
-  const disc20 = 20;
-  const disc50 = 50;
+  const sum = days * 40;
+  const smallDiscount = 20;
+  const largeDiscount = 50;
+  const smallPeriod = 3;
+  const largePeriod = 7;
 
-  if (days >= 3 && days < 7) {
-    return (sumWOdisc - disc20);
-  } else if (days >= 7) {
-    return (sumWOdisc - disc50);
-  } else {
-    return sumWOdisc;
+  if (days >= smallPeriod && days < largePeriod) {
+    return (sum - smallDiscount);
   }
+
+  if (days >= largePeriod) {
+    return (sum - largeDiscount);
+  }
+
+  return sum;
 }
 
 module.exports = calculateRentalCost;
