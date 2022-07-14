@@ -29,11 +29,13 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const minDaysForDiscount20 = 3;
+  const minDaysForDiscount50 = 7;
   let sum = days * 40;
 
-  if (days >= 3 && days < 7) {
+  if (days >= minDaysForDiscount20 && days < minDaysForDiscount50) {
     sum -= 20;
-  } else if (days >= 7) {
+  } else if (days >= minDaysForDiscount50) {
     sum -= 50;
   }
 
