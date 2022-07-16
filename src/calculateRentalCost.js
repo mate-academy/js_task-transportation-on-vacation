@@ -28,13 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  if (days >= 7) {
-    return (40 * days) - 50;
-  } else if (days >= 3) {
-    return (40 * days) - 20;
-  } else {
-    return 40 * days;
+  const sum = 40 * days;
+  const discountFirst = 50;
+  const discountSecond = 20;
+  const daysFirst = 7;
+  const daysSecond = 3;
+
+  if (days >= daysFirst) {
+    return sum - discountFirst;
+  } else if (days >= daysSecond) {
+    return sum - discountSecond;
   }
+
+  return sum;
 }
 
 module.exports = calculateRentalCost;
