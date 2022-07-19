@@ -31,18 +31,17 @@ function calculateRentalCost(days) {
   const costCarDay = 40;
   const discountOverThreeDays = 20;
   const discountOverSevenDays = 50;
+  const rentalCost = days * costCarDay;
 
   if (days >= 7) {
-    return (days * costCarDay) - discountOverSevenDays;
+    return rentalCost - discountOverSevenDays;
   }
 
   if (days >= 3) {
-    return (days * costCarDay) - discountOverThreeDays;
+    return rentalCost - discountOverThreeDays;
   }
 
-  if (days < 3) {
-    return days * costCarDay;
-  }
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
