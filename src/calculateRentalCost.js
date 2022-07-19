@@ -31,16 +31,18 @@ function calculateRentalCost(days) {
   let costs = 0;
   const countDays = days;
   const rentPriceOneDay = 40;
-  let amount = countDays * rentPriceOneDay;
+  const amount = countDays * rentPriceOneDay;
 
   if (countDays >= 7) {
     costs = 50;
-    amount = (countDays * rentPriceOneDay) - costs;
+
+    return amount - costs;
   }
 
   if (countDays < 7 & countDays >= 3) {
     costs = 20;
-    amount = (countDays * rentPriceOneDay) - costs;
+
+    return amount - costs;
   }
 
   return amount;
