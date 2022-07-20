@@ -28,7 +28,24 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const basicPayAmount = days * 40;
+  const costShortRentPeriod = basicPayAmount - 20;
+  const costLongRentPeriod = basicPayAmount - 50;
+  const shortRentPeriod = days < 3;
+  const longRentPeriod = days >= 7;
+  const averageRentPeriod = days >= 3 && days < 7;
+
+  if (shortRentPeriod) {
+    return basicPayAmount;
+  }
+
+  if (longRentPeriod) {
+    return costLongRentPeriod;
+  }
+
+  if (averageRentPeriod) {
+    return costShortRentPeriod;
+  }
 }
 
 module.exports = calculateRentalCost;
