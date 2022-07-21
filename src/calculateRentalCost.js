@@ -28,12 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  let dirtyCost = days * 40;
+  const maxDiscount = 50;
+  const minDiscount = 20;
+  const rentCost = 40;
+  let dirtyCost = days * rentCost;
 
   if (days >= 3 && days < 7) {
-    dirtyCost = dirtyCost - 20;
+    dirtyCost = dirtyCost - minDiscount;
   } else if (days >= 7) {
-    dirtyCost = dirtyCost - 50;
+    dirtyCost = dirtyCost - maxDiscount;
   }
 
   return dirtyCost;
