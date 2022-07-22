@@ -40,9 +40,9 @@ function calculateRentalCost(days) {
 
   if (days < limitDays2) {
     return rentalCost - discount1;
-  } else {
-    return rentalCost - discount2;
   }
+
+  return rentalCost - discount2;
 }
 
 module.exports = calculateRentalCost;
