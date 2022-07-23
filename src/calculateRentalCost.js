@@ -32,14 +32,6 @@ function calculateRentalCost(days) {
   const bigDiscount = rentalCost - 50;
   const smallDiscount = rentalCost - 20;
 
-  // if (days >= 7) {
-  //   return rentalCost - 50;
-  // } else if (days >= 3) {
-  //   return rentalCost - 20;
-  // }
-
-  // return rentalCost;
-
   switch (true) {
     case days >= 7 :
       return bigDiscount;
