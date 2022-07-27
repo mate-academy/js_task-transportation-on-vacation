@@ -15,7 +15,7 @@
  * you get $20 off your total.
  *
  * Implement calculateRentalCost function
- * which returns the total amount for different count of days.
+ * which returns the total amount for different days of days.
  *
  * Examples:
  *  - calculateRentalCost(1) === 40
@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
-}
+  const pricePerDay = 40;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+  const twoDays = 2;
+  const sixDays = 6;
 
+  if (days <= twoDays) {
+    return days * pricePerDay;
+  }
+
+  if (days <= sixDays) {
+    return (days * pricePerDay) - smallDiscount;
+  } else {
+    return (days * pricePerDay) - bigDiscount;
+  }
+}
 module.exports = calculateRentalCost;
