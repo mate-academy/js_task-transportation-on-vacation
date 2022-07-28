@@ -28,18 +28,25 @@
  */
 
 function calculateRentalCost(days) {
-  let finalPrice = days * 40;
+  const pricePerDayRent = 40;
+  const priceBeforeDiscont = days * pricePerDayRent;
+  const discontWithThreeDays = 20;
+  const discontWithSevenDays = 50;
+  let finalPrice;
 
-  switch (true) {
-    case days > 6:
-      finalPrice -= 50;
+  if (days >= 7) {
+    finalPrice = priceBeforeDiscont - discontWithSevenDays;
 
-      break;
-    case days > 2:
-      finalPrice -= 20;
+    return finalPrice;
+  } else if (days >= 3) {
+    finalPrice = priceBeforeDiscont - discontWithThreeDays;
+
+    return finalPrice;
+  } else {
+    finalPrice = priceBeforeDiscont;
+
+    return finalPrice;
   }
-
-  return finalPrice;
 }
 
 module.exports = calculateRentalCost;
