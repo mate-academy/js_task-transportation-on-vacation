@@ -29,8 +29,16 @@
 
 function calculateRentalCost(days) {
   const costsPerDay = 40;
-  const discount = (days >= 7) ? 50 : (days >= 3) ? 20 : 0;
   let total = 0;
+  let discount;
+
+  if (days >= 7) {
+    discount = 50;
+  } else if (days >= 3) {
+    discount = 20;
+  } else {
+    discount = 0;
+  }
 
   total = (days * costsPerDay) - discount;
 
