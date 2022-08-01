@@ -38,15 +38,15 @@ function calculateRentalCost(days) {
     finalPrice = priceBeforeDiscont - discontWithSevenDays;
 
     return finalPrice;
-  } else if (days >= 3) {
+  }
+
+  if (days >= 3) {
     finalPrice = priceBeforeDiscont - discontWithThreeDays;
 
     return finalPrice;
-  } else {
-    finalPrice = priceBeforeDiscont;
-
-    return finalPrice;
   }
+
+  return priceBeforeDiscont;
 }
 
 module.exports = calculateRentalCost;
