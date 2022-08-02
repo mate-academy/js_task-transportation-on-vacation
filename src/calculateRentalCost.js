@@ -28,29 +28,13 @@
  */
 
 function calculateRentalCost(days) {
-  const costOneDay = 40;
-  const threeDaysDiscount = 20;
-  const sevenDaysDiscount = 50;
-
-  let count = 0;
-
-  for (let i = 1; i <= days; i++) {
-    if (days <= 2) {
-      count += costOneDay;
-    } else if (days >= 3 && days <= 6) {
-      count += costOneDay;
-    } else {
-      count += costOneDay;
-    }
+  if (days >= 7) {
+    return days * 40 - 50;
+  } else if (days >= 3 && days < 7) {
+    return days * 40 - 20;
   }
 
-  if (count > 80 && count < 250) {
-    return count - threeDaysDiscount;
-  } else if (count >= 250) {
-    return count - sevenDaysDiscount;
-  } else {
-    return count;
-  }
+  return days * 40;
 }
 
 module.exports = calculateRentalCost;
