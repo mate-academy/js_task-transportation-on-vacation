@@ -26,16 +26,20 @@
  *
  * @return {number}
  */
+const rentalCost = 40;
+const smallOff = 20;
+const bigOff = 50;
 
 function calculateRentalCost(days) {
-  let total = days * 40;
+
+  const total = days * rentalCost;
 
   if (days >= 7) {
-    total = total - 50;
+    return total - bigOff;
   }
 
   if (days >= 3 && days < 7) {
-    total = total - 20;
+    return total - smallOff;
   }
 
   return total;
