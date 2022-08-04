@@ -27,24 +27,26 @@
  * @return {number}
  */
 
+function getSumm(days, price, saleSumm = 0) {
+  return days * price - saleSumm;
+}
+
 function calculateRentalCost(days) {
   const price = 40;
 
   const daysMin = 3;
-  const sumMin = 20;
   const daysMax = 7;
-  const sumMax = 50;
 
   if (days < 3) {
-    return days * price;
+    return getSumm(days, price);
   }
 
   if (days >= daysMin && days < daysMax) {
-    return days * price - sumMin;
+    return getSumm(days, price, 20);
   }
 
-  if (daysMax >= 7) {
-    return days * price - sumMax;
+  if (days >= daysMax) {
+    return getSumm(days, price, 50);
   }
 }
 
