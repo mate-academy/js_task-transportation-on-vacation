@@ -40,9 +40,7 @@ function calculateRentalCost(days) {
     return (rentCarPerDay * days) - discountPer3Days;
   };
 
-  if (days < 3) {
-    return rentCarPerDay * days;
-  }
+  return rentCarPerDay * days;
 }
 
 module.exports = calculateRentalCost;
