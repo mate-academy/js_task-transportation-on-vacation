@@ -27,8 +27,19 @@
  * @return {number}
  */
 
+const regularCost = 40;
+const discountBasic = 20;
+const discountPremium = 50;
+
 function calculateRentalCost(days) {
-  // write code here
+  if (days < 3) {
+    return days * regularCost;
+  } else if (days >= 3 && days < 7) {
+    return (days * regularCost) - discountBasic;
+  } else {
+    return (days * regularCost) - discountPremium;
+  }
+// write code here
 }
 
 module.exports = calculateRentalCost;
