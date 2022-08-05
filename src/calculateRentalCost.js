@@ -27,13 +27,17 @@
  * @return {number}
  */
 
+const regularCost = 40;
+const discountBasic = 20;
+const discountPremium = 50;
+
 function calculateRentalCost(days) {
   if (days < 3) {
-    return days * 40;
+    return days * regularCost;
   } else if (days >= 3 && days < 7) {
-    return (days * 40) - 20;
+    return (days * regularCost) - discountBasic;
   } else {
-    return (days * 40) - 50;
+    return (days * regularCost) - discountPremium;
   }
 // write code here
 }
