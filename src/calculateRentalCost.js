@@ -29,7 +29,8 @@
 
 function calculateRentalCost(days) {
   return days < 1
-    ? 0 : days < 3
+    ? 0
+    : days < 3
       ? days * 40
       : days < 7
         ? days * 40 - 20
