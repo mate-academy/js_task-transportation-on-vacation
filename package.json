@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "js task boilerplate",
   "main": "src/calculateRentalCost.js",
+  "jest": {
+    "verbose": true
+  },
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
@@ -16,7 +19,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "*",
-    "@mate-academy/scripts": "^0.3.5",
+    "@mate-academy/scripts": "^1.2.3",
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-node": "^8.0.1",
