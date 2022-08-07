@@ -28,8 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  // eslint-disable-next-line
-  return (days >= 7) ? days * 40 - 50 : (days >= 3) ? days * 40 - 20 : days * 40;
+  let discount = 0;
+  const dailyRent = 40;
+
+  if (days >= 7) {
+    discount = 50;
+  } else if (days >= 3) {
+    discount = 20;
+  }
+
+  return days * dailyRent - discount;
 }
 
 module.exports = calculateRentalCost;
