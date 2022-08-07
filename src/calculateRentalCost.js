@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let fullCoast = 0;
+  const coastOneDay = 40;
+  const coastWithoutOffer = days * coastOneDay;
+
+  if (days < 3) {
+    fullCoast = coastWithoutOffer;
+  }
+
+  if (days >= 3 && days < 7) {
+    fullCoast = coastWithoutOffer - 20;
+  }
+
+  if (days >= 7) {
+    fullCoast = coastWithoutOffer - 50;
+  }
+
+  return fullCoast;
 }
 
 module.exports = calculateRentalCost;
