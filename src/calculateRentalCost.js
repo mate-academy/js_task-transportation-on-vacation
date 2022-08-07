@@ -29,15 +29,15 @@
 
 function calculateRentalCost(days) {
   const rentPrice = 40;
-  const sevenDaysDiscount = 50;
-  const threeDaysDiscount = 20;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
 
   if (days >= 7) {
-    return rentPrice * days - sevenDaysDiscount;
+    return rentPrice * days - bigDiscount;
   }
 
   if (days >= 3 && days < 7) {
-    return rentPrice * days - threeDaysDiscount;
+    return rentPrice * days - smallDiscount;
   }
 
   return rentPrice * days;
