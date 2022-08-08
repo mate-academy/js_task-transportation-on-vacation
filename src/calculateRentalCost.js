@@ -28,15 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const rentalDayCost = 40;
+  const threeDaysDiscont = 20;
+  const sevenDaysDiscont = 50;
+
   switch (true) {
     case days < 3:
-      return 40 * days;
+      return rentalDayCost * days;
 
     case days < 7:
-      return 40 * days - 20;
+      return rentalDayCost * days - threeDaysDiscont;
 
     default:
-      return 40 * days - 50;
+      return rentalDayCost * days - sevenDaysDiscont;
   }
 }
 
