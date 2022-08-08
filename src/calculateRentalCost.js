@@ -28,24 +28,27 @@
  */
 
 function calculateRentalCost(days) {
-  let rent = 0;
+  let totalRent = 0;
+  const minimalDiscount = 20;
+  const basicDiscount = 50;
+  const dailyRent = 40;
 
   if (days < 3) {
-    rent += 40 * days;
+    totalRent += dailyRent * days;
 
-    return rent;
+    return totalRent;
   }
 
   if (days >= 3 && days < 7) {
-    rent += 40 * days - 20;
+    totalRent += dailyRent * days - minimalDiscount;
 
-    return rent;
+    return totalRent;
   }
 
   if (days >= 7) {
-    rent += 40 * days - 50;
+    totalRent += dailyRent * days - basicDiscount;
 
-    return rent;
+    return totalRent;
   }
 }
 
