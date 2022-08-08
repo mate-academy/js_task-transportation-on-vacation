@@ -29,12 +29,14 @@
 
 function calculateRentalCost(days) {
   const rentDay = 40;
+  const discount = 20;
+  const extraDiscount = 50;
   let totalPrice = rentDay * days;
 
   if (days >= 7) {
-    totalPrice = totalPrice - 50;
+    totalPrice -= extraDiscount;
   } else if (days >= 3) {
-    totalPrice = totalPrice - 20;
+    totalPrice -= discount;
   }
 
   return totalPrice;
