@@ -38,10 +38,9 @@ function calculateRentalCost(days) {
 
     case days < 7:
       return rentalDayCost * days - threeDaysDiscont;
-
-    default:
-      return rentalDayCost * days - sevenDaysDiscont;
   }
+
+  return rentalDayCost * days - sevenDaysDiscont;
 }
 
 module.exports = calculateRentalCost;
