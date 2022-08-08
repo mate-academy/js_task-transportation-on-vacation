@@ -28,21 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  let res = 0;
+  let finalAmount = 0;
 
-  for (let i = 0; i < days; i++) {
-    res += 40;
+  for (let currentDay = 0; currentDay < days; currentDay++) {
+    finalAmount += 40;
 
-    if (i === 6) {
-      res -= 50;
+    if (currentDay === 6) {
+      finalAmount -= 50;
     }
 
-    if (i === 2 && days < 7) {
-      res -= 20;
+    if (currentDay === 2 && days < 7) {
+      finalAmount -= 20;
     }
   }
 
-  return res;
+  return finalAmount;
 }
 
 module.exports = calculateRentalCost;
