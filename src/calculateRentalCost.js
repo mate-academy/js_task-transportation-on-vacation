@@ -29,13 +29,16 @@
 
 function calculateRentalCost(days) {
   const prise = 40;
-  let sum = 0;
+  const basicDiscount = 50;
+  const smallerDiscount = 20;
 
-  for (let i = 0; i < days; i++) {
-    sum += prise;
+  if (days >= 7) {
+    return prise * days - basicDiscount;
+  } else if (days >= 3) {
+    return prise * days - smallerDiscount;
   }
 
-  return (days >= 7) ? sum - 50 : (days >= 3) ? sum - 20 : sum;
+  return prise * days;
 }
 
 module.exports = calculateRentalCost;
