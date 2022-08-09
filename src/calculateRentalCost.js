@@ -29,18 +29,19 @@
 
 function calculateRentalCost(days) {
   const rentalDayCost = 40;
+  const staticCost = rentalDayCost * days
   const basicDiscont = 20;
   const extraDiscont = 50;
 
   switch (true) {
     case days < 3:
-      return rentalDayCost * days;
+      return staticCost;
 
     case days < 7:
-      return rentalDayCost * days - basicDiscont;
+      return staticCost - basicDiscont;
   }
 
-  return rentalDayCost * days - extraDiscont;
+  return staticCost - extraDiscont;
 }
 
 module.exports = calculateRentalCost;
