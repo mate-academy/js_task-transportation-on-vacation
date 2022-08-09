@@ -29,7 +29,7 @@
 
 function calculateRentalCost(days) {
   const rentalDayCost = 40;
-  const staticCost = rentalDayCost * days
+  const staticCost = rentalDayCost * days;
   const basicDiscont = 20;
   const extraDiscont = 50;
 
