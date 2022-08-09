@@ -47,6 +47,4 @@ function calculateRentalCost(days) {
   return rent;
 }
 
-calculateRentalCost(5);
-
 module.exports = calculateRentalCost;
