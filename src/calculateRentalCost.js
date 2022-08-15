@@ -27,7 +27,7 @@
  * @return {number}
  */
 
-//  Just add some comments to push the task again
+//  I just add some comments to push the task again
 function calculateRentalCost(days) {
   if (days < 3) {
     return 40 * days;
