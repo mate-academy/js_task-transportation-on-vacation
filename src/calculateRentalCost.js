@@ -29,22 +29,20 @@
 
 function calculateRentalCost(days) {
   const dayCost = 40;
-  let totalCost;
+  let totalCost = dayCost * days;
 
   if (days < 3) {
-    totalCost = dayCost * days;
-
     return totalCost;
   }
 
   if (days >= 3 && days <= 6) {
-    totalCost = dayCost * days - 20;
+    totalCost -= 20;
 
     return totalCost;
   }
 
   if (days >= 7) {
-    totalCost = (dayCost * days) - 50;
+    totalCost -= 50;
 
     return totalCost;
   }
