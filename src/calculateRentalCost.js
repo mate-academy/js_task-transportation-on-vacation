@@ -34,6 +34,6 @@ function calculateRentalCost(days) {
   } else if (days >= 3){
     cost = cost - 20;
   } return cost;
-}
+} 
 
 module.exports = calculateRentalCost;
