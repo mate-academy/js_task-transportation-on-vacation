@@ -30,12 +30,20 @@
 function calculateRentalCost(days) {
   let result = 0;
 
+  const dailyCarCost = 40;
+  const basicDiscount = 50;
+  const partDiscount = 20;
+
+  const shortRent = days * dailyCarCost;
+  const partRent = (days * dailyCarCost) - partDiscount;
+  const basicRent = (days * dailyCarCost) - basicDiscount;
+
   if (days >= 7) {
-    result = (days * 40) - 50;
+    result = basicRent;
   } else if (days >= 3 && days < 7) {
-    result = (days * 40) - 20;
+    result = partRent;
   } else if (days < 3) {
-    result = days * 40;
+    result = shortRent;
   }
 
   return result;
