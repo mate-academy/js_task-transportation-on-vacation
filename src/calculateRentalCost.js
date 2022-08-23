@@ -29,19 +29,14 @@
 
 function calculateRentalCost(days) {
   // write code here
-  let amount = 0;
-  const rentCar = 40;
+  let amount = days * 40;
 
-  if (days <= 2) {
-    amount = days * rentCar;
-  } else {
-    if (days >= 7) {
-      amount = days * rentCar - 50;
-    } else {
-      if (days >= 3) {
-        amount = days * rentCar - 20;
-      }
-    }
+  if (days >= 7) {
+    amount = amount - 50;
+  }
+
+  if (days > 2 && days < 7) {
+    amount = amount - 20;
   }
 
   return amount;
