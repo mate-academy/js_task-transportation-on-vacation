@@ -28,7 +28,10 @@
  */
 
 function calculateRentalCost(days) {
-  if (isNaN(days)) {
+  const discountForThreeDays = 20;
+  const discountForSevenDays = 50;
+
+  if (typeof days !== 'number') {
     return 'Is not a number';
   }
 
@@ -37,10 +40,10 @@ function calculateRentalCost(days) {
   };
 
   if (days < 7) {
-    return (days * 40) - 20;
-  } else {
-    return (days * 40) - 50;
+    return (days * 40) - discountForThreeDays;
   }
+
+  return (days * 40) - discountForSevenDays;
 }
 
 module.exports = calculateRentalCost;
