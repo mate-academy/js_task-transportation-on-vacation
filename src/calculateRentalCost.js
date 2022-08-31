@@ -30,11 +30,13 @@
 function calculateRentalCost(days) {
   const dailyCarRent = 40;
   const totalCarRent = days * dailyCarRent;
+  const maxDiscount = 50;
+  const minDiscount = 20;
 
   if (days >= 7) {
-    return totalCarRent - 50;
+    return totalCarRent - maxDiscount;
   } else if (days >= 3) {
-    return totalCarRent - 20;
+    return totalCarRent - minDiscount;
   } else {
     return totalCarRent;
   }
