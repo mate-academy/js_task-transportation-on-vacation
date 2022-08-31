@@ -31,11 +31,13 @@ function calculateRentalCost(days) {
   const dailyCarRent = 40;
   const totalCarRent = days * dailyCarRent;
 
-  return days >= 7
-    ? totalCarRent - 50
-    : days >= 3
-      ? totalCarRent - 20
-      : totalCarRent;
+  if (days >= 7) {
+    return totalCarRent - 50;
+  } else if (days >= 3) {
+    return totalCarRent - 20;
+  } else {
+    return totalCarRent;
+  }
 }
 
 module.exports = calculateRentalCost;
