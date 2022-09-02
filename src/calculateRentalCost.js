@@ -29,17 +29,18 @@
 
 function calculateRentalCost(days) {
   let answer;
+  const commonPrice = days * 40;
 
   if (days < 3) {
-    answer = days * 40;
+    answer = commonPrice;
 
     return answer;
   } else if (days < 7) {
-    answer = (days * 40) - 20;
+    answer = (commonPrice) - 20;
 
     return answer;
   } else {
-    answer = (days * 40) - 50;
+    answer = (commonPrice) - 50;
 
     return answer;
   }
