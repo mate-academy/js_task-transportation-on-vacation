@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let answer;
+  const commonPrice = days * 40;
+
+  if (days < 3) {
+    answer = commonPrice;
+
+    return answer;
+  } else if (days < 7) {
+    answer = (commonPrice) - 20;
+
+    return answer;
+  } else {
+    answer = (commonPrice) - 50;
+
+    return answer;
+  }
 }
 
 module.exports = calculateRentalCost;
