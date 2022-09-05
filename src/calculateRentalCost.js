@@ -29,18 +29,21 @@
 
 function calculateRentalCost(days) {
   let total;
+  const oneDayRentCost = 40;
+  const cashbackFromThreeDays = 20;
+  const cashbackFromSevenDays = 50;
 
   switch (true) {
     case days >= 7:
-      total = days * 40 - 50;
+      total = days * oneDayRentCost - cashbackFromSevenDays;
       break;
 
     case days >= 3:
-      total = days * 40 - 20;
+      total = days * oneDayRentCost - cashbackFromThreeDays;
       break;
 
     default:
-      total = days * 40;
+      total = days * oneDayRentCost;
   }
 
   return total;
