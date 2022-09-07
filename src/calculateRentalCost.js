@@ -29,18 +29,18 @@
 
 function calculateRentalCost(days) {
   const costs = 40;
-  let result = days * costs;
-  const startOfRent = 3;
-  const endOfRent = 7;
-  const discountFerst = 20;
-  const discountSecond = 50;
+  const result = days * costs;
+  const minDaysForSmallDiscount = 3;
+  const minDaysForLargeDiscount = 7;
+  const smallDiscount = 20;
+  const largeDiscount = 50;
 
-  if (days >= startOfRent && days < endOfRent) {
-    result -= discountFerst;
+  if (days >= minDaysForLargeDiscount) {
+    return result - largeDiscount;
   }
 
-  if (days >= endOfRent) {
-    result -= discountSecond;
+  if (days >= minDaysForSmallDiscount) {
+    return result - smallDiscount;
   }
 
   return result;
