@@ -28,7 +28,27 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let total;
+  const oneDayRentCost = 40;
+  const cashbackFromThreeDays = 20;
+  const cashbackFromSevenDays = 50;
+  const firstDiscountDegree = 3;
+  const secondDiscountDegree = 7;
+
+  switch (true) {
+    case days >= secondDiscountDegree:
+      total = days * oneDayRentCost - cashbackFromSevenDays;
+      break;
+
+    case days >= firstDiscountDegree:
+      total = days * oneDayRentCost - cashbackFromThreeDays;
+      break;
+
+    default:
+      total = days * oneDayRentCost;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
