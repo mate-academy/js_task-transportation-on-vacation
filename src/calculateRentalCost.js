@@ -31,20 +31,21 @@ function calculateRentalCost(days) {
   const discountForThreeDays = 20;
   const discountForSevenDays = 50;
   const rentalPrice = 40;
+  const amount = days * rentalPrice;
 
   if (typeof days !== 'number') {
     return 'Is not a number';
   }
 
   if (days < 3) {
-    return days * rentalPrice;
+    return amount;
   };
 
   if (days < 7) {
-    return days * rentalPrice - discountForThreeDays;
+    return amount - discountForThreeDays;
   }
 
-  return days * rentalPrice - discountForSevenDays;
+  return amount - discountForSevenDays;
 }
 
 module.exports = calculateRentalCost;
