@@ -28,17 +28,25 @@
  */
 
 function calculateRentalCost(days) {
-  const day = 40;
+  const costPerDay = 40;
+  let discountedAmount;
 
   switch (true) {
     case (days < 3):
-      return day * days;
+
+      discountedAmount = costPerDay * days;
+
+      return discountedAmount;
 
     case (days < 7):
-      return day * days - 20;
+      discountedAmount = costPerDay * days - 20;
+
+      return discountedAmount;
 
     case (days >= 7):
-      return day * days - 50;
+      discountedAmount = costPerDay * days - 50;
+
+      return discountedAmount;
   }
 }
 
