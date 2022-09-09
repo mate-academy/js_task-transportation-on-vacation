@@ -30,20 +30,25 @@
 function calculateRentalCost(days) {
   const countOfDays = days;
   let rentalCost = 0;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const smallDiscount = 20;
+  const largeDiscount = 50;
+  const oneDayCost = 40;
 
-  if (countOfDays < 3) {
-    rentalCost = countOfDays * 40;
+  if (countOfDays < shortTerm) {
+    rentalCost = countOfDays * oneDayCost;
 
     return rentalCost;
   }
 
-  if (countOfDays < 7) {
-    rentalCost = (countOfDays * 40) - 20;
+  if (countOfDays < longTerm) {
+    rentalCost = (countOfDays * oneDayCost) - smallDiscount;
 
     return rentalCost;
   }
 
-  rentalCost = (countOfDays * 40) - 50;
+  rentalCost = (countOfDays * oneDayCost) - largeDiscount;
 
   return rentalCost;
 }
