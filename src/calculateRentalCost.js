@@ -29,14 +29,24 @@
 
 function calculateRentalCost(days) {
   let sum = 0;
+  const dialyPrice = 40;
+  const threeDays = 3;
+  const firstOff = dialyPrice / 2;
+  const sevenDays = 7;
+  const secondOff = dialyPrice + 10;
+  const noDiscount = days * dialyPrice;
 
-  if (days >= 3 && days < 7) {
-    sum = (days * 40) - 20;
-  } else if (days >= 7) {
-    sum = (days * 40) - 50;
-  } else {
-    sum = days * 40;
-  }
+  sum = (days < threeDays) ? noDiscount : sum;
+  sum = (days >= threeDays && days < sevenDays) ? (noDiscount - firstOff) : sum;
+  sum = (days >= sevenDays) ? (noDiscount - secondOff) : sum;
+
+  // if (days >= 3 && days < 7) {
+  //   sum = (days * 40) - 20;
+  // } else if (days >= 7) {
+  //   sum = (days * 40) - 50;
+  // } else {
+  //   sum = days * 40;
+  // }
 
   return sum;
 }
