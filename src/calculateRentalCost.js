@@ -36,9 +36,11 @@ function calculateRentalCost(days) {
   let result = days * dailyPrice;
 
   if (days >= longDiscountPeriod) {
-    result -= discountMoreSevenDays;
-  } else if (days >= shortDiscountPeriod) {
-    result -= discountMoreThreeDays;
+    return (result -= discountMoreSevenDays);
+  }
+
+  if (days >= shortDiscountPeriod) {
+    return (result -= discountMoreThreeDays);
   }
 
   return result;
