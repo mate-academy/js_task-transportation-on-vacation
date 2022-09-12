@@ -33,14 +33,14 @@ function calculateRentalCost(days) {
   const smallDiscount = 20;
   const shortDiscountPeriod = 3;
   const longDiscountPeriod = 7;
-  let result = days * dailyPrice;
+  const result = days * dailyPrice;
 
   if (days >= longDiscountPeriod) {
-    return (result -= bigDiscount);
+    return (result - bigDiscount);
   }
 
   if (days >= shortDiscountPeriod) {
-    return (result -= smallDiscount);
+    return (result - smallDiscount);
   }
 
   return result;
