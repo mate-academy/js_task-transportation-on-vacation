@@ -28,16 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return 40 * days;
+  const rent = 40;
+  let cashBack = 0;
+
+  if (days > 0 && days < 3) {
+    return rent * days;
   }
 
   if (days >= 3 && days < 7) {
-    return 40 * days - 20;
+    cashBack = 20;
+
+    return rent * days - cashBack;
   }
 
   if (days >= 7) {
-    return 40 * days - 50;
+    cashBack = 50;
+
+    return rent * days - cashBack;
   }
 }
 
