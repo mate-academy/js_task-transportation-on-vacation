@@ -29,13 +29,16 @@
 
 function calculateRentalCost(days) {
   const oneDayPrice = 40;
+  const smallCashback = 20;
+  const bigCashback = 50;
+
 
   if (days >= 3 && days < 7) {
-    return (days * oneDayPrice) - 20;
+    return (days * oneDayPrice) - smallCashback;
   }
 
   if (days >= 7) {
-    return (days * oneDayPrice) - 50;
+    return (days * oneDayPrice) - bigCashback;
   }
 
   return days * oneDayPrice;
