@@ -30,17 +30,20 @@
 function calculateRentalCost(days) {
   let count = 0;
   const price = 40;
+  const amout = price * days;
+  const basicDiscount = 50;
+  const miniDiscount = 20;
+
+  if (days >= 3) {
+    count = amout - miniDiscount;
+  }
+
+  if (days >= 7) {
+    count = amout - basicDiscount;
+  }
 
   if (days <= 2) {
-    count = price * days;
-  } else if (days === 3) {
-    count = price * days - 20;
-  } else if (days >= 7) {
-    count = price * days - 50;
-  } else if (days === 6) {
-    count = price * days - 20;
-  } else {
-    count = price * days;
+    count = amout;
   }
 
   return count;
