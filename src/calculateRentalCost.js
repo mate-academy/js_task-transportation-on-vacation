@@ -29,10 +29,15 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const sevenDaysBonus = 50;
+  const threeDaysBonus = 20;
+
   if (days >= 3 && days < 7) {
-    return days * 40 - 20;
-  } else if (days >= 7) {
-    return days * 40 - 50;
+    return days * 40 - threeDaysBonus;
+  }
+
+  if (days >= 7) {
+    return days * 40 - sevenDaysBonus;
   } else {
     return days * 40;
   }
