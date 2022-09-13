@@ -34,12 +34,12 @@ function calculateRentalCost(days) {
 
   const count = days * price;
 
-  if (days >= 3 && days < 7) {
-    return count - firstDiscount;
-  }
-
   if (days >= 7) {
     return count - secondDiscount;
+  }
+
+  if (days >= 3) {
+    return count - firstDiscount;
   }
 
   return count;
