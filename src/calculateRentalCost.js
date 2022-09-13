@@ -41,9 +41,7 @@ function calculateRentalCost(days) {
     return (days * rentPrice) - smallDiscount;
   }
 
-  if (days >= 7) {
-    return (days * rentPrice) - bigDiscount;
-  }
+  return (days * rentPrice) - bigDiscount;
 }
 
 module.exports = calculateRentalCost;
