@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const dailyCarCost = 40;
+  const basicDiscount = 20;
+  const premiumDiscount = 50;
+  const price = dailyCarCost * days;
+
+  if (days >= 7) {
+    return price - premiumDiscount;
+  }
+
+  if (days >= 3) {
+    return price - basicDiscount;
+  }
+
+  return price;
 }
 
 module.exports = calculateRentalCost;
