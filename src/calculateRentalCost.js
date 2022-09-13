@@ -31,15 +31,16 @@ function calculateRentalCost(days) {
   const rentCost = 40;
   const threeDaysOff = 20;
   const sevenDaysOff = 50;
-  let totalRent = rentCost * days;
+  const totalRent = rentCost * days;
 
-  if (days >= 7) {
-    totalRent -= sevenDaysOff;
-  } else if (days >= 3) {
-    totalRent -= threeDaysOff;
+  switch (true) {
+    case days >= 7:
+      return totalRent - sevenDaysOff;
+    case days >= 3:
+      return totalRent - threeDaysOff;
+    default:
+      return totalRent;
   }
-
-  return totalRent;
 }
 
 module.exports = calculateRentalCost;
