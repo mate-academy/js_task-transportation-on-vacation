@@ -29,20 +29,20 @@
 
 function calculateRentalCost(days) {
   const pricePerDay = 40;
-  const backSmall = 20;
-  const backBig = 50;
-  const daysForSmall = 3;
+  const regularCashBack = 20;
+  const bigCashBack = 50;
+  const daysForRegular = 3;
   const daysForBig = 7;
 
-  if (days < daysForSmall) {
+  if (days < daysForRegular) {
     return days * pricePerDay;
   }
 
-  if (days >= daysForSmall && days < daysForBig) {
-    return days * pricePerDay - backSmall;
+  if (days >= daysForRegular && days < daysForBig) {
+    return days * pricePerDay - regularCashBack;
   }
 
-  return days * pricePerDay - backBig;
+  return days * pricePerDay - bigCashBack;
 }
 
 module.exports = calculateRentalCost;
