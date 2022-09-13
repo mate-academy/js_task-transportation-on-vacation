@@ -28,13 +28,18 @@
  */
 
 function calculateRentalCost(days) {
+  const rentalCost = 40;
+  const fullCost = days * rentalCost;
+  const sevenDaysCarRentOff = 50;
+  const threeDaysCarRentOff = 20;
+
   switch (true) {
     case days > 6:
-      return days * 40 - 50;
+      return fullCost - sevenDaysCarRentOff;
     case days > 2:
-      return days * 40 - 20;
+      return fullCost - threeDaysCarRentOff;
     default:
-      return days * 40;
+      return fullCost;
   }
 }
 
