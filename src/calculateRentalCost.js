@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -34,9 +34,11 @@ function calculateRentalCost(days) {
   let totalRentalCost = rentalCost * days;
 
   if (days >= 7) {
-    totalRentalCost -= payingOff7Days;
-  } else if (days >= 3) {
-    totalRentalCost -= payingOff3Days;
+    return (totalRentalCost -= payingOff7Days);
+  }
+
+  if (days >= 3) {
+    return (totalRentalCost -= payingOff3Days);
   }
 
   return totalRentalCost;
