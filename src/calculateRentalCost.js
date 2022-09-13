@@ -35,11 +35,13 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return totalCarRent - maxDiscount;
-  } else if (days >= 3) {
-    return totalCarRent - minDiscount;
-  } else {
-    return totalCarRent;
   }
+
+  if (days >= 3) {
+    return totalCarRent - minDiscount;
+  }
+
+  return totalCarRent;
 }
 
 module.exports = calculateRentalCost;
