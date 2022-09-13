@@ -28,15 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  let carCosts = 0;
   const dailyRent = 40;
+  const discountAfterThreeDays = 20;
+  const discountAfterSevenDays = 50;
+  let carCosts = days * dailyRent;
 
   if (days >= 7) {
-    carCosts = days * dailyRent - 50;
+    carCosts -= discountAfterSevenDays;
   } else if (days >= 3) {
-    carCosts = days * dailyRent - 20;
-  } else {
-    carCosts = days * dailyRent;
+    carCosts -= discountAfterThreeDays;
   }
 
   return carCosts;
