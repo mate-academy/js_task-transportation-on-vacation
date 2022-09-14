@@ -37,9 +37,10 @@ function calculateRentalCost(days) {
     return totalPrice;
   } else if (days >= 3 && days < 7) {
     return totalPrice - smallDiscont;
-  } else if (days >= 7) {
-    return totalPrice - bigDiscount;
   }
+
+  return totalPrice - bigDiscount;
 }
 
 module.exports = calculateRentalCost;
+calculateRentalCost(3);
