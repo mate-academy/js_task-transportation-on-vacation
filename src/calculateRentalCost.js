@@ -34,9 +34,9 @@ function calculateRentalCost(days) {
     return pay;
   } else if (days < 7) {
     return pay - 20;
-  } else {
-    return pay - 50;
   }
+
+  return pay - 50;
 }
 
 module.exports = calculateRentalCost;
