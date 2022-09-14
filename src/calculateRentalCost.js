@@ -29,23 +29,18 @@
 
 function calculateRentalCost(days) {
   const rent = 40;
-  let cashBack = 0;
+  const smallCashBack = 20;
+  const normalCashBack = 50;
 
   if (days > 0 && days < 3) {
     return rent * days;
   }
 
   if (days >= 3 && days < 7) {
-    cashBack = 20;
-
-    return rent * days - cashBack;
+    return rent * days - smallCashBack;
   }
 
-  if (days >= 7) {
-    cashBack = 50;
-
-    return rent * days - cashBack;
-  }
+  return rent * days - normalCashBack;
 }
 
 module.exports = calculateRentalCost;
