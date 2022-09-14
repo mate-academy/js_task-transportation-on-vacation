@@ -28,21 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  const dayRate = 40 * days;
-  const twentyOff = 20;
-  const fiftyOff = 50;
+  const pricePerDay = 40;
+  const dailyRate = pricePerDay * days;
+  const smallDiscount = 20;
+  const biggerDiscount = 50;
 
   switch (days) {
     case 1:
     case 2:
-      return dayRate;
+      return dailyRate;
     case 3:
     case 4:
     case 5:
     case 6:
-      return dayRate - twentyOff;
+      return dailyRate - smallDiscount;
     default:
-      return dayRate - fiftyOff;
+      return dailyRate - biggerDiscount;
   }
 }
 
