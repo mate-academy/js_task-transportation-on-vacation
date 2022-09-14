@@ -30,16 +30,15 @@
 function calculateRentalCost(days) {
   const rentalCost = 40;
   const fullCost = days * rentalCost;
-  const sevenDaysCarRentOff = 50;
-  const threeDaysCarRentOff = 20;
+  const highDiscount = 50;
+  const basicDiscount = 20;
 
-  switch (true) {
-    case days > 6:
-      return fullCost - sevenDaysCarRentOff;
-    case days > 2:
-      return fullCost - threeDaysCarRentOff;
-    default:
-      return fullCost;
+  if (days > 6) {
+    return fullCost - highDiscount;
+  } else if (days > 2) {
+    return fullCost - basicDiscount;
+  } else {
+    return fullCost;
   }
 }
 
