@@ -30,14 +30,16 @@
 function calculateRentalCost(days) {
   const costOfDayRent = 40;
   let totalPrice = costOfDayRent * days;
+  const threeDaysDiscaunt = 20;
+  const sevenDaysDiccaunt = 50;
 
   switch (true) {
     case days >= 7:
-      totalPrice -= 50;
+      totalPrice -= sevenDaysDiccaunt;
       break;
 
     case days >= 3:
-      totalPrice -= 20;
+      totalPrice -= threeDaysDiscaunt;
   }
 
   return totalPrice;
