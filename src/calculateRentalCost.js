@@ -41,9 +41,7 @@ function calculateRentalCost(days) {
     return dayCost * days - threeDayDisc;
   }
 
-  if (days >= 7) {
-    return dayCost * days - sevenDayDisc;
-  }
+  return dayCost * days - sevenDayDisc;
 }
 
 module.exports = calculateRentalCost;
