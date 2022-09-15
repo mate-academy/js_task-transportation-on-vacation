@@ -32,13 +32,13 @@ function calculateRentalCost(days) {
   const longTimeRent = 7;
   const middleTimeRent = 3;
   const baseRentPrice = 40;
-  const longTimeCiscount = 50;
-  const threeDaysCiscount = 20;
+  const longTimeDiscount = 50;
+  const threeDaysDiscount = 20;
 
   if (days >= longTimeRent) {
-    total = days * baseRentPrice - longTimeCiscount;
+    total = days * baseRentPrice - longTimeDiscount;
   } else if (days >= middleTimeRent) {
-    total = days * baseRentPrice - threeDaysCiscount;
+    total = days * baseRentPrice - threeDaysDiscount;
   } else {
     total = days * baseRentPrice;
   }
