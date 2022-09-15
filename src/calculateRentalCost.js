@@ -33,15 +33,15 @@ function calculateRentalCost(days) {
   const pricePerDay = 40;
   let totalPrice = 0;
 
-  for (let i = 0; i < days; i++) {
-    totalPrice += pricePerDay;
-  }
+  totalPrice += pricePerDay * days;
 
   if (days >= 3 && days < 7) {
     totalPrice -= liteDiscount;
 
     return totalPrice;
-  } else if (days >= 7) {
+  }
+
+  if (days >= 7) {
     totalPrice -= basicDiscount;
 
     return totalPrice;
