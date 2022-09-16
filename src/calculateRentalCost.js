@@ -35,13 +35,15 @@ function calculateRentalCost(days) {
   const smallDiscountDays = 3;
   const bigDiscountDays = 7;
 
-  if (days < smallDiscountDays) {
-    return dailyRate;
-  } else if (days >= smallDiscountDays && days < bigDiscountDays) {
-    return dailyRate - smallDiscount;
-  } else {
+  if (days >= bigDiscountDays) {
     return dailyRate - bigDiscount;
   }
+
+  if (days >= smallDiscountDays) {
+    return dailyRate - smallDiscount;
+  }
+
+  return dailyRate;
 }
 
 module.exports = calculateRentalCost;
