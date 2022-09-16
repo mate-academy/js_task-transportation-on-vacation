@@ -30,17 +30,17 @@
 function calculateRentalCost(days) {
   const rentDay = 40;
   const totalCost = days * rentDay;
-  const salesOffThreeDays = 20;
-  const salesOffSevenDays = 50;
-  const threeDay = 3;
-  const sevenDay = 7;
+  const salesOffFirstDiscountDays = 20;
+  const salesOffSecondDiscountDays = 50;
+  const firstDiscountDays = 3;
+  const secondDiscountDays = 7;
 
-  if (days >= sevenDay) {
-    return totalCost - salesOffSevenDays;
+  if (days >= secondDiscountDays) {
+    return totalCost - salesOffSecondDiscountDays;
   }
 
-  if (days >= threeDay) {
-    return totalCost - salesOffThreeDays;
+  if (days >= firstDiscountDays) {
+    return totalCost - salesOffFirstDiscountDays;
   }
 
   return totalCost;
