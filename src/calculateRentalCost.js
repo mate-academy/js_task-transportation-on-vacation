@@ -26,19 +26,22 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
-  let amount = 0;
+  const dayRent = 40;
 
-  if (days < 3) {
-    amount = 40 * days;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
+
+  const smallDiscountStartDay = 3;
+  const bigDiscountStartDay = 7;
+
+  let amount = dayRent * days;
+
+  if (days >= smallDiscountStartDay && days < bigDiscountStartDay) {
+    amount -= smallDiscount;
   } else {
-    if (days >= 3 && days < 7) {
-      amount = (40 * days) - 20;
-    } else {
-      if (days <= 7) {
-        amount = (40 * days) - 50;
-      }
+    if (days >= bigDiscountStartDay) {
+      amount -= bigDiscount;
     }
   }
 
