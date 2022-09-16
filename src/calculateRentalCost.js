@@ -32,13 +32,14 @@ function calculateRentalCost(days) {
   const payPerDay = 40;
   const percentThreeDay = 20;
   const percentSevenDay = 50;
+  const valuePerDays = days * payPerDay;
 
   if (days >= 3 && days < 7) {
-    value += (days * payPerDay) - percentThreeDay;
+    value += (valuePerDays) - percentThreeDay;
   } else if (days >= 7) {
-    value += (days * payPerDay) - percentSevenDay;
+    value += (valuePerDays) - percentSevenDay;
   } else {
-    value += days * payPerDay;
+    value += valuePerDays;
   }
 
   return value;
