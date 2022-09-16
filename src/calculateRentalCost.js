@@ -32,11 +32,11 @@ function calculateRentalCost(days) {
   const smallCashBack = 20;
   const normalCashBack = 50;
 
-  if (days > 0 && days < 3) {
+  if (days < 3) {
     return rent * days;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days < 7) {
     return rent * days - smallCashBack;
   }
 
