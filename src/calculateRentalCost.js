@@ -34,12 +34,12 @@ function calculateRentalCost(days) {
   const discount50 = 50;
   const totalTariff = days * dayTariff;
 
-  if (days >= 3 && days < 7) {
-    return totalTariff - discount20;
-  }
-
   if (days >= 7) {
     return totalTariff - discount50;
+  }
+
+  if (days >= 3) {
+    return totalTariff - discount20;
   }
 
   return totalTariff;
