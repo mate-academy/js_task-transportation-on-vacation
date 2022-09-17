@@ -28,12 +28,17 @@
  */
 
 function calculateRentalCost(days) {
+  const littleBonus = 20;
+  const bigBonus = 50;
+  const dayRent = 40;
+  const rentWithoutBonus = dayRent * days;
+
   if (days < 3) {
-    return 40 * days;
+    return rentWithoutBonus;
   } else if (days >= 3 && days < 7) {
-    return 40 * days - 20;
+    return rentWithoutBonus - littleBonus;
   } else if (days >= 7) {
-    return 40 * days - 50;
+    return rentWithoutBonus - bigBonus;
   }
 }
 
