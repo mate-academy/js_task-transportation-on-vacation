@@ -33,13 +33,15 @@ function calculateRentalCost(days) {
   const smallDiscont = 20;
   const bigDiscount = 50;
 
-  if (days < 3 && days > 0) {
-    return totalPrice;
-  } else if (days >= 3 && days < 7) {
+  if (days >= 7) {
+    return totalPrice - bigDiscount;
+  }
+
+  if (days >= 3) {
     return totalPrice - smallDiscont;
   }
 
-  return totalPrice - bigDiscount;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
