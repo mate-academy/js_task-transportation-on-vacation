@@ -17,6 +17,20 @@
  * Implement calculateRentalCost function
  * which returns the total amount for different count of days.
  *
+ *   // sum = (days < threeDays) ? noDiscount : sum;
+  // sum = (days >= threeDays && days < sevenDays) ?
+  (noDiscount - firstOff) : sum;
+  // sum = (days >= sevenDays) ? (noDiscount - secondOff) : sum;
+
+  // if (days >= 3 && days < 7) {
+  //   sum = (days * 40) - 20;
+  // } else if (days >= 7) {
+  //   sum = (days * 40) - 50;
+  // } else {
+  //   sum = days * 40;
+  // }
+ *
+ *
  * Examples:
  *  - calculateRentalCost(1) === 40
  *  - calculateRentalCost(3) === 100
@@ -36,17 +50,17 @@ function calculateRentalCost(days) {
   const secondOff = dialyPrice + 10;
   const noDiscount = days * dialyPrice;
 
-  sum = (days < threeDays) ? noDiscount : sum;
-  sum = (days >= threeDays && days < sevenDays) ? (noDiscount - firstOff) : sum;
-  sum = (days >= sevenDays) ? (noDiscount - secondOff) : sum;
-
-  // if (days >= 3 && days < 7) {
-  //   sum = (days * 40) - 20;
-  // } else if (days >= 7) {
-  //   sum = (days * 40) - 50;
-  // } else {
-  //   sum = days * 40;
-  // }
+  switch (true) {
+    case (days < threeDays):
+      sum = noDiscount;
+      break;
+    case (days >= threeDays && days < sevenDays):
+      sum = noDiscount - firstOff;
+      break;
+    default:
+      sum = noDiscount - secondOff;
+      break;
+  }
 
   return sum;
 }
