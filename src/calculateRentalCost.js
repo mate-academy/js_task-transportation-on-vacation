@@ -29,19 +29,18 @@
 
 function calculateRentalCost(days) {
   const costEveryDay = 40;
-  const discount7Days = 50;
-  const discount3Days = 20;
-  const result = costEveryDay * days;
+  const threeDaysOff = 20;
+  const sevenDaysOff = 50;
 
-  if (days >= 3 && days < 7) {
-    return result - discount3Days;
+  if (days < 3) {
+    return costEveryDay * days;
   }
 
-  if (days >= 7) {
-    return result - discount7Days;
+  if (days < 7) {
+    return costEveryDay * days - threeDaysOff;
   }
 
-  return result;
+  return costEveryDay * days - sevenDaysOff;
 }
 
 module.exports = calculateRentalCost;
