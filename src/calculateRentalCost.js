@@ -28,15 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  switch (true) {
-    case days >= 7:
-      return days * 40 - 50;
+  const rentCost = 40;
+  const discOverThreeDays = 20;
+  const discOverSevenDays = 50;
 
-    case days >= 3:
-      return days * 40 - 20;
-
-    default:
-      return days * 40;
+  if (days >= 7) {
+    return days * rentCost - discOverSevenDays;
+  } else if (days >= 3) {
+    return days * rentCost - discOverThreeDays;
+  } else {
+    return days * rentCost;
   }
 }
 
