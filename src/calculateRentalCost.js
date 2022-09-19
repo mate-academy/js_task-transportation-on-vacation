@@ -29,17 +29,17 @@
 
 function calculateRentalCost(days) {
   const payPerDay = 40;
-  const percentThreeDay = 20;
-  const percentSevenDay = 50;
-  const valuePerDays = days * payPerDay;
+  const basicDiscount = 20;
+  const upperDiscount = 50;
+  const parkingPrice = days * payPerDay;
 
   if (days >= 3 && days < 7) {
-    return valuePerDays - percentThreeDay;
+    return parkingPrice - basicDiscount;
   } else if (days >= 7) {
-    return valuePerDays - percentSevenDay;
-  } else {
-    return valuePerDays;
+    return parkingPrice - upperDiscount;
   }
+
+  return parkingPrice;
 }
 
 module.exports = calculateRentalCost;
