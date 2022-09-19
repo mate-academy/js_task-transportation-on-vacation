@@ -36,13 +36,11 @@ function calculateRentalCost(days) {
     return days * costPerDay;
   }
 
-  if (days >= 3 && days <= 6) {
+  if (days <= 6) {
     return days * costPerDay - firstDiscount;
   }
 
-  if (days >= 7) {
-    return days * costPerDay - secondDiscount;
-  }
+  return days * costPerDay - secondDiscount;
 }
 
 module.exports = calculateRentalCost;
