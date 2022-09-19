@@ -35,11 +35,13 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     return rentWithoutBonus;
-  } else if (days >= 3 && days < 7) {
-    return rentWithoutBonus - littleBonus;
-  } else if (days >= 7) {
-    return rentWithoutBonus - bigBonus;
   }
+
+  if (days < 7) {
+    return rentWithoutBonus - littleBonus;
+  }
+
+  return rentWithoutBonus - bigBonus;
 }
 
 module.exports = calculateRentalCost;
