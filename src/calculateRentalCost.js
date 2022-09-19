@@ -28,7 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const payPerDay = 40;
+  const basicDiscount = 20;
+  const upperDiscount = 50;
+  const parkingPrice = days * payPerDay;
+
+  if (days >= 3 && days < 7) {
+    return parkingPrice - basicDiscount;
+  } else if (days >= 7) {
+    return parkingPrice - upperDiscount;
+  }
+
+  return parkingPrice;
 }
 
 module.exports = calculateRentalCost;
