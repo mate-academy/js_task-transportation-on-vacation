@@ -29,17 +29,17 @@
 
 function calculateRentalCost(days) {
   const amountNotDiscount = days * 40;
+  let totalSum = amountNotDiscount;
 
-  switch (true) {
-    case (days >= 7):
-      return amountNotDiscount - 50;
-
-    case (days >= 3):
-      return amountNotDiscount - 20;
-
-    default:
-      return amountNotDiscount;
+  if (days >= 7) {
+    totalSum = amountNotDiscount - 50;
   }
+
+  if (days >= 3 && days < 7) {
+    totalSum = amountNotDiscount - 20;
+  }
+
+  return totalSum;
 }
 
 module.exports = calculateRentalCost;
