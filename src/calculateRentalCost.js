@@ -31,17 +31,18 @@ function calculateRentalCost(days) {
   const rental = 40;
   const moreSevenDay = 50;
   const lessSevenDay = 20;
+  const calculateNumber = days * rental;
 
   if (days < 3) {
-    return days * rental;
+    return calculateNumber;
   }
 
   if (days >= 7) {
-    return (days * rental) - moreSevenDay;
+    return (calculateNumber) - moreSevenDay;
   }
 
   if (days >= 3) {
-    return days * rental - lessSevenDay;
+    return calculateNumber - lessSevenDay;
   }
 }
 
