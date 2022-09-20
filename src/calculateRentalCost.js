@@ -29,12 +29,14 @@
 
 function calculateRentalCost(days) {
   const result = (days * 40);
+  const magicNumOne = 2;
+  const magicNumTwo = 6;
 
-  if (days > 6) {
+  if (days > magicNumTwo) {
     return result - 50;
   }
 
-  if (days > 2) {
+  if (days > magicNumOne) {
     return result - 20;
   }
 
