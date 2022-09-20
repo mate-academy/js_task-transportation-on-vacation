@@ -36,11 +36,13 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return result - maxDiscount;
-  } else if (days >= 3) {
-    return result - minDiscount;
-  } else {
-    return result;
   }
+
+  if (days >= 3) {
+    return result - minDiscount;
+  }
+
+  return result;
 }
 
 module.exports = calculateRentalCost;
