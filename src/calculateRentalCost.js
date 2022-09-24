@@ -29,14 +29,14 @@
 
 function calculateRentalCost(days) {
   const result = (days * 40);
-  const magicNumOne = 2;
-  const magicNumTwo = 6;
+  const rentForThryDays = 2;
+  const rentForSevenDays = 6;
 
-  if (days > magicNumTwo) {
+  if (days > rentForSevenDays) {
     return result - 50;
   }
 
-  if (days > magicNumOne) {
+  if (days > rentForThryDays) {
     return result - 20;
   }
 
