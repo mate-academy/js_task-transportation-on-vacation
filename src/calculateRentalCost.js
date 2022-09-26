@@ -28,24 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  let result;
   const rentCost = days * 40;
   const cashBack3MoreDays = 20;
   const cashBack7MoreDays = 50;
+  const minDayForCashBack = 3;
+  const maxDayForMaxCashBack = 7;
 
-  if (days < 3) {
+  if (days < minDayForCashBack) {
     return rentCost;
   }
 
-  if (days >= 3 & days < 7) {
-    result = rentCost - cashBack3MoreDays;
+  if (days < maxDayForMaxCashBack) {
+    return rentCost - cashBack3MoreDays;
   }
 
-  if (days >= 7) {
-    result = rentCost - cashBack7MoreDays;
+  if (days >= maxDayForMaxCashBack) {
+    return rentCost - cashBack7MoreDays;
   }
-
-  return result;
 }
 
 module.exports = calculateRentalCost;
