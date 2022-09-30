@@ -30,11 +30,13 @@
 function calculateRentalCost(days) {
   // write code here
   const costPerDay = 40;
+  const discountRangeFirst = 20;
+  const discountRangeSecond = 50;
 
   switch (true) {
     case days < 3: return days * costPerDay;
-    case days < 7: return days * costPerDay - 20;
-    default: return days * costPerDay - 50;
+    case days < 7: return days * costPerDay - discountRangeFirst;
+    default: return days * costPerDay - discountRangeSecond;
   }
 }
 
