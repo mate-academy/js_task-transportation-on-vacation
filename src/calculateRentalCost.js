@@ -34,9 +34,12 @@ function calculateRentalCost(days) {
   const discountRangeSecond = 50;
 
   switch (true) {
-    case days < 3: return days * costPerDay;
-    case days < 7: return days * costPerDay - discountRangeFirst;
-    default: return days * costPerDay - discountRangeSecond;
+    case days < 3: 
+      return days * costPerDay;
+    case days < 7: 
+      return days * costPerDay - discountRangeFirst;
+    default: 
+      return days * costPerDay - discountRangeSecond;
   }
 }
 
