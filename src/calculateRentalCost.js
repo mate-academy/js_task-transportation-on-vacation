@@ -29,17 +29,22 @@
 
 function calculateRentalCost(days) {
   const rentDay = 40;
+  const firstLevelDays = 3;
+  const secondLevelDays = 7;
+  const firstLevelDiscount = 20;
+  const secondLevelDiscount = 50;
+
   const amount = rentDay * days;
 
-  if (days < 3) {
+  if (days < firstLevelDays) {
     return amount;
   }
 
-  if (days < 7) {
-    return amount - 20;
+  if (days < secondLevelDays) {
+    return amount - firstLevelDiscount;
   }
 
-  return amount - 50;
+  return amount - secondLevelDiscount;
 }
 
 module.exports = calculateRentalCost;
