@@ -1,5 +1,7 @@
 'use strict';
 
+// const { Linter } = require('eslint');
+
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
@@ -28,7 +30,16 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const pricePerOneDay = 40;
+  let totalPrice = days * pricePerOneDay;
+
+  if (days >= 3 && days <= 6) {
+    totalPrice -= 20;
+  } else if (days >= 7) {
+    totalPrice -= 50;
+  }
+
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
