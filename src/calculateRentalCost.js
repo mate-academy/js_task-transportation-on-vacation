@@ -32,10 +32,6 @@ function calculateRentalCost(days) {
   let discount = 0;
   let amount = 0;
 
-  if (days < 3) {
-    discount = 0;
-  }
-
   if (days >= 3 && days < 7) {
     discount = 20;
   }
