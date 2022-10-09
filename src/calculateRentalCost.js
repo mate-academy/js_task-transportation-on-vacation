@@ -28,18 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  let totalAmount = days * 40;
+  const rentCarPerDay = 40;
+  const minDiscount = 20;
+  const maxDiscount = 50;
+  const totalAmount = days * rentCarPerDay;
 
   if (days >= 7) {
-    totalAmount -= 50;
-
-    return totalAmount;
+    return totalAmount - maxDiscount;
   }
 
   if (days >= 3) {
-    totalAmount -= 20;
-
-    return totalAmount;
+    return totalAmount - minDiscount;
   }
 
   return totalAmount;
