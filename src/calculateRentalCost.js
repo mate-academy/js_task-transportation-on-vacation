@@ -29,6 +29,16 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const priseOneDay = 40;
+  let totalPrice = days * priseOneDay;
+
+  if (days >= 3 && days <= 6) {
+    totalPrice -= 20;
+  } else if (days >= 7) {
+    totalPrice -= 50;
+  }
+
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
