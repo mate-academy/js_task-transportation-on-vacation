@@ -1,7 +1,5 @@
 'use strict';
 
-// const { Linter } = require('eslint');
-
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
