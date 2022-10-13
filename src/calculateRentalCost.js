@@ -28,7 +28,26 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let result = 0;
+  const count = 40;
+  const smallDiscount = 20;
+  const basicDiscount = 50;
+  const smallTrip = 3;
+  const longTrip = 7;
+
+  if (days < smallTrip) {
+    result = count * days;
+  }
+
+  if (days >= smallTrip && days < longTrip) {
+    result = count * days - smallDiscount;
+  }
+
+  if (days >= longTrip) {
+    result = count * days - basicDiscount;
+  }
+
+  return result;
 }
 
 module.exports = calculateRentalCost;
