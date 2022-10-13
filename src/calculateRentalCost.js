@@ -32,16 +32,18 @@ function calculateRentalCost(days) {
   const count = 40;
   const smallDiscount = 20;
   const basicDiscount = 50;
+  const smallTrip = 3;
+  const longTrip = 7;
 
-  if (days < 3) {
+  if (days < smallTrip) {
     result = count * days;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days >= smallTrip && days < longTrip) {
     result = count * days - smallDiscount;
   }
 
-  if (days >= 7) {
+  if (days >= longTrip) {
     result = count * days - basicDiscount;
   }
 
