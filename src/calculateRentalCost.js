@@ -29,11 +29,18 @@
 
 function calculateRentalCost(days) {
   let res = 0;
-  const total = days * 40;
+  const price = 40;
+  const greatDisc = 50;
+  const tinyDisc = 20;
+  const total = days * price;
 
-  days >= 7 ? res = total - 50
-    : days >= 3 && days <= 7 ? res = total - 20
-      : res = total;
+  if (days >= 7) {
+    res = total - greatDisc;
+  } else if (days >= 3 && days <= 7) {
+    res = total - tinyDisc;
+  } else {
+    res = total;
+  }
 
   return res;
 }
