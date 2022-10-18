@@ -28,7 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const baseAmount = days * 40;
+  const dayRentPrice = 40;
+  const baseAmount = days * dayRentPrice;
 
   if (days < 3) {
     return baseAmount;
