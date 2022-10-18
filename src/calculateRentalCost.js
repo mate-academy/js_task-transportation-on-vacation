@@ -28,21 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  let res = 0;
+  let totalPrice = 0;
   const price = 40;
   const greatDisc = 50;
   const tinyDisc = 20;
   const total = days * price;
 
   if (days >= 7) {
-    res = total - greatDisc;
+    totalPrice = total - greatDisc;
   } else if (days >= 3 && days <= 7) {
-    res = total - tinyDisc;
+    totalPrice = total - tinyDisc;
   } else {
-    res = total;
+    totalPrice = total;
   }
 
-  return res;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
