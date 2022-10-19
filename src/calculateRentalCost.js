@@ -32,13 +32,13 @@ function calculateRentalCost(days) {
 
   if (days > 6) {
     return days * rentDays - 50;
-  };
+  }
 
   if (days > 2) {
     return days * rentDays - 20;
-  };
+  }
 
   return days * rentDays;
-};
+}
 
 module.exports = calculateRentalCost;
