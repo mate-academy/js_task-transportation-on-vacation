@@ -28,15 +28,17 @@
  */
 
 function calculateRentalCost(days) {
+  const tax = 40;
+
   switch (true) {
     case days >= 7:
-      return days * 40 - 50;
+      return days * tax - 50;
 
     case days >= 3:
-      return days * 40 - 20;
+      return days * tax - 20;
 
     default:
-      return days * 40;
+      return days * tax;
   }
 }
 
