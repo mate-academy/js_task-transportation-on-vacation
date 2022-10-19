@@ -28,12 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return days * 40;
-  } else if (days >= 3 && days < 7) {
-    return days * 40 - 20;
-  } else if (days >= 7) {
-    return days * 40 - 50;
+  const Newdays = days;
+  const dayCoast = 40;
+
+  if (Newdays < 3) {
+    return Newdays * dayCoast;
+  }
+
+  if (Newdays >= 3 && Newdays < 7) {
+    return Newdays * dayCoast - 20;
+  }
+
+  if (Newdays >= 7) {
+    return Newdays * dayCoast - 50;
   }
 }
 
