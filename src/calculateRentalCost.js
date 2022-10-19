@@ -29,15 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const fuelCost = 40;
+  const threeDayDisc = 20;
+  const sevenDayDisc = 50;
+
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * fuelCost - sevenDayDisc;
   }
 
   if (days >= 3) {
-    return days * 40 - 20;
+    return days * fuelCost - threeDayDisc;
   }
 
-  return days * 40;
+  return days * fuelCost;
 }
 
 module.exports = calculateRentalCost;
