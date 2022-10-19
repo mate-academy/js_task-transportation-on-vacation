@@ -29,17 +29,18 @@
 
 function calculateRentalCost(days) {
   const cost = 40;
-  let basicDiscount = 50;
+  const DiscForSevenDays = 50;
+  const DiscForThreeDays = 20;
 
   if (days < 3) {
     return cost * days;
   }
 
   if (days < 7) {
-    basicDiscount = 20;
+    return cost * days - DiscForThreeDays;
   }
 
-  return cost * days - basicDiscount;
+  return cost * days - DiscForSevenDays;
 }
 
 module.exports = calculateRentalCost;
