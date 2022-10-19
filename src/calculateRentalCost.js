@@ -29,15 +29,19 @@
 
 function calculateRentalCost(days) {
   const rentPrice = 40;
-  let amount = days * rentPrice;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
 
-  if (days >= 3 && days < 7) {
-    amount -= 20;
-  } else if (days >= 7) {
-    amount -= 50;
+  // Do I need to use brackets in: return (days * rentPrice - bigDiscount)?
+  if (days >= 7) {
+    return days * rentPrice - bigDiscount;
   }
 
-  return amount;
+  if (days >= 3 && days < 7) {
+    return days * rentPrice - smallDiscount;
+  }
+
+  return days * rentPrice;
 }
 
 module.exports = calculateRentalCost;
