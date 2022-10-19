@@ -34,7 +34,9 @@ function calculateRentalCost(days) {
 
   if (days <= 2) {
     return carRentPrice * days;
-  } else if (days <= 6) {
+  }
+
+  if (days <= 6) {
     return carRentPrice * days - minDiscount;
   }
 
