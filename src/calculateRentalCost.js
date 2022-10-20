@@ -30,15 +30,15 @@
 function calculateRentalCost(days) {
   // write code here
   const fuelCost = 40;
-  const threeDayDisc = 20;
-  const sevenDayDisc = 50;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
 
   if (days >= 7) {
-    return days * fuelCost - sevenDayDisc;
+    return days * fuelCost - bigDiscount;
   }
 
   if (days >= 3) {
-    return days * fuelCost - threeDayDisc;
+    return days * fuelCost - smallDiscount;
   }
 
   return days * fuelCost;
