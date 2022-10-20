@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   const tax = 40;
+  const discSmall = 20;
+  const discBig = 50;
 
   switch (true) {
     case days >= 7:
-      return days * tax - 50;
+      return days * tax - discBig;
 
     case days >= 3:
-      return days * tax - 20;
+      return days * tax - discSmall;
 
     default:
       return days * tax;
