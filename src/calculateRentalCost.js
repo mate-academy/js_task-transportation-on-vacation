@@ -43,7 +43,7 @@ function calculateRentalCost(days) {
     return amount;
   }
 
-  if (days >= 7) {
+  if (days) {
     amount = (days * dayRentPrice) - 50;
 
     return amount;
