@@ -38,9 +38,7 @@ function calculateRentalCost(days) {
     return (days * dayRentPrice) - 20;
   }
 
-  if (days) {
-    return (days * dayRentPrice) - 50;
-  }
+  return (days * dayRentPrice) - 50;
 }
 
 module.exports = calculateRentalCost;
