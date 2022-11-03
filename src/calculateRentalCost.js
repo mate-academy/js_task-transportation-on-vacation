@@ -29,17 +29,19 @@
 
 function calculateRentalCost(days) {
   const rent = 40;
+  const coupon1 = 20;
+  const coupon2 = 50;
 
   if (days < 3) {
     return days * rent;
   }
 
   if (days >= 3 && days < 7) {
-    return days * rent - 20;
+    return days * rent - coupon1;
   }
 
   if (days >= 7) {
-    return days * rent - 50;
+    return days * rent - coupon2;
   }
 }
 
