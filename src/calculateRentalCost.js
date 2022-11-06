@@ -27,16 +27,21 @@
  * @return {number}
  */
 
+const DAYS_WITH_LOW_DISCOUNT = 3;
+const DAYS_WITH_HIGH_DISCOUNT = 7;
+const LOW_DISCOUNT = 20;
+const HIGH_DISCOUNT = 50;
+
 function calculateRentalCost(days) {
   const price = 40;
   const total = days * price;
 
-  if (days >= 7) {
-    return total - 50;
+  if (days >= DAYS_WITH_HIGH_DISCOUNT) {
+    return total - HIGH_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return total - 20;
+  if (days >= DAYS_WITH_LOW_DISCOUNT) {
+    return total - LOW_DISCOUNT;
   }
 
   return total;
