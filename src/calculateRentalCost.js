@@ -30,13 +30,17 @@
 function calculateRentalCost(days) {
   // write code here
   const carCost = 40;
+  const off20 = 20;
+  const off50 = 50;
+  const trial = 3;
+  const week = 7;
 
-  if (days < 3) {
+  if (days < trial) {
     return days * carCost;
-  } else if (days >= 3 && days < 7) {
-    return days * carCost - 20;
+  } else if (days >= trial && days < week) {
+    return days * carCost - off20;
   } else {
-    return days * carCost - 50;
+    return days * carCost - off50;
   }
 }
 
