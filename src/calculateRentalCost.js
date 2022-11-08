@@ -29,6 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const carCost = 40;
+  const discountOfShortPeriod = 20;
+  const discountOfLongPeriod = 50;
+  const shortPeriod = 3;
+  const longPeriod = 7;
+
+  if (days < shortPeriod) {
+    return days * carCost;
+  } else if (days >= shortPeriod && days < longPeriod) {
+    return days * carCost - discountOfShortPeriod;
+  } else {
+    return days * carCost - discountOfLongPeriod;
+  }
 }
 
 module.exports = calculateRentalCost;
