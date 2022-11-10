@@ -26,18 +26,20 @@
  *
  * @return {number}
  */
-const rentcost = 40;
-const discountMoreWeek = 50;
-const discountLessWeek = 20;
 
 function calculateRentalCost(days) {
+  const rentcost = 40;
+  const moreWeek = 7;
+  const lessWeek = 3;
+  const discountMoreWeek = 50;
+  const discountLessWeek = 20;
   const result = rentcost * days;
 
-  if (days >= 7) {
+  if (days >= moreWeek) {
     return result - discountMoreWeek;
   }
 
-  if (days >= 3) {
+  if (days >= lessWeek) {
     return result - discountLessWeek;
   }
 
