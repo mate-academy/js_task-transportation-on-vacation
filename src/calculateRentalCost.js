@@ -44,6 +44,8 @@ function calculateRentalCost(days) {
   if (days < 3) {
     return rentCost;
   }
+
+  return rentCost;
 }
 
 module.exports = calculateRentalCost;
