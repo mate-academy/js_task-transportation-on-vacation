@@ -33,10 +33,6 @@ function calculateRentalCost(days) {
   const threeDaysDiscount = 20;
   const rentCost = days * carCost;
 
-  if (days === 0) {
-    return 0;
-  }
-
   if (days >= 7) {
     return rentCost - sevenDaysDiscount;
   }
