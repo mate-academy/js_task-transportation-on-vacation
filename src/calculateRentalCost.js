@@ -28,13 +28,14 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const priceOfOneDay = 40;
+
   if (days <= 2) {
-    return (days * 40);
+    return (days * priceOfOneDay);
   } else if (days < 7) {
-    return ((days * 40) - 20);
+    return ((days * priceOfOneDay) - 20);
   } else if (days >= 7) {
-    return ((days * 40) - 50);
+    return ((days * priceOfOneDay) - 50);
   }
 }
 
