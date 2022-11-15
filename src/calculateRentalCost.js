@@ -28,19 +28,21 @@
  */
 
 function calculateRentalCost(days) {
+  const regularCost = 40;
+  const discountThreeDays = 20;
+  const discountSevenDays = 50;
+
   if (days > 0 && days < 3) {
-    return days * 40;
+    return days * regularCost;
   }
 
   if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+    return days * regularCost - discountThreeDays;
   }
 
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * regularCost - discountSevenDays;
   }
 }
 
-// eslint-disable-next-line no-console
-console.log(calculateRentalCost(6));
 module.exports = calculateRentalCost;
