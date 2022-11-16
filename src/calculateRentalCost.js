@@ -31,17 +31,20 @@ function calculateRentalCost(days) {
   const regularCost = 40;
   const discountThreeDays = 20;
   const discountSevenDays = 50;
+  const firstDiscountPeriod = 3;
+  const secondDiscountPeriod = 7;
+  const totalWithoutDiscount = days * regularCost;
 
-  if (days > 0 && days < 3) {
-    return days * regularCost;
+  if (days > 0 && days < firstDiscountPeriod) {
+    return totalWithoutDiscount;
   }
 
-  if (days >= 3 && days < 7) {
-    return days * regularCost - discountThreeDays;
+  if (days >= firstDiscountPeriod && days < secondDiscountPeriod) {
+    return totalWithoutDiscount - discountThreeDays;
   }
 
-  if (days >= 7) {
-    return days * regularCost - discountSevenDays;
+  if (days >= secondDiscountPeriod) {
+    return totalWithoutDiscount - discountSevenDays;
   }
 }
 
