@@ -34,7 +34,9 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return days * carRent - advancedDiscount;
-  } else if (days >= 3) {
+  }
+
+  if (days >= 3) {
     return days * carRent - basicDiscount;
   }
 
