@@ -29,12 +29,16 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const oneDayRentPrice = 40;
+  const threeOrMoreDaysOff = 20;
+  const sevenOrMoreDaysOff = 50;
+
   if (days < 3) {
-    return 40 * days;
+    return oneDayRentPrice * days;
   } else if (days >= 3 && days < 7) {
-    return (40 * days) - 20;
+    return (oneDayRentPrice * days) - threeOrMoreDaysOff;
   } else {
-    return (40 * days) - 50;
+    return (oneDayRentPrice * days) - sevenOrMoreDaysOff;
   }
 }
 
