@@ -31,13 +31,15 @@ function calculateRentalCost(days) {
   const rentalFee = 40;
   const minorDiscount = 20;
   const majorDiscount = 50;
+  const daysForMajorDiscount = 7;
+  const daysForMinorDiscount = 3;
   const totalFee = rentalFee * days;
 
-  if (days >= 7) {
+  if (days >= daysForMajorDiscount) {
     return totalFee - majorDiscount;
   }
 
-  if (days >= 3) {
+  if (days >= daysForMinorDiscount) {
     return totalFee - minorDiscount;
   }
 
