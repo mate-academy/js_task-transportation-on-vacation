@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const amount = 40 * days;
+  const minDiscount = 20;
+  const maxDiscount = 50;
+  const daysOfMinDiscount = 3;
+  const daysOfMaxDiscount = 7;
+
+  if (days >= daysOfMinDiscount && days < daysOfMaxDiscount) {
+    return amount - minDiscount;
+  }
+
+  if (days >= daysOfMaxDiscount) {
+    return amount - maxDiscount;
+  }
+
+  return amount;
 }
 
 module.exports = calculateRentalCost;
