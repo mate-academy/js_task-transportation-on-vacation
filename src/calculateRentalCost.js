@@ -39,10 +39,10 @@ function calculateRentalCost(days) {
     return totalCount;
   } else {
     if (days < smallDiscountDay) {
-      return (totalCount - smallDiscount);
+      return totalCount - smallDiscount;
     }
 
-    return (totalCount - bigDiscount);
+    return totalCount - bigDiscount;
   }
 }
 
