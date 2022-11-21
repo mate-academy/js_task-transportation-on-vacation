@@ -29,20 +29,22 @@
 
 function calculateRentalCost(days) {
   const discontSmall = 20;
+  const daysMin = 3;
   const discontBig = 50;
+  const daysMax = 7;
   const basicPrice = 40;
 
-  const result = basicPrice * days;
+  const totalCost = basicPrice * days;
 
-  if (days >= 3 && days < 7) {
-    return result - discontSmall;
+  if (days >= daysMin && days < daysMax) {
+    return totalCost - discontSmall;
   }
 
-  if (days >= 7) {
-    return result - discontBig;
+  if (days >= daysMax) {
+    return totalCost - discontBig;
   }
 
-  return result;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
