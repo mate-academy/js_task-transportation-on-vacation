@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * After a hard quarter in the office you decide
+ * After a hard Quarter in the office you decide
  * to get some rest on a vacation.
  * So you will book a flight for you
  * and your family and try to leave all the mess behind you.
@@ -18,9 +18,9 @@
  * which returns the total amount for different count of days.
  *
  * Examples:
- *  - calculateRentalCost(1) === 40
- *  - calculateRentalCost(3) === 100
- *  - calculateRentalCost(7) === 230
+ *  -calculateRentalCost(1) === 40
+ *  -calculateRentalCost(3) === 100
+ *  -calculateRentalCost(7) === 230
  *
  * @param {number} days
  *
@@ -28,7 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const price = 40;
+
+  if (days >= 3 && days < 7) {
+    return price * days - 20;
+  }
+
+  if (days >= 7) {
+    return price * days - 50;
+  } else {
+    return days * price;
+  }
 }
 
 module.exports = calculateRentalCost;
