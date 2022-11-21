@@ -31,16 +31,18 @@ function calculateRentalCost(days) {
   const basicDiscount = 50;
   const alternativelyDiscount = 20;
   const rentPrice = 40;
+  const threeOrLess = 3;
+  const moreThanSeven = 7;
 
-  if (days < 3) {
+  if (days < threeOrLess) {
     return days * rentPrice;
   }
 
-  if (days >= 7) {
+  if (days >= moreThanSeven) {
     return days * rentPrice - basicDiscount;
   }
 
-  if (days >= 3 < 7) {
+  if (days >= threeOrLess < moreThanSeven) {
     return days * rentPrice - alternativelyDiscount;
   }
 }
