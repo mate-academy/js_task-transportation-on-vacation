@@ -33,11 +33,13 @@ function calculateRentalCost(days) {
   const basicDiscount = 20;
   const extendedDiscount = 50;
 
+  const rentalCost = days * dayCost;
+
   return days > 6
-    ? (days * dayCost) - extendedDiscount
+    ? rentalCost - extendedDiscount
     : days > 2
-      ? (days * dayCost) - basicDiscount
-      : days * dayCost;
+      ? rentalCost - basicDiscount
+      : rentalCost;
 }
 
 module.exports = calculateRentalCost;
