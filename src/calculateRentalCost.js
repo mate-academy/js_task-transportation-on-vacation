@@ -31,12 +31,14 @@ function calculateRentalCost(days) {
   const carRent = 40;
   const basicDiscount = 20;
   const advancedDiscount = 50;
+  const minDiscountDays = 3;
+  const maxDiscountDays = 7;
 
-  if (days >= 7) {
+  if (days >= maxDiscountDays) {
     return days * carRent - advancedDiscount;
   }
 
-  if (days >= 3) {
+  if (days >= minDiscountDays) {
     return days * carRent - basicDiscount;
   }
 
