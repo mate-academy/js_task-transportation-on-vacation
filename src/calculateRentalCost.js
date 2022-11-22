@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
   const dayCost = 40;
   const smallDiscount = 20;
   const normalDiscount = 50;
