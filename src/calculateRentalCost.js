@@ -29,17 +29,20 @@
 
 function calculateRentalCost(days) {
   let score = 0;
+  const priceCardOneDay = 40;
+  const smallSale = 20;
+  const bigSale = 50;
 
   if (days < 3) {
-    score = days * 40;
+    score = days * priceCardOneDay;
   }
 
   if (days >= 3 && days < 7) {
-    score = days * 40 - 20;
+    score = days * priceCardOneDay - smallSale;
   }
 
   if (days >= 7) {
-    score = days * 40 - 50;
+    score = days * priceCardOneDay - bigSale;
   }
 
   return score;
