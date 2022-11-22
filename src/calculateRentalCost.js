@@ -28,7 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  return days * 40 - ((days >= 7) ? 50 : (days >= 3) ? 20 : 0);
+  let cost = days * 40;
+
+  if (days >= 7) { // discount is $50 for 7 or more days
+    cost -= 50;
+  } else if (days >= 3) { // discount is $20 for 3 or more days
+    cost -= 20;
+  }
+
+  return cost;
 }
 
 module.exports = calculateRentalCost;
