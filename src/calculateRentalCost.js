@@ -31,10 +31,12 @@ function calculateRentalCost(days) {
   const basicDiscount = 20;
   const extraDiscount = 50;
   const normalPrice = 40;
+  const basicDiscountLimit = 3;
+  const extraDiscountLimit = 7;
 
-  if (days >= 3 && days < 7) {
+  if (days >= basicDiscountLimit && days < extraDiscountLimit) {
     return normalPrice * days - basicDiscount;
-  } else if (days >= 7) {
+  } else if (days >= extraDiscountLimit) {
     return normalPrice * days - extraDiscount;
   }
 
