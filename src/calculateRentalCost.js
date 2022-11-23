@@ -28,15 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const result = days * 40;
+  const rentalPrice = 40;
+  const totalExpences = days * rentalPrice;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  const minDiscountDays = 3;
+  const maxDiscountDays = 7;
 
   switch (true) {
-    case (days >= 7):
-      return result - 50;
-    case (days >= 3):
-      return result - 20;
+    case (days >= maxDiscountDays):
+      return totalExpences - bigDiscount;
+    case (days >= minDiscountDays):
+      return totalExpences - smallDiscount;
     default:
-      return result;
+      return totalExpences;
   }
 }
 
