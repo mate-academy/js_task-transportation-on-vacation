@@ -31,19 +31,19 @@ function calculateRentalCost(days) {
   // write code here
   const basicDayCost = 40;
   const fullCost = days * basicDayCost;
-  const regularDiscount = 20;
-  const weekDiscount = 50;
+  const minDiscount = 20;
+  const maxDiscount = 50;
 
-  const regularMinDays = 3;
-  const weekMinDays = 7;
+  const daysForMinDiscount = 3;
+  const daysForMaxDiscount = 7;
 
-  if (days < regularMinDays) {
+  if (days < daysForMinDiscount) {
     return fullCost;
-  } else if (days < weekMinDays) {
-    return fullCost - regularDiscount;
+  } else if (days < daysForMaxDiscount) {
+    return fullCost - minDiscount;
   }
 
-  return fullCost - weekDiscount;
+  return fullCost - maxDiscount;
 }
 
 module.exports = calculateRentalCost;
