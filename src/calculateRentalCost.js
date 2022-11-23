@@ -28,16 +28,20 @@
  */
 
 function calculateRentalCost(days) {
+  const basicDiscount = 20;
+  const extraDiscount = 50;
+  const oneDayCost = 40;
+
   if (days < 3) {
     return days * 40;
   }
 
   if (days < 7) {
-    return days * 40 - 20;
+    return days * oneDayCost - basicDiscount;
   }
 
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * oneDayCost - extraDiscount;
   }
 }
 
