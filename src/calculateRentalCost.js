@@ -35,11 +35,13 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     return days * rentForDay; ;
-  } else if (days < 7) {
-    return ((rentForDay * days) - minSale);
-  } else {
-    return ((days * rentForDay) - maxSale);
   }
+
+  if (days < 7) {
+    return ((rentForDay * days) - minSale);
+  }
+
+  return ((days * rentForDay) - maxSale);
 }
 
 module.exports = calculateRentalCost;
