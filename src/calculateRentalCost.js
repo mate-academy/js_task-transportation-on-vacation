@@ -29,23 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const cost = 40;
-  const bill = cost * days;
-  let totalAmount;
+  const bill = 40 * days;
 
   if (days < 3) {
-    totalAmount = bill;
+    return bill;
   }
 
-  if (days >= 3) {
-    totalAmount = bill - 20;
+  if (days >= 3 && days < 7) {
+    return bill - 20;
   }
 
   if (days >= 7) {
-    totalAmount = bill - 50;
+    return bill - 50;
   }
-
-  return totalAmount;
 }
 
 module.exports = calculateRentalCost;
