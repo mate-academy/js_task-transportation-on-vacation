@@ -31,12 +31,14 @@ function calculateRentalCost(days) {
   const costsForDay = 40;
   const discountMax = 50;
   const discountMin = 20;
+  const daysForSmallDiscount = 3;
+  const daysForBigDiscount = 7;
 
-  if (days >= 7) {
+  if (days >= daysForBigDiscount) {
     return days * costsForDay - discountMax;
   }
 
-  if (days >= 3) {
+  if (days >= daysForSmallDiscount) {
     return days * costsForDay - discountMin;
   }
 
