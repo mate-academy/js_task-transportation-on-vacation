@@ -41,10 +41,6 @@ function calculateRentalCost(days) {
     return rentCost - threeDaysDiscount;
   }
 
-  if (days < 3) {
-    return rentCost;
-  }
-
   return rentCost;
 }
 
