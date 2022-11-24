@@ -31,17 +31,16 @@ function calculateRentalCost(days) {
   const dayRate = 40;
   const threeDayDiscount = 20;
   const sevenDayDiscount = 50;
-
-  if (days >= 3 && days < 7) {
-    return (days * dayRate) - threeDayDiscount;
-  }
-
-  if (days >= 7) {
-    return (days * dayRate) - sevenDayDiscount;
-  }
+  const cost = (days * dayRate);
 
   if (days < 3) {
-    return days * dayRate;
+    return cost;
+  }
+
+  if (days >= 3 && days < 7) {
+    return cost - threeDayDiscount;
+  } else {
+    return cost - sevenDayDiscount;
   }
 }
 
