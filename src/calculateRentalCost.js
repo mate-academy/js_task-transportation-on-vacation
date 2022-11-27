@@ -40,7 +40,7 @@ function calculateRentalCost(days) {
     case longerThanThree:
       return (days * moneyPerDay) - threeDaysDiscount;
     default:
-      return days * 40;
+      return days * moneyPerDay;
   }
 }
 
