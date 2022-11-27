@@ -30,21 +30,13 @@
 function calculateRentalCost(days) {
   const rentalFeeForDay = 40;
   const rentalFee = rentalFeeForDay * days;
-  let discountedRent = 0;
 
-  switch (true) {
-    case days < 3:
-      return rentalFee;
-
-    case days >= 3 && days < 7:
-      discountedRent = rentalFee - 20;
-
-      return discountedRent;
-
-    case days >= 7:
-      discountedRent = rentalFee - 50;
-
-      return discountedRent;
+  if (days < 3) {
+    return rentalFee;
+  } else if (days >= 3 && days < 7) {
+    return rentalFee - 20;
+  } else if (days >= 7) {
+    return rentalFee - 50;
   }
 }
 
