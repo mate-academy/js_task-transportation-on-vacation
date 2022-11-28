@@ -28,21 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  let costRentalAllDays = 0;
   const costRental = 40;
   const discountSmall = 20;
   const discountBig = 50;
   const daysForSmallDiscount = 3;
   const daysForBigDiscount = 7;
 
-  costRentalAllDays = costRental * days;
-
-  if (days >= daysForSmallDiscount && days < daysForBigDiscount) {
-    return costRentalAllDays - discountSmall;
-  }
+  const costRentalAllDays = costRental * days;
 
   if (days >= daysForBigDiscount) {
     return costRentalAllDays - discountBig;
+  }
+
+  if (days >= daysForSmallDiscount) {
+    return costRentalAllDays - discountSmall;
   }
 
   return costRentalAllDays;
