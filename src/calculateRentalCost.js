@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * After a hard quarter in the office you decide
@@ -33,13 +33,9 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     return bill;
-  }
-
-  if (days >= 3 && days < 7) {
+  } else if (days >= 3 && days < 7) {
     return bill - 20;
-  }
-
-  if (days >= 7) {
+  } else {
     return bill - 50;
   }
 }
