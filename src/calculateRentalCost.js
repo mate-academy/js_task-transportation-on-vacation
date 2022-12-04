@@ -43,9 +43,7 @@ function calculateRentalCost(days) {
     return moreThanThree;
   }
 
-  if (days >= 7) {
-    return moreThanSeven;
-  }
+  return moreThanSeven;
 }
 
 module.exports = calculateRentalCost;
