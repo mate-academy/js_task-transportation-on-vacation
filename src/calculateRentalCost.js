@@ -28,17 +28,12 @@
  */
 
 function calculateRentalCost(days) {
-  let markdown = 0; // Знижка, грн.
-
-  const pricePerDay = 40; // Ціна\день, грн.
-
-  const firstMarkdown = 20; // Перший рівень знижки, грн.
-
-  const secondMarkdown = 50; // Другий рівень знижки, грн.
-
-  const firstMarkdownDay = 3; // День першого рівня.
-
-  const secondMarkdownDay = 7; // День другого рівня.
+  let markdown = 0;
+  const pricePerDay = 40;
+  const firstMarkdown = 20;
+  const secondMarkdown = 50;
+  const firstMarkdownDay = 3;
+  const secondMarkdownDay = 7;
 
   if (days >= firstMarkdownDay && days < secondMarkdownDay) {
     markdown = firstMarkdown;
