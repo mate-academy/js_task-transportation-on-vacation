@@ -34,7 +34,7 @@ function calculateRentalCost(days) {
     case days < 3:
       return amount;
 
-    case (days >= 3) && (days < 7):
+    case days < 7:
       return amount - 20;
 
     default:
