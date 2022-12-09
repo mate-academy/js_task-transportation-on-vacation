@@ -29,24 +29,23 @@
 
 function calculateRentalCost(days) {
   const Rent = 40;
+  const amount = Rent * days;
 
-  const firstDiscount = 20;
-  const secondDiscount = 50;
+  const firstDiscount = amount - 20;
+  const secondDiscount = amount - 50;
 
   const firstDiscountStartDay = 3;
   const secondDiscountStartDay = 7;
 
-  let amount = Rent * days;
-
-  if (days >= firstDiscountStartDay && days < secondDiscountStartDay) {
-    amount -= firstDiscount;
-  } else {
-    if (days >= secondDiscountStartDay) {
-      amount -= secondDiscount;
-    }
+  if (days < firstDiscountStartDay) {
+    return amount;
   }
 
-  return amount;
+  if (days < secondDiscountStartDay) {
+    return firstDiscount;
+  }
+
+  return secondDiscount;
 }
 
 module.exports = calculateRentalCost;
