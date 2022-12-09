@@ -34,11 +34,14 @@ function calculateRentalCost(days) {
 
   if (days >= 1 && days < 3) {
     return days * perDayRent;
-  } else if (days >= 3 && days < 7) {
-    return days * perDayRent - threeDaysDiscount;
-  } else if (days >= 7) {
-    return days * perDayRent - sevenDaysDiscount;
   }
+
+  if (days >= 3 && days < 7) {
+    return days * perDayRent - threeDaysDiscount;
+  }
+
+  return days * perDayRent - sevenDaysDiscount;
+
   // write code here
 }
 
