@@ -28,14 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  let charge;
+  let charge = 0;
+  const smallCharge = 20;
+  const bigCharge = 50;
 
-  if (days < 3) {
-    charge = 0;
-  } else if (days < 7) {
-    charge = 20;
-  } else {
-    charge = 50;
+  if (days >= 3 && days < 7) {
+    charge = smallCharge;
+  }
+
+  if (days >= 7) {
+    charge = bigCharge;
   }
 
   const cost = days * 40 - charge;
