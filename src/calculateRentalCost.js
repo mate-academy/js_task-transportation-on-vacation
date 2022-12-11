@@ -31,14 +31,20 @@ function calculateRentalCost(days) {
   const dayRent = 40;
   const weekDiscount = 50;
   const threeDaysDiscount = 20;
-  let total = days * dayRent;
+  const total = days * dayRent;
+  const moreThanTree = 3;
+  const moreThanSeven = 7;
 
-  if (days < 3) {
-    total = days * dayRent;
-  } else if ((days >= 3) && (days < 7)) {
-    total -= threeDaysDiscount;
-  } else {
-    total -= weekDiscount;
+  if (days < moreThanTree) {
+    return total;
+  }
+
+  if ((days >= moreThanTree) && (days < moreThanSeven)) {
+    return total - threeDaysDiscount;
+  }
+
+  if (days >= moreThanSeven) {
+    return total - weekDiscount;
   }
 
   return total;
