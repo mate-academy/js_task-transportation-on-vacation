@@ -40,9 +40,7 @@ function calculateRentalCost(days) {
     charge = bigCharge;
   }
 
-  const cost = days * 40 - charge;
-
-  return cost;
+  return days * 40 - charge;
 }
 
 module.exports = calculateRentalCost;
