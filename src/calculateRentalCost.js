@@ -26,14 +26,18 @@
  *
  * @return {number}
  */
-const pricePerDay = 40;
-let sum = 0;
+
+
 
 function calculateRentalCost(days) {
+  const pricePerDay = 40;
+  const sevenDaysDiscount = 50;
+  const treeDaysDiscount = 20;
+  let sum = 0;
   if (days >= 7) {
-    sum = (days * pricePerDay - 50);
+    sum = (days * pricePerDay - sevenDaysDiscount);
   } else if (days >= 3) {
-    sum = (days * pricePerDay - 20);
+    sum = (days * pricePerDay - treeDaysDiscount);
   } else {
     sum = days * pricePerDay;
   }
