@@ -27,13 +27,12 @@
  * @return {number}
  */
 
-
-
 function calculateRentalCost(days) {
   const pricePerDay = 40;
   const sevenDaysDiscount = 50;
   const treeDaysDiscount = 20;
   let sum = 0;
+
   if (days >= 7) {
     sum = (days * pricePerDay - sevenDaysDiscount);
   } else if (days >= 3) {
