@@ -35,6 +35,7 @@ function calculateRentalCost(days) {
   } else {
     return days * 40;
   }
+  // comment for removal
   //comment for removal
 }
 
