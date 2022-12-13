@@ -25,7 +25,7 @@
  * @param {number} days
  *
  * @return {number}
- */
+*/
 
 function calculateRentalCost(days) {
   let total = days * 40;
