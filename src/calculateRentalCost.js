@@ -29,17 +29,19 @@
 
 function calculateRentalCost(days) {
   let result = 0;
+  const everyDayRent = days * 40;
+  const threeDayRent = (days - 1) * 40;
 
   if (days <= 2) {
-    result = days * 40;
+    result = everyDayRent;
   }
 
   if (days >= 3 && days < 7) {
-    result = (days - 1) * 40 + 20;
+    result = threeDayRent + 20;
   }
 
   if (days >= 7) {
-    result = days * 40 - 50;
+    result = everyDayRent - 50;
   }
 
   return result;
