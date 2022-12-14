@@ -28,17 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  let total = 0;
-
   if (days >= 3 && days <= 6) {
-    total = days * 40 - 20;
-  } else if (days >= 7) {
-    total = days * 40 - 50;
-  } else {
-    return days * 40;
+    return days * 40 - 20;
   }
 
-  return total;
+  if (days >= 7) {
+    return days * 40 - 50;
+  }
+
+  return days * 40;
 }
 
 module.exports = calculateRentalCost;
