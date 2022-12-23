@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1671812375828" clover="3.2.0">
+  <project timestamp="1671812375828" name="All files">
+    <metrics statements="11" coveredstatements="9" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1" elements="17" coveredelements="14" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
+    <file name="calculateRentalCost.js" path="/Users/sonyaxent/Downloads/js_task-transportation-on-vacation/src/calculateRentalCost.js">
+      <metrics statements="11" coveredstatements="9" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="31" count="4" type="stmt"/>
+      <line num="33" count="4" type="cond" truecount="2" falsecount="1"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="45" count="4" type="stmt"/>
+      <line num="47" count="4" type="stmt"/>
+      <line num="50" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
