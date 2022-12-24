@@ -29,8 +29,8 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const countInday = 40;
-  const sum = days * countInday;
+  const countInDay = 40;
+  const sum = days * countInDay;
 
   if (days >= 7) {
     return sum - 50;
@@ -40,9 +40,7 @@ function calculateRentalCost(days) {
     return sum - 20;
   }
 
-  if (days < 3) {
-    return sum;
-  }
+  return sum;
 }
 
 module.exports = calculateRentalCost;
