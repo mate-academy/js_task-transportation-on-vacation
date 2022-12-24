@@ -31,17 +31,16 @@ function calculateRentalCost(days) {
   const dailyRent = 40;
   const basicDiscount = 20;
   const maxDiscount = 50;
-  let result = days * dailyRent;
 
-  if (days >= 3) {
-    result = days * dailyRent - basicDiscount;
+  if (days >= 3 && days < 7) {
+    return days * dailyRent - basicDiscount;
   }
 
   if (days >= 7) {
-    result = days * dailyRent - maxDiscount;
+    return days * dailyRent - maxDiscount;
   }
 
-  return result;
+  return days * dailyRent;
 }
 
 module.exports = calculateRentalCost;
