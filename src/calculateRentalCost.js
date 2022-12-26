@@ -32,9 +32,9 @@ function calculateRentalCost(days) {
   let totalRent = days * 40;
 
   if (days >= 7) {
-    totalRent -= 50;
+    return (totalRent -= 50);
   } else if (days >= 3) {
-    totalRent -= 20;
+    return (totalRent -= 20);
   }
 
   return totalRent;
