@@ -28,14 +28,14 @@
  */
 
 function calculateRentalCost(days) {
+  const res = days * 40;
+
   if (days <= 2) {
-    return 80;
-  } else if (days <= 4) {
-    return 100;
-  } else if (days === 6) {
-    return 220;
-  } else if (days > 6) {
-    return 230;
+    return res;
+  } else if (days >= 3 && days < 7) {
+    return res - 20;
+  } else if (days >= 7) {
+    return res - 50;
   }
 }
 
