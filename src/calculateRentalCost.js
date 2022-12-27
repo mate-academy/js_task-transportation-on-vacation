@@ -29,16 +29,18 @@
 
 function calculateRentalCost(days) {
   const totalSum = days * 40;
+  const smallPayOff = 20;
+  const largePayOff = 50;
 
   if (days < 3) {
     return totalSum;
   }
 
   if (days < 7) {
-    return totalSum - 20;
+    return totalSum - smallPayOff;
   }
 
-  return totalSum - 50;
+  return totalSum - largePayOff;
 }
 
 module.exports = calculateRentalCost;
