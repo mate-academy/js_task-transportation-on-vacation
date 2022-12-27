@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   const oneDayRent = 40;
+  const basicDiscount = 20;
+  const aditionalDiscount = 50;
 
   if (days < 3) {
     return days * oneDayRent;
   } else if (days >= 3 && days < 7) {
-    return (days * oneDayRent) - 20;
+    return (days * oneDayRent) - basicDiscount;
   } else if (days >= 7) {
-    return (days * oneDayRent) - 50;
+    return (days * oneDayRent) - aditionalDiscount;
   }
 }
 
