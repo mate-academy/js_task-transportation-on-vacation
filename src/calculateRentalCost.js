@@ -28,7 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const sum = days * 40;
+  const dayAmount = 40;
+  const sum = days * dayAmount;
   const regularDiscount = 20;
   const bigDiscount = 50;
 
