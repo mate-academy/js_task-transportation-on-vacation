@@ -31,17 +31,17 @@ function calculateRentalCost(days) {
   const costCarPerDay = 40;
   const weekDiscount = 50;
   const basicDiscount = 20;
-  const sum = days * costCarPerDay;
+  const rentalCost = days * costCarPerDay;
 
   if (days >= 7) {
-    return sum - weekDiscount;
+    return rentalCost - weekDiscount;
   }
 
   if (days >= 3) {
-    return sum - basicDiscount;
+    return rentalCost - basicDiscount;
   }
 
-  return sum;
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
