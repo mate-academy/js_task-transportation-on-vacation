@@ -38,7 +38,7 @@ function calculateRentalCost(days) {
     return carCost * days - maxDiscount;
   }
 
-  if (days < maxLine && days >= minLine) {
+  if (days >= minLine) {
     return carCost * days - minDiscount;
   }
 
