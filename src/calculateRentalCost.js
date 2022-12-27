@@ -28,18 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const pay = 40;
-  let sum = 0;
+  const dayCost = 40;
+  const rentalCost = days * dayCost;
+  const firstRebate = 20;
+  const secondRebate = 50;
 
-  if (days < 3) {
-    sum = days * pay;
-  } else if (days >= 3 && days < 7) {
-    sum = (days * pay) - 20;
-  } else if (days >= 7) {
-    sum = (days * pay) - 50;
+  if (days >= 7) {
+    return rentalCost - secondRebate;
   }
 
-  return sum;
+  if (days >= 3) {
+    return rentalCost - firstRebate;
+  }
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
