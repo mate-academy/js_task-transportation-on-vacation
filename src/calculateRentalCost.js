@@ -37,7 +37,7 @@ function calculateRentalCost(days) {
     return rentalCost;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days < 7) {
     return rentalCost - smallDiscount;
   }
 
