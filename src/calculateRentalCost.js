@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   const totalCost = 40 * days;
+  const discountForWeek = 50;
+  const discountForThreeDays = 20;
 
   if (days >= 7) {
-    return totalCost - 50;
+    return totalCost - discountForWeek;
   }
 
   if (days >= 3) {
-    return totalCost - 20;
+    return totalCost - discountForThreeDays;
   }
 
   return totalCost;
