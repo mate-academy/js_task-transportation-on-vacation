@@ -28,13 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  const rentSum = 40 * days;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  const dayRentPrice = 40;
+  const rentSum = dayRentPrice * days;
 
   switch (true) {
     case (days >= 7):
-      return rentSum - 50;
+      return rentSum - bigDiscount;
     case (days >= 3):
-      return rentSum - 20;
+      return rentSum - smallDiscount;
     default:
       return rentSum;
   }
