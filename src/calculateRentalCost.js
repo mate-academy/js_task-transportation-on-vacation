@@ -28,14 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const defaultCost = days * 40;
+  const price = 40;
+  const basicDiscount = 20;
+  const maxDiscount = 50;
+  const defaultCost = days * price;
 
   if (days >= 7) {
-    return defaultCost - 50;
+    return defaultCost - maxDiscount;
   }
 
   if (days >= 3) {
-    return defaultCost - 20;
+    return defaultCost - basicDiscount;
   }
 
   return defaultCost;
