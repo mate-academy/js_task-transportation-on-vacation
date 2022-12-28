@@ -33,14 +33,15 @@ function calculateRentalCost(days) {
   const dayRentPrice = 40;
   const rentSum = dayRentPrice * days;
 
-  switch (true) {
-    case (days >= 7):
-      return rentSum - bigDiscount;
-    case (days >= 3):
-      return rentSum - smallDiscount;
-    default:
-      return rentSum;
+  if (days >= 7) {
+    return rentSum - bigDiscount;
   }
+
+  if (days >= 3) {
+    return rentSum - smallDiscount;
+  }
+
+  return rentSum;
 }
 
 module.exports = calculateRentalCost;
