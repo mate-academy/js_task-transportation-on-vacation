@@ -29,17 +29,17 @@
 
 function calculateRentalCost(days) {
   const dailyRent = 40;
-  const sevenDayLimit = 7;
-  const fiftyDollarOffer = 50;
-  const twentyDollarOffer = 20;
-  const threeDayLimit = 3;
+  const secondDayDiscount = 7;
+  const firstDiscount = 50;
+  const secondDiscount = 20;
+  const firstDayDiscount = 3;
 
-  if (days >= sevenDayLimit) {
-    return (days * dailyRent) - fiftyDollarOffer;
+  if (days >= secondDayDiscount) {
+    return (days * dailyRent) - firstDiscount;
   }
 
-  if (days >= threeDayLimit) {
-    return (days * dailyRent) - twentyDollarOffer;
+  if (days >= firstDayDiscount) {
+    return (days * dailyRent) - secondDiscount;
   }
 
   return days * dailyRent;
