@@ -34,11 +34,13 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return everyDayCarCosts * days - discountBigger;
-  } else if (days >= 3 && days < 7) {
-    return everyDayCarCosts * days - discountSmaller;
-  } else {
-    return everyDayCarCosts * days;
   }
+
+  if (days >= 3 && days < 7) {
+    return everyDayCarCosts * days - discountSmaller;
+  }
+
+  return everyDayCarCosts * days;
 }
 
 module.exports = calculateRentalCost;
