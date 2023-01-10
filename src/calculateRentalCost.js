@@ -33,10 +33,10 @@ function calculateRentalCost(days) {
   const sevenDaysOff = 50;
   let total = oneDayRent * days;
 
-  if (days >= 3 && days < 7) {
-    total = total - threeDaysOff;
-  } else if (days >= 7) {
+  if (days >= 7) {
     total = total - sevenDaysOff;
+  } else if (days >= 3) {
+    total = total - threeDaysOff;
   }
 
   return total;
