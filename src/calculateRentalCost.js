@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let cost = 0;
+  const totalCost = days * 40;
+
+  switch (true) {
+    case (days >= 7):
+      cost = totalCost - 50;
+      break;
+    case (days >= 3):
+      cost = totalCost - 20;
+      break;
+    default:
+      cost = totalCost;
+  }
+
+  return cost;
 }
 
 module.exports = calculateRentalCost;
