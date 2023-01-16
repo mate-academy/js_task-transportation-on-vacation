@@ -42,9 +42,7 @@ function calculateRentalCost(days) {
     return days * price - firstLevelDiscount;
   }
 
-  if (days >= 7) {
-    return days * price - secondLevelDiscount;
-  }
+  return days * price - secondLevelDiscount;
 }
 
 module.exports = calculateRentalCost;
