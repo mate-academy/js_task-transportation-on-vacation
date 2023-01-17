@@ -32,16 +32,18 @@ function calculateRentalCost(days) {
   const smallDiscount = 20;
   const bigDiscount = 50;
   const totalCost = days * rentPrice;
-  const threeDays = 3;
-  const sevenDays = 7;
+  const daysForSmallDiscount = 3;
+  const daysForBigDiscount = 7;
 
-  if (days >= sevenDays) {
+  if (days >= daysForBigDiscount) {
     return totalCost - bigDiscount;
-  } else if (days >= threeDays) {
-    return totalCost - smallDiscount;
-  } else {
-    return totalCost;
   }
+
+  if (days >= daysForSmallDiscount) {
+    return totalCost - smallDiscount;
+  }
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
