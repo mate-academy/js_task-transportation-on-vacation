@@ -27,6 +27,7 @@
  * @return {number}
  */
 
+// This is just a hacky solution - don't try this at home.
 function calculateRentalCost(days) {
   const results = {
     2: 80,
