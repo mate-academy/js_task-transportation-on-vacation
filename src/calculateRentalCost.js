@@ -29,15 +29,15 @@
 
 function calculateRentalCost(days) {
   const totalSum = 40 * days;
-  const moreThree = totalSum - 20;
-  const moreSeven = totalSum - 50;
+  const moreThanThreeDays = totalSum - 20;
+  const moreThanSevenDays = totalSum - 50;
 
   if (days >= 7) {
-    return moreSeven;
+    return moreThanSevenDays;
   }
 
   if (days >= 3) {
-    return moreThree;
+    return moreThanThreeDays;
   }
 
   return totalSum;
