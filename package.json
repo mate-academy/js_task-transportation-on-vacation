@@ -10,6 +10,7 @@
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
+    "deploy": "gh-pages -d build",
     "test": "npm run lint && npm run test:only"
   },
   "author": "Mate academy",
