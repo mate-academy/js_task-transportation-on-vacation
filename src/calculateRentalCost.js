@@ -28,14 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const total = days * 40;
+  const costPerNight = 40;
+  const total = days * costPerNight;
+  const basicDiscout = 20;
+  const fullDiscout = 50;
 
   if (days >= 7) {
-    return total - 50;
+    return total - fullDiscout;
   }
 
   if (days >= 3) {
-    return total - 20;
+    return total - basicDiscout;
   }
 
   return total;
