@@ -30,14 +30,11 @@
 
 function calculateRentalCost(days) {
   const payTotal = days * 40;
+  const rentMore3Days = payTotal - 20;
+  const rentMore7Days = payTotal - 50;
 
-  if (days < 3) {
-    return payTotal;
-  } else if (days >= 3 && days < 7) {
-    return payTotal - 20;
-  } else {
-    return payTotal - 50;
-  }
+  return (days < 3)
+    ? payTotal : (days >= 3 && days < 7) ? rentMore3Days : rentMore7Days;
 }
 
 module.exports = calculateRentalCost;
