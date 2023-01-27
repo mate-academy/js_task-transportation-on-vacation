@@ -29,9 +29,13 @@
  */
 
 function calculateRentalCost(days) {
-  const payTotal = days * 40;
-  const rentMore3Days = payTotal - 20;
-  const rentMore7Days = payTotal - 50;
+  const payOneDay = 40;
+  const discountMore3Days = 20;
+  const discountMore7Days = 50;
+
+  const payTotal = days * payOneDay;
+  const rentMore3Days = payTotal - discountMore3Days;
+  const rentMore7Days = payTotal - discountMore7Days;
 
   return (days < 3)
     ? payTotal : (days >= 3 && days < 7) ? rentMore3Days : rentMore7Days;
