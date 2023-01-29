@@ -29,12 +29,16 @@
 
 function calculateRentalCost(days) {
   const carRentPrice = 40;
-  let totalCost = carRentPrice * days;
+  const rentDiscountForThreeDays = 20;
+  const rentDiscountForSevenDays = 50;
+  const totalCost = carRentPrice * days;
 
   if (days >= 7) {
-    totalCost -= 50;
-  } else if (days >= 3) {
-    totalCost -= 20;
+    return totalCost - rentDiscountForSevenDays;
+  }
+
+  if (days >= 3) {
+    return totalCost - rentDiscountForThreeDays;
   }
 
   return totalCost;
