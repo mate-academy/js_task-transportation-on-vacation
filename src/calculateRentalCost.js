@@ -27,14 +27,16 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  const dayPrice = 40;
-  const smallOff = 20;
-  const bigOff = 50;
+const dayPrice = 40;
+const smallOff = 20;
+const bigOff = 50;
+const minDaysSmallOff = 3;
+const minDaysBigOff = 7;
 
+function calculateRentalCost(days) {
   const baseAmount = days * dayPrice;
 
-  if (days >= 3 && days < 7) {
+  if (days >= minDaysSmallOff && days < minDaysBigOff) {
     return baseAmount - smallOff;
   }
 
