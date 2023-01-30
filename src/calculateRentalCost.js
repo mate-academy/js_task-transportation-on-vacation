@@ -28,12 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  if (days >= 7) {
-    return days * 40 - 50;
-  } else if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+  const daycost = 40;
+  const mindiscont = 20;
+  const maxdiscont = 50;
+  const mindays = 3;
+  const maxdays = 7;
+
+  if (days >= maxdays) {
+    return daycost * days - maxdiscont;
   } else {
-    return days * 40;
+    if (days >= mindays && days < maxdays) {
+      return daycost * days - mindiscont;
+    } else {
+      return daycost * days;
+    }
   }
 }
 
