@@ -22,13 +22,28 @@
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
- * @param {number} days
+ * @param {number} costWithoutDiscount
  *
  * @return {number}
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const costPerDay = 40;
+  const costWithoutDiscount = costPerDay * days;
+  const discountBig = 50;
+  const discountMedium = 20;
+  const periodLong = 7;
+  const periodShort = 3;
+
+  if (days >= periodLong) {
+    return costWithoutDiscount - discountBig;
+  }
+
+  if (days >= periodShort) {
+    return costWithoutDiscount - discountMedium;
+  }
+
+  return costWithoutDiscount;
 }
 
 module.exports = calculateRentalCost;
