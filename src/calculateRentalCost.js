@@ -37,8 +37,15 @@ function calculateRentalCost(days) {
   const rentMore3Days = payTotal - discountMore3Days;
   const rentMore7Days = payTotal - discountMore7Days;
 
-  return (days < 3)
-    ? payTotal : (days >= 3 && days < 7) ? rentMore3Days : rentMore7Days;
+  if (days >= 7) {
+    return rentMore7Days;
+  }
+
+  if (days >= 3) {
+    return rentMore3Days;
+  }
+
+  return payTotal;
 }
 
 module.exports = calculateRentalCost;
