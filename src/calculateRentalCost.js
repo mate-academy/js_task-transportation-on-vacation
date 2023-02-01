@@ -32,17 +32,19 @@ function calculateRentalCost(days) {
   const payOneDay = 40;
   const discountMore3Days = 20;
   const discountMore7Days = 50;
+  const bigDiscountThreshold = 7;
+  const smallDiscountThreshold = 3;
 
   const payTotal = days * payOneDay;
-  const rentMore3Days = payTotal - discountMore3Days;
-  const rentMore7Days = payTotal - discountMore7Days;
+  const rentSmallDiscount = payTotal - discountMore3Days;
+  const rentBigDiscount = payTotal - discountMore7Days;
 
-  if (days >= 7) {
-    return rentMore7Days;
+  if (days >= bigDiscountThreshold) {
+    return rentBigDiscount;
   }
 
-  if (days >= 3) {
-    return rentMore3Days;
+  if (days >= smallDiscountThreshold) {
+    return rentSmallDiscount;
   }
 
   return payTotal;
