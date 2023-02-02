@@ -32,11 +32,15 @@ function calculateRentalCost(days) {
   let rentalCoast = days * price;
 
   if (days >= 3 && days < 7) {
-    rentalCoast -= 20;
+    const discount = 20;
+
+    rentalCoast -= discount;
   }
 
   if (days >= 7) {
-    rentalCoast -= 50;
+    const discount = 50;
+
+    rentalCoast -= discount;
   }
 
   return rentalCoast;
