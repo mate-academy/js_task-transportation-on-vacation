@@ -33,9 +33,15 @@ function calculateRentalCost(days) {
   const sevenDaysDiscount = 50;
   let sum = dayCost * days;
 
-  if (days >= 3 && days < 7) {
+  if (days < 3) {
+    return sum;
+  }
+
+  if (days < 7) {
     sum -= threeDaysDiscount;
-  } else if (days >= 7) {
+  }
+
+  if (days >= 7) {
     sum -= sevenDaysDiscount;
   }
 
