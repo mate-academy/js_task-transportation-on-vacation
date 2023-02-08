@@ -29,21 +29,16 @@
 
 function calculateRentalCost(days) {
   const oneDayPay = 40;
-  let prise = 0;
 
   if (days < 3) {
-    prise = days * oneDayPay;
+    return days * oneDayPay;
   }
 
   if (days >= 3 && days < 7) {
-    prise = days * oneDayPay - 20;
+    return days * oneDayPay - 20;
+  } else {
+    return days * oneDayPay - 50;
   }
-
-  if (days >= 7) {
-    prise = days * oneDayPay - 50;
-  }
-
-  return prise;
 }
 
 module.exports = calculateRentalCost;
