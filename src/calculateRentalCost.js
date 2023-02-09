@@ -25,16 +25,17 @@
  * @param {number} days
  *
  * @return {number}
- */
-
+*/
 function calculateRentalCost(days) {
   const costPerDay = 40;
-  let totalCost = costPerDay * days;
+  const RentalDiscount1 = 20;
+  const RentalDiscount2 = 50;
+  let totalCost = days * costPerDay;
 
   if (days >= 7) {
-    totalCost -= 50;
+    totalCost -= RentalDiscount2;
   } else if (days >= 3) {
-    totalCost -= 20;
+    totalCost -= RentalDiscount1;
   }
 
   return totalCost;
