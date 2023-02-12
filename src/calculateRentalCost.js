@@ -29,6 +29,18 @@
 
 function calculateRentalCost(days) {
   // write code here
+  let totalSum = days * 40;
+
+  // eslint-disable-next-line no-constant-condition
+  if ((days >= 3) && (days < 7)) {
+    totalSum -= 20;
+  };
+
+  if (days >= 7) {
+    totalSum -= 50;
+  };
+
+  return totalSum;
 }
 
 module.exports = calculateRentalCost;
