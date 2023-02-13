@@ -31,18 +31,19 @@ function calculateRentalCost(days) {
   const rentalPrice = 40;
   const discount = 20;
   const specialDiscount = 50;
+  const sumForAllDays = days * rentalPrice;
 
   switch (true) {
     case days < 3: {
-      return days * rentalPrice;
+      return sumForAllDays;
     }
 
     case days < 7: {
-      return days * rentalPrice - discount;
+      return sumForAllDays - discount;
     }
 
     default:
-      return days * rentalPrice - specialDiscount;
+      return sumForAllDays - specialDiscount;
   }
 }
 
