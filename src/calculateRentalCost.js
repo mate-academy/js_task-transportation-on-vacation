@@ -29,12 +29,12 @@
 
 function calculateRentalCost(days) {
   const price = 40;
-  const getOffTreeDays = 20;
+  const getOffMoney = 20;
   const getOffWeek = 50;
   let total = days * price;
 
   if (days >= 3) {
-    total = days * price - getOffTreeDays;
+    total = days * price - getOffMoney;
   }
 
   if (days >= 7) {
