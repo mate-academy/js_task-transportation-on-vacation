@@ -28,11 +28,14 @@
  */
 
 function calculateRentalCost(days) {
+  const sailForRent = 20;
+  const sailForLongRent = 50;
+
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * 40 - sailForLongRent;
   } else if
   (days >= 3) {
-    return days * 40 - 20;
+    return (days * 40) - sailForRent;
   }
 
   return days * 40;
