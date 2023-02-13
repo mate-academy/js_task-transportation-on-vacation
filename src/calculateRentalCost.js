@@ -29,11 +29,13 @@
 
 function calculateRentalCost(days) {
   let rentCost = 40 * days;
+  const basicDiscount = 20;
+  const superDiscount = 50;
 
   if (days >= 7) {
-    rentCost -= 50;
+    rentCost -= superDiscount;
   } else if (days >= 3) {
-    rentCost -= 20;
+    rentCost -= basicDiscount;
   }
 
   return rentCost;
