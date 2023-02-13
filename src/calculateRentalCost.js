@@ -28,15 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  if (days > 2 && days < 7) {
-    return 40 * days - 20;
+  const calculate = 40 * days;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  const longRent = 6;
+  const shortRent = 2;
+
+  if (days > longRent) {
+    return calculate - bigDiscount;
   }
 
-  if (days > 6) {
-    return 40 * days - 50;
+  if (days > shortRent) {
+    return calculate - smallDiscount;
   }
 
-  return days * 40;
+  return calculate;
 }
 
 module.exports = calculateRentalCost;
