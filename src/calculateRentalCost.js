@@ -28,17 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  const sailForRent = 20;
-  const sailForLongRent = 50;
+  const basicDiscount = 20;
+  const bigDiscount = 50;
+  const priceRent = 40;
 
   if (days >= 7) {
-    return (days * 40) - sailForLongRent;
+    return (days * priceRent) - bigDiscount;
   } else if
   (days >= 3) {
-    return (days * 40) - sailForRent;
+    return (days * priceRent) - basicDiscount;
   }
 
-  return days * 40;
+  return days * priceRent;
 }
 
 module.exports = calculateRentalCost;
