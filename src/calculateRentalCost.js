@@ -28,19 +28,19 @@
  */
 
 const DAILY_PRICE = 40;
+const MIN_DISCOUNT = 20;
+const MAX_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  let discount = 0;
-
-  if (days >= 3) {
-    discount = 20;
-  }
+  let totalPrice = DAILY_PRICE * days;
 
   if (days >= 7) {
-    discount = 50;
+    totalPrice -= MAX_DISCOUNT;
+  } else if (days >= 3) {
+    totalPrice -= MIN_DISCOUNT;
   }
 
-  return days * DAILY_PRICE - discount;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
