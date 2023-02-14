@@ -31,20 +31,19 @@ function calculateRentalCost(days) {
   const basicDiscount = 50;
   const extraDiscount = 20;
   const rentPrice = 40;
+  const calc = days * rentPrice;
+  const shortVacation = 2;
+  const longVacation = 6;
 
-  if (days <= 2) {
-    return days * rentPrice;
+  if (days <= shortVacation) {
+    return calc;
   }
 
-  if (days >= 3 && days <= 6) {
-    return (days * rentPrice) - extraDiscount;
+  if (days <= longVacation) {
+    return calc - extraDiscount;
   }
 
-  if (days <= 7) {
-    return (days * rentPrice) - basicDiscount;
-  }
-
-  return 0;
+  return calc - basicDiscount;
 }
 
 module.exports = calculateRentalCost;
