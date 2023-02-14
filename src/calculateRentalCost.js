@@ -29,16 +29,16 @@
 
 function calculateRentalCost(days) {
   const carCostsPerDay = 40;
-  const discountWhenMoreThanSevenDays = 50;
-  const discountWhenMoreThanThreeDays = 20;
+  const basicDiscount = 50;
+  const additionalDiscount = 20;
   const carCostsPerVacation = carCostsPerDay * days;
 
   if (days >= 7) {
-    return carCostsPerVacation - discountWhenMoreThanSevenDays;
+    return carCostsPerVacation - basicDiscount;
   }
 
   if (days >= 3) {
-    return carCostsPerVacation - discountWhenMoreThanThreeDays;
+    return carCostsPerVacation - additionalDiscount;
   }
 
   return carCostsPerVacation;
