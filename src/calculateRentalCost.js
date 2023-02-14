@@ -29,15 +29,19 @@
 
 function calculateRentalCost(days) {
   const costOfDay = 40;
-  const sumOfAllTime = days * costOfDay;
+  const sumAll = days * costOfDay;
+  const bigDiscount = 50;
+  const littleDiscount = 20;
+  const daysBig = 7;
+  const daysLittle = 3;
 
-  if (days >= 7) {
-    return (sumOfAllTime - 50);
-  } else if (days < 7 && days >= 3) {
-    return (sumOfAllTime - 20);
-  } else {
-    return sumOfAllTime;
+  if (days >= daysBig) {
+    return (sumAll - bigDiscount);
+  } else if (days < daysBig && days >= daysLittle) {
+    return (sumAll - littleDiscount);
   }
+
+  return sumAll;
 }
 
 module.exports = calculateRentalCost;
