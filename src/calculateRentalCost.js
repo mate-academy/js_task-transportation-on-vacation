@@ -31,16 +31,17 @@ function calculateRentalCost(days) {
   const normalPrice = 40;
   const smallDiscount = 20;
   const bigDiscount = 50;
+  const totalPrice = days * normalPrice;
 
   if (days < 3) {
-    return days * 40;
+    return totalPrice;
   }
 
   if (days < 7) {
-    return days * normalPrice - smallDiscount;
+    return totalPrice - smallDiscount;
   }
 
-  return days * normalPrice - bigDiscount;
+  return totalPrice - bigDiscount;
 }
 
 module.exports = calculateRentalCost;
