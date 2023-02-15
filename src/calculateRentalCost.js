@@ -29,15 +29,17 @@
 
 function calculateRentalCost(days) {
   const sum = days * 40;
+  const smallDiscount = 20;
+  const greatDiscount = 50;
 
   switch (true) {
     case days >= 7:
-      return sum - 50;
+      return sum - greatDiscount;
     case days >= 3:
-      return sum - 20;
+      return sum - smallDiscount;
+    default:
+      return sum;
   }
-
-  return sum;
 }
 
 module.exports = calculateRentalCost;
