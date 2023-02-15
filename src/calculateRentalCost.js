@@ -33,12 +33,10 @@ function calculateRentalCost(days) {
   const discountForSeven = 50;
   let result = days * rentPerDay;
 
-  if (days >= 3 && days < 7) {
-    result -= discountForThree;
-  }
-
   if (days >= 7) {
     result -= discountForSeven;
+  } else if (days >= 3) {
+    result -= discountForThree;
   }
 
   return result;
