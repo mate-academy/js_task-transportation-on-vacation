@@ -32,22 +32,16 @@ function calculateRentalCost(days) {
   let res = 0;
 
   if (days < 3) {
-    for (let i = 0; i < days; i++) {
-      res += rentalCost;
-    }
+    res = days * rentalCost;
 
     return res;
   } else if (days < 7) {
-    for (let i = 0; i < days; i++) {
-      res += rentalCost;
-    }
+    res = days * rentalCost;
     res -= 20;
 
     return res;
   } else if (days > 6) {
-    for (let i = 0; i < days; i++) {
-      res += rentalCost;
-    }
+    res = days * rentalCost;
     res -= 50;
 
     return res;
