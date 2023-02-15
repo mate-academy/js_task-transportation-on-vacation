@@ -28,7 +28,7 @@
  */
 
 const calculateRentalCost = (days) => {
-  const rentalPriceForDay = 40;
+  const pureRentalPrice = days * 40;
   const minorDiscount = {
     startDay: 3,
     value: 20,
@@ -39,14 +39,14 @@ const calculateRentalCost = (days) => {
   };
 
   if (days >= majorDiscount.startDay) {
-    return days * rentalPriceForDay - majorDiscount.value;
+    return pureRentalPrice - majorDiscount.value;
   }
 
   if (days >= minorDiscount.startDay) {
-    return days * rentalPriceForDay - minorDiscount.value;
+    return pureRentalPrice - minorDiscount.value;
   }
 
-  return days * rentalPriceForDay;
+  return pureRentalPrice;
 };
 
 module.exports = calculateRentalCost;
