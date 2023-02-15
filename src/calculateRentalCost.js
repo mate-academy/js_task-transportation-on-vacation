@@ -29,7 +29,8 @@
 
 function calculateRentalCost(days) {
   const price = 40;
-  let basicDiscaunt = 20;
+  const basicDiscaunt = 20;
+  const extraDiscaunt = 50;
 
   if (days < 3) {
     return days * price;
@@ -40,9 +41,7 @@ function calculateRentalCost(days) {
   }
 
   if (days >= 7) {
-    basicDiscaunt = 50;
-
-    return days * price - basicDiscaunt;
+    return days * price - extraDiscaunt;
   }
 }
 
