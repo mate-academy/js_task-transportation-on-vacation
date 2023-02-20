@@ -30,8 +30,8 @@
 function calculateRentalCost(days) {
   const rentalCost = 40;
   let res = 0;
-  const threeDays = 20;
-  const sevenDays = 50;
+  const disc = 20;
+  const discPlus = 50;
 
   if (days < 3) {
     res = days * rentalCost;
@@ -39,13 +39,13 @@ function calculateRentalCost(days) {
     return res;
   } else if (days < 7) {
     res = days * rentalCost;
-    res -= threeDays;
+    res -= disc;
 
     return res;
   }
 
   res = days * rentalCost;
-  res -= sevenDays;
+  res -= discPlus;
 
   return res;
 }
