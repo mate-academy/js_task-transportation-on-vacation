@@ -28,11 +28,25 @@
  */
 
 function calculateRentalCost(days) {
-  return days < 3 // if car is rented for less then 3 days
-    ? days * 40 // total cost will be equal to clear cost-per-day times days
-    : days >= 3 && days < 7 // othrwise we'll check if term is between 3 and 6
-      ? (days * 40) - 20 // in this case total cost will be decreased on 20
-      : (days * 40) - 50; // last case - `days` is 7+ - we'll get -$50
+  const dayCost = 40;
+  const threeDayBonus = 20;
+  const sevenDayBonus = 50;
+  const costWithoutBonus = days * dayCost;
+  let totalCost;
+
+  if (days < 3) {
+    totalCost = costWithoutBonus;
+  }
+
+  if (days >= 3 && days < 7) {
+    totalCost = costWithoutBonus - threeDayBonus;
+  }
+
+  if (days >= 7) {
+    totalCost = costWithoutBonus - sevenDayBonus;
+  }
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
