@@ -32,18 +32,18 @@ const SMALL_DISCOUNT = 20;
 const BIG_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  const TOTAL_PRICE = PRICE * days;
+  const totalPrice = PRICE * days;
 
   if (days < 3) {
-    return TOTAL_PRICE;
+    return totalPrice;
   }
 
   if (days >= 3 && days < 7) {
-    return TOTAL_PRICE - SMALL_DISCOUNT;
+    return totalPrice - SMALL_DISCOUNT;
   }
 
   if (days >= 7) {
-    return TOTAL_PRICE - BIG_DISCOUNT;
+    return totalPrice - BIG_DISCOUNT;
   }
 }
 
