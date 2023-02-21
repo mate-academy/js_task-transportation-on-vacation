@@ -29,22 +29,21 @@
 
 function calculateRentalCost(days) {
   const rentalCost = 40;
+  const firstDiscount = 20;
+  const secondDiscount = 50;
   const fullCost = rentalCost * days;
-  let totalCost = 0;
 
   if (days >= 1 && days < 3) {
-    totalCost = fullCost;
+    return fullCost;
   }
 
   if (days >= 3 && days < 7) {
-    totalCost = fullCost - 20;
+    return (fullCost - firstDiscount);
   }
 
   if (days >= 7) {
-    totalCost = fullCost - 50;
+    return (fullCost - secondDiscount);
   }
-
-  return totalCost;
 }
 
 module.exports = calculateRentalCost;
