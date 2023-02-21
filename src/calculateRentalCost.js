@@ -31,19 +31,14 @@ function calculateRentalCost(days) {
   const dayCost = 40;
   const threeDayBonus = 20;
   const sevenDayBonus = 50;
-  const costWithoutBonus = days * dayCost;
-  let totalCost;
-
-  if (days < 3) {
-    totalCost = costWithoutBonus;
-  }
+  let totalCost = days * dayCost;
 
   if (days >= 3 && days < 7) {
-    totalCost = costWithoutBonus - threeDayBonus;
+    totalCost -= threeDayBonus;
   }
 
   if (days >= 7) {
-    totalCost = costWithoutBonus - sevenDayBonus;
+    totalCost -= sevenDayBonus;
   }
 
   return totalCost;
