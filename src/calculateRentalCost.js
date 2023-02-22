@@ -33,17 +33,15 @@ function calculateRentalCost(days) {
   const secondDiscount = 50;
   const fullCost = rentalCost * days;
 
-  if (days >= 1 && days < 3) {
-    return fullCost;
-  }
-
-  if (days >= 3 && days < 7) {
-    return (fullCost - firstDiscount);
-  }
-
   if (days >= 7) {
-    return (fullCost - secondDiscount);
+    return fullCost - secondDiscount;
   }
+
+  if (days >= 3) {
+    return fullCost - firstDiscount;
+  }
+
+  return fullCost;
 }
 
 module.exports = calculateRentalCost;
