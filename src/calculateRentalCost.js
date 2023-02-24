@@ -26,22 +26,23 @@
  *
  * @return {number}
  */
+const PRICE = 40;
+const SMALLDISCOUNT = 20;
+const BIGDISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  let total;
-  const price = 40;
-  const smallDiscount = 20;
-  const bigDiscount = 50;
+  const total = days * PRICE;
+  let finalPrice;
 
   if (days >= 7) {
-    total = days * price - bigDiscount;
+    finalPrice = total - BIGDISCOUNT;
   } else if (days >= 3 && days < 7) {
-    total = days * price - smallDiscount;
+    finalPrice = total - SMALLDISCOUNT;
   } else {
-    total = days * price;
+    finalPrice = total;
   }
 
-  return total;
+  return finalPrice;
 }
 
 module.exports = calculateRentalCost;
