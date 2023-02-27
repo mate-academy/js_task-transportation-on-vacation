@@ -36,8 +36,6 @@ function calculateRentalCost(days) {
     costRent -= discountThreeDays;
   } else if (days >= 7) {
     costRent -= discountSevenDays;
-  } else {
-    costRent = 40 * days;
   }
 
   return costRent;
