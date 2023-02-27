@@ -29,14 +29,19 @@
 
 function calculateRentalCost(days) {
   let rentalAmount = 0;
-  const rentalAmountWithoutDiscount = 40 * days;
+  const pricePerDay = 40;
+  const rentalAmountWithoutDiscount = pricePerDay * days;
+  const mediumDiscount = 20;
+  const biggestDiscount = 50;
+  const threeDays = 3;
+  const sixDays = 6;
 
-  if (days === 1 || days < 3) {
+  if (days < threeDays) {
     rentalAmount = rentalAmountWithoutDiscount;
-  } else if (days === 3 || days <= 6) {
-    rentalAmount = rentalAmountWithoutDiscount - 20;
+  } else if (days === threeDays || days <= sixDays) {
+    rentalAmount = rentalAmountWithoutDiscount - mediumDiscount;
   } else {
-    rentalAmount = rentalAmountWithoutDiscount - 50;
+    rentalAmount = rentalAmountWithoutDiscount - biggestDiscount;
   }
 
   return rentalAmount;
