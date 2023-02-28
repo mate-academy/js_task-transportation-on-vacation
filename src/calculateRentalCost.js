@@ -28,20 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  let rentalAmount = 0;
-  const pricePerDay = 40;
-  const rentalAmountWithoutDiscount = pricePerDay * days;
+  let rentalAmount = 40 * days;
   const mediumDiscount = 20;
   const biggestDiscount = 50;
   const threeDays = 3;
   const sixDays = 6;
+  const sevenDays = 7;
 
-  if (days < threeDays) {
-    rentalAmount = rentalAmountWithoutDiscount;
-  } else if (days === threeDays || days <= sixDays) {
-    rentalAmount = rentalAmountWithoutDiscount - mediumDiscount;
-  } else {
-    rentalAmount = rentalAmountWithoutDiscount - biggestDiscount;
+  if (days >= threeDays && days <= sixDays) {
+    rentalAmount -= mediumDiscount;
+  } else if (days >= sevenDays) {
+    rentalAmount -= biggestDiscount;
   }
 
   return rentalAmount;
