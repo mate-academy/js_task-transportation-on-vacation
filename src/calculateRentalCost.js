@@ -31,14 +31,19 @@ function calculateRentalCost(days) {
   const cost = 40;
   const midSale = 20;
   const bigSale = 50;
+  const lowDayPrice = days * cost;
+  const midDayPrice = lowDayPrice - midSale;
+  const bigDayPrice = lowDayPrice - bigSale;
 
   if (days >= 7) {
-    return days * cost - bigSale;
-  } else if (days > 2 && days <= 6) {
-    return days * cost - midSale;
-  } else {
-    return days * cost;
+    return bigDayPrice;
   }
+
+  if (days >= 3) {
+    return midDayPrice;
+  }
+
+  return lowDayPrice;
 }
 
 module.exports = calculateRentalCost;
