@@ -27,12 +27,12 @@
  * @return {number}
  */
 
-const rentalCost = 40;
-let price = 0;
-
 calculateRentalCost(7);
 
 function calculateRentalCost(days) {
+  const rentalCost = 40;
+  let price = 0;
+
   for (let i = 0; i < days; i++) {
     price = price + rentalCost;
   }
