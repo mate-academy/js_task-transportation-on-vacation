@@ -31,17 +31,20 @@ calculateRentalCost(7);
 
 function calculateRentalCost(days) {
   const dayPrice = 40;
-  const rentalCost = days * dayPrice;
   const threeDayDiscount = 20;
   const sevenDayDiscount = 50;
 
+  const rentalCost = days * dayPrice;
+
   if (days >= 3 && days < 7) {
     return rentalCost - threeDayDiscount;
-  } else if (days >= 7) {
-    return rentalCost - sevenDayDiscount;
-  } else {
-    return rentalCost;
   }
+
+  if (days >= 7) {
+    return rentalCost - sevenDayDiscount;
+  }
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
