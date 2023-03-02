@@ -1,5 +1,7 @@
 #airbnb
 root = true
+quote_type = single
+
 
 [*]
 indent_style = space
