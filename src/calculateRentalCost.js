@@ -27,6 +27,8 @@
  * @return {number}
  */
 
+// for commit
+
 function calculateRentalCost(days) {
   const sevenDaysDiscount = 50;
   const threeDaysDiscount = 20;
