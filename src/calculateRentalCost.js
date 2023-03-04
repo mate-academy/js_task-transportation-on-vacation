@@ -30,15 +30,16 @@
 function calculateRentalCost(days) {
   const rentalCost = 40;
   const smallDiscount = 20;
-  const BigDiscount = 50;
-  let totalCost = 0;
+  const bigDiscount = 50;
 
-  if (days < 3) {
-    totalCost = rentalCost * days;
-  } else if (days >= 7) {
-    totalCost = (rentalCost * days) - BigDiscount;
-  } else if (days >= 3) {
-    totalCost = (rentalCost * days) - smallDiscount;
+  const totalCost = days * rentalCost;
+
+  if (days >= 7) {
+    return totalCost * bigDiscount;
+  }
+
+  if (days >= 3) {
+    return totalCost * smallDiscount;
   }
 
   return totalCost;
