@@ -27,8 +27,20 @@
  * @return {number}
  */
 
+// for commit
+
 function calculateRentalCost(days) {
-  // write code here
+  const sevenDaysDiscount = 50;
+  const threeDaysDiscount = 20;
+  const total = days * 40;
+
+  if (days >= 3 && days < 7) {
+    return total - threeDaysDiscount;
+  } else if (days >= 7) {
+    return total - sevenDaysDiscount;
+  } else {
+    return total;
+  }
 }
 
 module.exports = calculateRentalCost;
