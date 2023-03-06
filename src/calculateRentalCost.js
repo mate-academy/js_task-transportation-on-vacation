@@ -31,14 +31,14 @@ function calculateRentalCost(days) {
   const rentalPrice = 40;
   const priceOffSeven = 50;
   const priceOffThree = 20;
-  let count = 0;
+  let count = rentalPrice * days;
+
+  if (days >= 3 && days < 7) {
+    count -= priceOffThree;
+  }
 
   if (days >= 7) {
-    count = (rentalPrice * days) - priceOffSeven;
-  } else if (days >= 3 && days <= 6) {
-    count = (rentalPrice * days) - priceOffThree;
-  } else {
-    count = rentalPrice * days;
+    count -= priceOffSeven;
   }
 
   return count;
