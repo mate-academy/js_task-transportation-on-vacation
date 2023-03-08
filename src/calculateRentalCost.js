@@ -26,7 +26,6 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   const rentalPrice = 40;
   const priceOffSeven = 50;
