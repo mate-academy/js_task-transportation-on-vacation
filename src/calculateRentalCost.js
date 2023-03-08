@@ -36,7 +36,7 @@ function calculateRentalCost(days) {
   const basicCost = carRent * days;
   let totalCost = basicCost;
 
-  if (days >= smallWeekend && days < bigWeekend) {
+  if (days >= smallWeekend && days <= bigWeekend) {
     totalCost = basicCost - smallDiscount;
   };
 
