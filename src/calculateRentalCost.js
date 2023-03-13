@@ -31,15 +31,17 @@ function calculateRentalCost(days) {
   const dayPayment = 40;
   const threeOrMoreDaysDisc = 20;
   const sevenOrMoreDaysDisc = 50;
+  const threeDays = 3;
+  const sevenDays = 7;
 
   switch (true) {
-    case days < 3:
+    case days < threeDays:
       return days * dayPayment;
 
-    case days < 7:
+    case days < sevenDays:
       return days * dayPayment - threeOrMoreDaysDisc;
 
-    case days >= 7:
+    case days >= sevenDays:
       return days * dayPayment - sevenOrMoreDaysDisc;
   }
 }
