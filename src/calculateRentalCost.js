@@ -33,8 +33,9 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     return dayRent * days;
-  } else if (days < 7
-    && days >= 3) {
+  }
+
+  if (days < 7) {
     return dayRent * days - 20;
   }
 
