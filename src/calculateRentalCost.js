@@ -28,14 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  const rentCost = days * 40;
+  const carCost = 40;
+  const bigDiscount = 50;
+  const basicDiscount = 20;
+  const moreWeek = 7;
+  const lessWeek = 3;
+  const rentCost = days * carCost;
 
-  if (days >= 7) {
-    return rentCost - 50;
+  if (days >= moreWeek) {
+    return rentCost - bigDiscount;
   }
 
-  if (days >= 3) {
-    return rentCost - 20;
+  if (days >= lessWeek) {
+    return rentCost - basicDiscount;
   }
 
   return rentCost;
