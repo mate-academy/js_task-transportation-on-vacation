@@ -33,16 +33,17 @@ function calculateRentalCost(days) {
   const maxDiscount = 50;
   const minNumDayDiscount = 3;
   const maxNumDayDiscount = 7;
+  const toPay = days * dailyPrice;
 
   if (days >= maxNumDayDiscount) {
-    return days * dailyPrice - maxDiscount;
+    return toPay - maxDiscount;
   }
 
   if (days >= minNumDayDiscount) {
-    return days * dailyPrice - minDiscount;
+    return toPay - minDiscount;
   }
 
-  return days * dailyPrice;
+  return toPay;
 }
 
 module.exports = calculateRentalCost;
