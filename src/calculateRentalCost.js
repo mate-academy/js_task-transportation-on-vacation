@@ -31,10 +31,10 @@ function calculateRentalCost(days) {
   const price = 40;
 
   switch (true) {
-    case days === 1:
+    case days >= 1 < 3:
       return price;
 
-    case 3 <= days < 7:
+    case days >= 3 < 7:
       return days * price - 20;
 
     case days >= 7:
