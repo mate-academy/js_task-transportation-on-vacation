@@ -32,10 +32,11 @@ function calculateRentalCost(days) {
   const basicDiscount = 20;
   const superDiscount = 50;
 
-  if (days >= 3 && days < 7) {
-    return (totalAmount - basicDiscount);
-  } else if (days >= 7) {
-    return (totalAmount - superDiscount);
+  switch (true) {
+    case (days >= 7):
+      return (totalAmount - superDiscount);
+    case (days >= 3):
+      return (totalAmount - basicDiscount);
   }
 
   return totalAmount;
