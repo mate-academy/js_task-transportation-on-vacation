@@ -33,17 +33,18 @@ function calculateRentalCost(days) {
   const discont2 = 50;
   const daysToDiscont = 3;
   const daysToBigDiscont = 7;
+  const total = cost * days;
 
   if (days < daysToDiscont) {
-    return cost * days;
+    return total;
   }
 
   if (days >= daysToDiscont && days < daysToBigDiscont) {
-    return (cost * days) - discont1;
+    return total - discont1;
   }
 
   if (days >= daysToBigDiscont) {
-    return (cost * days) - discont2;
+    return total - discont2;
   }
 }
 
