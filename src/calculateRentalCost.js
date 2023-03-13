@@ -29,13 +29,15 @@
 
 function calculateRentalCost(days) {
   const price = 40;
+  const weekDiscount = 50;
+  const threeDaysDiscount = 20;
 
   switch (true) {
     case days >= 7:
-      return days * price - 50;
+      return days * price - weekDiscount;
 
     case days >= 3:
-      return days * price - 20;
+      return days * price - threeDaysDiscount;
 
     case days >= 1:
       return days * price;
