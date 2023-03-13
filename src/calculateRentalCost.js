@@ -34,10 +34,10 @@ function calculateRentalCost(days) {
     case days === 1:
       return price;
 
-    case days > 3 < 7:
+    case 3 <= days < 7:
       return days * price - 20;
 
-    case days > 7:
+    case days >= 7:
       return days * price - 50;
   }
 }
