@@ -31,14 +31,14 @@ function calculateRentalCost(days) {
   const price = 40;
 
   switch (true) {
-    case 1 <= days < 3:
-      return price;
-
-    case 3 <= days < 7:
-      return days * price - 20;
-
     case days >= 7:
       return days * price - 50;
+
+    case days >= 3:
+      return days * price - 20;
+
+    case days >= 1:
+      return days * price;
   }
 }
 
