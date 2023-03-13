@@ -38,7 +38,7 @@ function calculateRentalCost(days) {
     return days * dailyPrice - maxDiscount;
   }
 
-  if (days >= minNumDayDiscount && days < maxNumDayDiscount) {
+  if (days >= minNumDayDiscount) {
     return days * dailyPrice - minDiscount;
   }
 
