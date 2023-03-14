@@ -29,6 +29,7 @@
 
 function calculateRentalCost(days) {
   const costPerDay = 40;
+  const totalCostPerDay = costPerDay * days;
   const basicDiscount = 20;
   const proDiscount = 50;
   const firstDiscountPeriod = 3;
@@ -36,13 +37,13 @@ function calculateRentalCost(days) {
 
   switch (true) {
     case (days < firstDiscountPeriod):
-      return days * costPerDay;
+      return totalCostPerDay;
 
     case (days < secondDiscountPeriod):
-      return days * costPerDay - basicDiscount;
+      return totalCostPerDay - basicDiscount;
 
     default:
-      return days * costPerDay - proDiscount;
+      return totalCostPerDay - proDiscount;
   }
 }
 
