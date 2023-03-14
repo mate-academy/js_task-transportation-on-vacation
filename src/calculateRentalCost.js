@@ -32,17 +32,17 @@ function calculateRentalCost(days) {
   const disc20 = 20;
   const disc50 = 50;
 
+  const sum = rent * days;
+
   if (days >= 7) {
-    return (rent * days) - disc50;
+    return sum - disc50;
   }
 
   if (days >= 3) {
-    return (rent * days) - disc20;
+    return sum - disc20;
   }
 
-  if (days < 3) {
-    return rent * days;
-  }
+  return sum;
 }
 
 module.exports = calculateRentalCost;
