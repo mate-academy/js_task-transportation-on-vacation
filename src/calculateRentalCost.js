@@ -29,18 +29,19 @@
 
 function calculateRentalCost(days) {
   const defaultPrice = 40;
-  const middleSale = defaultPrice * days - 20;
-  const maxSale = defaultPrice * days - 50;
-
-  if (days >= 3 && days < 7) {
-    return middleSale;
-  }
+  const sumPrice = days * defaultPrice;
+  const middleSale = sumPrice - 20;
+  const maxSale = sumPrice - 50;
 
   if (days >= 7) {
     return maxSale;
   }
 
-  return defaultPrice * days;
+  if (days >= 3) {
+    return middleSale;
+  }
+
+  return sumPrice;
 }
 
 module.exports = calculateRentalCost;
