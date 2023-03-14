@@ -33,16 +33,17 @@ function calculateRentalCost(days) {
   const discount = 20;
   const lessDays = 3;
   const moreDays = 7;
+  const totalSum = days * carPrice;
 
   if (days >= moreDays) {
-    return days * carPrice - maxDiscount;
+    return totalSum - maxDiscount;
   }
 
   if (days >= lessDays) {
-    return days * carPrice - discount;
+    return totalSum - discount;
   }
 
-  return days * carPrice;
+  return totalSum;
 }
 
 module.exports = calculateRentalCost;
