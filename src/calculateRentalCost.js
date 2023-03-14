@@ -41,6 +41,8 @@ function calculateRentalCost(days) {
   if (days >= 3) {
     return totalPrice - midDiscount;
   }
+
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
