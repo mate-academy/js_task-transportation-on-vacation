@@ -30,13 +30,19 @@
 function calculateRentalCost(days) {
   // write code here
   let cost = 40 * days;
+  const saleSmall = 20;
+  const saleBig = 50;
 
   if (days > 6) {
-    return (cost -= 50);
+    cost -= saleBig;
+
+    return cost;
   }
 
   if (days > 2) {
-    return (cost -= 20);
+    cost -= saleSmall;
+
+    return cost;
   }
 
   return cost;
