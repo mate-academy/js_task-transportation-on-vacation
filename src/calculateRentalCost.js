@@ -30,7 +30,7 @@
 function calculateRentalCost(days) {
   const payment = days * 40;
   const rentForThreeDays = 3;
-  const rentForSixDays = 6;
+  const rentMoreSixDays = 6;
   const baseDiscount = 20;
   const strongDiscont = 50;
 
@@ -38,7 +38,7 @@ function calculateRentalCost(days) {
     return payment;
   }
 
-  if (days <= rentForSixDays) {
+  if (days <= rentMoreSixDays) {
     return payment - baseDiscount;
   }
 
