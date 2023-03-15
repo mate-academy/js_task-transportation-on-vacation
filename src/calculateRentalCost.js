@@ -10,12 +10,12 @@
  * The manager of the car rental makes you some good offers.
  *
  * Every day you rent the car costs $40.
- * If you rent the car for 7 or more days, you get $50 off your total.
+ * If you rent the car for 7 or more days, you get $50 off your totalAmount.
  * Alternatively, if you rent the car for 3 or more days,
- * you get $20 off your total.
+ * you get $20 off your totalAmount.
  *
  * Implement calculateRentalCost function
- * which returns the total amount for different count of days.
+ * which returns the totalAmount amount for different count of days.
  *
  * Examples:
  *  - calculateRentalCost(1) === 40
@@ -28,24 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  let total = 0;
-  const firstDayDiscount = 3;
+  const firstDiscountPeriod = 3;
   const firstDiscount = 20;
-  const secondDayDiscount = 7;
+  const secondDiscountPeriod = 7;
   const secondDiscount = 50;
   const dayCost = 40;
 
-  for (let i = 0; i < days; i++) {
-    total += dayCost;
+  const totalAmount = dayCost * days;
+
+  if (days >= secondDiscountPeriod) {
+    return totalAmount - secondDiscount;
   }
 
-  if (days >= secondDayDiscount) {
-    total -= secondDiscount;
-  } else if (days >= firstDayDiscount) {
-    total -= firstDiscount;
+  if (days >= firstDiscountPeriod) {
+    return totalAmount - firstDiscount;
   }
 
-  return total;
+  return totalAmount;
 }
 
 module.exports = calculateRentalCost;
