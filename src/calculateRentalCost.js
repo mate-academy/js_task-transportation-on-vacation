@@ -30,7 +30,7 @@
 function calculateRentalCost(days) {
   const payment = days * 40;
   const minDiscountPeriod = 3;
-  const maxDiscountPeriod = 6;
+  const maxDiscountPeriod = 7;
   const baseDiscount = 20;
   const strongDiscount = 50;
 
