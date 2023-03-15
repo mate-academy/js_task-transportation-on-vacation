@@ -29,20 +29,20 @@
 
 function calculateRentalCost(days) {
   const payment = days * 40;
-  const rentForThreeDays = 3;
-  const rentMoreSixDays = 6;
+  const minDiscountPeriod = 3;
+  const maxDiscountPeriod = 6;
   const baseDiscount = 20;
-  const strongDiscont = 50;
+  const strongDiscount = 50;
 
-  if (days < rentForThreeDays) {
+  if (days < minDiscountPeriod) {
     return payment;
   }
 
-  if (days <= rentMoreSixDays) {
+  if (days <= maxDiscountPeriod) {
     return payment - baseDiscount;
   }
 
-  return payment - strongDiscont;
+  return payment - strongDiscount;
 }
 
 module.exports = calculateRentalCost;
