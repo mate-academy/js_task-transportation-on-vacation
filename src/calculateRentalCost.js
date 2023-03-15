@@ -33,15 +33,16 @@ function calculateRentalCost(days) {
   const minDiscount = 20;
   const totalCost = days * dayPayment;
 
-  switch (true) {
-    case days < 3:
-      return totalCost;
+  if (days < 3) {
+    return totalCost;
+  }
 
-    case days < 7:
-      return totalCost - minDiscount;
+  if (days < 7) {
+    return totalCost - minDiscount;
+  }
 
-    case days >= 7:
-      return totalCost - basicDiscount;
+  if (days >= 7) {
+    return totalCost - basicDiscount;
   }
 }
 
