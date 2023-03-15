@@ -38,7 +38,7 @@ function calculateRentalCost(days) {
     return payment;
   }
 
-  if (days <= maxDiscountPeriod) {
+  if (days < maxDiscountPeriod) {
     return payment - baseDiscount;
   }
 
