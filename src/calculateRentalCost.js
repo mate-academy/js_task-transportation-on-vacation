@@ -28,15 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  const sum = days * 40;
+  const dailyRent = 40;
+  const basicDiscount = 20;
+  const weekDiscount = 50;
+  const theWholeAmount = days * dailyRent;
 
   switch (true) {
     case days >= 7:
-      return sum - 50;
+      return theWholeAmount - weekDiscount;
     case days >= 3:
-      return sum - 20;
+      return theWholeAmount - basicDiscount;
     default:
-      return sum;
+      return theWholeAmount;
   }
 }
 
