@@ -41,9 +41,7 @@ function calculateRentalCost(days) {
     return totalCost - minDiscount;
   }
 
-  if (days >= 7) {
-    return totalCost - basicDiscount;
-  }
+  return totalCost - basicDiscount;
 }
 
 module.exports = calculateRentalCost;
