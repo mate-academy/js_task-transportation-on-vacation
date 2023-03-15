@@ -29,18 +29,18 @@
 
 function calculateRentalCost(days) {
   // write code here
-  let countSum = 0;
   const dayOfTrip = days;
   const carDayRent = 40;
-  const threeDayDiscount = 20;
-  const sevenDayDiscount = 50;
+  const smallDayDiscount = 20;
+  const bigDayDiscount = 50;
+  const countSum = carDayRent * dayOfTrip;
 
-  if (dayOfTrip < 3) {
-    countSum = carDayRent * dayOfTrip;
-  } else if (dayOfTrip >= 3 && dayOfTrip < 7) {
-    countSum = (carDayRent * dayOfTrip) - threeDayDiscount;
-  } else {
-    countSum = (carDayRent * dayOfTrip) - sevenDayDiscount;
+  if (dayOfTrip >= 7) {
+    return countSum - bigDayDiscount;
+  }
+
+  if (dayOfTrip >= 3) {
+    return countSum - smallDayDiscount;
   }
 
   return countSum;
