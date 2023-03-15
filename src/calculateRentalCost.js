@@ -35,16 +35,15 @@ function calculateRentalCost(days) {
   const firstDiscountPeriod = 3;
   const secondDiscountPeriod = 7;
 
-  switch (true) {
-    case (days < firstDiscountPeriod):
-      return totalCostPerDay;
-
-    case (days < secondDiscountPeriod):
-      return totalCostPerDay - basicDiscount;
-
-    default:
-      return totalCostPerDay - proDiscount;
+  if (days < firstDiscountPeriod) {
+    return totalCostPerDay;
   }
+
+  if (days < secondDiscountPeriod) {
+    return totalCostPerDay - basicDiscount;
+  }
+
+  return totalCostPerDay - proDiscount;
 }
 
 module.exports = calculateRentalCost;
