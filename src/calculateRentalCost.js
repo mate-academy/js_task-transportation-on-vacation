@@ -35,15 +35,12 @@ function calculateRentalCost(days) {
   const countDay3 = 3;
   const countDay7 = 7;
 
-  switch (true) {
-    case days > countDay0 && days < countDay3:
-      return sum;
-
-    case days >= countDay3 && days < countDay7:
-      return sum - 20;
-
-    case days >= countDay7:
-      return sum - 50;
+  if (days > countDay0 && days < countDay3) {
+    return sum;
+  } else if (days >= countDay3 && days < countDay7) {
+    return sum - 20;
+  } else if (days >= countDay7) {
+    return sum - 50;
   }
 };
 
