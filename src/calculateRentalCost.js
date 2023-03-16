@@ -29,15 +29,15 @@
 
 function calculateRentalCost(days) {
   const pricePerDay = 40;
-  const firstBreakPoint = 3;
-  const secondBreakPoint = 7;
-  const daysForSmallDiscout = 20;
-  const daysForBigDiscout = 50;
+  const daysForSmallDiscout = 3;
+  const daysForBigDiscout = 7;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
 
-  if (days >= firstBreakPoint && days < secondBreakPoint) {
-    return days * pricePerDay - daysForSmallDiscout;
-  } else if (days >= secondBreakPoint) {
-    return days * pricePerDay - daysForBigDiscout;
+  if (days >= daysForSmallDiscout && days < daysForBigDiscout) {
+    return days * pricePerDay - smallDiscount;
+  } else if (days >= daysForBigDiscout) {
+    return days * pricePerDay - bigDiscount;
   }
 
   return days * pricePerDay;
