@@ -33,14 +33,15 @@ function calculateRentalCost(days) {
   const weekDiscount = 50;
   const theWholeAmount = days * dailyRent;
 
-  switch (true) {
-    case days >= 7:
-      return theWholeAmount - weekDiscount;
-    case days >= 3:
-      return theWholeAmount - basicDiscount;
-    default:
-      return theWholeAmount;
+  if (days >= 7) {
+    return theWholeAmount - weekDiscount;
   }
+
+  if (days >= 3) {
+    return theWholeAmount - basicDiscount;
+  }
+
+  return theWholeAmount;
 }
 
 module.exports = calculateRentalCost;
