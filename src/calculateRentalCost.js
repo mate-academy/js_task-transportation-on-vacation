@@ -28,12 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  let price = days * 40;
+  const price = days * 40;
+  const firstBreakPoint = 3;
+  const secondBreakPoint = 7;
+  const smallDiscount = 20;
+  const bigDiscount = 50;
 
-  if (days >= 3 && days < 7) {
-    price = price - 20;
-  } else if (days >= 7) {
-    price = price - 50;
+  if (days >= firstBreakPoint && days < secondBreakPoint) {
+    return price - smallDiscount;
+  } else if (days >= secondBreakPoint) {
+    return price - bigDiscount;
   }
 
   return price;
