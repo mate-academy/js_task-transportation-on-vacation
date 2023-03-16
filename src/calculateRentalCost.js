@@ -40,9 +40,9 @@ function calculateRentalCost(days) {
 
   if (days >= 3) {
     return totalPrice - stanartDiscount;
-  } else {
-    return totalPrice;
   }
+
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
