@@ -29,7 +29,6 @@
 const rentalDay = 40;
 const discountTree = 20;
 const discountSeven = 50;
-
 function calculateRentalCost(days) {
   const rental = days * rentalDay;
 
