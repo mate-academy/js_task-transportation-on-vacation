@@ -29,8 +29,8 @@
 
 function calculateRentalCost(days) {
   const cost = 40;
-  const diskont = 20;
-  const bigDiskont = 50;
+  const discount = 20;
+  const bigDiscount = 50;
   const littleDays = days < 3;
   const manyDays = days < 7;
 
@@ -39,10 +39,10 @@ function calculateRentalCost(days) {
   }
 
   if (manyDays) {
-    return (days * cost) - diskont;
+    return (days * cost) - discount;
   }
 
-  return (days * cost) - bigDiskont;
+  return (days * cost) - bigDiscount;
 }
 
 module.exports = calculateRentalCost;
