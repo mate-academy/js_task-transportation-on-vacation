@@ -6,7 +6,7 @@
  * So you will book a flight for you
  * and your family and try to leave all the mess behind you.
  *
- * You will need a rental car in order for you to get around in your vacation.
+ * Your will need a rental car in order for you to get around in your vacation.
  * The manager of the car rental makes you some good offers.
  *
  * Every day you rent the car costs $40.
