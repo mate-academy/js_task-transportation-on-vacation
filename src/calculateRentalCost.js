@@ -3,7 +3,7 @@
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
- * So you will book a flight for you
+ * Sos you will book a flight for you
  * and your family and try to leave all the mess behind you.
  *
  * You will need a rental car in order for you to get around in your vacation.
