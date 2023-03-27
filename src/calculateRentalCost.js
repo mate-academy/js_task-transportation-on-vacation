@@ -36,7 +36,7 @@ function calculateRentalCost(days) {
       discount = 20;
       break;
     case days >= 7:
-      discount = 50 * (Math.floor(days / 7));
+      discount = 50;
       break;
     default:
       discount = 0;
