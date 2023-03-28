@@ -28,19 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  const minThreeDay = 3;
-  const minSevenDay = 7;
-  const costsDay = 40;
-  const discountThree = 20;
-  const discountSeven = 50;
+  const daysForSmallDiscount = 3;
+  const daysForBigDiscount = 7;
+  const carRentPricePerDay = 40;
+  const smallDiscountPercentage = 20;
+  const bigDiscountPercentage = 50;
 
-  if (days < minThreeDay) {
-    return costsDay * days;
-  } else if (days >= minThreeDay && days < minSevenDay) {
-    return costsDay * days - discountThree;
-  } else {
-    return costsDay * days - discountSeven;
+  if (days < daysForSmallDiscount) {
+    return carRentPricePerDay * days;
+  } else if (days >= daysForSmallDiscount && days < daysForBigDiscount) {
+    return carRentPricePerDay * days - smallDiscountPercentage;
   }
+
+  return carRentPricePerDay * days - bigDiscountPercentage;
 }
 
 module.exports = calculateRentalCost;
