@@ -34,10 +34,6 @@ function calculateRentalCost(days) {
   const discountSevenDays = 50;
   const allDaysNoDiscount = oneDayRenta * days;
 
-  if (days < 3) {
-    return oneDayRenta * days;
-  }
-
   if (days >= 3 && days < 7) {
     return allDaysNoDiscount - discountThreeDays;
   }
@@ -45,6 +41,8 @@ function calculateRentalCost(days) {
   if (days >= 7) {
     return allDaysNoDiscount - discountSevenDays;
   }
+
+  return allDaysNoDiscount;
 }
 
 module.exports = calculateRentalCost;
