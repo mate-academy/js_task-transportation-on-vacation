@@ -34,15 +34,12 @@ function calculateRentalCost(days) {
   const discountLevel2 = 50;
   const daysAmount = days;
 
-  switch (true) {
-    case daysAmount >= 3 && daysAmount < 7:
-      discount = discountLevel1;
-      break;
-    case daysAmount >= 7:
+  if (daysAmount >= 3) {
+    discount = discountLevel1;
+
+    if (daysAmount >= 7) {
       discount = discountLevel2;
-      break;
-    default:
-      discount = 0;
+    }
   }
 
   return daysAmount * 40 - discount;
