@@ -28,18 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  let rent = 0;
-
-  if (days < 3) {
-    rent = days * 40;
-  }
+  const payDay = 40;
+  const smallSale = 20;
+  const bigSale = 50;
+  let rent = payDay * days;
 
   if (days >= 3 && days <= 6) {
-    rent = (days * 40) - 20;
+    rent -= smallSale;
   }
 
   if (days >= 7) {
-    rent = (days * 40) - 50;
+    rent -= bigSale;
   }
 
   return rent;
