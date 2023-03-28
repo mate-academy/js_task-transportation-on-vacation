@@ -33,13 +33,12 @@ function calculateRentalCost(days) {
   const extendedDiscountAmount = 50;
   const basicDiscountAmount = 20;
   const basicDiscountDays = 3;
-
-  let rentalCost = dailyRentalPrice * days;
+  const rentalCost = dailyRentalPrice * days;
 
   if (days >= extendedDiscountDays) {
-    rentalCost -= extendedDiscountAmount;
+    return rentalCost - extendedDiscountAmount;
   } else if (days >= basicDiscountDays) {
-    rentalCost -= basicDiscountAmount;
+    return rentalCost - basicDiscountAmount;
   }
 
   return rentalCost;
