@@ -34,12 +34,12 @@ function calculateRentalCost(days) {
   const discountSevenDays = 50;
   const priceNoDiscount = oneDayRenta * days;
 
-  if (days >= 3 && days < 7) {
-    return allDaysNoDiscount - discountThreeDays;
-  }
-
   if (days >= 7) {
     return allDaysNoDiscount - discountSevenDays;
+  }
+
+  if (days >= 3) {
+    return allDaysNoDiscount - discountThreeDays;
   }
 
   return allDaysNoDiscount;
