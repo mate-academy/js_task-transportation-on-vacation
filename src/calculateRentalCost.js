@@ -29,10 +29,10 @@
 
 function calculateRentalCost(days) {
   const dailyRent = 40;
-  const basicDiscount = 20;
-  const weekDiscount = 50;
   const daysForSmallDiscout = 3;
   const daysForBigDiscout = 7;
+  const basicDiscount = 20;
+  const weekDiscount = 50;
   const totalCost = days * dailyRent;
 
   if (days < daysForSmallDiscout) {
