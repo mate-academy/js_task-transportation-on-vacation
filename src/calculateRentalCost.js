@@ -35,11 +35,11 @@ function calculateRentalCost(days) {
   const cost = daysAmount * 40;
 
   if (daysAmount >= 3) {
-    return cost - discountLevel1;
-  }
+    if (daysAmount >= 7) {
+      return cost - discountLevel2;
+    }
 
-  if (daysAmount >= 7) {
-    return cost - discountLevel2;
+    return cost - discountLevel1;
   }
 
   return cost;
