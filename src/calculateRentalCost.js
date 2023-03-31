@@ -31,18 +31,18 @@ function calculateRentalCost(days) {
   const mdDiscount = 20;
   const lgDiscount = 50;
   const price = 40;
-  const priceBeforDiscount = days * price;
+  const priceBeforeDiscount = days * price;
 
   if (days <= 2) {
-    return priceBeforDiscount;
+    return priceBeforeDiscount;
   }
 
   if (days >= 3 && days <= 6) {
-    return priceBeforDiscount - mdDiscount;
+    return priceBeforeDiscount - mdDiscount;
   }
 
   if (days >= 7) {
-    return priceBeforDiscount - lgDiscount;
+    return priceBeforeDiscount - lgDiscount;
   }
 }
 
