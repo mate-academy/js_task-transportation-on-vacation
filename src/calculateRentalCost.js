@@ -32,12 +32,12 @@ function calculateRentalCost(days) {
   const rentCostPerDay = 40;
   const bigRentalCost = 50;
   const littleRentalCost = 20;
-  let everyDay = days * rentCostPerDay;
+  const everyDay = days * rentCostPerDay;
 
   if (days >= 3 && days < 7) {
-    everyDay = everyDay - littleRentalCost;
+    return everyDay - littleRentalCost;
   } else if (days >= 7) {
-    everyDay = everyDay - bigRentalCost;
+    return everyDay - bigRentalCost;
   }
 
   return everyDay;
