@@ -41,9 +41,9 @@ function calculateRentalCost(days) {
 
   if (days >= 3 && days < 7) {
     return totalCoast3;
-  } else {
-    return totalCoast7;
   }
+
+  return totalCoast7;
 }
 
 module.exports = calculateRentalCost;
