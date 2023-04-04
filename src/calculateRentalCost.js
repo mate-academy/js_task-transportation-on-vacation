@@ -28,17 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const discountFor3days = 20;
-  const discountFor7days = 50;
+  const discountSmall = 20;
+  const discountBig = 50;
   const dailyRentalCost = 40;
   const normalCost = days * dailyRentalCost;
 
   if (days >= 7) {
-    return normalCost - discountFor7days;
+    return normalCost - discountBig;
   }
 
   if (days >= 3) {
-    return normalCost - discountFor3days;
+    return normalCost - discountSmall;
   }
 
   return normalCost;
