@@ -1,26 +1,26 @@
 'use strict';
-
 /**
- * After a hard quarter in the office you decide
- * to get some rest on a vacation.
- * So you will book a flight for you
- * and your family and try to leave all the mess behind you.
+ * Після важкого кварталу в офісі ви вирішите
+ * Щоб трохи відпочити у відпустці.
+ * Отже, ви забронюєте для вас рейс
+ * І ваша родина і намагайтеся залишити весь безлад за собою.
  *
- * You will need a rental car in order for you to get around in your vacation.
- * The manager of the car rental makes you some good offers.
+ * Вам знадобиться прокат автомобіля для того, щоб ви обійшли у відпустці.
+ * Менеджер прокату автомобілів робить вас хорошими пропозиціями.
  *
- * Every day you rent the car costs $40.
- * If you rent the car for 7 or more days, you get $50 off your total.
- * Alternatively, if you rent the car for 3 or more days,
- * you get $20 off your total.
+ * Щодня ви орендуєте автомобіль, коштує 40 доларів.
+ * Якщо ви орендуєте автомобіль протягом 7 і більше днів,
+ * ви отримуєте 50 доларів США.
+ * Крім того, якщо ви орендуєте автомобіль на 3 або більше днів,
+ * Ви отримуєте 20 доларів США від загальної кількості.
  *
- * Implement calculateRentalCost function
- * which returns the total amount for different count of days.
+ * Впровадити функцію calculaterentalcost
+ *, що повертає загальну суму за різні кількості днів.
  *
- * Examples:
- *  - calculateRentalCost(1) === 40
- *  - calculateRentalCost(3) === 100
- *  - calculateRentalCost(7) === 230
+ * Приклади:
+ * - calculaterentalcost (1) === 40
+ * - calculaterentalcost (3) === 100
+ * - calculaterentalcost (7) === 230
  *
  * @param {number} days
  *
@@ -29,6 +29,15 @@
 
 function calculateRentalCost(days) {
   // write code here
-}
+  const autoPrice = 40;
+
+  if (days <= 2) {
+    return autoPrice * days;
+  } else if (days <= 6) {
+    return autoPrice * days - 20;
+  } else if (days >= 7) {
+    return autoPrice * days - 50;
+  }
+};
 
 module.exports = calculateRentalCost;
