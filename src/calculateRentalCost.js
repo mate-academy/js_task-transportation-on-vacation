@@ -28,24 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  let count = 0;
   const perDayPay = 40;
   const threeDays = 3;
   const sevenDays = 7;
 
-  if (days < threeDays) {
-    count = perDayPay * days;
+  if (days >= sevenDays) {
+    return (perDayPay * days) - 50;
   }
 
   if (days >= threeDays) {
-    count = (perDayPay * days) - 20;
+    return (perDayPay * days) - 20;
   }
 
-  if (days >= sevenDays) {
-    count = (perDayPay * days) - 50;
-  }
-
-  return count;
+  return perDayPay * days;
 }
 
 module.exports = calculateRentalCost;
