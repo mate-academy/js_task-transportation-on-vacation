@@ -28,7 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const biggestOff = days >= 7;
+  const midOff = days >= 3;
+  const totalPay = days * 40;
+
+  switch (true) {
+    case biggestOff:
+      return totalPay - 50;
+    case midOff:
+      return totalPay - 20;
+    default:
+      return totalPay;
+  }
 }
 
 module.exports = calculateRentalCost;
