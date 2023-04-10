@@ -28,15 +28,18 @@
  */
 
 function calculateRentalCost(days) {
+  const payPerDay = 40;
+  const biggestDiscount = 50;
+  const midDiscount = 20;
   const biggestOff = days >= 7;
   const midOff = days >= 3;
-  const totalPay = days * 40;
+  const totalPay = days * payPerDay;
 
   switch (true) {
     case biggestOff:
-      return totalPay - 50;
+      return totalPay - biggestDiscount;
     case midOff:
-      return totalPay - 20;
+      return totalPay - midDiscount;
     default:
       return totalPay;
   }
