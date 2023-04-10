@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const payPerDay = 40;
+  const biggestDiscount = 50;
+  const midDiscount = 20;
+  const biggestOff = days >= 7;
+  const midOff = days >= 3;
+  const totalPay = days * payPerDay;
+
+  switch (true) {
+    case biggestOff:
+      return totalPay - biggestDiscount;
+    case midOff:
+      return totalPay - midDiscount;
+    default:
+      return totalPay;
+  }
 }
 
 module.exports = calculateRentalCost;
