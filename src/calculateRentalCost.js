@@ -29,11 +29,13 @@
 
 function calculateRentalCost(days) {
   let price = 40 * days;
+  const disc1 = 50;
+  const disc2 = 20;
 
   if (days >= 7) {
-    price -= 50;
+    price -= disc1;
   } else if (days >= 3) {
-    price -= 20;
+    price -= disc2;
   }
 
   return price;
