@@ -29,14 +29,16 @@
 
 function calculateRentalCost(days) {
   const dailyRental = 40;
-  const discountSevenDays = 50;
-  const discountThreeDays = 20;
+  const basicDiscount = 50;
+  const lessDiscount = 20;
+  const basicDiscountDays = 7;
+  const lessDiscountDays = 3;
   let totalCosts = days * dailyRental;
 
-  if (days >= 7) {
-    totalCosts -= discountSevenDays;
-  } else if (days >= 3) {
-    totalCosts -= discountThreeDays;
+  if (days >= basicDiscountDays) {
+    totalCosts -= basicDiscount;
+  } else if (days >= lessDiscountDays) {
+    totalCosts -= lessDiscount;
   }
 
   return totalCosts;
