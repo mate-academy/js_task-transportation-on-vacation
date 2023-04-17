@@ -33,14 +33,14 @@ function calculateRentalCost(days) {
   const basicDays = 3;
   const subsequentDays = 7;
   const rentPrice = 40;
-  let carRentalAmount = days * rentPrice;
-
-  if (days >= basicDays && days < subsequentDays) {
-    carRentalAmount -= basicDiscount;
-  }
+  const carRentalAmount = days * rentPrice;
 
   if (days >= subsequentDays) {
-    carRentalAmount -= subsequentDiscount;
+    return carRentalAmount - subsequentDiscount;
+  }
+
+  if (days >= basicDays) {
+    return carRentalAmount - basicDiscount;
   }
 
   return carRentalAmount;
