@@ -28,15 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const rentCost = 40;
+  const discFr3Days = 20;
+  const discFr7Days = 50;
+
   switch (true) {
     case days < 3:
-      return days * 40;
+      return days * rentCost;
 
     case days >= 7:
-      return (days * 40) - 50;
+      return (days * rentCost) - discFr7Days;
 
     case days >= 3:
-      return (days * 40) - 20;
+      return (days * rentCost) - discFr3Days;
   }
 }
 
