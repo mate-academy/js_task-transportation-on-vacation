@@ -1,0 +1,17 @@
+corrected  solution
+
+# Пожалуйста, введите сообщение коммита для ваших изменений. Строки,
+# начинающиеся с «#» будут проигнорированы, а пустое сообщение
+# отменяет процесс коммита.
+#
+# интерактивное перемещение в процессе; над d6590b3
+# Last command done (1 command done):
+#    pick c6f5037 corrected  solution
+# Next command to do (1 remaining command):
+#    pick 8ddc6dc corrected task
+# Вы сейчас перемещаете ветку «develop» над «d6590b3».
+#
+# Изменения, которые будут включены в коммит:
+#	изменено:      package-lock.json
+#
+
