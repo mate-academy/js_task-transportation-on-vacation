@@ -27,8 +27,24 @@
  * @return {number}
  */
 
+const rentOneDay = 40;
+const bigDiskount = 50;
+const littleDiskount = 20;
+
 function calculateRentalCost(days) {
-  // write code here
+  const rentCost = rentOneDay * days;
+
+  if (days >= 3 && days < 7) {
+    return rentCost - littleDiskount;
+  }
+
+  if (days >= 7) {
+    return rentCost - bigDiskount;
+  }
+
+  return rentCost;
 }
+
+calculateRentalCost(7);
 
 module.exports = calculateRentalCost;
