@@ -27,15 +27,18 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
+const calculateRentalCost = (days) => {
   let price = 0;
+  const oneDayCost = 40;
+  const discountThreeDays = 20;
+  const discountSevenDays = 50;
 
   if (days < 3) {
-    price = days * 40;
-  } else if (days >= 3 && days < 7) {
-    price = (days * 40) - 20;
+    price = days * oneDayCost;
+  } else if (days < 7) {
+    price = days * oneDayCost - discountThreeDays;
   } else if (days >= 7) {
-    price = (days * 40) - 50;
+    price = days * oneDayCost - discountSevenDays;
   }
 
   return price;
