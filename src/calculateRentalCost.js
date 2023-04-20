@@ -26,9 +26,9 @@
  *
  * @return {number}
  */
-
+ 
 function calculateRentalCost(days) {
-  // write code here
+  // This function calculates a discount on car rental depending on the number of rental days
   let totalCost = days * 40;
 
   const discountCost
