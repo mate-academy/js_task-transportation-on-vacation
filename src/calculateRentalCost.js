@@ -21,14 +21,22 @@
  *  - calculateRentalCost(1) === 40
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
- *
- * @param {number} days
- *
- * @return {number}
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const payment = 40;
+  const lowDiscount = 20;
+  const highDiscount = 50;
+
+  if (days >= 7) {
+    return days * payment - highDiscount;
+  }
+
+  if (days >= 3 && days < 7) {
+    return days * payment - lowDiscount;
+  }
+
+  return days * payment;
 }
 
 module.exports = calculateRentalCost;
