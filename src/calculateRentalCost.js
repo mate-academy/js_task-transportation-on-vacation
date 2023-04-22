@@ -26,17 +26,21 @@
  *
  * @return {number}
  */
+const carRent = 40;
 
 function calculateRentalCost(days) {
   // write code here
-  let sum = 40 * days;
+  let sum = carRent * days;
+  let sale = 0;
 
   if (days >= 3) {
-    sum = (40 * days) - 20;
+    sale = 20;
+    sum = (carRent * days) - sale;
   }
 
   if (days >= 7) {
-    sum = (40 * days) - 50;
+    sale = 50;
+    sum = (carRent * days) - sale;
   }
 
   return sum;
