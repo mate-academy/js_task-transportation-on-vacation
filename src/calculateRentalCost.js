@@ -30,20 +30,17 @@ const carRent = 40;
 
 function calculateRentalCost(days) {
   // write code here
-  let sum = carRent * days;
   let sale = 0;
 
   if (days >= 3) {
     sale = 20;
-    sum = carRent * days - sale;
   }
 
   if (days >= 7) {
     sale = 50;
-    sum = carRent * days - sale;
   }
 
-  return sum;
+  return carRent * days - sale;
 }
 
 module.exports = calculateRentalCost;
