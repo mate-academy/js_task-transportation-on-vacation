@@ -28,20 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  let result = 0;
+  const price = 40;
+  const defaultCashback = 20;
+  const vipCashback = 50;
 
   if (days >= 7) {
-    result = days * 40 - 50;
-
-    return result;
-  } else if (days >= 3) {
-    result = days * 40 - 20;
-
-    return result;
+    return days * price - vipCashback;
   }
-  result = days * 40;
 
-  return result;
+  if (days >= 3) {
+    return days * price - defaultCashback;
+  }
+
+  return days * price;
 }
 
 module.exports = calculateRentalCost;
