@@ -31,21 +31,17 @@ function calculateRentalCost(days) {
   const basicDiscount = 20;
   const advancedDiscount = 50;
   const carRent = 40;
-  let sum = 0;
+  const amount = days * carRent;
 
-  for (let i = 1; i <= days; i++) {
-    sum += carRent;
-  }
-
-  if (days >= 3 && days < 7) {
-    sum += -basicDiscount;
+  if (days >= 3) {
+    return amount - basicDiscount;
   }
 
   if (days >= 7) {
-    sum += -advancedDiscount;
+    return amount - advancedDiscount;
   }
 
-  return sum;
+  return amount;
 }
 
 module.exports = calculateRentalCost;
