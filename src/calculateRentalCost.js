@@ -35,12 +35,12 @@ function calculateRentalCost(days) {
 
   if (days >= 3) {
     sale = 20;
-    sum = (carRent * days) - sale;
+    sum = carRent * days - sale;
   }
 
   if (days >= 7) {
     sale = 50;
-    sum = (carRent * days) - sale;
+    sum = carRent * days - sale;
   }
 
   return sum;
