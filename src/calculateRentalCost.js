@@ -26,9 +26,23 @@
  *
  * @return {number}
  */
+const carRent = 40;
+const dayForSmallDiscount = 3;
+const dayForBigDiscount = 7;
 
 function calculateRentalCost(days) {
   // write code here
+  let discount = 0;
+
+  if (days >= dayForSmallDiscount) {
+    discount = 20;
+  }
+
+  if (days >= dayForBigDiscount) {
+    discount = 50;
+  }
+
+  return carRent * days - discount;
 }
 
 module.exports = calculateRentalCost;
