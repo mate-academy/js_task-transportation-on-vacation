@@ -28,12 +28,14 @@
  */
 
 function calculateRentalCost(days) {
+  const longStayDiscount = 50;
+  const mediumStayDiscount = 20;
   let totalPrice = 40 * days;
 
   if (days >= 7) {
-    totalPrice -= 50;
+    totalPrice -= longStayDiscount;
   } else if (days >= 3) {
-    totalPrice -= 20;
+    totalPrice -= mediumStayDiscount;
   }
 
   return totalPrice;
