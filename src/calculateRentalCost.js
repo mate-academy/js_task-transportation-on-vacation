@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -27,8 +27,30 @@
  * @return {number}
  */
 
+function getSum(days, price, saleSumm = 0) {
+  return days * price - saleSumm;
+}
+
 function calculateRentalCost(days) {
-  // write code here
+  const price = 40;
+
+  const daysMin = 3;
+  const daysMax = 7;
+  let sum = 0;
+
+  if (days < 3) {
+    sum = getSum(days, price);
+  }
+
+  if (days >= daysMin && days < daysMax) {
+    sum = getSum(days, price, 20);
+  }
+
+  if (days >= daysMax) {
+    sum = getSum(days, price, 50);
+  }
+
+  return sum;
 }
 
 module.exports = calculateRentalCost;
