@@ -31,11 +31,13 @@ function calculateRentalCost(days) {
   const longStayDiscount = 50;
   const mediumStayDiscount = 20;
   const priceForTheDay = 40;
+  const sevenDays = 7;
+  const lessThanSevenDays = 3;
   let totalPrice = priceForTheDay * days;
 
-  if (days >= 7) {
+  if (days >= sevenDays) {
     totalPrice -= longStayDiscount;
-  } else if (days >= 3) {
+  } else if (days >= lessThanSevenDays) {
     totalPrice -= mediumStayDiscount;
   }
 
