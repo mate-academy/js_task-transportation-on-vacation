@@ -34,13 +34,15 @@ function calculateRentalCost(days) {
 
   const totalPrice = days * rentOneDay;
 
-  if (days >= 3 && days < 7) {
-    return totalPrice - discountThreeDays;
-  } else if (days >= 7) {
-    return totalPrice - discountSevenDays;
+  if (days < 3) {
+    return totalPrice;
   }
 
-  return totalPrice;
+  if (days < 7) {
+    return totalPrice - discountThreeDays;
+  }
+
+  return totalPrice - discountSevenDays;
 }
 
 module.exports = calculateRentalCost;
