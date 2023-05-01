@@ -44,6 +44,7 @@ function calculateRentalCost(days) {
     return (result - minDiscount);
   }
 
+  return result;
 }
 
 module.exports = calculateRentalCost;
