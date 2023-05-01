@@ -29,19 +29,20 @@
 
 function calculateRentalCost(days) {
   const rentCar = 40;
-  let sumRent = 0;
+  const threeDay = 3;
+  const sixDay = 6;
+  const sevenDays = 7;
+  const discontSmall = 20;
+  const discountBig = 50;
 
-  switch (true) {
-    case (days >= 3 && days <= 6):
-      sumRent = (days * rentCar) - 20;
-      break;
-    case (days >= 7):
-      sumRent = (days * rentCar) - 50;
-      break;
-    default:
-      sumRent = days * rentCar;
+  if (days >= threeDay && days <= sixDay) {
+    return (days * rentCar) - discontSmall;
   }
 
-  return sumRent;
+  if (days >= sevenDays) {
+    return (days * rentCar) - discountBig;
+  }
+
+  return days * rentCar;
 }
 module.exports = calculateRentalCost;
