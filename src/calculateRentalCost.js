@@ -29,20 +29,19 @@
 
 function calculateRentalCost(days) {
   const rentCar = 40;
-  const threeDay = 3;
-  const sixDay = 6;
-  const sevenDays = 7;
-  const discontSmall = 20;
-  const discountBig = 50;
+  const minDaysForSmallDiscount = 3;
+  const maxDaysForSmallDiscount = 6;
+  const smallDiscount = 20;
+  const largeDiscount = 50;
 
-  if (days >= threeDay && days <= sixDay) {
-    return (days * rentCar) - discontSmall;
+  if (days < minDaysForSmallDiscount) {
+    return days * rentCar;
   }
 
-  if (days >= sevenDays) {
-    return (days * rentCar) - discountBig;
+  if (days <= maxDaysForSmallDiscount) {
+    return (days * rentCar) - smallDiscount;
   }
 
-  return days * rentCar;
+  return (days * rentCar) - largeDiscount;
 }
 module.exports = calculateRentalCost;
