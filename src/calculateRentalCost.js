@@ -29,6 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const pricePerDay = 40;
+  const saleSevenDays = 50;
+  const saleThreeDays = 20;
+
+  const primaryCarCost = days * pricePerDay;
+
+  if (days >= 7) {
+    return (primaryCarCost - saleSevenDays);
+  } else if (days >= 3) {
+    return (primaryCarCost - saleThreeDays);
+  } else {
+    return primaryCarCost;
+  }
 }
 
 module.exports = calculateRentalCost;
