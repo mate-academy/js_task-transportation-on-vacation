@@ -9,7 +9,7 @@
  * You will need a rental car in order for you to get around in your vacation.
  * The manager of the car rental makes you some good offers.
  *
- * Every day you rent the car costs $40.
+ * Every day you rent the car costPerDay $40.
  * If you rent the car for 7 or more days, you get $50 off your total.
  * Alternatively, if you rent the car for 3 or more days,
  * you get $20 off your total.
@@ -28,18 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  const costs = 40;
+  const costPerDay = 40;
 
   if (days <= 0) {
-    return 'error text';
+    return 'Invalid days value';
   }
 
   if (days < 3) {
-    return days * costs;
-  } else if (days >= 3 && days < 7) {
-    return days * costs - 20;
-  } else if (days >= 7) {
-    return days * costs - 50;
+    return days * costPerDay;
+  } else if (days < 7) {
+    return days * costPerDay - 20;
+  } else {
+    return days * costPerDay - 50;
   }
 }
 
