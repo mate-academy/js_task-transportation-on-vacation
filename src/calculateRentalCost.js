@@ -28,16 +28,18 @@
  */
 
 function calculateRentalCost(days) {
+  const pricePerDay = 40;
+
   if (days < 3) {
-    return 40 * days;
+    return pricePerDay * days;
   }
 
   if (days >= 7) {
-    return 40 * days - 50;
+    return pricePerDay * days - 50;
   }
 
   if (days >= 3) {
-    return 40 * days - 20;
+    return pricePerDay * days - 20;
   }
 }
 
