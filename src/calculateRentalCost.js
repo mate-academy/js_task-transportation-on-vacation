@@ -28,12 +28,16 @@
  */
 
 function calculateRentalCost(days) {
+  const basicPrice = 40;
+  const smallDisc = 20;
+  const bigDisc = 50;
+
   if (days < 3) {
-    return days * 40;
+    return days * basicPrice;
   } else if (days >= 7) {
-    return days * 40 - 50;
+    return days * basicPrice - bigDisc;
   } else {
-    return days * 40 - 20;
+    return days * basicPrice - smallDisc;
   }
 }
 
