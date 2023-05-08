@@ -29,20 +29,27 @@
 
 function calculateRentalCost(days) {
   const rentPerDay = 40;
-  const threeDaysDiscount = 20;
-  const sevenDaysDiscount = 50;
+
+  const firstLevelDiscountDays = 3;
+  const secondLevelDiscountDays = 7;
+
+  const firstLevelDiscount = 20;
+  const secondLevelDiscount = 50;
+
   let totalAmount = 0;
 
   if (days < 3) {
     totalAmount = rentPerDay * days;
   }
 
-  if (days >= 3) {
-    totalAmount = (rentPerDay * days) - threeDaysDiscount;
+  if (days >= firstLevelDiscountDays) {
+    totalAmount = rentPerDay * days;
+    totalAmount -= firstLevelDiscount;
   }
 
-  if (days >= 7) {
-    totalAmount = (rentPerDay * days) - sevenDaysDiscount;
+  if (days >= secondLevelDiscountDays) {
+    totalAmount = rentPerDay * days;
+    totalAmount -= secondLevelDiscount;
   }
 
   return totalAmount;
