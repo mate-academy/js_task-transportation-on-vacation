@@ -43,7 +43,7 @@ function calculateRentalCost(days) {
     return totalCost - longTermDiscount;
   }
 
-  return days * rentPrice;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
