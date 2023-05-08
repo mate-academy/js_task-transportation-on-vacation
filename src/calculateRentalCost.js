@@ -29,6 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const bigRentalPeriod = 7;
+  const bigRentalDisc = 50;
+  const smallRentalPeriod = 3;
+  const smallRentalDisc = 20;
+  const dayPrice = 40;
+
+  if (days >= bigRentalPeriod) {
+    return days * dayPrice - bigRentalDisc;
+  } else if (days >= smallRentalPeriod) {
+    return days * dayPrice - smallRentalDisc;
+  }
+
+  return days * dayPrice;
 }
 
 module.exports = calculateRentalCost;
