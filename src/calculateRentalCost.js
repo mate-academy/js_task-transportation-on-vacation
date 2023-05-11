@@ -32,12 +32,14 @@ function calculateRentalCost(days) {
   const generalCost = costPerDay * days;
   const basicDiscount = 20;
   const extraDiscount = 50;
+  const basicNumberOfDays = 3;
+  const extraNumberOfDays = 7;
 
-  if (days < 3) {
+  if (days < basicNumberOfDays) {
     return generalCost;
   }
 
-  if (days < 7) {
+  if (days < extraNumberOfDays) {
     return generalCost - basicDiscount;
   }
 
