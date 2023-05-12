@@ -28,19 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  let specOffer = 0;
-  let total = 0;
-
-  if (days >= 3) {
-    specOffer = 20;
-  }
+  const lowerDisc = 20;
+  const higherDisc = 50;
+  const oneDayPrice = 40;
+  const priceWhithoutDisc = days * oneDayPrice;
 
   if (days >= 7) {
-    specOffer = 50;
+    return priceWhithoutDisc - higherDisc;
   }
-  total = days * 40 - specOffer;
 
-  return total;
+  if (days >= 3) {
+    return priceWhithoutDisc - lowerDisc;
+  }
+
+  return priceWhithoutDisc;
 }
 
 module.exports = calculateRentalCost;
