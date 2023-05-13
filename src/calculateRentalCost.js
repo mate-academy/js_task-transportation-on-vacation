@@ -27,17 +27,21 @@
  * @return {number}
  */
 
+const rentCost = 40;
+const smallDiscount = 20;
+const bigDiscount = 50;
+
 function calculateRentalCost(days) {
   if (days < 3) {
-    return days * 40;
+    return days * rentCost;
   }
 
   if (days >= 7) {
-    return (days * 40) - 50;
+    return (days * rentCost) - bigDiscount;
   }
 
   if (days >= 3) {
-    return (days * 40) - 20;
+    return (days * rentCost) - smallDiscount;
   }
 }
 
