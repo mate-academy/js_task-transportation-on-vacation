@@ -28,8 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  const price = 40;
-  let newPrice = 0;
+  const pricePerDay = 40;
+  let rentalCost = 0;
   let daysCount = 0;
   const firstDiscount = 20;
   const secondDiscount = 50;
@@ -39,14 +39,20 @@ function calculateRentalCost(days) {
   }
 
   if (daysCount < 3) {
-    newPrice = price * daysCount;
-  } else if (daysCount >= 3 && daysCount <= 6) {
-    newPrice = price * daysCount - firstDiscount;
-  } else if (daysCount >= 7) {
-    newPrice = price * daysCount - secondDiscount;
+    rentalCost = pricePerDay * daysCount;
+
+    return rentalCost;
   }
 
-  return newPrice;
+  if (daysCount <= 6) {
+    rentalCost = pricePerDay * daysCount - firstDiscount;
+
+    return rentalCost;
+  }
+
+  rentalCost = pricePerDay * daysCount - secondDiscount;
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
