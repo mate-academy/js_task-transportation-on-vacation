@@ -34,7 +34,9 @@ function calculateRentalCost(days) {
 
   if (days > 2 && days < 7) {
     return totalCost - basicDiscount;
-  } else if (days > 6) {
+  }
+
+  if (days > 6) {
     return totalCost - extraDiscount;
   }
 
