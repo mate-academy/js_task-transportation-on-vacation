@@ -28,6 +28,10 @@
  */
 
 function calculateRentalCost(days) {
+  if (typeof days !== 'number' || !Number.isInteger(days) || days < 1) {
+    throw new Error('The input parameter must be a positive integer');
+  }
+
   const dailyCost = 40;
   const rentalCost = dailyCost * days;
   const basicDiscount = 20;
