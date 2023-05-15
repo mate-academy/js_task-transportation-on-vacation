@@ -27,15 +27,28 @@
  * @return {number}
  */
 
+const DAILY_COST = 40;
+
+const DISCOUNTS = [
+  {
+    daysToGet: 3, discont: 20,
+  },
+  {
+    daysToGet: 7, discont: 50,
+  },
+];
+
+DISCOUNTS.sort((offerA, offerB) => offerB.daysToGet - offerA.daysToGet);
+
 function calculateRentalCost(days) {
-  const rentalCost = days * 40;
+  const rentalCost = days * DAILY_COST;
 
-  if (days >= 7) {
-    return rentalCost - 50;
-  }
+  for (const discountOffer of DISCOUNTS) {
+    const { discont, daysToGet } = discountOffer;
 
-  if (days >= 3) {
-    return rentalCost - 20;
+    if (days >= daysToGet) {
+      return rentalCost - discont;
+    }
   }
 
   return rentalCost;
