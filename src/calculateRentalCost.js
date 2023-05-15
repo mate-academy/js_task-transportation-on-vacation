@@ -34,14 +34,16 @@ function calculateRentalCost(days) {
 
   const dailyCost = 40;
   const rentalCost = dailyCost * days;
+  const shortTerm = 3;
+  const longTerm = 7;
   const basicDiscount = 20;
   const extraDiscount = 50;
 
-  if (days < 3) {
+  if (days < shortTerm) {
     return rentalCost;
   }
 
-  if (days < 7) {
+  if (days < longTerm) {
     return rentalCost - basicDiscount;
   }
 
