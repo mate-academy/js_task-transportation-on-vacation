@@ -27,8 +27,31 @@
  * @return {number}
  */
 
+const DAILY_COST = 40;
+
+const DISCOUNTS = [
+  {
+    daysToGet: 3, discont: 20,
+  },
+  {
+    daysToGet: 7, discont: 50,
+  },
+];
+
+DISCOUNTS.sort((offerA, offerB) => offerB.daysToGet - offerA.daysToGet);
+
 function calculateRentalCost(days) {
-  // write code here
+  const rentalCost = days * DAILY_COST;
+
+  for (const discountOffer of DISCOUNTS) {
+    const { discont, daysToGet } = discountOffer;
+
+    if (days >= daysToGet) {
+      return rentalCost - discont;
+    }
+  }
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
