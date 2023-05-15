@@ -33,12 +33,12 @@ function calculateRentalCost(days) {
   const basicDiscount = 50;
   const lightDicsount = 20;
 
-  const basicAmountdays = 3;
+  const basicAmountDays = 3;
   const extendedAmountDays = 7;
 
   let totalCost = days * basicRent;
 
-  if (days >= basicAmountdays && days < extendedAmountDays) {
+  if (days >= basicAmountDays && days < extendedAmountDays) {
     totalCost -= lightDicsount;
   }
 
