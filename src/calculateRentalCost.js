@@ -28,16 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  const costEveryDay = 40;
-  let totalcost = costEveryDay * days;
+  const dailyCost = 40;
+  const longTermDiscount = 50;
+  const shortTermDiscount = 20;
+  let totalCost = dailyCost * days;
 
   if (days >= 7) {
-    totalcost -= 50;
+    totalCost -= longTermDiscount;
   } else if (days >= 3) {
-    totalcost -= 20;
+    totalCost -= shortTermDiscount;
   }
 
-  return totalcost;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
