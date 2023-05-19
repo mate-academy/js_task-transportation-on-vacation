@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let result = 40 * days;
+  const daysForFirstDiscount = 3;
+  const daysForSecondDiscount = 7;
+
+  if (days >= daysForSecondDiscount) {
+    result -= 50;
+
+    return result;
+  }
+
+  if (days >= daysForFirstDiscount) {
+    result -= 20;
+  }
+
+  return result;
 }
 
 module.exports = calculateRentalCost;
