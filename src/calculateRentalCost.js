@@ -5,7 +5,7 @@ function calculateRentalCost(days) {
   const discountSinceThreeDays = 20;
   const discountSinceSevenDays = 50;
 
-  if (days <= 0) {
+  if (days < 0) {
     return new Error('Invalid days value');
   }
 
