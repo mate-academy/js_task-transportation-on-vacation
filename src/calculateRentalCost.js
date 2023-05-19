@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -29,14 +29,16 @@
 
 function calculateRentalCost(days) {
   let result = 40 * days;
+  const daysForFirstDiscount = 3;
+  const daysForSecondDiscount = 7;
 
-  if (days >= 7) {
+  if (days >= daysForSecondDiscount) {
     result -= 50;
 
     return result;
   }
 
-  if (days >= 3) {
+  if (days >= daysForFirstDiscount) {
     result -= 20;
   }
 
