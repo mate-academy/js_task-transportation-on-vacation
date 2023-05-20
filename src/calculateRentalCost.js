@@ -28,7 +28,15 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let totalCost = days * 40; // Base cost per day is $40
+
+  if (days >= 7) {
+    totalCost -= 50; // $50 discount for renting 7 or more days
+  } else if (days >= 3) {
+    totalCost -= 20; // $20 discount for renting 3 or more days
+  }
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
