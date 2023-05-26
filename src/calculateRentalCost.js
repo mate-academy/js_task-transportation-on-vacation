@@ -36,15 +36,12 @@ function calculateRentalCost(days) {
   let rentalCost = days * baseDailyRentalCost;
   let discount = discountZero;
 
-  switch (true) {
-    case days >= 7:
-      discount = discountAdditional;
+  if (days >= 7) {
+    discount = discountAdditional;
+  }
 
-      break;
-    case days >= 3 && days < 7:
-      discount = discountBasic;
-
-      break;
+  if (days >= 3 && days < 7) {
+    discount = discountBasic;
   }
 
   rentalCost -= discount;
