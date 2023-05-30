@@ -28,19 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  const costs = 40;
-  const totalCosts = costs * days;
+  const pricePerDay = 40;
+  const discountFromThreeDays = 20;
+  const discountFromSevenDays = 50;
+  const totalPrice = pricePerDay * days;
   let sale = 0;
 
   if (days >= 3) {
-    sale = 20;
+    sale = discountFromThreeDays;
   }
 
   if (days >= 7) {
-    sale = 50;
+    sale = discountFromSevenDays;
   }
 
-  return totalCosts - sale;
+  return totalPrice - sale;
 }
 
 module.exports = calculateRentalCost;
