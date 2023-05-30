@@ -29,7 +29,13 @@
 
 function calculateRentalCost(days) {
   const carPrice = 40;
-  const discount = days >= 3 && days < 7 ? 20 : days >= 7 ? 50 : 0;
+  let discount = 0;
+
+  if (days >= 3 && days < 7) {
+    discount = 20;
+  } else if (days >= 7) {
+    discount = 50;
+  }
 
   return carPrice * days - discount;
 }
