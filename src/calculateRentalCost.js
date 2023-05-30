@@ -26,6 +26,7 @@
  *
  * @return {number}
  */
+// updated code after review
 
 function calculateRentalCost(days) {
   const dayRate = 40;
