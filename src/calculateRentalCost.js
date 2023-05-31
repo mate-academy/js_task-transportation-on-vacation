@@ -29,17 +29,20 @@
 
 function calculateRentalCost(days) {
   let cost = 0;
+  const oneDayCost = 40;
+  const durationShort = 3;
+  const durationAverage = 7;
+  const discountAverage = 20;
+  const discountLong = 50;
 
-  if (days < 3) {
-    cost = days * 40;
+  cost = days * oneDayCost;
+
+  if (days >= durationShort) {
+    cost = (days * oneDayCost) - discountAverage;
   }
 
-  if (days >= 3 && days < 7) {
-    cost = (days * 40) - 20;
-  }
-
-  if (days >= 7) {
-    cost = (days * 40) - 50;
+  if (days >= durationAverage) {
+    cost = (days * oneDayCost) - discountLong;
   }
 
   return cost;
