@@ -30,13 +30,19 @@
 function calculateRentalCost(days) {
   let counter = 0;
   const rentDay = 40;
+  const longTermDiscount = 50;
+  const shortTermDiscount = 20;
 
   if (days < 3) {
     counter = days * rentDay;
-  } else if (days >= 3 && days <= 6) {
-    counter = (days * rentDay) - 20;
-  } else if (days >= 7) {
-    counter = (days * rentDay) - 50;
+  }
+
+  if (days >= 3 && days <= 6) {
+    counter = (days * rentDay) - shortTermDiscount;
+  }
+
+  if (days >= 7) {
+    counter = (days * rentDay) - longTermDiscount;
   }
 
   return counter;
