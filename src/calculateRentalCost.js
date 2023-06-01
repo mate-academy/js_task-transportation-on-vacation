@@ -28,7 +28,31 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const discountList = [
+    {
+      neededDays: 3,
+      discount: 20,
+    },
+    {
+      neededDays: 7,
+      discount: 50,
+    },
+  ];
+
+  const rent = {
+    oneDayRent: 40,
+    discount: 0,
+  };
+
+  for (const item of discountList) {
+    const { neededDays, discount } = item;
+
+    if (days >= neededDays) {
+      rent.discount = discount;
+    }
+  }
+
+  return rent.oneDayRent * days - rent.discount;
 }
 
 module.exports = calculateRentalCost;
