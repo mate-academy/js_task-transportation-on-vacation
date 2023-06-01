@@ -38,9 +38,7 @@ function calculateRentalCost(days) {
     discount = 20;
   }
 
-  const totalCostsWithDiscount = totalCosts - discount;
-
-  return totalCostsWithDiscount;
+  return totalCosts - discount;
 }
 
 module.exports = calculateRentalCost;
