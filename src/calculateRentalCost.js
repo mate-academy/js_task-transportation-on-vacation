@@ -26,9 +26,21 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
-  // write code here
+  const rentalPrice = 40;
+  const priceOffSeven = 50;
+  const priceOffThree = 20;
+  let count = rentalPrice * days;
+
+  if (days >= 3 && days < 7) {
+    count -= priceOffThree;
+  }
+
+  if (days >= 7) {
+    count -= priceOffSeven;
+  }
+
+  return count;
 }
 
 module.exports = calculateRentalCost;
