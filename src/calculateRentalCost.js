@@ -17,7 +17,7 @@
  * Implement calculateRentalCost function
  * which returns the total amount for different count of days.
  *
- * Examples:
+ * Examplees:
  *  - calculateRentalCost(1) === 40
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
