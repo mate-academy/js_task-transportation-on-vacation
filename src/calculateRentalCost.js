@@ -31,14 +31,15 @@ function calculateRentalCost(days) {
   const longTermDiscount = 50;
   const middleTermDiscount = 20;
   const rentPrice = 40;
+  const fullPrice = days + rentPrice;
 
   if (days >= 7) {
-    return days * rentPrice - longTermDiscount;
+    return fullPrice - longTermDiscount;
   } else if (days >= 3) {
-    return days * rentPrice - middleTermDiscount;
-  } else {
-    return days * rentPrice;
+    return fullPrice - middleTermDiscount;
   }
+
+  return fullPrice;
 }
 
 module.exports = calculateRentalCost;
