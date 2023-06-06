@@ -31,7 +31,7 @@ function calculateRentalCost(days) {
   const longTermDiscount = 50;
   const middleTermDiscount = 20;
   const rentPrice = 40;
-  const fullPrice = days + rentPrice;
+  const fullPrice = days * rentPrice;
 
   if (days >= 7) {
     return fullPrice - longTermDiscount;
