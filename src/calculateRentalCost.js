@@ -36,6 +36,10 @@ function calculateRentalCost(days) {
 
   const bestPrice = days * PRICE_PER_DAY;
 
+  if (days < 0) {
+    throw new Error('Invalid input: number of days cannot be negative');
+  }
+
   if (days >= LONG_TERM) {
     return bestPrice - LONG_TERM_DISCOUNT;
   }
@@ -46,5 +50,4 @@ function calculateRentalCost(days) {
 
   return bestPrice;
 }
-
 module.exports = calculateRentalCost;
