@@ -34,14 +34,14 @@ function calculateRentalCost(days) {
   const DISCOUNT_SHORT_TERM = 20;
   const COST_PER_DAY = 40;
 
-  let totalCost = days * COST_PER_DAY;
+  const totalCost = days * COST_PER_DAY;
 
   if (days >= LONG_TERM) {
-    totalCost -= DISCOUNT_LONG_TERM;
+    return totalCost - DISCOUNT_LONG_TERM;
   }
 
-  if (days >= SHORT_TERM && days < LONG_TERM) {
-    totalCost -= DISCOUNT_SHORT_TERM;
+  if (days >= SHORT_TERM) {
+    return totalCost - DISCOUNT_SHORT_TERM;
   }
 
   return totalCost;
