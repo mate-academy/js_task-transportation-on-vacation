@@ -9,7 +9,7 @@
  * You will need a rental car in order for you to get around in your vacation.
  * The manager of the car rental makes you some good offers.
  *
- * Every day you rent the car costs $40.
+ * Every day you rent the car costs $rentCost.
  * If you rent the car for 7 or more days, you get $50 off your total.
  * Alternatively, if you rent the car for 3 or more days,
  * you get $20 off your total.
@@ -18,7 +18,7 @@
  * which returns the total amount for different count of days.
  *
  * Examples:
- *  - calculateRentalCost(1) === 40
+ *  - calculateRentalCost(1) === rentCost
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const rentCost = 40;
+  const midDiscount = 20;
+  const largeDiscount = 50;
+
+  switch (true) {
+    case days < 3:
+      return days * rentCost;
+
+    case days < 7:
+      return (days * rentCost) - midDiscount;
+
+    default:
+      return (days * rentCost) - largeDiscount;
+  }
 }
 
 module.exports = calculateRentalCost;
