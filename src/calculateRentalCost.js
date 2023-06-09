@@ -33,14 +33,14 @@ function calculateRentalCost(days) {
   const largeDiscount = 50;
 
   switch (true) {
-    case days < 3:
-      return days * rentCost;
+    case days >= 7:
+      return (days * rentCost) - largeDiscount;
 
-    case days < 7:
+    case days >= 3:
       return (days * rentCost) - midDiscount;
 
     default:
-      return (days * rentCost) - largeDiscount;
+      return days * rentCost;
   }
 }
 
