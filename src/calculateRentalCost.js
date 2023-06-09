@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
   const RENT_VALUE = 40;
 
   const LONG_TERM = 7;
