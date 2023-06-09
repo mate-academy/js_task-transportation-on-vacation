@@ -32,11 +32,13 @@ function calculateRentalCost(days) {
   const oneDayRentCost = 40;
   const smallDiscount = 20;
   const bigDiscount = 50;
+  const longTerm = 7;
+  const shortTerm = 3;
 
   switch (true) {
-    case days >= 7:
+    case days >= longTerm:
       return days * oneDayRentCost - bigDiscount;
-    case days >= 3:
+    case days >= shortTerm:
       return days * oneDayRentCost - smallDiscount;
   }
 
