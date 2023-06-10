@@ -28,9 +28,10 @@
  */
 
 function calculateRentalCost(days) {
-  const rentAmount = days * 40;
+  const PRICE_PER_DAY = 40;
   const SHORT_TERM_DISCOUNT = 20;
   const LONG_TERM_DISCOUNT = 50;
+  const rentAmount = days * PRICE_PER_DAY;
 
   switch (true) {
     case (days >= 7):
