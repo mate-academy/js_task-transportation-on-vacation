@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -32,8 +32,9 @@ function calculateRentalCost(days) {
   const SHORT_TERM = 3;
   const LONG_TERM_DISCOUNT = 50;
   const SHORT_TERM_DISCOUNT = 20;
+  const REGULAR_PRICE = 40;
 
-  const dailyPrice = 40 * days;
+  const dailyPrice = REGULAR_PRICE * days;
 
   if (days >= LONG_TERM) {
     return dailyPrice - LONG_TERM_DISCOUNT;
