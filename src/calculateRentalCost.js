@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
+  const cost = days * 40;
+  const smallDiscount = 3;
+  const largeDiscount = 7;
+  const smallCashback = 20;
+  const smlargeCashback = 50;
+
   // write code here
+  switch (true) {
+    case days < smallDiscount:
+      return cost;
+    case days >= smallDiscount && days < largeDiscount:
+      return cost - smallCashback;
+    case days >= largeDiscount:
+      return cost - smlargeCashback;
+    default:
+      break;
+  }
 }
 
 module.exports = calculateRentalCost;
