@@ -28,7 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const costPerDay = 40;
+  const costPerVacation = costPerDay * days;
+
+  if (days >= 3 && days <= 6) {
+    return costPerVacation - 20;
+  } else if (days >= 7) {
+    return costPerVacation - 50;
+  } else {
+    return costPerVacation;
+  }
 }
 
 module.exports = calculateRentalCost;
