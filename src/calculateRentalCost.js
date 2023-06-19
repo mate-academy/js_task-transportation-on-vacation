@@ -22,13 +22,32 @@
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
- * @param {number} days
+ * @param {number} numberOfDays
  *
  * @return {number}
  */
 
-function calculateRentalCost(days) {
+function calculateRentalCost(numberOfDays) {
   // write code here
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+
+  const RENT = 40;
+
+  const basePrice = RENT * numberOfDays;
+
+  if (numberOfDays >= LONG_TERM) {
+    return basePrice - LONG_TERM_DISCOUNT;
+  }
+
+  if (numberOfDays >= SHORT_TERM) {
+    return basePrice - SHORT_TERM_DISCOUNT;
+  }
+
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
