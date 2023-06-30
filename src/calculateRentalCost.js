@@ -25,10 +25,25 @@
  * @param {number} days
  *
  * @return {number}
+ *
  */
 
 function calculateRentalCost(days) {
   // write code here
+  const costPerDay = 40;
+  const costPerDayForThree = 20;
+  const costPerDayForSeven = 50;
+  const totalCost = costPerDay * days;
+
+  if (days >= 7) {
+    return totalCost - costPerDayForSeven;
+  }
+
+  if (days >= 3) {
+    return totalCost - costPerDayForThree;
+  }
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
