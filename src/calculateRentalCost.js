@@ -29,6 +29,28 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const SumaOneDay = 40;
+  const discountShort = 20;
+  const DaysRangeShort = 3;
+  const DaysRangeLong = 7;
+  const discountLong = 50;
+  let ResultSuma = SumaOneDay * days;
+
+  if (days < DaysRangeShort) {
+    return ResultSuma;
+  }
+
+  if (days >= DaysRangeShort && days < DaysRangeLong) {
+    ResultSuma -= discountShort;
+
+    return ResultSuma;
+  }
+
+  if (days >= DaysRangeLong) {
+    ResultSuma -= discountLong;
+
+    return ResultSuma;
+  }
 }
 
 module.exports = calculateRentalCost;
