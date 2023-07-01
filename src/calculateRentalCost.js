@@ -29,27 +29,27 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const SumaOneDay = 40;
+  const sumOneDay = 40;
   const discountShort = 20;
-  const DaysRangeShort = 3;
-  const DaysRangeLong = 7;
+  const daysRangeShort = 3;
+  const daysRangeLong = 7;
   const discountLong = 50;
-  let ResultSuma = SumaOneDay * days;
+  let resultSum = sumOneDay * days;
 
-  if (days < DaysRangeShort) {
-    return ResultSuma;
+  if (days < daysRangeShort) {
+    return resultSum;
   }
 
-  if (days >= DaysRangeShort && days < DaysRangeLong) {
-    ResultSuma -= discountShort;
+  if (days >= daysRangeShort && days < daysRangeLong) {
+    resultSum -= discountShort;
 
-    return ResultSuma;
+    return resultSum;
   }
 
-  if (days >= DaysRangeLong) {
-    ResultSuma -= discountLong;
+  if (days >= daysRangeLong) {
+    resultSum -= discountLong;
 
-    return ResultSuma;
+    return resultSum;
   }
 }
 
