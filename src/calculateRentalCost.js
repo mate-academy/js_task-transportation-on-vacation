@@ -33,16 +33,16 @@ function calculateRentalCost(days) {
   const LONG_THERM_DISCOUNT = 50;
   const SHORT_THERM = 3;
   const SHORT_THERM_DISCOUNT = 20;
-  const BASE_PRICE = days * PRICE;
+  const basePrice = days * PRICE;
 
   if (days >= LONG_THERM) {
-    return BASE_PRICE - LONG_THERM_DISCOUNT;
+    return basePrice - LONG_THERM_DISCOUNT;
   }
 
   if (days >= SHORT_THERM) {
-    return BASE_PRICE - SHORT_THERM_DISCOUNT;
+    return basePrice - SHORT_THERM_DISCOUNT;
   } else {
-    return BASE_PRICE;
+    return basePrice;
   }
 }
 
