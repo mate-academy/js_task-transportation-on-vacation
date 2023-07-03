@@ -41,9 +41,9 @@ function calculateRentalCost(days) {
 
   if (days >= SHORT_THERM) {
     return basePrice - SHORT_THERM_DISCOUNT;
-  } else {
-    return basePrice;
   }
+
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
