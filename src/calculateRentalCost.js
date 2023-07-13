@@ -29,13 +29,17 @@
 
 function calculateRentalCost(days) {
   const priceArendCar = 40;
+  const discountFraDays = 20;
+  const discountSevenDays = 50;
+  const valueSeven = 7;
+  const valueFre = 3;
 
-  if (days >= 7) {
-    return (days * priceArendCar) - 50;
+  if (days >= valueSeven) {
+    return (days * priceArendCar) - discountSevenDays;
   }
 
-  if (days >= 3) {
-    return (days * priceArendCar) - 20;
+  if (days >= valueFre) {
+    return (days * priceArendCar) - discountFraDays;
   }
 
   return days * priceArendCar;
