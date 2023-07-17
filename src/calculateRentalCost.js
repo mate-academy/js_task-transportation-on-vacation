@@ -37,7 +37,7 @@ function calculateRentalCost(days) {
     return cost;
   } else if (days >= smallPeriod && days < longPeriod) {
     return cost - 20;
-  } else if (days >= longPeriod) {
+  } else {
     return cost - 50;
   }
 }
