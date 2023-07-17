@@ -29,24 +29,21 @@
 
 function calculateRentalCost(days) {
   let rentalCost = 0;
+  const carRentPerDay = 40;
 
   if (days < 3) {
-    rentalCost = days * 40;
-
-    return rentalCost;
+    rentalCost = days * carRentPerDay;
   }
 
   if (days >= 3 && days < 7) {
-    rentalCost = (days * 40) - 20;
-
-    return rentalCost;
+    rentalCost = (days * carRentPerDay) - 20;
   }
 
   if (days >= 7) {
-    rentalCost = (days * 40) - 50;
-
-    return rentalCost;
+    rentalCost = (days * carRentPerDay) - 50;
   }
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
