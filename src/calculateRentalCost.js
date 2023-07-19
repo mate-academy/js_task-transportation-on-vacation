@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const shortTerm = days < 3;
+  const mediumTerm = days >= 3 && days < 7;
+  const longTerm = days >= 7;
+
+  switch (true) {
+    case longTerm:
+      return days * 40 - 50;
+
+    case mediumTerm:
+      return days * 40 - 20;
+
+    case shortTerm:
+      return days * 40;
+
+    default:
+      return 0;
+  }
 }
 
 module.exports = calculateRentalCost;
