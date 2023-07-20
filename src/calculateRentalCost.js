@@ -26,7 +26,6 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   // write code here
   const total = days * 40;
