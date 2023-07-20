@@ -1,21 +1,20 @@
 "use strict";
-
 const DayPrice = 40;
 const SmallDiscount = 20;
 const BigDiscount = 50;
 
 function calculateRentalCost(days) {
-  const totalCost = DayPrice * days;  //Calculate the total cost without any discounts
-
+  let rentalCost = DayPrice * days; //Calculate the total cost without any discounts
   if (days >= 7) {
-    totalCost -= BigDiscount; //The big discount if renting 7 or more days
+    rentalCost -= BigDiscount; //The big discount if renting 7 or more days
   } else if (days >= 3) {
-    totalCost -= SmallDiscount;  //The small discount if renting 3 or more days
+    rentalCost -= SmallDiscount; //The small discount if renting 3 or more days
   }
-  return totalCost;
+  return rentalCost;
 }
-
 module.exports = calculateRentalCost;
+
+
 
 
 
