@@ -29,15 +29,9 @@
 
 function calculateRentalCost(days) {
   const costOneDay = 40;
-  const cost = days * costOneDay;
 
-  if (days >= 7) {
-    return cost - 50;
-  } else if (days >= 3 && days < 7) {
-    return cost - 20;
-  }
+  if (days)
 
-  return cost;
 }
 
 module.exports = calculateRentalCost;
