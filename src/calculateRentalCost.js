@@ -37,7 +37,7 @@ function calculateRentalCost(days) {
   const result = days * rentCarCost;
 
   if (days >= longTerm) {
-    return (result - discountLongTerm);
+    return result - discountLongTerm;
   };
 
   if (days >= shortTerm) {
