@@ -30,20 +30,23 @@
 function calculateRentalCost(days) {
   // write code here
   let sum = 0;
+  const costPerDay = 40;
+  const lowDisc = 20;
+  const bigDisc = 50;
 
   if (days <= 2) {
-    sum = 40 * days;
-
-    return sum;
-  } else if (days <= 6) {
-    sum = (40 * days) - 20;
-
-    return sum;
-  } else if (days >= 7) {
-    sum = (40 * days) - 50;
+    sum = costPerDay * days;
 
     return sum;
   }
+
+  if (days <= 6) {
+    sum = (costPerDay * days) - lowDisc;
+
+    return sum;
+  }
+
+  return (costPerDay * days) - bigDisc;
 }
 
 module.exports = calculateRentalCost;
