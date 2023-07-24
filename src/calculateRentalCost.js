@@ -27,18 +27,22 @@
  * @return {number}
  */
 
+const DAILY_COST = 40;
+const LONG_DAYS = 7;
+const LONG_DAYS_DISCOUNT = 50;
+const SHORT_DAYS = 3;
+const SHORT_DAYS_DISCOUNT = 20;
+
 function calculateRentalCost(days) {
-  const carCost = 40;
-
-  if (days >= 7) {
-    return carCost * days - 50;
+  if (days >= LONG_DAYS) {
+    return DAILY_COST * days - LONG_DAYS_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return carCost * days - 20;
+  if (days >= SHORT_DAYS) {
+    return DAILY_COST * days - SHORT_DAYS_DISCOUNT;
   }
 
-  return carCost * days;
+  return DAILY_COST * days;
 }
 
 module.exports = calculateRentalCost;
