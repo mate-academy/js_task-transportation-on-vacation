@@ -27,12 +27,13 @@
  * @return {number}
  */
 
+const PRICE_PER_DAY = 40;
+const LONG_TERM_DISCOUNT = 50;
+const MEDIUM_TERM_DISCOUNT = 20;
+const LONG_TERM_RENTAL_TIME = 7;
+const MEDIUM_TERM_RENTAL_TIME = 3;
+
 function calculateRentalCost(days) {
-  const PRICE_PER_DAY = 40;
-  const LONG_TERM_DISCOUNT = 50;
-  const MEDIUM_TERM_DISCOUNT = 20;
-  const LONG_TERM_RENTAL_TIME = 7;
-  const MEDIUM_TERM_RENTAL_TIME = 3;
   let rentalCost = PRICE_PER_DAY * days;
 
   if (days >= LONG_TERM_RENTAL_TIME) {
