@@ -26,12 +26,14 @@
  *
  * @return {number}
  */
+
+let toPay = 0;
+const shortTermDiscount = 20;
+const longTermDiscount = 50;
+
 function calculateRentalCost(days) {
   // write code here
   const totalSum = days * 40;
-  let toPay = 0;
-  const shortTermDiscount = 20;
-  const longTermDiscount = 50;
 
   if (days >= 3 && days < 7) {
     toPay = totalSum - shortTermDiscount;
