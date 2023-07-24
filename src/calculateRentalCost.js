@@ -29,24 +29,23 @@
 
 function calculateRentalCost(days) {
   // write code here
-  let sum = 0;
-  const costPerDay = 40;
-  const lowDisc = 20;
-  const bigDisc = 50;
+  const DAILY_RATE = 40;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
 
-  if (days <= 2) {
-    sum = costPerDay * days;
+  const total = DAILY_RATE * days;
 
-    return sum;
+  if (days >= LONG_TERM) {
+    return total - LONG_TERM_DISCOUNT;
   }
 
-  if (days <= 6) {
-    sum = (costPerDay * days) - lowDisc;
-
-    return sum;
+  if (days >= SHORT_TERM) {
+    return total - SHORT_TERM_DISCOUNT;
   }
 
-  return (costPerDay * days) - bigDisc;
+  return total;
 }
 
 module.exports = calculateRentalCost;
