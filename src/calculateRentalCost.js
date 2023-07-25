@@ -27,13 +27,13 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  const LONG_TERM_RENT = 7;
-  const DISCOUNT_LONG_TERM = 50;
-  const SHORT_TERM_RENT = 3;
-  const DISCOUNT_SHORT_TERM = 20;
-  const ONE_DAY_COST = 40;
+const LONG_TERM_RENT = 7;
+const DISCOUNT_LONG_TERM = 50;
+const SHORT_TERM_RENT = 3;
+const DISCOUNT_SHORT_TERM = 20;
+const ONE_DAY_COST = 40;
 
+function calculateRentalCost(days) {
   const result = days * ONE_DAY_COST;
 
   if (days >= LONG_TERM_RENT) {
