@@ -27,13 +27,14 @@
  * @return {number}
  */
 
+const COST_ONE_DAY = 40;
+
 function calculateRentalCost(days) {
-  const costOneDay = 40;
-  const cost = days * costOneDay;
+  const cost = days * COST_ONE_DAY;
 
   if (days >= 7) {
     return cost - 50;
-  } else if (days >= 3 && days < 7) {
+  } else if (days >= 3) {
     return cost - 20;
   }
 
