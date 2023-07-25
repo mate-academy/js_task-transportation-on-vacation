@@ -29,17 +29,19 @@
 
 const LONG_TERM = 7;
 const SHORT_TERM = 3;
-const LONG_TERM_DISCOUNT = 40;
+const LONG_TERM_DISCOUNT = 50;
+const SHORT_TERM_DISCOUNT = 20;
+const COST_ONE_DAY = 40;
 
 function calculateRentalCost(days) {
-  const cost = days * LONG_TERM_DISCOUNT;
+  const cost = days * COST_ONE_DAY;
 
   if (days >= LONG_TERM) {
-    return cost - 50;
+    return cost - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM && days < LONG_TERM) {
-    return cost - 20;
+    return cost - SHORT_TERM_DISCOUNT;
   }
 
   return cost;
