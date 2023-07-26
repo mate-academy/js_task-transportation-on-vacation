@@ -26,27 +26,26 @@
  *
  * @return {number}
  */
+const COST = 40;
+const SHORT_TERM = 3;
+const LONG_TERM = 7;
+const SMALL_DISCOUNT = 20;
+const BIG_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  const cost = 40;
-  const shortTerm = 3;
-  const longTerm = 7;
-  const smallDiscount = 20;
-  const bigDiscount = 50;
-  let finalCost = 0;
+  let finalCost = COST * days - BIG_DISCOUNT;
 
-  if (days < shortTerm) {
-    finalCost = cost * days;
+  if (days < SHORT_TERM) {
+    finalCost = COST * days;
 
     return finalCost;
   }
 
-  if (days < longTerm) {
-    finalCost = cost * days - smallDiscount;
+  if (days < LONG_TERM) {
+    finalCost = COST * days - SMALL_DISCOUNT;
 
     return finalCost;
   }
-  finalCost = cost * days - bigDiscount;
 
   return finalCost;
 }
