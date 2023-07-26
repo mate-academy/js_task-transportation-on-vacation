@@ -27,8 +27,22 @@
  * @return {number}
  */
 
+const SHORT = 2;
+const LONG_TER = 6;
+const NUM = 40;
+const NORM = 20;
+const LONG = 50;
+
 function calculateRentalCost(days) {
-  // write code here
+  if (days <= SHORT) {
+    return days * NUM;
+  }
+
+  if (days <= LONG_TER) {
+    return (days * NUM) - NORM;
+  }
+
+  return (days * NUM) - LONG;
 }
 
 module.exports = calculateRentalCost;
