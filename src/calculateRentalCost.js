@@ -1,20 +1,22 @@
 'use strict';
 
+const DAILY_COST = 40;
+const DISCOUNT_FOR_WEEK = 50;
+const DISCOUNT_FOR_THREE_DAYS = 20;
+const THREE_DAYS = 3;
+const SEVEN_DAYS = 7;
+
 function calculateRentalCost(days) {
-  const dailyCost = 40;
-  const discountForWeek = 50;
-  const discountForThreeDays = 20;
+  let total = days * DAILY_COST;
 
-  let total = days * dailyCost;
-
-  if (days >= 7) {
-    total -= discountForWeek;
+  if (days >= SEVEN_DAYS) {
+    total -= DISCOUNT_FOR_WEEK;
 
     return total;
   }
 
-  if (days >= 3) {
-    total -= discountForThreeDays;
+  if (days >= THREE_DAYS) {
+    total -= DISCOUNT_FOR_THREE_DAYS;
 
     return total;
   }
