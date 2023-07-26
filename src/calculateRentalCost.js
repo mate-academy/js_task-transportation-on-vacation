@@ -26,21 +26,20 @@
  *
  * @return {number}
  */
+const DAILY_PRICE = 40;
+const SMALL_DISCOUNT = 20;
+const BIG_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  const dailyPrice = 40;
-  const smallDiscount = 20;
-  const bigDiscount = 50;
-
   if (days < 3) {
-    return days * dailyPrice;
+    return days * DAILY_PRICE;
   }
 
   if (days >= 3 && days < 7) {
-    return (days * dailyPrice) - smallDiscount;
+    return (days * DAILY_PRICE) - SMALL_DISCOUNT;
   }
 
-  return (days * dailyPrice) - bigDiscount;
+  return (days * DAILY_PRICE) - BIG_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
