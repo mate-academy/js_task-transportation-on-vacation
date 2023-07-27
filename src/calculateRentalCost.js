@@ -38,7 +38,9 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return RENT_FOR_DAY * days - LONG_TERM_DISCONT;
-  } else if (days >= MIDDLE_TERM && days < LONG_TERM_DISCONT) {
+  }
+
+  if (days >= MIDDLE_TERM && days < LONG_TERM_DISCONT) {
     return RENT_FOR_DAY * days - MIDDLE_TERM_DISCONT;
   }
 
