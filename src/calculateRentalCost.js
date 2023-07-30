@@ -44,9 +44,7 @@ function calculateRentalCost(days) {
     return rentalCosts - SHORT_TERM_DISCOUNT;
   }
 
-  if (days >= LONG_TERM) {
-    return rentalCosts - LONG_TERM_DISCOUNT;
-  }
+  return rentalCosts - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
