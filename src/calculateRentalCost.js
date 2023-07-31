@@ -28,17 +28,25 @@
  */
 
 function calculateRentalCost(days) {
-  let sale = 0;
+  const PAY_PER_DAY = 40;
+  const MIN_DISCOUNT = 20;
+  const MAX_DISCOUNT = 50;
 
-  if (days >= 3) {
-    sale = 20;
+  const INITIAL_DISCOUNT = 0;
+  const DAYS_FOR_MINDISCOUNT = 3;
+  const DAYS_FOR_MAXDISCOUNT = 7;
+
+  let sale = INITIAL_DISCOUNT;
+
+  if (days >= DAYS_FOR_MINDISCOUNT) {
+    sale = MIN_DISCOUNT;
   }
 
-  if (days >= 7) {
-    sale = 50;
+  if (days >= DAYS_FOR_MAXDISCOUNT) {
+    sale = MAX_DISCOUNT;
   }
 
-  const totalCost = days * 40 - sale;
+  const totalCost = days * PAY_PER_DAY - sale;
 
   return totalCost;
 }
