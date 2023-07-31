@@ -29,22 +29,22 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const MIDDLE_TERM = 3;
+  const MIDDLE_TERM_DAYS = 3;
   const MIDDLE_TERM_DISCOUNT = 20;
-  const LONG_TERM = 7;
+  const LONG_TERM_DAYS = 7;
   const LONG_TERM_DISCOUNT = 50;
   const PRICE_PER_DAY = 40;
-  const normalPrice = days * PRICE_PER_DAY;
+  const totalRentalCost = days * PRICE_PER_DAY;
 
-  if (days >= LONG_TERM) {
-    return (normalPrice - LONG_TERM_DISCOUNT);
-  }
+  if (days >= LONG_TERM_DAYS)
+    return (totalRentalCost - LONG_TERM_DISCOUNT);
 
-  if (days >= MIDDLE_TERM) {
-    return (normalPrice - MIDDLE_TERM_DISCOUNT);
-  }
+    
+  if (days >= MIDDLE_TERM_DAYS)
+    return (totalRentalCost - MIDDLE_TERM_DISCOUNT);
 
-  return normalPrice;
+
+  return totalRentalCost;
 }
 
 module.exports = calculateRentalCost;
