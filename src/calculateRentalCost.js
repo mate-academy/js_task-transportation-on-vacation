@@ -36,19 +36,17 @@ function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const LONG_TERM_DISCONT = 50;
 
-  const RENT_PERIOD = days * RENT_FOR_DAY;
+  const rentPeriod = days * RENT_FOR_DAY;
 
   if (days >= LONG_TERM) {
-    return RENT_PERIOD - LONG_TERM_DISCONT;
+    return rentPeriod - LONG_TERM_DISCONT;
   }
 
   if (days >= MIDDLE_TERM) {
-    return RENT_PERIOD - MIDDLE_TERM_DISCONT;
+    return rentPeriod - MIDDLE_TERM_DISCONT;
   }
 
-  return RENT_PERIOD;
+  return rentPeriod;
 }
 
 module.exports = calculateRentalCost;
-
-calculateRentalCost(4);
