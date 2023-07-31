@@ -31,19 +31,19 @@ function calculateRentalCost(days) {
   const RENTAL_COST_PER_DAY = 40;
   const SHORT_TERM = 3;
   const LONG_TERM = 7;
-  const SHORT_TERM_DISCUONT = 20;
+  const SHORT_TERM_DISCOUNT = 20;
   const LONG_TERM_DISCOUNT = 50;
-  const OVERALL_RENTAL_COST = RENTAL_COST_PER_DAY * days;
+  const overallRentalCost = RENTAL_COST_PER_DAY * days;
 
   if (days >= LONG_TERM) {
-    return OVERALL_RENTAL_COST - LONG_TERM_DISCOUNT;
+    return overallRentalCost - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM) {
-    return OVERALL_RENTAL_COST - SHORT_TERM_DISCUONT;
+    return overallRentalCost - SHORT_TERM_DISCOUNT;
   }
 
-  return OVERALL_RENTAL_COST;
+  return overallRentalCost;
 }
 
 module.exports = calculateRentalCost;
