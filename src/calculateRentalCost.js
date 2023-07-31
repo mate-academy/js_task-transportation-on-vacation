@@ -34,17 +34,17 @@ const GREAT_DISCOUNT = 50;
 const MEDIUM_DISCOUNT = 20;
 
 function calculateRentalCost(days) {
-  const BASE_PRICE = days * RENT_PER_DAY;
+  const basePrice = days * RENT_PER_DAY;
 
   if (days >= DAYS_FOR_GREAT_DISCOUNT) {
-    return BASE_PRICE - GREAT_DISCOUNT;
+    return basePrice - GREAT_DISCOUNT;
   }
 
   if (days >= DAYS_FOR_MEDIUM_DISCOUNT) {
-    return BASE_PRICE - MEDIUM_DISCOUNT;
+    return basePrice - MEDIUM_DISCOUNT;
   }
 
-  return BASE_PRICE;
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
