@@ -45,9 +45,7 @@ function calculateRentalCost(days) {
     return calculate - MEDIUM_TERM_DISCOUNT;
   }
 
-  if (days < MEDIUM_TERM) {
-    return calculate;
-  }
+  return calculate;
 }
 
 module.exports = calculateRentalCost;
