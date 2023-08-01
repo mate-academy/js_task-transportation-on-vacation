@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * After a hard quarter in the office you decide
