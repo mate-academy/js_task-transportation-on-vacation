@@ -28,16 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const dailyRent = 40;
-  const saleLongTime = 50;
-  const saleShirtTime = 20;
+  const DAILY_RENT = 40;
+  const LONG_TIME = 7;
+  const SALE_LONG_TIME = 50;
+  const SHORT_TIME = 3;
+  const SALE_SHORT_TIME = 20;
 
-  let totalCost = dailyRent * days;
+  const totalCost = DAILY_RENT * days;
 
-  if (days >= 7) {
-    totalCost -= saleLongTime;
-  } else if (days >= 3) {
-    totalCost -= saleShirtTime;
+  if (days >= LONG_TIME) {
+    return totalCost - SALE_LONG_TIME;
+  }
+
+  if (days >= SHORT_TIME) {
+    return totalCost - SALE_SHORT_TIME;
   }
 
   return totalCost;
