@@ -28,7 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const dailyRent = 40;
+  const saleLongTime = 50;
+  const saleShirtTime = 20;
+
+  let totalCost = dailyRent * days;
+
+  if (days >= 7) {
+    totalCost -= saleLongTime;
+  } else if (days >= 3) {
+    totalCost -= saleShirtTime;
+  }
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
