@@ -29,14 +29,14 @@
 
 function calculateRentalCost(days) {
   const pricePerDay = 40;
-  const longTerm = 7;
+  const longTermOfDays = 7;
   const longRentalDiscount = 50;
-  const shortTerm = 3;
+  const shortTermOfDays = 3;
   const shortRentalDiscount = 20;
 
-  if (days >= longTerm) {
+  if (days >= longTermOfDays) {
     return days * pricePerDay - longRentalDiscount;
-  } else if (days >= shortTerm) {
+  } else if (days >= shortTermOfDays) {
     return days * pricePerDay - shortRentalDiscount;
   }
 
