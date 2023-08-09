@@ -34,13 +34,15 @@ function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const SHORT_TERM = 3;
 
-   if (days >= LONG_TERM) {
+  if (days >= LONG_TERM) {
     return (days * RENT) - BIG_DISCOUNT;
-  } else if (days >= SHORT_TERM) {
+  };
+  
+  if (days >= SHORT_TERM) {
     return (days * RENT) - SMALL_DISCOUNT;
-  } else {
-    return days * RENT;
   }
+
+  return days * RENT;
 }
 
 module.exports = calculateRentalCost;
