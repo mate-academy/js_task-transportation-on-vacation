@@ -32,14 +32,14 @@ function calculateRentalCost(days) {
   const midTerm = 3;
   const longDiscount = 50;
   const midDiscount = 20;
-  const price = 40 * days;
+  let price;
 
   if (days >= longTerm) {
-    return price - longDiscount;
-  }
-
-  if (days >= midTerm) {
-    return price - midDiscount;
+    price = 40 * days - longDiscount;
+  } else if (days >= midTerm) {
+    price = 40 * days - midDiscount;
+  } else {
+    price = 40 * days;
   }
 
   return price;
