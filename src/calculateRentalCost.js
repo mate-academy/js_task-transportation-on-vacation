@@ -37,12 +37,12 @@ function calculateRentalCost(days) {
 
   totalAmount = days * amountPerDay;
 
-  if (days >= shortTerm && days < longTerm) {
-    totalAmount = days * amountPerDay - shortTermDiscaunt;
+  if (days >= longTerm) {
+    return totalAmount - longTermDiscaunt;
   }
 
-  if (days >= longTerm) {
-    totalAmount = days * amountPerDay - longTermDiscaunt;
+  if (days >= shortTerm) {
+    return totalAmount - shortTermDiscaunt;
   }
 
   return totalAmount;
