@@ -21,3 +21,23 @@ test('Should add an additional discount for 7 and more days of rent', () => {
   expect(calculateRentalCost(7))
     .toBe(230);
 });
+
+test('Throws an error when input is a string', () => {
+  expect(() => calculateRentalCost('5'))
+    .toThrow(Error);
+});
+
+test('Throws an error when input is a string containing a number', () => {
+  expect(() => calculateRentalCost('2 days'))
+    .toThrow(Error);
+});
+
+test('Throws an error when input is Infinity', () => {
+  expect(() => calculateRentalCost(Infinity))
+    .toThrow(Error);
+});
+
+test('Throws an error when input is negative Infinity', () => {
+  expect(() => calculateRentalCost(-Infinity))
+    .toThrow(Error);
+});

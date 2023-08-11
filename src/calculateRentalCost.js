@@ -28,7 +28,24 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  if (typeof days !== 'number' || !Number.isInteger(days) || days < 1) {
+    throw new Error('The input parameter must be a positive integer');
+  }
+
+  const dailyCost = 40;
+  const rentalCost = dailyCost * days;
+  const basicDiscount = 20;
+  const extraDiscount = 50;
+
+  if (days < 3) {
+    return rentalCost;
+  }
+
+  if (days < 7) {
+    return rentalCost - basicDiscount;
+  }
+
+  return rentalCost - extraDiscount;
 }
 
 module.exports = calculateRentalCost;
