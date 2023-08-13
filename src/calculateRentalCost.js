@@ -38,11 +38,12 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return (basePrise - FROM_SEVEN_DAY_REFUND);
-  } else if (days >= SHORT_TERM) {
-    return (basePrise - FROM_THREE_DAY_REFUND);
-  } else {
-    return basePrise;
   }
-}
 
+  if (days >= SHORT_TERM) {
+    return (basePrise - FROM_THREE_DAY_REFUND);
+  }
+
+  return basePrise;
+}
 module.exports = calculateRentalCost;
