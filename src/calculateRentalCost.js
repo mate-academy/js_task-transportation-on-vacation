@@ -33,17 +33,17 @@ function calculateRentalCost(days) {
   const LONG_TERM_RENT_CAR_DISCOUNT = 50;
   const SHORT_TERM_RENT_CAR_DISCOUNT = 20;
   const COSTS_RENT_CAR_DAY = 40;
-  const FULL_COSTS_RENT_WITHOUT_DISCOUNT = days * COSTS_RENT_CAR_DAY;
+  const basicRentCost = days * COSTS_RENT_CAR_DAY;
 
   if (days >= LONG_TERM_RENT_CAR_DAYS) {
-    return FULL_COSTS_RENT_WITHOUT_DISCOUNT - LONG_TERM_RENT_CAR_DISCOUNT;
+    return basicRentCost - LONG_TERM_RENT_CAR_DISCOUNT;
   }
 
   if (days >= SHORT_TERM_RENT_CAR_DAYS) {
-    return FULL_COSTS_RENT_WITHOUT_DISCOUNT - SHORT_TERM_RENT_CAR_DISCOUNT;
+    return basicRentCost - SHORT_TERM_RENT_CAR_DISCOUNT;
   }
 
-  return FULL_COSTS_RENT_WITHOUT_DISCOUNT;
+  return basicRentCost;
 }
 
 module.exports = calculateRentalCost;
