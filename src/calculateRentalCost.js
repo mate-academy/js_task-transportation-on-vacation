@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  return days < 3 ? days * 40 : days < 7 ? days * 40 - 20 : days * 40 - 50;
+  const DAILY_RENT = 40;
+  const MIN_DISCOUNT = 20;
+  const MAX_DISCOUNT = 50;
+  const DAYS_FOR_MIN_DISCOUNT = 3;
+  const DAYS_F0R_MAX_DISCOUNT = 7;
+
+  if (days < DAYS_FOR_MIN_DISCOUNT) {
+    return days * DAILY_RENT;
+  }
+
+  if (days < DAYS_F0R_MAX_DISCOUNT) {
+    return days * DAILY_RENT - MIN_DISCOUNT;
+  }
+
+  return days * DAILY_RENT - MAX_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
