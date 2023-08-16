@@ -28,19 +28,19 @@
  */
 
 function calculateRentalCost(days) {
-  const DISCOUNT_20$ = 20;
-  const DISCOUNT_50$ = 50;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
   const RENT_DAY = 40;
-  const MORE_7_DAYS = 7;
-  const MORE_3_DAYS = 3;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
   const BASIS_PRICE = days * RENT_DAY;
 
-  if (days >= MORE_7_DAYS) {
-    return BASIS_PRICE - DISCOUNT_50$;
+  if (days >= LONG_TERM) {
+    return BASIS_PRICE - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= MORE_3_DAYS) {
-    return BASIS_PRICE - DISCOUNT_20$;
+  if (days >= SHORT_TERM) {
+    return BASIS_PRICE - SHORT_TERM_DISCOUNT;
   }
 
   return BASIS_PRICE;
