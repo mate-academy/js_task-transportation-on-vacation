@@ -28,16 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return days * 40;
+  const PRICE = 40;
+  const SHORT_STAY = 3;
+  const BASIC_DISCOUNT = 20;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+
+  if (days < SHORT_STAY) {
+    return days * PRICE;
   }
 
-  if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+  if (days >= SHORT_STAY && days < LONG_TERM) {
+    return days * PRICE - BASIC_DISCOUNT;
   }
 
-  if (days >= 7) {
-    return days * 40 - 50;
+  if (days >= LONG_TERM) {
+    return days * PRICE - LONG_TERM_DISCOUNT;
   }
 }
 
