@@ -38,13 +38,11 @@ function calculateRentalCost(days) {
     return days * PRICE;
   }
 
-  if (days >= SHORT_STAY && days < LONG_STAY) {
+  if (days < LONG_STAY) {
     return days * PRICE - BASIC_DISCOUNT;
   }
 
-  if (days >= LONG_STAY) {
-    return days * PRICE - LONG_STAY_DISCOUNT;
-  }
+  return days * PRICE - LONG_STAY_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
