@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
   const RENTAL_DAY_VALUE = 40;
   const DISCOUNT_SHORT_TERM = 20;
   const DISCOUNT_LONG_TERM = 50;
