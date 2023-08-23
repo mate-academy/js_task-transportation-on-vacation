@@ -29,15 +29,12 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const BASE_PRICE = days * 40;
+  const DAY_PRICE = 40;
+  const BASE_PRICE = days * DAY_PRICE;
   const SHORT_TERM = 3;
   const SHORT_TERM_DISCOUNT = 20;
   const LONG_TERM = 7;
   const LONG_TERM_DISCOUNT = 50;
-
-  if (days === 0) {
-    return 0;
-  }
 
   if (days < SHORT_TERM) {
     return BASE_PRICE;
