@@ -29,25 +29,16 @@
 
 function calculateRentalCost(days) {
   const LONG_TERM = 7;
-  const BASIC_TERM = 6;
   const MIN_TERM = 3;
   const LONG_TERM_DISCOUNT = 50;
   const BASIC_TERM_DISCOUNT = 20;
 
-  const longPrice = 40 * LONG_TERM;
-  const basePrice = 40 * BASIC_TERM;
-  const minPrice = 40 * MIN_TERM;
-
   if (days >= LONG_TERM) {
-    return longPrice - LONG_TERM_DISCOUNT;
-  }
-
-  if (days === BASIC_TERM) {
-    return basePrice - BASIC_TERM_DISCOUNT;
+    return 40 * days - LONG_TERM_DISCOUNT;
   }
 
   if (days >= MIN_TERM) {
-    return minPrice - BASIC_TERM_DISCOUNT;
+    return 40 * days - BASIC_TERM_DISCOUNT;
   }
 
   return 80;
