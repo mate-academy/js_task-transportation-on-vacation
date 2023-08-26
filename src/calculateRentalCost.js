@@ -32,9 +32,9 @@ function calculateRentalCost(days) {
   const LONG_TERM = 6;
   const LONG_TERM_DISCOUNT = 50;
   const MIDDLE_TERM_DISCOUNT = 20;
-  const standartDay = 2;
+  const STANDART_DAY = 2;
 
-  if (days <= standartDay) {
+  if (days <= STANDART_DAY) {
     return (days * price);
   }
 
