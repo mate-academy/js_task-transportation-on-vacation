@@ -38,11 +38,7 @@ function calculateRentalCost(days) {
   cost = NORMAL_COST * days;
 
   if (days >= LONG_TERM) {
-    for (let j = 1; j <= days; j += LONG_TERM) {
-      cost -= LONG_TERM_DISC;
-    }
-
-    return cost;
+    return NORMAL_COST * days - LONG_TERM_DISC;
   }
 
   for (let i = 1; i <= days; i++) {
