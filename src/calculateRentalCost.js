@@ -30,24 +30,17 @@
 function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const LONG_TERM_DISC = 50;
+  const SHORT_TERM = 3;
   const SHORT_TERM_DISC = 20;
   const NORMAL_COST = 40;
   let cost = 0;
-  let k = 1;
 
   cost = NORMAL_COST * days;
 
   if (days >= LONG_TERM) {
     return NORMAL_COST * days - LONG_TERM_DISC;
-  }
-
-  for (let i = 1; i <= days; i++) {
-    k++;
-
-    if (k === 4) {
-      cost -= SHORT_TERM_DISC;
-      k = 0;
-    }
+  } else if (days >= SHORT_TERM) {
+    return NORMAL_COST * days - SHORT_TERM_DISC;
   }
 
   return cost;
