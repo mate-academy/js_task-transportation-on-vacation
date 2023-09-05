@@ -33,9 +33,7 @@ function calculateRentalCost(days) {
   const LONG_TERM_DISCOUNT = 50;
   const SHORT_TERM = 3;
   const SHORT_TERM_DISCOUNT = 20;
-
-  // eslint-disable-next-line prefer-const
-  let basePrice = days * PRICE_PER_DAY;
+  const basePrice = days * PRICE_PER_DAY;
 
   if (days >= LONG_TERM) {
     return basePrice - LONG_TERM_DISCOUNT;
