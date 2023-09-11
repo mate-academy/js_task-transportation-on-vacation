@@ -33,18 +33,14 @@ function calculateRentalCost(days) {
   const everyDayRent = 40;
   const threeDaysOff = 20;
   const sevenDaysOff = 50;
-  let totalCost = everyDayRent * days;
+  const totalCost = everyDayRent * days;
 
   if (days >= longTimeDiscount) {
-    totalCost = totalCost - sevenDaysOff;
-
-    return totalCost;
+    return totalCost - sevenDaysOff;
   }
 
   if (days >= shortTimeDiscount) {
-    totalCost = everyDayRent * days - threeDaysOff;
-
-    return totalCost;
+    return totalCost - threeDaysOff;
   }
 
   return totalCost;
