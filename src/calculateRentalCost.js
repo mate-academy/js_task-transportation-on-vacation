@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const CAR_RENT_COST = 40;
+  const PRICE_DROP_50_PERIOD = 7;
+  const PRICE_DROP_7DAYS = 50;
+  const PRICE_DROP_20_PERIOD = 3;
+  const PRICE_DROP_3DAYS = 20;
+
+  if (days < PRICE_DROP_20_PERIOD) {
+    return days * CAR_RENT_COST;
+  }
+
+  if (days >= PRICE_DROP_20_PERIOD && days < PRICE_DROP_50_PERIOD) {
+    return days * CAR_RENT_COST - PRICE_DROP_3DAYS;
+  }
+
+  if (days >= PRICE_DROP_50_PERIOD) {
+    return days * CAR_RENT_COST - PRICE_DROP_7DAYS;
+  }
 }
 
 module.exports = calculateRentalCost;
