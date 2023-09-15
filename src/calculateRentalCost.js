@@ -36,11 +36,13 @@ function calculateRentalCost(days) {
 
   if (days < MID_TERM) {
     return DAILY_RENT * days;
-  } else if (days >= MID_TERM && days < LONG_TERM) {
-    return DAILY_RENT * days - MID_TERM_DISC;
-  } else if (days >= LONG_TERM) {
-    return DAILY_RENT * days - LONG_TERM_DISC;
   }
+
+  if (days >= MID_TERM && days < LONG_TERM) {
+    return DAILY_RENT * days - MID_TERM_DISC;
+  }
+
+  return DAILY_RENT * days - LONG_TERM_DISC;
 }
 
 module.exports = calculateRentalCost;
