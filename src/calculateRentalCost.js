@@ -28,20 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  const ShortTermRent = days * 40;
-  const MediumTermRent = days * 40 - 20;
-  const LongTermRent = days * 40 - 50;
+  const pricePerDay = 40;
+  const mediumTermDiscount = 20;
+  const longTermDiscount = 50;
+  const shortTermRent = days * pricePerDay;
+  const mediumTermRent = days * pricePerDay - mediumTermDiscount;
+  const longTermRent = days * pricePerDay - longTermDiscount;
 
   if (days < 3) {
-    return ShortTermRent;
+    return shortTermRent;
   }
 
-  if (days >= 3 && days < 7) {
-    return MediumTermRent;
+  if (days < 7) {
+    return mediumTermRent;
   }
 
   if (days >= 7) {
-    return LongTermRent;
+    return longTermRent;
   }
 
   return 'Looks like you\'ve saved some money :)';
