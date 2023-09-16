@@ -30,23 +30,28 @@
 const RENT_COST = 40;
 const FIRST_OFF = 20;
 const SECOND_OFF = 50;
+const LONG_TERM_3 = 3;
+const LONG_TERM_6 = 6;
+const LONG_TERM_7 = 7;
+
+
 
 function calculateRentalCost(days) {
   let finalCost;
 
-  if (days < 3) {
+  if (days < LONG_TERM_3) {
     finalCost = days * RENT_COST;
 
     return finalCost;
   }
 
-  if (days >= 3 && days <= 6) {
+  if (days >= LONG_TERM_3 && days <= LONG_TERM_6) {
     finalCost = (days * RENT_COST) - FIRST_OFF;
 
     return finalCost;
   }
 
-  if (days >= 7) {
+  if (days >= LONG_TERM_7) {
     finalCost = (days * RENT_COST) - SECOND_OFF;
 
     return finalCost;
