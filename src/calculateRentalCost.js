@@ -27,8 +27,30 @@
  * @return {number}
  */
 
+const RENT_COST = 40;
+const FIRST_OFF = 20;
+const SECOND_OFF = 50;
+
 function calculateRentalCost(days) {
-  // write code here
+  let finalCost;
+
+  if (days < 3) {
+    finalCost = days * RENT_COST;
+
+    return finalCost;
+  }
+
+  if (days >= 3 && days <= 6) {
+    finalCost = (days * RENT_COST) - FIRST_OFF;
+
+    return finalCost;
+  }
+
+  if (days >= 7) {
+    finalCost = (days * RENT_COST) - SECOND_OFF;
+
+    return finalCost;
+  }
 }
 
 module.exports = calculateRentalCost;
