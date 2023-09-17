@@ -34,28 +34,22 @@ const LONG_TERM_3 = 3;
 const LONG_TERM_6 = 6;
 const LONG_TERM_7 = 7;
 
-
-
 function calculateRentalCost(days) {
-  let finalCost;
+  const finalCost = days * RENT_COST;
 
   if (days < LONG_TERM_3) {
-    finalCost = days * RENT_COST;
-
     return finalCost;
   }
 
-  if (days >= LONG_TERM_3 && days <= LONG_TERM_6) {
-    finalCost = (days * RENT_COST) - FIRST_OFF;
-
-    return finalCost;
+  if (days <= LONG_TERM_6) {
+    return finalCost - FIRST_OFF;
   }
 
   if (days >= LONG_TERM_7) {
-    finalCost = (days * RENT_COST) - SECOND_OFF;
-
-    return finalCost;
+    return finalCost - SECOND_OFF;
   }
+
+  return finalCost;
 }
 
 module.exports = calculateRentalCost;
