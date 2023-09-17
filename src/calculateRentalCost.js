@@ -35,9 +35,7 @@ function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const BIG_DISCOUNT = 50;
 
-  for (let i = 0; i < days; i++) {
-    totalCost += DAILY_RENT;
-  }
+  totalCost = DAILY_RENT * days;
 
   if (days >= MEDIUM_TERM && days < LONG_TERM) {
     return totalCost - REG_DISCOUNT;
