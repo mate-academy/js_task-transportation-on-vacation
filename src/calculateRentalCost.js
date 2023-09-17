@@ -27,8 +27,29 @@
  * @return {number}
  */
 
+const RENT_COST = 40;
+const FIRST_OFF = 20;
+const SECOND_OFF = 50;
+const LONG_TERM_3 = 3;
+const LONG_TERM_6 = 6;
+const LONG_TERM_7 = 7;
+
 function calculateRentalCost(days) {
-  // write code here
+  const finalCost = days * RENT_COST;
+
+  if (days < LONG_TERM_3) {
+    return finalCost;
+  }
+
+  if (days <= LONG_TERM_6) {
+    return finalCost - FIRST_OFF;
+  }
+
+  if (days >= LONG_TERM_7) {
+    return finalCost - SECOND_OFF;
+  }
+
+  return finalCost;
 }
 
 module.exports = calculateRentalCost;
