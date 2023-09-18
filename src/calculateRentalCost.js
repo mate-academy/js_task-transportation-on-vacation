@@ -30,19 +30,20 @@
 function calculateRentalCost(days) {
   const basicPrice = 40;
   const THREE_DAYS_DISC = 20;
+  const THREE_DAYS = 3;
   const SEVEN_PLUS_DAYS_DISC = 50;
+  const SEVEN_DAYS = 7;
+  const rawRentalCost = days * basicPrice;
 
-  if (days < 3) {
-    return days * basicPrice;
+  if (days >= THREE_DAYS && days < SEVEN_DAYS) {
+    return (rawRentalCost) - THREE_DAYS_DISC;
   }
 
-  if (days >= 3 && days < 7) {
-    return (days * basicPrice) - THREE_DAYS_DISC;
+  if (days >= SEVEN_DAYS) {
+    return (rawRentalCost) - SEVEN_PLUS_DAYS_DISC;
   }
 
-  if (days >= 7) {
-    return (days * basicPrice) - SEVEN_PLUS_DAYS_DISC;
-  }
+  return rawRentalCost;
 }
 
 module.exports = calculateRentalCost;
