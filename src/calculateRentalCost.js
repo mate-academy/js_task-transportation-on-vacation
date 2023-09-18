@@ -38,12 +38,12 @@ function calculateRentalCost(days) {
 
   const basePrice = DAY_PRICE * days;
 
-  if (days >= SHORT_TERM && days < LONG_TERM) {
-    return basePrice - SHORT_TERM_DISCOUNT;
-  }
-
   if (days >= LONG_TERM) {
     return basePrice - LONG_TERM_DISCOUNT;
+  }
+
+  if (days >= SHORT_TERM) {
+    return basePrice - SHORT_TERM_DISCOUNT;
   }
 
   return basePrice;
