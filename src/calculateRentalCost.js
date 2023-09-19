@@ -32,13 +32,15 @@ function calculateRentalCost(days) {
   const additionalDiscount = 50;
   const rentCost = 40;
 
+  const total = days * rentCost;
+
   if (days > 2 && days <= 6) {
-    return (rentCost * days) - basicDiscount;
+    return total - basicDiscount;
   } else if (days > 6) {
-    return (days * rentCost) - additionalDiscount;
+    return total - additionalDiscount;
   }
 
-  return rentCost * days;
+  return total;
 }
 
 module.exports = calculateRentalCost;
