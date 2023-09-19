@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const basicPrice = 40;
+  const THREE_DAYS_DISC = 20;
+  const SHORT_TERM = 3;
+  const SEVEN_PLUS_DAYS_DISC = 50;
+  const LONG_TERM = 7;
+  const rawRentalCost = days * basicPrice;
+
+  if (days >= LONG_TERM) {
+    return (rawRentalCost) - SEVEN_PLUS_DAYS_DISC;
+  }
+
+  if (days >= SHORT_TERM) {
+    return (rawRentalCost) - THREE_DAYS_DISC;
+  }
+
+  return rawRentalCost;
 }
 
 module.exports = calculateRentalCost;
