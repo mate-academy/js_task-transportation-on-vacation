@@ -35,15 +35,23 @@ function calculateRentalCost(days) {
   const MID_TERM = 3;
   const MID_TERM_DISCOUNT = 20;
 
+  let totalRentalCost = 0;
+
   if (days >= LONG_TERM) {
-    return days * RENT_COST - LONG_TERM_DISCOUNT;
+    totalRentalCost = days * RENT_COST - LONG_TERM_DISCOUNT;
+
+    return totalRentalCost;
   }
 
   if (days >= MID_TERM) {
-    return days * RENT_COST - MID_TERM_DISCOUNT;
+    totalRentalCost = days * RENT_COST - MID_TERM_DISCOUNT;
+
+    return totalRentalCost;
   }
 
-  return days * RENT_COST;
+  totalRentalCost = days * RENT_COST;
+
+  return totalRentalCost;
 }
 
 module.exports = calculateRentalCost;
