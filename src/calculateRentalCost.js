@@ -30,7 +30,7 @@
 function calculateRentalCost(days) {
   const AMOUNT_$_PER_DAY = 40;
   const DISCOUNT_7_DAYS = 50;
-  const DISCOUNT_3_DAYS = 50;
+  const DISCOUNT_3_DAYS = 20;
 
   const total = days * AMOUNT_$_PER_DAY;
 
