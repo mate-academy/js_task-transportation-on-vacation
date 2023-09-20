@@ -28,15 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  const smallDiscount = 20;
-  const bigDiscount = 50;
+  const shortTermDiscount = 20;
+  const shortTerm = 3;
+  const longTermDiscount = 50;
+  const longTerm = 7;
+  const carRentCost = 40;
 
-  if (days < 3) {
-    return days * 40;
-  } else if (days >= 3 && days < 7) {
-    return days * 40 - smallDiscount;
-  } else {
-    return days * 40 - bigDiscount;
+  if (days < shortTerm) {
+    return days * carRentCost;
+  }
+
+  if (days >= shortTerm && days < longTerm) {
+    return days * carRentCost - shortTermDiscount;
+  }
+
+  if (days >= longTerm) {
+    return days * carRentCost - longTermDiscount;
   }
 }
 
