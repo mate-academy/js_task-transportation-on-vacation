@@ -28,7 +28,26 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const daysPrice = days * 40; // 40 (price per day)
+  const discountForThreeOrMoreDays = daysPrice - 20; // 20 (discount)
+  const dicountForSevenOrMoreDays = daysPrice - 50; // 50 (discount)
+  const shortTerm = days >= 3 && days <= 6; // 3 and 6 (days numbers)
+  const longTerm = days >= 7; // 7 (days)
+  const base = days < 3; // 4 (days)
+
+  switch (true) {
+    case shortTerm:
+      return discountForThreeOrMoreDays;
+
+    case base:
+      return daysPrice;
+
+    case longTerm:
+      return dicountForSevenOrMoreDays;
+
+    default:
+      return 'Invalid input or no discount applicable';
+  }
 }
 
 module.exports = calculateRentalCost;
