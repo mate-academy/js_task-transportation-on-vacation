@@ -34,18 +34,15 @@ function calculateRentalCost(days) {
   const longTerm = 7;
   const discountForShortTerm = 20;
   const discountForLongTerm = 50;
-  let rentalPay = 0;
 
-  if (days < shortTerm) {
-    rentalPay = oneDayPay * days;
-  }
+  let rentalPay = oneDayPay * days;
 
   if (days >= shortTerm && days < longTerm) {
-    rentalPay = oneDayPay * days - discountForShortTerm;
+    rentalPay -= discountForShortTerm;
   }
 
   if (days >= longTerm) {
-    rentalPay = oneDayPay * days - discountForLongTerm;
+    rentalPay -= discountForLongTerm;
   }
 
   return rentalPay;
