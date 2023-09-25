@@ -29,23 +29,23 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const oneDayPay = 40;
-  const shortTerm = 3;
-  const longTerm = 7;
-  const discountForShortTerm = 20;
-  const discountForLongTerm = 50;
+  const ONE_DAY_PAY = 40;
+  const SHORT_TERM = 3;
+  const LONG_TERM = 7;
+  const DISCOUNT_FOR_SHORT_TERM = 20;
+  const DISCOUNT_FOR_LONG_TERM = 50;
 
-  let rentalPay = oneDayPay * days;
+  let RENTAL_PAY = ONE_DAY_PAY * days;
 
-  if (days >= shortTerm && days < longTerm) {
-    rentalPay -= discountForShortTerm;
+  if (days >= SHORT_TERM && days < LONG_TERM) {
+    RENTAL_PAY -= DISCOUNT_FOR_SHORT_TERM;
   }
 
-  if (days >= longTerm) {
-    rentalPay -= discountForLongTerm;
+  if (days >= LONG_TERM) {
+    RENTAL_PAY -= DISCOUNT_FOR_LONG_TERM;
   }
 
-  return rentalPay;
+  return RENTAL_PAY;
 }
 
 module.exports = calculateRentalCost;
