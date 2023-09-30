@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const SHORT_TERM_SAIL = 20;
+  const LONG_TERM_SAIL = 50;
+  const CAR_RENT = 40;
+  const LONG_TERM_RENT = 7;
+  const SHORT_TERM_RENT = 3;
+  const TOTAL_RENT = CAR_RENT * days;
+
+  if (days >= LONG_TERM_RENT) {
+    return TOTAL_RENT - LONG_TERM_SAIL;
+  }
+
+  if (days >= SHORT_TERM_RENT) {
+    return TOTAL_RENT - SHORT_TERM_SAIL;
+  }
+
+  return TOTAL_RENT;
 }
 
 module.exports = calculateRentalCost;
