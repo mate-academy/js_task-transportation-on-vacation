@@ -36,15 +36,17 @@ function calculateRentalCost(days) {
   const MIDEL_TERM = 3;
   const MIDEL_TERM_DISCOUNT = 20;
 
+  const standartPrice = days * STANDART_COAST;
+
   if (days < MIDEL_TERM) {
-    return days * STANDART_COAST;
+    return standartPrice;
   }
 
   if (days < LONG_TERM) {
-    return (days * STANDART_COAST) - MIDEL_TERM_DISCOUNT;
+    return standartPrice - MIDEL_TERM_DISCOUNT;
   }
 
-  return (days * STANDART_COAST) - LONG_TERM_DISCOUNT;
+  return standartPrice - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
