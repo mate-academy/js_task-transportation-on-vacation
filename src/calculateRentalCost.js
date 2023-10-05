@@ -36,17 +36,17 @@ function calculateRentalCost(days) {
   const SHORT_TERM = 3;
   const SHORT_TERM_DISCOUNT = 20;
 
-  const anitialPrice = days * PRICE_CAR_RENT;
+  const initialPrice = days * PRICE_CAR_RENT;
 
   if (days >= LONG_TERM) {
-    return anitialPrice - LONG_TERM_DISCOUNT;
+    return initialPrice - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM) {
-    return anitialPrice - SHORT_TERM_DISCOUNT;
+    return initialPrice - SHORT_TERM_DISCOUNT;
   }
 
-  return anitialPrice;
+  return initialPrice;
 }
 
 module.exports = calculateRentalCost;
