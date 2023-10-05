@@ -33,12 +33,14 @@ const DISSCOUNT_OF_3DAYS = 20;
 const DISSCOUNT_OF_7DAYS = 50;
 
 function calculateRentalCost(days) {
-  let totalCost = days * PRICE_PER_DAY;
+  const totalCost = days * PRICE_PER_DAY;
 
   if (days >= SEVEN_DAYS) {
-    totalCost -= DISSCOUNT_OF_7DAYS;
-  } else if (days >= THREE_DAYS) {
-    totalCost -= DISSCOUNT_OF_3DAYS;
+    return totalCost - DISSCOUNT_OF_7DAYS;
+  }
+
+  if (days >= THREE_DAYS) {
+    return totalCost - DISSCOUNT_OF_3DAYS;
   }
 
   return totalCost;
