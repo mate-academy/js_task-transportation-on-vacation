@@ -27,17 +27,23 @@
  * @return {number}
  */
 
+const PRICE = 40;
+const MID_TERM = 3;
+const LONG_TERM = 7;
+const MID_TERM_DISCOUNT = 20;
+const LONG_TERM_DISCOUNT = 50;
+
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return 40 * days;
+  if (days < MID_TERM) {
+    return PRICE * days;
   }
 
-  if (days >= 3 && days < 7) {
-    return (40 * days) - 20;
+  if (days >= MID_TERM && days < LONG_TERM) {
+    return (PRICE * days) - MID_TERM_DISCOUNT;
   }
 
-  if (days >= 7) {
-    return (40 * days) - 50;
+  if (days >= LONG_TERM) {
+    return (PRICE * days) - LONG_TERM_DISCOUNT;
   }
 }
 
