@@ -35,7 +35,9 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return standardPrice - 50;
-  } else if (days >= SHORT_TERM) {
+  }
+
+  if (days >= SHORT_TERM) {
     return standardPrice - 20;
   }
 
