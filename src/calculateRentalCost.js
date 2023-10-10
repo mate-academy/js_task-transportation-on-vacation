@@ -28,7 +28,27 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const priceDay = 40;
+
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+
+  const AVERAGE_TERM = 3;
+  const AVERAGE_TERM_DISCOUNT = 20;
+
+  switch (days > 0) {
+    case (days >= LONG_TERM): {
+      return (days * priceDay) - LONG_TERM_DISCOUNT;
+    }
+
+    case (days >= AVERAGE_TERM): {
+      return (days * priceDay) - AVERAGE_TERM_DISCOUNT;
+    }
+
+    default: {
+      return (days * priceDay);
+    }
+  }
 }
 
 module.exports = calculateRentalCost;
