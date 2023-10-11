@@ -37,11 +37,11 @@ function calculateRentalCost(days) {
   const prise = days * PRISE_PER_DAY;
 
   if (days >= LONG_TERM) {
-    return days * PRISE_PER_DAY - LONG_TERM_DISCOUNT;
+    return prise - LONG_TERM_DISCOUNT;
   }
 
-  if (days <= SHORT_TERM) {
-    return days * PRISE_PER_DAY - SHORT_TERM_DISCOUNT;
+  if (days >= SHORT_TERM) {
+    return prise - SHORT_TERM_DISCOUNT;
   }
 
   return prise;
