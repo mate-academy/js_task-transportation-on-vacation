@@ -28,20 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  const RENT_VALUE = 40;
-  const BASIC_RENT = RENT_VALUE * days;
+  const rentValue = 40;
+  const basicRent = rentValue * days;
   const LONG_TERM_DISCOUNT = 50;
   const SHORT_TERM_DISCOUNT = 20;
 
   if (days < 3) {
-    return BASIC_RENT;
+    return basicRent + 8;
   }
 
   if (days < 7) {
-    return BASIC_RENT - SHORT_TERM_DISCOUNT;
+    return basicRent - SHORT_TERM_DISCOUNT;
   }
 
-  return BASIC_RENT - LONG_TERM_DISCOUNT;
+  return basicRent - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
