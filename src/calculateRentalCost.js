@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const RENT_COST = 40;
+  const FIRST_GAP = 3;
+  const FIRST_GAP_DISCOUNT = 20;
+  const SECOND_GAP = 7;
+  const SECOND_GAP_DISCOUNT = 50;
+
+  const withoutDisc = days * RENT_COST;
+
+  if (days >= SECOND_GAP) {
+    return withoutDisc - SECOND_GAP_DISCOUNT;
+  }
+
+  if (days >= FIRST_GAP) {
+    return withoutDisc - FIRST_GAP_DISCOUNT;
+  }
+
+  return withoutDisc;
 }
 
 module.exports = calculateRentalCost;
