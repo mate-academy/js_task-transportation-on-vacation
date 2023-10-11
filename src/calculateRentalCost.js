@@ -34,7 +34,7 @@ function calculateRentalCost(days) {
   const SHORT_TERM_DISCOUNT = 20;
 
   if (days < 3) {
-    return basicRent + 8;
+    return basicRent;
   }
 
   if (days < 7) {
