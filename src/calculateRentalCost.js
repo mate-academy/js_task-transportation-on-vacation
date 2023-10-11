@@ -26,7 +26,6 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   const rentValue = 40;
   const basicRent = rentValue * days;
