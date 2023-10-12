@@ -29,6 +29,22 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const DISC_AFTER_THREE = 20;
+  const DISC_AFTER_SEVEN = 50;
+  const DAYS_FOR_DISC_AFTER_THREE = 3;
+  const DAYS_FOR_DISC_AFTER_SEVEN = 7;
+  const BAISIC_COST = 40;
+  const totalDaysCost = BAISIC_COST * days;
+
+  if (days >= DAYS_FOR_DISC_AFTER_SEVEN) {
+    return totalDaysCost - DISC_AFTER_SEVEN;
+  }
+
+  if (days >= DAYS_FOR_DISC_AFTER_THREE) {
+    return totalDaysCost - DISC_AFTER_THREE;
+  }
+
+  return totalDaysCost;
 }
 
 module.exports = calculateRentalCost;
