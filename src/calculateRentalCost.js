@@ -26,9 +26,23 @@
  *
  * @return {number}
  */
+const EVERY_DAY_COST = 40;
+const LONG_TERM = 7;
+const LONG_TERM_DISC = 50;
+const SHORT_TERM = 3;
+const SHORT_TERM_DISC = 20;
 
 function calculateRentalCost(days) {
   // write code here
+  if (days >= LONG_TERM) {
+    return EVERY_DAY_COST * days - LONG_TERM_DISC;
+  }
+
+  if (days >= SHORT_TERM) {
+    return EVERY_DAY_COST * days - SHORT_TERM_DISC;
+  }
+
+  return days * EVERY_DAY_COST;
 }
 
 module.exports = calculateRentalCost;
