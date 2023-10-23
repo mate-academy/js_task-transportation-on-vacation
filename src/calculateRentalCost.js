@@ -43,9 +43,7 @@ function calculateRentalCost(days) {
     return basePrice - SHORT_TERM_DISCOUNT;
   }
 
-  if (days < 3) {
-    return basePrice;
-  }
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
