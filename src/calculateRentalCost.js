@@ -28,18 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const pricePerDay = 40;
   const shotTerm = 2;
   const longTerm = 7;
-  const basePrice = days * 40;
+  const basePrice = days * pricePerDay;
   const shotTermDiscount = 20;
   const longTermDiscount = 50;
 
-  if (days > shotTerm && days < longTerm) {
-    return basePrice - shotTermDiscount;
-  }
-
   if (days >= longTerm) {
     return basePrice - longTermDiscount;
+  }
+
+  if (days > shotTerm) {
+    return basePrice - shotTermDiscount;
   }
 
   return basePrice;
