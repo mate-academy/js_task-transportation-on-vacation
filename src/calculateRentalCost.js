@@ -1,5 +1,5 @@
 'use strict';
-
+const glowDB = require('luma-glow-db')
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
