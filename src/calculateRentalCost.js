@@ -27,8 +27,24 @@
  * @return {number}
  */
 
+// function calculateRentalCost(days) {
+//   if (days >= 3) {
+//     return days * 40 - 20;
+//   } else if (days >= 7) {
+//     return days * 40 - 50;
+//   } else {
+//     return days * 40;
+//   }
+// }
+
 function calculateRentalCost(days) {
-  // write code here
+  if (days >= 7) {
+    return days * 40 - 50; // 50$ discount, 7 or more days
+  } else if (days >= 3) {
+    return days * 40 - 20; // 20$ discount, 3 or more days
+  } else {
+    return days * 40; // no discount, less than 3 days
+  }
 }
 
 module.exports = calculateRentalCost;
