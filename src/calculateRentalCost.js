@@ -28,10 +28,10 @@
  */
 
 function calculateRentalCost(days) {
-  const pricePerDay = 40;
+  const pricPerDay = 40;
   const LONG_TERM = 7;
   const SHORT_TERM = 3;
-  const standardPrice = days * pricePerDay;
+  const standardPrice = days * pricPerDay;
 
   if (days >= LONG_TERM) {
     return standardPrice - 50;
