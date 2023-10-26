@@ -35,11 +35,13 @@ const MIN_DAYS = 3;
 function calculateRentalCost(days) {
   if (days >= MAX_DAYS) {
     return DAILY_RATE * days - SEVEN_DAY_DISCOUNT;
-  } else if (days >= MIN_DAYS) {
-    return DAILY_RATE * days - THREE_DAY_DISCOUNT;
-  } else {
-    return DAILY_RATE * days;
   }
+  
+  if (days >= MIN_DAYS) {
+    return DAILY_RATE * days - THREE_DAY_DISCOUNT;
+  }
+  
+  return DAILY_RATE * days;
 }
 
 module.exports = calculateRentalCost;
