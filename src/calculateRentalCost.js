@@ -28,7 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const COST_PER_DAY = 40;
+  const LONG_TERM_VACATION = 7;
+  const LONG_TERM_VACATION_DISCOUNT = 50;
+  const SHORT_TERM_VACATION = 3;
+  const SHORT_TERM_VACATION_DISCOUNT = 20;
+
+  if (days >= LONG_TERM_VACATION) {
+    return days * COST_PER_DAY - LONG_TERM_VACATION_DISCOUNT;
+  }
+
+  if (days >= SHORT_TERM_VACATION) {
+    return days * COST_PER_DAY - SHORT_TERM_VACATION_DISCOUNT;
+  }
+
+  return days * COST_PER_DAY;
 }
 
 module.exports = calculateRentalCost;
