@@ -39,5 +39,4 @@ function calculateRentalCost(days) {
   return days * 40 - 50;
 }
 
-
 module.exports = calculateRentalCost;
