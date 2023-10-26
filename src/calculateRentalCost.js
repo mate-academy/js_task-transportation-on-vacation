@@ -33,13 +33,9 @@ function calculateRentalCost(days) {
 
   if (days < 3) {
     totalCost = days * oneDayCost;
-  }
-
-  if (days >= 3 && days < 7) {
+  } else if (days >= 3 && days < 7) {
     totalCost = days * oneDayCost - 20;
-  }
-
-  if (days >= 7) {
+  } else {
     totalCost = days * oneDayCost - 50;
   }
 
@@ -47,3 +43,4 @@ function calculateRentalCost(days) {
 }
 
 module.exports = calculateRentalCost;
+
