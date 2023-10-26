@@ -27,16 +27,17 @@
  * @return {number}
  */
 
+const DAILY_RATE = 40;
+const SEVEN_DAY_DISCOUNT = 50;
+const THREE_DAY_DISCOUNT = 20;
+
 function calculateRentalCost(days) {
   if (days >= 7) {
-    // If renting for 7 or more days, apply a $50 discount
-    return 40 * days - 50;
+    return DAILY_RATE * days - SEVEN_DAY_DISCOUNT;
   } else if (days >= 3) {
-    // If renting for 3 or more days, apply a $20 discount
-    return 40 * days - 20;
+    return DAILY_RATE * days - THREE_DAY_DISCOUNT;
   } else {
-    // If renting for less than 3 days, no discount
-    return 40 * days;
+    return DAILY_RATE * days;
   }
 }
 
