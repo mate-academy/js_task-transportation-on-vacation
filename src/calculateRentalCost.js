@@ -28,7 +28,16 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  if (days >= 7) {
+    // If renting for 7 or more days, apply a $50 discount
+    return 40 * days - 50;
+  } else if (days >= 3) {
+    // If renting for 3 or more days, apply a $20 discount
+    return 40 * days - 20;
+  } else {
+    // If renting for less than 3 days, no discount
+    return 40 * days;
+  }
 }
 
 module.exports = calculateRentalCost;
