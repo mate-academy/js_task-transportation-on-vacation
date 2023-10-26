@@ -26,13 +26,13 @@
  *
  * @return {number}
  */
-const DAILY_RATE = 40;
-const SEVEN_DAY_DISCOUNT = 50;
-const THREE_DAY_DISCOUNT = 20;
-const MAX_DAYS = 7;
-const MIN_DAYS = 3;
-
 function calculateRentalCost(days) {
+  const DAILY_RATE = 40;
+  const SEVEN_DAY_DISCOUNT = 50;
+  const THREE_DAY_DISCOUNT = 20;
+  const MAX_DAYS = 7;
+  const MIN_DAYS = 3;
+
   if (days >= MAX_DAYS) {
     return DAILY_RATE * days - SEVEN_DAY_DISCOUNT;
   } else if (days >= MIN_DAYS) {
