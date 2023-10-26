@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  if (days < 1) {
+    return 'Invalid input. The minimum rental period is 1 day';
+  }
+
+  const dailyRate = 40;
+
+  if (days >= 7) {
+    return days * dailyRate - 50;
+  } else if (days >= 3) {
+    return days * dailyRate - 20;
+  } else {
+    return days * dailyRate;
+  }
 }
 
+calculateRentalCost(1);
+calculateRentalCost(100);
+calculateRentalCost(230);
 module.exports = calculateRentalCost;
