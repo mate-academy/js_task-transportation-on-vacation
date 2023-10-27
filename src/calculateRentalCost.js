@@ -29,25 +29,29 @@
 
 function calculateRentalCost(days) {
   // write code here
-  let result = 0;
+  let totalPrice = 0;
+
   const priceOfRentPerDay = 40;
   const discountBeforeSevenDays = 20;
   const discountAfterSevenDays = 50;
 
-  if (days < 3) {
-    result = priceOfRentPerDay * days;
+  const smallTerm = 3;
+  const longTerm = 7;
 
-    return result;
+  if (days < smallTerm) {
+    totalPrice = priceOfRentPerDay * days;
+
+    return totalPrice;
   }
 
-  if (days < 7) {
-    result = (priceOfRentPerDay * days) - discountBeforeSevenDays;
+  if (days < longTerm) {
+    totalPrice = (priceOfRentPerDay * days) - discountBeforeSevenDays;
 
-    return result;
+    return totalPrice;
   }
-  result = (priceOfRentPerDay * days) - discountAfterSevenDays;
+  totalPrice = (priceOfRentPerDay * days) - discountAfterSevenDays;
 
-  return result;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
