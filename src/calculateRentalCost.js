@@ -26,14 +26,14 @@
  *
  * @return {number}
  */
-const cost = 40;
+const COST = 40;
 const LONG_TERM = 7;
 const SHORT_TERM = 3;
 const LONG_TERM_DISCOUNT = 50;
 const SHORT_TERM_DISCOUNT = 20;
 
 function calculateRentalCost(days) {
-  const price = days * cost;
+  const price = days * COST;
 
   if (days >= LONG_TERM) {
     return price - LONG_TERM_DISCOUNT;
