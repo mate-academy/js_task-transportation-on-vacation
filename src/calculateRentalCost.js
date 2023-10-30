@@ -36,19 +36,18 @@ function calculateRentalCost(days) {
   let totalAmount = days * dailyCost;
 
   if (days >= longTerm) {
-    totalAmount = days * dailyCost - longTermDiscount;
+    totalAmount -= longTermDiscount;
 
     return totalAmount;
   }
-  
+
   if (days >= shortTerm) {
-    totalAmount = days * dailyCost - shortTermDiscount;
+    totalAmount -= shortTermDiscount;
 
     return totalAmount;
   }
 
   return totalAmount;
 }
-
 
 module.exports = calculateRentalCost;
