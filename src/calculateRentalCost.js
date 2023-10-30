@@ -27,19 +27,19 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  const BASE_PRICE = 40;
-  const SMALL_DISCOUNT = 20;
-  const BIG_DISCOUNT = 50;
+const PRICE = 40;
+const SMALL_DISCOUNT = 20;
+const BIG_DISCOUNT = 50;
 
-  let cost = BASE_PRICE * days;
+function calculateRentalCost(days) {
+  const cost = PRICE * days;
 
   if (days >= 3 && days < 7) {
-    cost -= SMALL_DISCOUNT;
+    return cost - SMALL_DISCOUNT;
   }
 
   if (days >= 7) {
-    cost -= BIG_DISCOUNT;
+    return cost - BIG_DISCOUNT;
   }
 
   return cost;
