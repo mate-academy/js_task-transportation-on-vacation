@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * After a hard quarter in the office you decide
+* After a hard quarter in the office you decide
  * to get some rest on a vacation.
  * So you will book a flight for you
  * and your family and try to leave all the mess behind you.
@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+
+  const costBorday = 40
+  const retdDiscont1 = 20;
+  const retdDiscont2 = 50
+  const totalCost = days * costBorday;
+
+  if (days >= 7) {
+    return totalCost - retdDiscont2;
+  }
+
+  if (days >= 3) {
+    return totalCost - retdDiscont1;
+  }
+
+   return totalCost;
+
 }
 
 module.exports = calculateRentalCost;
