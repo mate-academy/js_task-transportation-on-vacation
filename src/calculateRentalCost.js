@@ -36,10 +36,12 @@ const LONG_TERM = 7;
 function calculateRentalCost(days) {
   const BASE_PRICE = days * DAILY_PRICE;
 
-  if (days >= SHORT_TERM && days < LONG_TERM) {
-    return BASE_PRICE - SMALL_DISCOUNT;
-  } else if (days >= LONG_TERM) {
+  if (days >= LONG_TERM) {
     return BASE_PRICE - BIG_DISCOUNT;
+  }
+
+  if (days >= SHORT_TERM) {
+    return BASE_PRICE - SMALL_DISCOUNT;
   }
 
   return BASE_PRICE;
