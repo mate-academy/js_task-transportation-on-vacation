@@ -28,6 +28,7 @@
  */
 
 function calculateRentalCost(days) {
+// write code here
   const prise = 40;
   const totalPrice = days * prise;
   const LONG_TERM = 7;
