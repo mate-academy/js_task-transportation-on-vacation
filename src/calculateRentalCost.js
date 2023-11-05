@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-// write code here
   const PRISE_ONE_DAY = 40;
   const LONG_TERM = 7;
   const SHORT_TERM = 3;
