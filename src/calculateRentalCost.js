@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
@@ -28,7 +27,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCONT = 50;
+  const SHOT_TERM = 3;
+  const SHOT_TERM_DISCONT = 20;
+  const GENERAL_PRICE = 40;
+  const totalPrice = days * 40;
+
+  if (days >= LONG_TERM) {
+    return days * GENERAL_PRICE - LONG_TERM_DISCONT;
+  }
+
+  if (days >= SHOT_TERM) {
+    return days * GENERAL_PRICE - SHOT_TERM_DISCONT;
+  }
+
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
