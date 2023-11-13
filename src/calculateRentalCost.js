@@ -28,7 +28,6 @@
  */
 
 function calculateRentalCost(days) {
-
   const priceCarPerDay = 40;
   const discountSevenOrMoreDays = 50;
   const discountFromThreeToSixDays = 20;
