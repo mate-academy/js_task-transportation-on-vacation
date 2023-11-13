@@ -21,7 +21,7 @@
  *  - calculateRentalCost(1) === 40
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
- *
+ * -comm
  * @param {number} days
  *
  * @return {number}
