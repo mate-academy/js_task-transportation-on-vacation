@@ -27,17 +27,22 @@
  * @return {number}
  */
 
+const DAILY_COST = 40;
+const SHORT_TERM = 3;
+const LONG_TERM = 7;
+const SHORT_TERM_DISCOUNT = 20;
+const LONG_TERM_DISCOUNT = 50;
+
 function calculateRentalCost(days) {
-  const dailyCost = 40;
   let discount = 0;
 
-  if (days >= 7) {
-    discount = 50;
-  } else if (days >= 3) {
-    discount = 20;
+  if (days >= LONG_TERM) {
+    discount = LONG_TERM_DISCOUNT;
+  } else if (days >= SHORT_TERM) {
+    discount = SHORT_TERM_DISCOUNT;
   }
 
-  return days * dailyCost - discount;
+  return days * DAILY_COST - discount;
 }
 
 module.exports = calculateRentalCost;
