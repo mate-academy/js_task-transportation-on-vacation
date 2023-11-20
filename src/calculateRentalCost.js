@@ -34,15 +34,17 @@ function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const LONG_TERM_DISCOUNT = 50;
 
+  const basePrice = days * CAR_RENT;
+
   if (days >= LONG_TERM) {
-    return (days * CAR_RENT) - LONG_TERM_DISCOUNT;
+    return (basePrice) - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM) {
-    return (days * CAR_RENT) - SHORT_TERM_DISCOUNT;
+    return (basePrice) - SHORT_TERM_DISCOUNT;
   }
 
-  return (days * CAR_RENT);
+  return (basePrice);
 }
 
 module.exports = calculateRentalCost;
