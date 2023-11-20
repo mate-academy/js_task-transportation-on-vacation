@@ -40,9 +40,7 @@ function calculateRentalCost(days) {
     return (days * carRent) - minDiscountRent;
   }
 
-  if (days < 3) {
-    return (days * carRent);
-  }
+  return (days * carRent);
 }
 
 module.exports = calculateRentalCost;
