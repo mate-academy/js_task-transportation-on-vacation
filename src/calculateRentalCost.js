@@ -29,6 +29,25 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const PRICE_PER_DAY = 40;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const AVERAGE_TERM_BEGINNING = 3;
+  const AVERAGE_TERM_ENDIND = 6;
+  const AVERAGE_TERM_DISCOUNT = 20;
+  const totalAmount = days * PRICE_PER_DAY;
+
+  if (days < AVERAGE_TERM_BEGINNING) {
+    return totalAmount;
+  }
+
+  if (days >= AVERAGE_TERM_BEGINNING && days <= AVERAGE_TERM_ENDIND) {
+    return (totalAmount - AVERAGE_TERM_DISCOUNT);
+  }
+
+  if (days >= LONG_TERM) {
+    return (totalAmount - LONG_TERM_DISCOUNT);
+  }
 }
 
 module.exports = calculateRentalCost;
