@@ -33,7 +33,7 @@ function calculateRentalCost(days) {
   const discountLongTerm = 50;
 
   if (days < 3) {
-    return price;
+    return basePrice;
   }
 
   if (days < 7) {
