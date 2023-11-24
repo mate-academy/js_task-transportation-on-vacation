@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const costPerNight = 40;
+  const total = days * costPerNight;
+  const basicDiscout = 20;
+  const fullDiscout = 50;
+
+  if (days >= 7) {
+    return total - fullDiscout;
+  }
+
+  if (days >= 3) {
+    return total - basicDiscout;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
