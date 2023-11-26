@@ -1,41 +1,47 @@
 'use strict';
 
 /**
- * After a hard quarter in the office you decide
- * to get some rest on a vacation.
- * So you will book a flight for you
- * and your family and try to leave all the mess behind you.
+ * After a challenging quarter in the office, you've decided
+ * to take a vacation. You plan to book a flight for yourself
+ * and your family to leave all the stress behind.
  *
- * You will need a rental car in order for you to get around in your vacation.
- * The manager of the car rental makes you some good offers.
+ * During your vacation, you'll need a rental car to get around.
+ * The car rental manager has some enticing offers for you.
  *
- * Every day you rent the car costs $40.
- * If you rent the car for 7 or more days, you get $50 off your total.
+ * The daily cost of renting a car is $40. If you rent the car
+ * for 7 or more days, you receive a $50 discount on the total.
  * Alternatively, if you rent the car for 3 or more days,
- * you get $20 off your total.
+ * you get a $20 discount on the total.
  *
- * Implement calculateRentalCost function
- * which returns the total amount for different count of days.
+ * Implement the calculateRentalCost function,
+ * which returns the total amount for a different number of days.
  *
  * Examples:
  *  - calculateRentalCost(1) === 40
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
- * @param {number} days
+ * @param {number} rentalDays
  *
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  // write code here
-  if (days >= 7) {
-    return (days * 40) - 50;
-  } else if (days >= 3) {
-    return (days * 40) - 20;
-  } else {
-    return (days * 40);
+function calculateRentalCost(rentalDays) {
+  const DAILY_RENTAL_FEE = 40;
+  const LONG_TERM_THRESHOLD = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_THRESHOLD = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+
+  if (rentalDays >= LONG_TERM_THRESHOLD) {
+    return rentalDays * DAILY_RENTAL_FEE - LONG_TERM_DISCOUNT;
   }
+
+  if (rentalDays >= SHORT_TERM_THRESHOLD) {
+    return rentalDays * DAILY_RENTAL_FEE - SHORT_TERM_DISCOUNT;
+  }
+
+  return rentalDays * DAILY_RENTAL_FEE;
 }
 
 module.exports = calculateRentalCost;
