@@ -30,14 +30,17 @@
 function calculateRentalCost(days) {
   const shortTern = 3;
   const longTerm = 7;
+  const price = 40;
+  const bigDics = 50;
+  const smallDics = 20;
 
   if (days >= longTerm) {
-    return 40 * days - 50;
+    return price * days - bigDics;
   } else if (days >= shortTern) {
-    return 40 * days - 20;
+    return price * days - smallDics;
   }
 
-  return 40 * days;
+  return price * days;
 }
 
 module.exports = calculateRentalCost;
