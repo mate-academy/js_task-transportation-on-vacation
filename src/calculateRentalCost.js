@@ -28,23 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  let totalPrice = 0;
-  const term = {
+  const TERM = {
     SHORT: 3,
     LONG: 7,
   };
-  const discount = {
+  const DISCOUNT = {
     SMALL: 20,
     BIG: 50,
   };
   const PRICE_PER_DAY = 40;
+  const totalPrice = days * PRICE_PER_DAY;
 
-  totalPrice = days * PRICE_PER_DAY;
+  if (days >= TERM.SHORT && days < TERM.LONG) {
+    return totalPrice - DISCOUNT.SMALL;
+  }
 
-  if (days >= term.SHORT && days < term.LONG) {
-    return totalPrice - discount.SMALL;
-  } else if (days >= term.LONG) {
-    return totalPrice - discount.BIG;
+  if (days >= TERM.LONG) {
+    return totalPrice - DISCOUNT.BIG;
   }
 
   return totalPrice;
