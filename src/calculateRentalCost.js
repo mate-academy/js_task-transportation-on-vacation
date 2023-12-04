@@ -33,7 +33,6 @@ function calculateRentalCost(days) {
   const BIG_OFF = 50;
   const SHORT_TERM = 3;
   const SMALL_OFF = 20;
-
   const value = days * RENT_COSTS;
 
   if (days >= LONG_TERM) {
