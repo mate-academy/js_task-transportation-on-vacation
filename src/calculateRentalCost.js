@@ -29,20 +29,22 @@
 
 function calculateRentalCost(days) {
   let totalPrice = 0;
-  const SHORT_TERM = 3;
-  const LONG_TERM = 7;
-  const SHORT_TERM_DISCOUNT = 20;
-  const LONG_TERM_DISCOUNT = 50;
-  const DAILY_CAR_RENT = 40;
+  const term = {
+    SHORT: 3,
+    LONG: 7,
+  };
+  const discount = {
+    SMALL: 20,
+    BIG: 50,
+  };
+  const PRICE_PER_DAY = 40;
 
-  for (let i = 0; i < days; i++) {
-    totalPrice += DAILY_CAR_RENT;
-  }
+  totalPrice = days * PRICE_PER_DAY;
 
-  if (days >= SHORT_TERM && days < LONG_TERM) {
-    totalPrice -= SHORT_TERM_DISCOUNT;
-  } else if (days >= 7) {
-    totalPrice -= LONG_TERM_DISCOUNT;
+  if (days >= term.SHORT && days < term.LONG) {
+    return totalPrice - discount.SMALL;
+  } else if (days >= term.LONG) {
+    return totalPrice - discount.BIG;
   }
 
   return totalPrice;
