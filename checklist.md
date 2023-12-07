@@ -1,31 +1,36 @@
-1. [VARIABLES] - use variables for the main values so that you can reuse them and give them descriptive names.
-2. [CODE STYLE] - Avoid reassigning variables values. It's better to use `const` instead of `let`.
-3. [CODE STYLE] - You should return the value immediately in `if` statements. And don't use `else` after return statement. If `return` is performed - code after it won't be executed anyway.
-BAD EXAMPLE:
-```
-if (condition) {
-  return x;
-} else {
-  return y;
-}
-```
-GOOD EXAMPLE: 
-```
-if (condition) {
-  return x;
-}
-return y;
-```
+1. Make names descriptive, so they explain the purpose of variables and functions.
+2. Don't use literals in expressions (HARDCODE). Instead use constants explaining this values
+    - BAD EXAMPLE:
+    ```js
+    if (numberOfDays >= 7) {
+      return basePrice - 50;
+    }
+    ```
+    - GOOD EXAMPLE: 
+    ```js
+    const LONG_TERM = 7;
+    const LONG_TERM_DISCOUNT = 50;
 
+    if (numberOfDays >= LONG_TERM) {
+      return basePrice - LONG_TERM_DISCOUNT;
+    }
+    ```
+3. Prefer `const` over `let` where possible, to avoid unintentional changes.
+4. Prefer `if` with `return` over `if else` to simplify later conditions. 
+5. DON'T add `else` after `if` with `return` - the code after it won't be executed anyway.
+    - BAD EXAMPLE:
+    ```js
+    if (condition) {
+      return x;
+    } else {
+      return y;
+    }
+    ```
+    - GOOD EXAMPLE: 
+    ```js
+    if (condition) {
+      return x;
+    }
 
-4. [REUSABILITY] - Give variables abstract names - it's will be easiar for another person to read your code 
-5. [VARIABLES] - Don't hardcode some values that may change in the future in variable names (numbers etc.)
-
-BAD EXAMPLE:
-```
-const discountForThreeDays = 50;
-```
-GOOD EXAMPLE: 
-```
-const basicDiscount = 50;
-```
+    return y;
+    ```
