@@ -40,8 +40,8 @@ function calculateRentalCost(days) {
 
   if (days >= SMALL_PERIOD) {
     return PRICE_PER_DAY - DISCOUNT_FROM_THREE_DAYS;
-  } else {
-    return PRICE_PER_DAY;
   }
+
+  return PRICE_PER_DAY;
 }
 module.exports = calculateRentalCost;
