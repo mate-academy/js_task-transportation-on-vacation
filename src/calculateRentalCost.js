@@ -37,12 +37,12 @@ function calculateRentalCost(days) {
 
   const result = days * ONE_DAY_RENT;
 
-  if (days >= DISCOUNT_SHORT_SHIFT && days < DISCOUNT_LONG_SHIFT) {
-    return result - DISCOUNT_SHORT_COUNT;
-  };
-
   if (days >= DISCOUNT_LONG_SHIFT) {
     return result - DISCOUNT_LONG_COUNT;
+  };
+
+  if (days >= DISCOUNT_SHORT_SHIFT) {
+    return result - DISCOUNT_SHORT_COUNT;
   }
 
   return result;
