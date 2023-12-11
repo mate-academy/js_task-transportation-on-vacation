@@ -28,7 +28,24 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  let cost = 0;
+  const dicountSeven = 50;
+  const discountThree = 20;
+  const longTerm = 7;
+  const middleTerm = 3;
+  const payForDay = 40;
+
+  if (days >= longTerm) {
+    cost = (days * payForDay) - dicountSeven;
+
+    return cost;
+  } else if (days >= middleTerm && days < longTerm) {
+    cost = (days * payForDay) - discountThree;
+
+    return cost;
+  } else {
+    return (days * payForDay);
+  }
 }
 
 module.exports = calculateRentalCost;
