@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * After a hard quarter in the office you decide
@@ -34,17 +34,17 @@ function calculateRentalCost(days) {
   const SHORT_TERM = 3;
   const SHORT_TERM_DISCOUNT = 20;
 
-  const basePrice = days * PRICE_PER_DAY;
+  const BASE_PRICE = days * PRICE_PER_DAY;
 
   if (days >= LONG_TERM) {
-    return basePrice - LONG_TERM_DISCOUNT;
+    return BASE_PRICE - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM) {
-    return basePrice - SHORT_TERM_DISCOUNT;
+    return BASE_PRICE - SHORT_TERM_DISCOUNT;
   }
 
-  return basePrice;
+  return BASE_PRICE;
 }
 
 module.exports = calculateRentalCost;
