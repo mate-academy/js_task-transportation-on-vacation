@@ -39,13 +39,15 @@ function calculateRentalCost(days) {
     cost = (days * payForDay) - dicountSeven;
 
     return cost;
-  } else if (days >= middleTerm && days < longTerm) {
+  }
+
+  if (days >= middleTerm && days < longTerm) {
     cost = (days * payForDay) - discountThree;
 
     return cost;
-  } else {
-    return (days * payForDay);
   }
+
+  return (days * payForDay);
 }
 
 module.exports = calculateRentalCost;
