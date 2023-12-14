@@ -30,13 +30,15 @@
 function calculateRentalCost(days) {
   const carRent = 40;
   let fullCost = days * carRent;
-  const moreThan7DaySale = 50;
-  const moreThan3DaySale = 20;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
 
-  if (days >= 7) {
-    fullCost -= moreThan7DaySale;
-  } else if (days >= 3) {
-    fullCost -= moreThan3DaySale;
+  if (days >= LONG_TERM) {
+    fullCost -= LONG_TERM_DISCOUNT;
+  } else if (days >= SHORT_TERM) {
+    fullCost -= SHORT_TERM_DISCOUNT;
   }
 
   return fullCost;
