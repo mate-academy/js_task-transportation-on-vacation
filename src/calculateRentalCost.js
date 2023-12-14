@@ -28,7 +28,18 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const carRent = 40;
+  let fullCost = days * carRent;
+  const moreThan7DaySale = 50;
+  const moreThan3DaySale = 20;
+
+  if (days >= 7) {
+    fullCost -= moreThan7DaySale;
+  } else if (days >= 3) {
+    fullCost -= moreThan3DaySale;
+  }
+
+  return fullCost;
 }
 
 module.exports = calculateRentalCost;
