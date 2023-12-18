@@ -29,19 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const longTerm = 7;
-  const midTerm = 3;
-  const longTermDiscount = 50;
-  const midTermDiscount = 20;
+  const LONG_TERM = 7;
+  const MID_TERM = 3;
+  const LONG_TERM_DISCOUNT = 50;
+  const MID_TERM_DISCOUNT = 20;
   const dayPrice = 40;
   const total = dayPrice * days;
 
-  if (days >= longTerm) {
-    return total - longTermDiscount;
+  if (days >= LONG_TERM) {
+    return total - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= midTerm && days < longTerm) {
-    return total - midTermDiscount;
+  if (days >= MID_TERM && days < LONG_TERM) {
+    return total - MID_TERM_DISCOUNT;
   }
 
   return total;
