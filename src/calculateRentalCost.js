@@ -29,16 +29,19 @@
 
 function calculateRentalCost(days) {
   const prise = 40;
-  const THREE_DAYS_DISCOUNT = 20;
-  const SEVEN_DAYS_DISCOUNT = 50;
+  const LESS_DAYS_DISCOUNT = 20;
+  const LESS_DAYS = 3;
+  const MORE_DAYS_DISCOUNT = 50;
+  const MORE_DAYS = 7;
+
   const sum = prise * days;
 
-  if (days >= 7) {
-    return sum - SEVEN_DAYS_DISCOUNT;
+  if (days >= MORE_DAYS) {
+    return sum - MORE_DAYS_DISCOUNT;
   }
 
-  if (days >= 3 && days < 7) {
-    return sum - THREE_DAYS_DISCOUNT;
+  if (days >= LESS_DAYS && days < MORE_DAYS) {
+    return sum - LESS_DAYS_DISCOUNT;
   }
 
   return sum;
