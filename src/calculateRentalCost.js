@@ -26,9 +26,22 @@
  *
  * @return {number}
  */
+const CAR_RENT_COST = 40;
+const CAR_DISCOUNT_BIG = 50;
+const CAR_DISCOUNT_SMALL = 20;
+const REQUIRED_DAYS_FOR_BIG_DISCOUNT = 7;
+const REQUIRED_DAYS_FOR_SMALL_DISCOUNT = 3;
 
 function calculateRentalCost(days) {
-  // write code here
+  if (days >= REQUIRED_DAYS_FOR_BIG_DISCOUNT) {
+    return CAR_RENT_COST * days - CAR_DISCOUNT_BIG;
+  }
+
+  if (days >= REQUIRED_DAYS_FOR_SMALL_DISCOUNT) {
+    return CAR_RENT_COST * days - CAR_DISCOUNT_SMALL;
+  }
+
+  return CAR_RENT_COST * days;
 }
 
 module.exports = calculateRentalCost;
