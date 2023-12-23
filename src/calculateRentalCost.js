@@ -27,8 +27,39 @@
  * @return {number}
  */
 
+/*
+  Кожен день оренди автомобіля коштує 40 доларів.
+  Якщо ви орендуєте автомобіль на 7 або більше днів,
+  ви отримуєте знижку 50 доларів США.
+  Як варіант, якщо ви орендуєте автомобіль на 3 і більше днів,
+  ви отримуєте $20 від загальної суми.
+*/
 function calculateRentalCost(days) {
   // write code here
+  const rentalDayPay = 40;
+  const shortTerm = 3;
+  const shortTermDisc = 20;
+  const longTerm = 7;
+  const longTermDisc = 50;
+  let amount = 0;
+
+  for (let i = 0; i < days; i++) {
+    amount += rentalDayPay;
+  }
+
+  if (days >= longTerm) {
+    amount -= longTermDisc;
+
+    return amount;
+  }
+
+  if (days >= shortTerm) {
+    amount -= shortTermDisc;
+
+    return amount;
+  }
+
+  return amount;
 }
 
 module.exports = calculateRentalCost;
