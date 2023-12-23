@@ -26,18 +26,26 @@
  *
  * @return {number}
  */
+const DAILY_RENT = 40;
+const DISCOUNT_7_DAYS = 50;
+const DISCOUNT_3_DAYS = 20;
 
 function calculateRentalCost(days) {
-  const DailyRent = 40;
-  let TotalRent = days * DailyRent;
-
-  if (days >= 7) {
-    TotalRent -= 50;
-  } else if (days >= 3) {
-    TotalRent -= 20;
+  if (days < 1) {
+    return 0;
   }
 
-  return TotalRent;
+  let totalRent = days * DAILY_RENT;
+
+  if (days >= 7) {
+    totalRent -= DISCOUNT_7_DAYS;
+  }
+
+  if (days >= 3 && days < 7) {
+    totalRent -= DISCOUNT_3_DAYS;
+  }
+
+  return totalRent;
 }
 
 module.exports = calculateRentalCost;
