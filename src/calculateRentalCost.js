@@ -26,9 +26,22 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
-  // write code here
+  const DAILY_RATE = 40;
+  const SEVEN_DAY_DISCOUNT = 50;
+  const THREE_DAY_DISCOUNT = 20;
+  const MAX_DAYS = 7;
+  const MIN_DAYS = 3;
+
+  if (days >= MAX_DAYS) {
+    return DAILY_RATE * days - SEVEN_DAY_DISCOUNT;
+  }
+  
+  if (days >= MIN_DAYS) {
+    return DAILY_RATE * days - THREE_DAY_DISCOUNT;
+  }
+  
+  return DAILY_RATE * days;
 }
 
 module.exports = calculateRentalCost;
