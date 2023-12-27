@@ -26,9 +26,24 @@
  *
  * @return {number}
  */
+// updated code after review
 
 function calculateRentalCost(days) {
-  // write code here
+  const dayRate = 40;
+  const bigDiscount = 50;
+  const smallDiscount = 20;
+  const bigDiscountBoundary = 7;
+  const smallDiscountBoundary = 3;
+
+  if (days >= bigDiscountBoundary) {
+    return (days * dayRate) - bigDiscount;
+  }
+
+  if (days >= smallDiscountBoundary) {
+    return (days * dayRate) - smallDiscount;
+  }
+
+  return days * dayRate;
 }
 
 module.exports = calculateRentalCost;
