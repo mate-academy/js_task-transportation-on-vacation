@@ -34,11 +34,7 @@ function calculateRentalCost(numberOfDays) {
   const MIDDLE_TERM_DISCOUNT = 20;
   const LONG_TERM_DISCOUNT = 50;
 
-  let rent = 0;
-
-  for (let i = 0; i < numberOfDays; i++) {
-    rent += RENT_PER_DAY;
-  }
+  const rent = RENT_PER_DAY * numberOfDays;
 
   switch (true) {
     case numberOfDays < MIDDLE_TERM:
