@@ -27,24 +27,26 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
+function calculateRentalCost(numberOfDays) {
   const RENT_PER_DAY = 40;
-  const RENT_THREE_DAYS_OFF = 20;
-  const RENT_SEVEN_DAYS_OFF = 50;
+  const MIDDLE_TERM = 3;
+  const LONG_TERM = 7;
+  const MIDDLE_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
 
   let rent = 0;
 
-  for (let i = 0; i < days; i++) {
+  for (let i = 0; i < numberOfDays; i++) {
     rent += RENT_PER_DAY;
   }
 
   switch (true) {
-    case days < 3:
+    case numberOfDays < MIDDLE_TERM:
       return rent;
-    case days < 7:
-      return rent - RENT_THREE_DAYS_OFF;
-    case days >= 7:
-      return rent - RENT_SEVEN_DAYS_OFF;
+    case numberOfDays < LONG_TERM:
+      return rent - MIDDLE_TERM_DISCOUNT;
+    case numberOfDays >= LONG_TERM:
+      return rent - LONG_TERM_DISCOUNT;
     default:
       return rent;
   }
