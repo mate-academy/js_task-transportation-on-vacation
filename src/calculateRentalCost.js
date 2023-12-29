@@ -27,8 +27,22 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  // write code here
+function calculateRentalCost(numberOfDays) {
+  const dailyCarPrice = 40;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const shortTermDiscount = 20;
+  const longTermDiscount = 50;
+
+  if (numberOfDays >= shortTerm && numberOfDays < longTerm) {
+    return dailyCarPrice * numberOfDays - shortTermDiscount;
+  }
+
+  if (numberOfDays >= longTerm) {
+    return dailyCarPrice * numberOfDays - longTermDiscount;
+  }
+
+  return dailyCarPrice * numberOfDays;
 }
 
 module.exports = calculateRentalCost;
