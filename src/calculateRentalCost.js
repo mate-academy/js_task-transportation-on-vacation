@@ -36,7 +36,9 @@ function calculateRentalCost(numberOfDays) {
 
   if (numberOfDays >= shortTerm && numberOfDays < longTerm) {
     return dailyCarPrice * numberOfDays - shortTermDiscount;
-  } else if (numberOfDays >= 7) {
+  }
+
+  if (numberOfDays >= longTerm) {
     return dailyCarPrice * numberOfDays - longTermDiscount;
   }
 
