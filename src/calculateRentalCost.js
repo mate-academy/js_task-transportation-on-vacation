@@ -28,22 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  let discount = 0;
+  const discountSevenDays = 50;
+  const discountThreeDays = 20;
   const rentCar = 40 * days;
+  const sevenDays = 7;
+  const threeDays = 3;
 
-  if (days >= 7) {
-    discount = 50;
-
-    return rentCar - discount;
+  if (days >= sevenDays) {
+    return rentCar - discountSevenDays;
   }
 
-  if (days >= 3 && days < 7) {
-    discount = 20;
-
-    return rentCar - discount;
+  if (days >= threeDays && days < sevenDays) {
+    return rentCar - discountThreeDays;
   }
 
-  if (days > 0 && days < 3) {
+  if (days < threeDays) {
     return rentCar;
   }
 }
