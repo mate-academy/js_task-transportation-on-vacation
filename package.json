@@ -24,5 +24,8 @@
   },
   "mateAcademy": {
     "projectType": "javascript"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
