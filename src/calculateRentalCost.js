@@ -34,13 +34,17 @@ function calculateRentalCost(days) {
   const lessWeeklyDiscount = 20;
   const weeklyDiscount = 50;
 
+  const totalCost = costDayCar * days;
+
   if (days < shortTerm) {
-    return costDayCar * days;
-  } else if (days < longTerm) {
-    return costDayCar * days - lessWeeklyDiscount;
+    return totalCost;
   }
 
-  return costDayCar * days - weeklyDiscount;
+  if (days < longTerm) {
+    return totalCost - lessWeeklyDiscount;
+  }
+
+  return totalCost - weeklyDiscount;
 }
 
 module.exports = calculateRentalCost;
