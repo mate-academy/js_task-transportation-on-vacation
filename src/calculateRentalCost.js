@@ -36,15 +36,15 @@ function calculateRentalCost(days) {
 
   const totalCost = costDayCar * days;
 
-  if (days < shortTerm) {
-    return totalCost;
+  if (days >= longTerm) {
+    return totalCost - weeklyDiscount;
   }
 
-  if (days < longTerm) {
+  if (days >= shortTerm) {
     return totalCost - lessWeeklyDiscount;
   }
 
-  return totalCost - weeklyDiscount;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
