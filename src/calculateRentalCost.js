@@ -12,7 +12,7 @@
  * Every day you rent the car costs $40.
  * If you rent the car for 7 or more days, you get $50 off your total.
  * Alternatively, if you rent the car for 3 or more days,
- * you get $20 off your total.
+ * you get $20 off your total.nmp
  *
  * Implement calculateRentalCost function
  * which returns the total amount for different count of days.
@@ -28,7 +28,25 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const rentCost = 40;
+  const discountOne = 50;
+  const discountTwo = 20;
+  const shortTerm = 3;
+  const longTerm = 7;
+
+  const cost = days * rentCost;
+ 
+
+  if (days < shortTerm) {
+    return cost;
+  }
+
+  if (days < longTerm) {
+    return cost - discountTwo;
+  } 
+
+    return cost - discountOne;
 }
+
 
 module.exports = calculateRentalCost;
