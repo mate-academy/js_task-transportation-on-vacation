@@ -29,6 +29,22 @@
 
 function calculateRentalCost(days) {
   // write code here
+  const PER_DAY = 40;
+  const LONG_TERM = 7;
+  const SEMI_TERM = 3;
+  const LONG_DISC = 50;
+  const SEMI_DISC = 20;
+  const TOTAL = PER_DAY * days;
+
+  if (days >= LONG_TERM) {
+    return TOTAL - LONG_DISC;
+  }
+
+  if (days >= SEMI_TERM) {
+    return TOTAL - SEMI_DISC;
+  }
+
+  return TOTAL;
 }
 
 module.exports = calculateRentalCost;
