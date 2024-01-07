@@ -28,6 +28,19 @@
  */
 
 function calculateRentalCost(days) {
+  const DEFAULT_RENT_PRICE = 40;
+  const SEVEN_DAYS_DISCOUNT = 50;
+  const THREE_DAYS_DISCOUNT = 20;
+
+  const totalPriceWithNoDiscount = days * DEFAULT_RENT_PRICE;
+
+  if (days < 3) {
+    return totalPriceWithNoDiscount;
+  }
+
+  return days >= 7
+    ? totalPriceWithNoDiscount - SEVEN_DAYS_DISCOUNT
+    : totalPriceWithNoDiscount - THREE_DAYS_DISCOUNT;
   // write code here
 }
 
