@@ -26,7 +26,6 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   const PRICE_PER_DAY = 40;
   const LONG_TERM = 7;
