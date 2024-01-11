@@ -28,19 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  const basePrice = days * 40;
-  const midleTerm = 3;
-  const longTerm = 7;
-  const lowDiscount = 20;
-  const hiDiscount = 50;
+  const BASE_PRICE = days * 40;
+  const MIDL_TERM = 3;
+  const LONG_TERM = 7;
+  const LOW_DISCOUNT = 20;
+  const HI_DISCOUNT = 50;
 
-  if (days < midleTerm) {
-    return basePrice;
-  } else if (days >= midleTerm && days < longTerm) {
-    return basePrice - lowDiscount;
-  } else {
-    return basePrice - hiDiscount;
+  if (days < MIDL_TERM) {
+    return BASE_PRICE;
   }
+
+  if (days >= MIDL_TERM && days < LONG_TERM) {
+    return BASE_PRICE - LOW_DISCOUNT;
+  }
+
+  return BASE_PRICE - HI_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
