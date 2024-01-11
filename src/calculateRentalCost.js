@@ -38,7 +38,7 @@ function calculateRentalCost(days) {
     return PRICE_PER_DAY * days;
   }
 
-  if (days >= MIDL_TERM && days < LONG_TERM) {
+  if (days < LONG_TERM) {
     return PRICE_PER_DAY * days - LOW_DISCOUNT;
   }
 
