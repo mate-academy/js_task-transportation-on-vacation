@@ -28,21 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  const BASE_PRICE = days * 40;
+  const PRICE_PER_DAY = 40;
   const MIDL_TERM = 3;
   const LONG_TERM = 7;
   const LOW_DISCOUNT = 20;
   const HI_DISCOUNT = 50;
 
   if (days < MIDL_TERM) {
-    return BASE_PRICE;
+    return PRICE_PER_DAY * days;
   }
 
   if (days >= MIDL_TERM && days < LONG_TERM) {
-    return BASE_PRICE - LOW_DISCOUNT;
+    return PRICE_PER_DAY * days - LOW_DISCOUNT;
   }
 
-  return BASE_PRICE - HI_DISCOUNT;
+  return PRICE_PER_DAY * days - HI_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
