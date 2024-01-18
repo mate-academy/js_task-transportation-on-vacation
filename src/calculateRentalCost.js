@@ -38,9 +38,11 @@ function calculateRentalCost(days) {
   finalPrice = days * pricePerDay;
 
   if (days >= shortTerm && days < longTerm) {
-    finalPrice -= smallDiccount;
-  } else if (days >= longTerm) {
-    finalPrice -= bigDiscount;
+    return finalPrice - smallDiccount;
+  }
+
+  if (days >= longTerm) {
+    return finalPrice - bigDiscount;
   }
 
   return finalPrice;
