@@ -34,13 +34,15 @@ function calculateRentalCost(days) {
   const MEDIUM_TERM_DISCOUNT = 20;
   const BASE_PRICE = 40;
 
+  const price = days * BASE_PRICE;
+
   if (days >= LONG_TERM) {
-    return days * BASE_PRICE - LONG_TERM_DISCOUNT;
+    return price - LONG_TERM_DISCOUNT;
   } else if (days >= MEDIUM_TERM) {
-    return days * BASE_PRICE - MEDIUM_TERM_DISCOUNT;
+    return price - MEDIUM_TERM_DISCOUNT;
   }
 
-  return days * BASE_PRICE;
+  return price;
 }
 
 module.exports = calculateRentalCost;
