@@ -31,16 +31,20 @@ function calculateRentalCost(days) {
   const DAY_PRICE = 40;
   const SHORT_TERM_SALE = 20;
   const LONG_TERM_SALE = 50;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
 
-  if (days >= 3 && days < 7) {
-    return DAY_PRICE * days - SHORT_TERM_SALE;
+  const BASE_PRICE = days * DAY_PRICE;
+
+  if (days >= LONG_TERM) {
+    return BASE_PRICE - LONG_TERM_SALE;
   }
 
-  if (days >= 7) {
-    return DAY_PRICE * days - LONG_TERM_SALE;
+  if (days >= SHORT_TERM) {
+    return BASE_PRICE - SHORT_TERM_SALE;
   }
 
-  return DAY_PRICE * days;
+  return BASE_PRICE;
 }
 
 module.exports = calculateRentalCost;
