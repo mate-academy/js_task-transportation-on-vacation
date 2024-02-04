@@ -18,7 +18,7 @@
  * which returns the total amount for different count of days.
  *
  * Examples:
- *  - calculateRentalCost(1) === 40
+ *  - calculateRentalCost(2) === 80
  *  - calculateRentalCost(3) === 100
  *  - calculateRentalCost(7) === 230
  *
@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const PRICE_PER_DAY = 40;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISONT = 50;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCONT = 20; 
+  
+  const RENTAL_COST = days * PRICE_PER_DAY;
+
+  if (days >= LONG_TERM) {
+    return RENTAL_COST - LONG_TERM_DISONT;
+  }
+  
+  if (days >= SHORT_TERM) {
+    return RENTAL_COST - SHORT_TERM_DISCONT;
+  };
+
+  return RENTAL_COST;
 }
 
 module.exports = calculateRentalCost;
