@@ -28,7 +28,8 @@
  */
 
 function calculateRentalCost(days) {
-  let totalCost = days * 40;
+  const cost = 40;
+  let totalCost = days * cost;
   const longTerm = 7;
   const longTermDiscount = 50;
   const shortTerm = 3;
