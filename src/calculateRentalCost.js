@@ -33,7 +33,7 @@ function calculateRentalCost(days) {
   const LONG_TERM_DISCOUNT = 50;
   const SHORT_TERM_RENT = 3;
   const SHORT_TERM_DISCOUNT = 20;
-  let totalCost = days * PRICE_PER_DAY;
+  const totalCost = days * PRICE_PER_DAY;
 
   if (days >= LONG_TERM_RENT) {
     return totalCost - LONG_TERM_DISCOUNT;
