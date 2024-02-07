@@ -2,7 +2,7 @@
 
 /**
  * After a hard quarter in the office you decide
- * to get some rest on a vacation.
+ * to get some rest on a vacationno=.
  * So you will book a flight for you
  * and your family and try to leave all the mess behind you.
  *
@@ -28,7 +28,20 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const COST_PER_DAY = 40;
+  const DISCOUNT_SEVEN_DAYS = 50;
+  const DISCOUNT_THREE_DAYS = 20;
+
+  let price = COST_PER_DAY * days;
+
+  if (days >= 7) {
+    price -= DISCOUNT_SEVEN_DAYS;
+  } else if (days >= 3) {
+    price -= DISCOUNT_THREE_DAYS;
 }
+
+  return price;
+}
+
 
 module.exports = calculateRentalCost;
