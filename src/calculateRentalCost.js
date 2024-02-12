@@ -33,16 +33,17 @@ function calculateRentalCost(days) {
   const DISCOUNT_VALUE_BASIC = 20;
   const DISCOUNT_DAYS_EXTENDED = 7;
   const DISCOUNT_VALUE_EXTENDED = 50;
+  const FULL_COST_FORMULA = DAY_COST * days;
 
   if (days >= DISCOUNT_DAYS_EXTENDED) {
-    return DAY_COST * days - DISCOUNT_VALUE_EXTENDED;
+    return FULL_COST_FORMULA - DISCOUNT_VALUE_EXTENDED;
   }
 
   if (days >= DISCOUNT_DAYS_BASIC) {
-    return DAY_COST * days - DISCOUNT_VALUE_BASIC;
+    return FULL_COST_FORMULA - DISCOUNT_VALUE_BASIC;
   }
 
-  return DAY_COST * days;
+  return FULL_COST_FORMULA;
 }
 
 module.exports = calculateRentalCost;
