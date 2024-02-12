@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const EVERY_DAY_RENT = 40;
+  const RESULT_RENTAL_COST = days * EVERY_DAY_RENT;
+  const LONG_TERM = 7;
+  const OFFER_FOR_SEVEN_DAYS = 50;
+  const SHORT_TERM = 3;
+  const OFFER_FOR_THREE_DAYS = 20;
+
+  if (days >= LONG_TERM) {
+    return RESULT_RENTAL_COST - OFFER_FOR_SEVEN_DAYS;
+  }
+
+  if (days >= SHORT_TERM) {
+    return RESULT_RENTAL_COST - OFFER_FOR_THREE_DAYS;
+  }
+
+  return RESULT_RENTAL_COST;
 }
 
 module.exports = calculateRentalCost;
