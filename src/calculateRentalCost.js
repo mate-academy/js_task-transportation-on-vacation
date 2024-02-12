@@ -25,10 +25,25 @@
  * @param {number} days
  *
  * @return {number}
- */
+ * */
+const LONG_TERM_VACATION = 7;
+const MEDIUM_TERM_VACATION = 3;
+const LONG_TERM_RENTAL_DISCOUNT = 50;
+const BASIC_DISCOUNT = 20;
+const CAR_COSTS_FOR_DAY = 40;
 
 function calculateRentalCost(days) {
-  // write code here
+  const baseCost = days * CAR_COSTS_FOR_DAY;
+
+  if (days >= LONG_TERM_VACATION) {
+    return baseCost - LONG_TERM_RENTAL_DISCOUNT;
+  }
+
+  if (days >= MEDIUM_TERM_VACATION) {
+    return baseCost - BASIC_DISCOUNT;
+  }
+
+  return baseCost;
 }
 
 module.exports = calculateRentalCost;
