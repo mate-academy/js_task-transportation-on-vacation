@@ -28,7 +28,23 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const LONG_TERM_VACATION = 7;
+  const MEDIUM_TERM_VACATION = 3;
+  const LONG_TERM_RENTAL_DISCOUNT = 50;
+  const BASIC_DISCOUNT = 20;
+  const CAR_COSTS_FOR_DAY = 40;
+
+  const TOTAL_COST = days * CAR_COSTS_FOR_DAY;
+
+  if (days >= LONG_TERM_VACATION) {
+    return TOTAL_COST - LONG_TERM_RENTAL_DISCOUNT;
+  }
+
+  if (days >= MEDIUM_TERM_VACATION) {
+    return TOTAL_COST - BASIC_DISCOUNT;
+  }
+
+  return TOTAL_COST;
 }
 
 module.exports = calculateRentalCost;
