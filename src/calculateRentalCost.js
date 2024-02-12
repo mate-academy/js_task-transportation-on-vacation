@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -28,7 +28,22 @@
  */
 
 function calculateRentalCost(days) {
-  // write code here
+  const RENT_PER_DAY = 40;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
+  let res = 0;
+
+  if (days >= LONG_TERM) {
+    res = RENT_PER_DAY * days - LONG_TERM_DISCOUNT;
+  } else if (days >= SHORT_TERM && days < LONG_TERM) {
+    res = RENT_PER_DAY * days - SHORT_TERM_DISCOUNT;
+  } else if (days < SHORT_TERM) {
+    res = RENT_PER_DAY * days;
+  }
+
+  return res;
 }
 
 module.exports = calculateRentalCost;
