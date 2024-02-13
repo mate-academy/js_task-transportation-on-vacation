@@ -29,16 +29,18 @@
 
 function calculateRentalCost(days) {
   const carCosts = 40;
-  const longTermDiscount = 50;
-  const shortTermDiscount = 20;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
   const commonPrice = days * carCosts;
 
-  if (days >= 7) {
-    return commonPrice - longTermDiscount;
+  if (days >= LONG_TERM) {
+    return commonPrice - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return commonPrice - shortTermDiscount;
+  if (days >= SHORT_TERM) {
+    return commonPrice - SHORT_TERM_DISCOUNT;
   }
 
   return commonPrice;
