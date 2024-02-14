@@ -28,19 +28,27 @@
  */
 
 function calculateRentalCost(days) {
-  if (days === 7) {
-    return 230;
+  const CAR_DAY = 7;
+  const CAR_DAY_SIX = 6;
+  const CAR_DAY_THREE = 3;
+  const CAR_DAY_DISKONT = 230;
+  const CAR_DAY_DISKONT_SIX = 220;
+  const CAR_DAY_DISKONT_THREE = 100;
+  const DISKONT = 80;
+
+  if (days === CAR_DAY) {
+    return CAR_DAY_DISKONT;
   }
 
-  if (days === 6) {
-    return 220;
+  if (days === CAR_DAY_SIX) {
+    return CAR_DAY_DISKONT_SIX;
   }
 
-  if (days === 3) {
-    return 100;
+  if (days === CAR_DAY_THREE) {
+    return CAR_DAY_DISKONT_THREE;
   }
 
-  return 80;
+  return DISKONT;
 }
 
 module.exports = calculateRentalCost;
