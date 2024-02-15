@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * After a hard quarter in the office you decide
  * to get some rest on a vacation.
@@ -27,28 +26,24 @@
  * @return {number}
  */
 
-// calculateRentalCost.js
-
-// calculateRentalCost.js
-
-// calculateRentalCost.js
-
-// calculateRentalCost.js
-
-// calculateRentalCost.js
-
-// calculateRentalCost.js
-
-// calculateRentalCost.js
-
 function calculateRentalCost(days) {
-  if (days < 3) {
-    return days * 40;
-  } else if (days <= 6) {
-    return days * 40 - 20;
-  } else {
-    return days * 40 - 50;
+  // write code here
+  const PRICE_PER_DAY = 40;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
+  const price = days * PRICE_PER_DAY;
+
+  if (days >= LONG_TERM) {
+    return price - LONG_TERM_DISCOUNT;
   }
+
+  if (days >= SHORT_TERM) {
+    return price - SHORT_TERM_DISCOUNT;
+  }
+
+  return price;
 }
 
 module.exports = calculateRentalCost;
