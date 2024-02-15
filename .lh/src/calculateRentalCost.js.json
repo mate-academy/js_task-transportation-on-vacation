@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/calculateRentalCost.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1708006796362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708006801764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,8 @@\n  */\n \n function calculateRentalCost(days) {\n   // write code here\n-  \n+  if(days)\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006808746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,8 @@\n  */\n \n function calculateRentalCost(days) {\n   // write code here\n-  if(days)\n+  if(days < 3)\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006815418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,37 @@\n+'use strict';\n+\n+/**\n+ * After a hard quarter in the office you decide\n+ * to get some rest on a vacation.\n+ * So you will book a flight for you\n+ * and your family and try to leave all the mess behind you.\n+ *\n+ * You will need a rental car in order for you to get around in your vacation.\n+ * The manager of the car rental makes you some good offers.\n+ *\n+ * Every day you rent the car costs $40.\n+ * If you rent the car for 7 or more days, you get $50 off your total.\n+ * Alternatively, if you rent the car for 3 or more days,\n+ * you get $20 off your total.\n+ *\n+ * Implement calculateRentalCost function\n+ * which returns the total amount for different count of days.\n+ *\n+ * Examples:\n+ *  - calculateRentalCost(1) === 40\n+ *  - calculateRentalCost(3) === 100\n+ *  - calculateRentalCost(7) === 230\n+ *\n+ * @param {number} days\n+ *\n+ * @return {number}\n+ */\n+\n+function calculateRentalCost(days) {\n+  // write code here\n+  if(days < 3) {\n+    return days *\n+  }\n+}\n+\n+module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006823240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,44 +29,9 @@\n \n function calculateRentalCost(days) {\n   // write code here\n   if(days < 3) {\n-    return days *\n-  }\n+    return days * 3;\n+  } else if (days )\n }\n \n module.exports = calculateRentalCost;\n-'use strict';\n-\n-/**\n- * After a hard quarter in the office you decide\n- * to get some rest on a vacation.\n- * So you will book a flight for you\n- * and your family and try to leave all the mess behind you.\n- *\n- * You will need a rental car in order for you to get around in your vacation.\n- * The manager of the car rental makes you some good offers.\n- *\n- * Every day you rent the car costs $40.\n- * If you rent the car for 7 or more days, you get $50 off your total.\n- * Alternatively, if you rent the car for 3 or more days,\n- * you get $20 off your total.\n- *\n- * Implement calculateRentalCost function\n- * which returns the total amount for different count of days.\n- *\n- * Examples:\n- *  - calculateRentalCost(1) === 40\n- *  - calculateRentalCost(3) === 100\n- *  - calculateRentalCost(7) === 230\n- *\n- * @param {number} days\n- *\n- * @return {number}\n- */\n-\n-function calculateRentalCost(days) {\n-  // write code here\n-  if(days < 3)\n-}\n-\n-module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006833685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n function calculateRentalCost(days) {\n   // write code here\n   if(days < 3) {\n     return days * 3;\n-  } else if (days )\n+  } else if (days >= 3 )\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006840096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,10 @@\n function calculateRentalCost(days) {\n   // write code here\n   if(days < 3) {\n     return days * 3;\n-  } else if (days >= 3 )\n+  } else if (days >= 3 && days < 7) {\n+    return \n+  }\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006849430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   // write code here\n   if(days < 3) {\n     return days * 3;\n   } else if (days >= 3 && days < 7) {\n-    return \n+    return days * 40\n   }\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006856801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   // write code here\n   if(days < 3) {\n     return days * 3;\n   } else if (days >= 3 && days < 7) {\n-    return days * 40\n+    return (days * 40) - 20\n   }\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006862257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \n function calculateRentalCost(days) {\n   // write code here\n   if(days < 3) {\n-    return days * 3;\n+    return days * 40;\n   } else if (days >= 3 && days < 7) {\n     return (days * 40) - 20\n   }\n }\n"
+                },
+                {
+                    "date": 1708006871350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n   if(days < 3) {\n     return days * 40;\n   } else if (days >= 3 && days < 7) {\n     return (days * 40) - 20\n-  }\n+  } else if (days >= 7)\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006882946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,10 @@\n   if(days < 3) {\n     return days * 40;\n   } else if (days >= 3 && days < 7) {\n     return (days * 40) - 20\n-  } else if (days >= 7)\n+  } else if (days >= 7) {\n+    return days * 40 - 40\n+  }\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006888383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     return days * 40;\n   } else if (days >= 3 && days < 7) {\n     return (days * 40) - 20\n   } else if (days >= 7) {\n-    return days * 40 - 40\n+    return days * 40) - 50\n   }\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708006916363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     return days * 40;\n   } else if (days >= 3 && days < 7) {\n     return (days * 40) - 20\n   } else if (days >= 7) {\n-    return days * 40) - 50\n+    return (days * 40) - 50\n   }\n }\n \n module.exports = calculateRentalCost;\n"
+                }
+            ],
+            "date": 1708006796362,
+            "name": "Commit-0",
+            "content": "'use strict';\n\n/**\n * After a hard quarter in the office you decide\n * to get some rest on a vacation.\n * So you will book a flight for you\n * and your family and try to leave all the mess behind you.\n *\n * You will need a rental car in order for you to get around in your vacation.\n * The manager of the car rental makes you some good offers.\n *\n * Every day you rent the car costs $40.\n * If you rent the car for 7 or more days, you get $50 off your total.\n * Alternatively, if you rent the car for 3 or more days,\n * you get $20 off your total.\n *\n * Implement calculateRentalCost function\n * which returns the total amount for different count of days.\n *\n * Examples:\n *  - calculateRentalCost(1) === 40\n *  - calculateRentalCost(3) === 100\n *  - calculateRentalCost(7) === 230\n *\n * @param {number} days\n *\n * @return {number}\n */\n\nfunction calculateRentalCost(days) {\n  // write code here\n  \n}\n\nmodule.exports = calculateRentalCost;\n"
+        }
+    ]
+}
