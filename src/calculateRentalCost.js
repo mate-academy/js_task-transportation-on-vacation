@@ -34,15 +34,15 @@ const PRISE = 40;
 
 function calculateRentalCost(days) {
   // write code here
-  if (days >= MIN_TERM) {
-    if (days >= LONG_TERM) {
-      return (days * PRISE - LONG_TERM_DISCONT);
-    } else {
-      return (days * PRISE - MIDLE_TERM_DISCONT);
-    }
-  } else {
-    return (days * PRISE);
+  if (days >= LONG_TERM) {
+    return (days * PRISE - LONG_TERM_DISCONT);
   }
+
+  if (days >= MIN_TERM) {
+    return (days * PRISE - MIDLE_TERM_DISCONT);
+  }
+
+  return (days * PRISE);
 }
 
 module.exports = calculateRentalCost;
