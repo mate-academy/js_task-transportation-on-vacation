@@ -26,9 +26,23 @@
  *
  * @return {number}
  */
+const LONG_TERM = 7;
+const MIN_TERM = 3;
+const LONG_TERM_DISCONT = 50;
+const MIDLE_TERM_DISCONT = 20;
+const PRISE = 40;
 
 function calculateRentalCost(days) {
   // write code here
+  if (days >= LONG_TERM) {
+    return (days * PRISE - LONG_TERM_DISCONT);
+  }
+
+  if (days >= MIN_TERM) {
+    return (days * PRISE - MIDLE_TERM_DISCONT);
+  }
+
+  return (days * PRISE);
 }
 
 module.exports = calculateRentalCost;
