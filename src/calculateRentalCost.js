@@ -37,14 +37,15 @@ function calculateRentalCost(days) {
     discountSum: 50,
   };
 
-  return (
-    days * 40
-    - (days < SMALL_DISCOUNT.dayRequirement
-      ? 0
-      : days < LARGER_DISCOUNT.dayRequirement
-        ? SMALL_DISCOUNT.discountSum
-        : LARGER_DISCOUNT.discountSum)
-  );
+  let price = days * 40;
+
+  if (days >= LARGER_DISCOUNT.dayRequirement) {
+    price -= LARGER_DISCOUNT.discountSum;
+  } else if (days >= SMALL_DISCOUNT.dayRequirement) {
+    price -= SMALL_DISCOUNT.discountSum;
+  }
+
+  return price;
 }
 
 module.exports = calculateRentalCost;
