@@ -28,17 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const shortTerm = 3;
-  const longTerm = 7;
+  const SHORT_TERM = 3;
+  const LONG_TERM = 7;
   const rentalPricePerDay = 40;
   const threeDaysBonus = 20;
   const sevenDaysBonus = 50;
 
-  if (days < shortTerm) {
+  if (days < SHORT_TERM) {
     return days * rentalPricePerDay;
   }
 
-  if (days < longTerm) {
+  if (days < LONG_TERM) {
     return (days * rentalPricePerDay) - threeDaysBonus;
   }
 
