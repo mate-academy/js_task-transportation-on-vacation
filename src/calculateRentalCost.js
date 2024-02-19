@@ -28,17 +28,17 @@
  */
 
 function calculateRentalCost(days) {
-  const longTerm = days * 40 - 50;
-  const midTerm = days * 40 - 20;
-  const shortTerm = days * 40;
+  const LONG_TERM = days * 40 - 50;
+  const MID_TERM = days * 40 - 20;
+  const SHORT_TERM = days * 40;
   let total = 0;
 
   if (days >= 7) {
-    total = longTerm;
+    total = LONG_TERM;
   } else if (days >= 3) {
-    total = midTerm;
+    total = MID_TERM;
   } else if (days < 3) {
-    total = shortTerm;
+    total = SHORT_TERM;
   }
 
   return total;
