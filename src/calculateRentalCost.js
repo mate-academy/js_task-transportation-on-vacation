@@ -44,6 +44,7 @@ function calculateRentalCost(days) {
     return basePrice - LONG_DISSCOUNT;
   }
 
+
   return basePrice;
 }
 
