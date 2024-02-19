@@ -33,16 +33,13 @@ function calculateRentalCost(days) {
   const rentalPricePerDay = 40;
   const threeDaysBonus = 20;
   const sevenDaysBonus = 50;
+  const fuulPrice = days * rentalPricePerDay;
 
-  if (days < SHORT_TERM) {
-    return days * rentalPricePerDay;
-  }
-
-  if (days < LONG_TERM) {
-    return (days * rentalPricePerDay) - threeDaysBonus;
-  }
-
-  return (days * rentalPricePerDay) - sevenDaysBonus;
+  return days < SHORT_TERM
+    ? fuulPrice
+    : days < LONG_TERM
+      ? fuulPrice - threeDaysBonus
+      : fuulPrice - sevenDaysBonus;
 }
 
 module.exports = calculateRentalCost;
