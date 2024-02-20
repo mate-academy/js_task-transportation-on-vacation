@@ -3,18 +3,19 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  const DAYCOST = 40;
-  const WEEKLENGTH = 7;
-  const WEEKOFF = 50;
-  const THREEDAYS = 3;
-  const THREEDAYSOFF = 20;
-  let result = days * DAYCOST;
+const DAY_COST = 40;
+const WEEK_LENGTH = 7;
+const WEEK_OFF = 50;
+const THREE_DAYS = 3;
+const THREE_DAYS_OFF = 20;
 
-  if (days >= WEEKLENGTH) {
-    result -= WEEKOFF;
-  } else if (days >= THREEDAYS) {
-    result -= THREEDAYSOFF;
+function calculateRentalCost(days) {
+  let result = days * DAY_COST;
+
+  if (days >= WEEK_LENGTH) {
+    result -= WEEK_OFF;
+  } else if (days >= THREE_DAYS) {
+    result -= THREE_DAYS_OFF;
   }
 
   return result;
