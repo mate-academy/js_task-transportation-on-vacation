@@ -4,15 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let result = days * 40;
+  const DAYCOST = 40;
+  const WEEKLENGTH = 7;
+  const WEEKOFF = 50;
+  const THREEDAYS = 3;
+  const THREEDAYSOFF = 20;
+  let result = days * DAYCOST;
 
-  if (days >= 7) {
-    result -= 50;
-  } else if (days >= 3) {
-    result -= 20;
+  if (days >= WEEKLENGTH) {
+    result -= WEEKOFF;
+  } else if (days >= THREEDAYS) {
+    result -= THREEDAYSOFF;
   }
 
-  return result
+  return result;
 }
 
 module.exports = calculateRentalCost;
