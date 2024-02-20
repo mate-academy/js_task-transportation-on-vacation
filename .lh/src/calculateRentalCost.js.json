@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/calculateRentalCost.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1708358563743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708359783448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n  *\n  * @return {number}\n  */\n function calculateRentalCost(days) {\n-  // write code here\n+  const \n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708359792377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n  *\n  * @return {number}\n  */\n function calculateRentalCost(days) {\n-  const \n+  co\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708359798781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n  *\n  * @return {number}\n  */\n function calculateRentalCost(days) {\n-  co\n+  let \n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708359803871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n  *\n  * @return {number}\n  */\n function calculateRentalCost(days) {\n-  let \n+  let costPerDay \n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708359818288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+/**\n+ * @param {number} days\n+ *\n+ * @return {number}\n+ */\n+function calculateRentalCost(days) {\n+  let costPerDay = 40;\n+  let days = 0;\n+  \n+}\n+\n+module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708359823380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,9 @@\n  */\n function calculateRentalCost(days) {\n   let costPerDay = 40;\n   let days = 0;\n-  \n-}\n \n-module.exports = calculateRentalCost;\n-/**\n- * @param {number} days\n- *\n- * @return {number}\n- */\n-function calculateRentalCost(days) {\n-  let costPerDay \n+  if ()\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708359846198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n function calculateRentalCost(days) {\n   let costPerDay = 40;\n   let days = 0;\n \n-  if ()\n+  if (days)\n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708359852893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n function calculateRentalCost(days) {\n   let costPerDay = 40;\n   let days = 0;\n \n-  if (days >= 7)\n+  if (days >= 7) \n }\n \n module.exports = calculateRentalCost;\n"
+                },
+                {
+                    "date": 1708360083527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n  * @return {number}\n  */\n function calculateRentalCost(days) {\n   const costPerDay = 40;\n-  let const daysNeed = 7;\n+  let toconst daysNeed = 7;\n \n   if (days >= 7) {\n     return costPerDay * daysNeed;\n   }\n"
+                }
+            ],
+            "date": 1708358563743,
+            "name": "Commit-0",
+            "content": "/**\n * @param {number} days\n *\n * @return {number}\n */\nfunction calculateRentalCost(days) {\n  // write code here\n}\n\nmodule.exports = calculateRentalCost;\n"
+        }
+    ]
+}
