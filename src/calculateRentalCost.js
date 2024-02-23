@@ -3,7 +3,7 @@
 *
 * @return {number}
 */'use strict';
- function calculateRentalCost(days) {
+function calculateRentalCost(days) {
   const PRICE_PER_DAY = 40;
   const LONG_TERM = 7;
   const LONG_TERM_DISCOUNT = 50;
