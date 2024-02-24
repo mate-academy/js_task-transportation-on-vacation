@@ -29,16 +29,21 @@
 
 function calculateRentalCost(days) {
   const rentCost = 40;
-
-  if (days >= 3 && days < 7) {
-    return (rentCost * days) - 20;
-  }
+  const totalToPay = rentCost * days;
 
   if (days >= 7) {
-    return (rentCost * days) - 50;
+    const discount = 50;
+
+    return totalToPay - discount;
   }
 
-  return (rentCost * days);
+  if (days >= 3) {
+    const discount = 20;
+
+    return totalToPay - discount;
+  }
+
+  return totalToPay;
 }
 
 module.exports = calculateRentalCost;
