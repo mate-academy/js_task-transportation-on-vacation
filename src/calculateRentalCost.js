@@ -12,13 +12,17 @@ function calculateRentalCost(days) {
   const DISCOUNT_THREE_DAYS = 20;
   const BASE_PRICE_OF_RENT = 40;
 
+  const LONG_TERM = 7;
+  const LOW_TERM = 3;
+  const MIDDLE_TERM = 6;
+
   const baseResult = days * BASE_PRICE_OF_RENT;
 
-  if (days >= 3 && days <= 6) {
+  if (days >= LOW_TERM && days <= MIDDLE_TERM) {
     return baseResult - DISCOUNT_THREE_DAYS;
   }
 
-  if (days >= 7) {
+  if (days >= LONG_TERM) {
     return baseResult - DISCOUNT_SEVEN_DAYS;
   }
 
