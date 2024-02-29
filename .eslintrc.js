@@ -1,5 +1,5 @@
 module.exports = {
-  extends: '@mate-academy/eslint-config',
+  "extends": ["plugin:prettier/recommended"],
   env: {
     jest: true
   },
