@@ -13,11 +13,11 @@ function calculateRentalCost(days) {
     return 220;
   }
 
-  if (days ==3) {
+  if (days == 3) {
     return 100;
   }
 
-    return 80;
-  }
+  return 80;
+}
 
 module.exports = calculateRentalCost;
