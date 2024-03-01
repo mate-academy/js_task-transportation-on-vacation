@@ -27,19 +27,23 @@
  * @return {number}
  */
 
-function calculateRentalCost(days) {
-  const standardPrice = 40;
-  const shortTerm = 3;
-  const midTermDiscount = 20;
-  const longTerm = 7;
-  const longTermDiscount = 50;
+const STANDARD_PRICE = 40;
+const SHORT_TERM = 3;
+const MID_TERM_DISCOUNT = 20;
+const LONG_TERM = 7;
+const LONG_TERM_DISCOUNT = 50;
 
-  if (days < shortTerm) {
-    return days * standardPrice;
-  } else if (days >= shortTerm && days < longTerm) {
-    return days * standardPrice - midTermDiscount;
-  } else if (days >= longTerm) {
-    return days * standardPrice - longTermDiscount;
+function calculateRentalCost(days) {
+  if (days < SHORT_TERM) {
+    return days * STANDARD_PRICE;
+  }
+
+  if (days >= SHORT_TERM && days < LONG_TERM) {
+    return days * STANDARD_PRICE - MID_TERM_DISCOUNT;
+  }
+
+  if (days >= LONG_TERM) {
+    return days * STANDARD_PRICE - LONG_TERM_DISCOUNT;
   }
 }
 
