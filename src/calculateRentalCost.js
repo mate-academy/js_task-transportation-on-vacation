@@ -34,15 +34,17 @@ const LONG_TERM = 7;
 const LONG_TERM_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
+  const STANDARD_TERM = days * STANDARD_PRICE;
+
   if (days >= SHORT_TERM && days < LONG_TERM) {
-    return days * STANDARD_PRICE - MID_TERM_DISCOUNT;
+    return STANDARD_TERM - MID_TERM_DISCOUNT;
   }
 
   if (days >= LONG_TERM) {
-    return days * STANDARD_PRICE - LONG_TERM_DISCOUNT;
+    return STANDARD_TERM - LONG_TERM_DISCOUNT;
   }
 
-  return days * STANDARD_PRICE;
+  return STANDARD_TERM;
 }
 
 module.exports = calculateRentalCost;
