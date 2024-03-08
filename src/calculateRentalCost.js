@@ -4,23 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const baseCost = 40;
-  const shortTermDiscount = 20;
-  const longTermDiscount = 50;
-  const shortTermThreshold = 3;
-  const longTermThreshold = 7;
+  const BASE_COST = 40;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_THRESHOLD = 3;
+  const LONG_TERM_THRESHOLD = 7;
 
-  if (days < shortTermThreshold) {
-    return baseCost * days;
+  if (days < SHORT_TERM_THRESHOLD) {
+    return BASE_COST * days;
   }
 
-  if (days >= shortTermThreshold && days < longTermThreshold) {
-    return baseCost * days - shortTermDiscount;
+  if (days >= LONG_TERM_THRESHOLD) {
+    return BASE_COST * days - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= longTermThreshold) {
-    return baseCost * days - longTermDiscount;
-  }
+  return BASE_COST * days - SHORT_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
