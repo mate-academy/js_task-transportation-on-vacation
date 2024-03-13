@@ -20,9 +20,7 @@ function calculateRentalCost(days) {
     return days * RENT_COST - MEDIUM_TERM_DISCOUNT;
   }
 
-  if (days >= LONG_TERM) {
-    return days * RENT_COST - LONG_TERM_DISCOUNT;
-  }
+  return days * RENT_COST - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
