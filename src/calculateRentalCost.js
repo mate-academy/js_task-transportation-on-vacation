@@ -4,25 +4,25 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const pricePerDay = 40;
+  const PRICE_PER_DAY = 40;
 
-  const smallPeriod = 3;
-  const smallPeriodDiscount = 20;
+  const SMALL_PERIOD = 3;
+  const SMALL_PERIOD_DISCOUNT = 20;
 
-  const bigPeriod = 7;
-  const bigPeriodDiscount = 50;
+  const BIG_PERIOD = 7;
+  const BIG_PERIOD_DISCOUNT = 50;
 
-  const totalRentalPrice = days * pricePerDay;
+  const TOTAL_RENTAL_PRICE = days * PRICE_PER_DAY;
 
-  if (days >= bigPeriod) {
-    return totalRentalPrice - bigPeriodDiscount;
+  if (days >= BIG_PERIOD) {
+    return TOTAL_RENTAL_PRICE - BIG_PERIOD_DISCOUNT;
   }
 
-  if (days >= smallPeriod) {
-    return totalRentalPrice - smallPeriodDiscount;
+  if (days >= SMALL_PERIOD) {
+    return TOTAL_RENTAL_PRICE - SMALL_PERIOD_DISCOUNT;
   }
 
-  return totalRentalPrice;
+  return TOTAL_RENTAL_PRICE;
 }
 
 module.exports = calculateRentalCost;
