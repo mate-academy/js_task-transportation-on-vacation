@@ -1,5 +1,5 @@
 'use strict';
-
+  
 function calculateRentalCost(days) {
   const baseRate = 40;
 
