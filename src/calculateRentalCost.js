@@ -10,12 +10,12 @@ const LONG_TERM_DISCOUNT = 50;
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
   const calculatedRentalCost = days * PRICE_PER_DAY;
 
   if (days >= LONG_TERM) {
     return calculatedRentalCost - LONG_TERM_DISCOUNT;
-  } else if (days >= SHORT_TERM) {
+  }
+  if (days >= SHORT_TERM) {
     return calculatedRentalCost - SHORT_TERM_DISCOUNT;
   }
 
