@@ -12,7 +12,9 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return rentalCost - LONG_TERM_DISCOUNT;
-  } else if (days >= SHORT_TERM) {
+  } 
+  
+  if (days >= SHORT_TERM) {
     return rentalCost - SHORT_TERM_DISCOUNT;
   }
 
