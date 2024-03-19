@@ -28,17 +28,21 @@
  */
 
 function calculateRentalCost(days) {
-  const rentCost = 40;
-  const totalToPay = rentCost * days;
+  const RENTCOAST = 40;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+  const totalToPay = RENTCOAST * days;
 
-  if (days >= 7) {
-    const discount = 50;
+  if (days >= LONG_TERM) {
+    const discount = LONG_TERM_DISCOUNT;
 
     return totalToPay - discount;
   }
 
-  if (days >= 3) {
-    const discount = 20;
+  if (days >= SHORT_TERM) {
+    const discount = SHORT_TERM_DISCOUNT;
 
     return totalToPay - discount;
   }
