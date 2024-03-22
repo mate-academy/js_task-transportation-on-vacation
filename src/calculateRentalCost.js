@@ -10,16 +10,16 @@ function calculateRentalCost(days) {
   const SHORT_TERM = 3;
   const SHORT_TERM_DISCOUNT = 20;
 
+  if (days >= LONG_TERM) {
+    return days * ONE_DAY_RENT_COST - LONG_TERM_DISCOUNT;
+  }
+
   if (days < SHORT_TERM) {
     return days * ONE_DAY_RENT_COST;
   }
 
   if (days >= SHORT_TERM) {
     return ONE_DAY_RENT_COST * days - SHORT_TERM_DISCOUNT;
-  }
-
-  if (days >= LONG_TERM) {
-    return days * ONE_DAY_RENT_COST - LONG_TERM_DISCOUNT;
   }
 }
 
