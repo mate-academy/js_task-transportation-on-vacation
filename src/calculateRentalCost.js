@@ -1,21 +1,21 @@
 'use strict';
 
 function calculateRentalCost(days) {
-  const RentalCostdays1 = 1;
-  const price1 = 40;
-  if (days === RentalCostdays1) {
-    return price1;
-  }
-  const RentalCostdays2 = 3;
-  const price2 = 100;
+  const RentalCostday = 40;
+  const Discount3DaysMore = 20;
+  const Discount7DaysMore = 50;
+  let totalCost = days * RentalCostday;
 
-  if (days === RentalCostdays2) {
-    return price2;
+  if (days ===1) {
+    return RentalCostday;
   }
-  const RentalCostdays3 = 7;
-  const price3 = 230;
-  if (days === RentalCostdays3) {
-    return price3;
+
+  if (days >= 3 & days <= 7) {
+   totalCost -= Discount3DaysMore;
   }
+  if (days >= 7) {
+    totalCost-= Discount7DaysMore;
+  }
+  return totalCost;
 }
 module.exports = calculateRentalCost;
