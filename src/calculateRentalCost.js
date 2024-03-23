@@ -15,12 +15,12 @@ function calculateRentalCost(days) {
     return TOTAL_PRICE;
   }
 
-  if (days >= LONG_TERM) {
-    return TOTAL_PRICE - LONG_TERM_DISCOUNT;
+  if (days >= SHORT_TERM && days < LONG_TERM) {
+    return TOTAL_PRICE - SHORT_TERM_DISCOUNT;
   }
 
-  if (days >= SHORT_TERM) {
-    return TOTAL_PRICE - SHORT_TERM_DISCOUNT;
+  if (days >= LONG_TERM) {
+    return TOTAL_PRICE - LONG_TERM_DISCOUNT;
   }
 }
 
