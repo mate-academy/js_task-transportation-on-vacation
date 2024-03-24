@@ -4,21 +4,23 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let rentPerDays = 40 * days;
+  const discount1 = 20;
+  const discount2 = 50;
+  const rentPerDays = 40;
+  let total = rentPerDays * days;
 
   if (days < 3) {
-    return rentPerDays;
   }
 
   if (days >= 3 && days < 7) {
-    rentPerDays = rentPerDays - 20;
+    total = total - discount1;
   }
 
   if (days >= 7) {
-    rentPerDays = rentPerDays - 50;
+    total = total - discount2;
   }
 
-  return rentPerDays;
+  return total;
 }
 
 module.exports = calculateRentalCost;
