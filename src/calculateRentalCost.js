@@ -4,15 +4,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let NORM_RENT = days * 40;
+  const NORM_RENT = days * 40;
 
-if(days >= 7){
-  return NORM_RENT - 50;
-}
+  if (days >= 7) {
+    return NORM_RENT - 50;
+  }
 
-if(days >= 3){
-  return NORM_RENT - 20;
-}
+  if (days >= 3) {
+    return NORM_RENT - 20;
+  }
+
   return NORM_RENT;
 }
 
