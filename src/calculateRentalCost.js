@@ -11,12 +11,12 @@ function calculateRentalCost(days) {
   const LONG_TERM_DISCOUNT = 50;
   const renCost = DAY_PRICE * days;
 
-  if (days >= MIN_TERM && days < LONG_TERM) {
-    return renCost - MIN_TERM_DISCOUNT;
+  if (days >= LONG_TERM) {
+    return renCost - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= 7) {
-    return renCost - LONG_TERM_DISCOUNT;
+  if (days >= MIN_TERM) {
+    return renCost - MIN_TERM_DISCOUNT;
   }
 
   return renCost;
