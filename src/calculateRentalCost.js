@@ -8,13 +8,15 @@ function calculateRentalCost(days) {
   const basePrice = PRICE_PER_DAY * days;
   const DISCOUNT_FOR_THREE_DAYS = 20;
   const DISCOUNT_FOR_SEVEN_DAYS = 50;
+  const LONG_TERM = 7;
+  const MEDIUM_TERM = 3;
 
-  if (days > 2 && days < 7) {
-    return basePrice - DISCOUNT_FOR_THREE_DAYS;
+  if (days >= LONG_TERM) {
+    return basePrice - DISCOUNT_FOR_SEVEN_DAYS;
   }
 
-  if (days > 6) {
-    return basePrice - DISCOUNT_FOR_SEVEN_DAYS;
+  if (days >= MEDIUM_TERM) {
+    return basePrice - DISCOUNT_FOR_THREE_DAYS;
   }
 
   return basePrice;
