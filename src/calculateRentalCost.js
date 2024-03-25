@@ -8,7 +8,7 @@ function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const SHORT_TERM = 3;
   const BIG_DISCOUNT = 50;
-  const SMALL_DISCAUNT = 20;
+  const SMALL_DISCOUNT = 20;
   const totalPrice = DAILY_PRICE * days;
 
   if (days >= LONG_TERM) {
@@ -16,7 +16,7 @@ function calculateRentalCost(days) {
   }
 
   if (days >= SHORT_TERM) {
-    return totalPrice - SMALL_DISCAUNT;
+    return totalPrice - SMALL_DISCOUNT;
   }
 
   return totalPrice;
