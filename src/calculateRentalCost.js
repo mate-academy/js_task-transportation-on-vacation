@@ -3,14 +3,16 @@
  *
  * @return {number}
  */
+const WEEKLY_DISCOUNT = 50;
+const SHORT_TERM_DISCOUNT = 20;
+
 function calculateRentalCost(days) {
-  let totalCost = days * 40;
+  const totalCost = days * 40;
 
   if (days >= 7) {
-    totalCost -= 50;
-
+    return totalCost - WEEKLY_DISCOUNT;
   } else if (days >= 3) {
-    totalCost -= 20;
+    return totalCost - SHORT_TERM_DISCOUNT;
   }
 
   return totalCost;
