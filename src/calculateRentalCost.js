@@ -11,15 +11,17 @@ function calculateRentalCost(days) {
   const longDiscaunt = 50;
   const lowDiscaunt = 20;
 
+  const basePrice = dailyRate * days;
+
   if (days < lowTerm) {
-    return dailyRate * days;
+    return basePrice;
   }
 
   if (days < longTerm) {
-    return dailyRate * days - lowDiscaunt;
+    return basePrice - lowDiscaunt;
   }
 
-  return dailyRate * days - longDiscaunt;
+  return basePrice - longDiscaunt;
 }
 
 module.exports = calculateRentalCost;
