@@ -4,8 +4,6 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code hereadfasdf
-
   const COST_PER_DAY = 40;
 
   if (days < 3) {
