@@ -4,20 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const dailyRent = 40;
-  const threeDaysOff = 20;
-  const sevenDaysOff = 50;
-  const totalPayment = days * dailyRent;
+  const DAILY_RENT = 40;
+  const THREE_DAYS_DISCOUNT = 20;
+  const SEVEN_DAYS_DISCOUNT = 50;
+  const TOTAL_PAYMENT = days * DAILY_RENT;
 
   switch (true) {
     case days >= 7:
-      return totalPayment - sevenDaysOff;
+      return TOTAL_PAYMENT - SEVEN_DAYS_DISCOUNT;
 
     case days >= 3:
-      return totalPayment - threeDaysOff;
+      return TOTAL_PAYMENT - THREE_DAYS_DISCOUNT;
 
     default:
-      return totalPayment;
+      return TOTAL_PAYMENT;
   }
 }
 
