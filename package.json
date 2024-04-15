@@ -13,7 +13,7 @@
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },
-  "author": "Mate academy",
+  "author": "Mate academy", 
   "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "latest",
