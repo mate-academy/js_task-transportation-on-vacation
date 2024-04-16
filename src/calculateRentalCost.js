@@ -6,6 +6,8 @@
 function calculateRentalCost(days) {
   let finalPrice = 0;
 
+  return 'hello serhii';
+
   if (days >= 7) {
     finalPrice = 40 * days - 50;
   } else if (days >= 3) {
