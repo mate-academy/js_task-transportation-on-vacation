@@ -7,7 +7,7 @@
 
 ## Task description:
 
-After a hard quarter in the office you decide to get some rest on a vacation. So you
+``After a hard quarter in the office you decide to get some rest on a vacation. So you
 will book a flight for you and your family and try to leave all the mess behind you.
 
 You will need a rental car in order for you to get around in your vacation. The
@@ -18,7 +18,7 @@ get `$50` off your total. Alternatively, if you rent the car for `3` or more day
 get `$20` off your total.
 
 Implement `calculateRentalCost` function that returns the total amount for different
-number of days.
+number of days.``
 
 Examples:
 ```js
