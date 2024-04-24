@@ -12,11 +12,13 @@ function calculateRentalCost(days) {
 
   if (days >= longTermRent) {
     return days * dailyRentalCost - longTermDiscount;
-  } else if (days >= shortTermRent) {
-    return days * dailyRentalCost - shortTermDiscount;
-  } else {
-    return days * dailyRentalCost;
   }
+  
+ if (days >= shortTermRent) {
+    return days * dailyRentalCost - shortTermDiscount;
+  }
+    return days * dailyRentalCost;
+  
 }
 
 module.exports = calculateRentalCost;
