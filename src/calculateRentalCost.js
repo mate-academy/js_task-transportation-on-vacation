@@ -4,6 +4,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  // useless comment
   let finalPrice = 0;
 
   if (days >= 7) {
