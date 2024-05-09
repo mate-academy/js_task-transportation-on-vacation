@@ -4,7 +4,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-    if (days === 7) {
+  if (days === 7) {
     return 230;
   }
 
