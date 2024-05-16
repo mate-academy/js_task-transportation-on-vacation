@@ -4,7 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  const price = 40;
+  const shortTerm = 3;
+  const longTerm = 7;
+  const shortTermDisc = 20;
+  const longTermDisc = 50;
+  const noDisc = price * days;
+
+  if (days >= shortTerm && days < longTerm) {
+    return noDisc - shortTermDisc;
+  } else if (days >= longTerm) {
+    return noDisc - longTermDisc;
+  } else {
+    return noDisc;
+  }
 }
 
 module.exports = calculateRentalCost;
