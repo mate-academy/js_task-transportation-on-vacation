@@ -5,20 +5,22 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  const payPerDay = 40;
-  const bigDiscount = 50;
-  const smallDiscount = 20;
+  const PAY_PER_DAY = 40;
+  const BIG_DISCOUNT = 50;
+  const SMALL_DISCOUNT = 20;
+  const SHORT_TERM = 3;
+  const LONG_TERM = 7;
 
-  if (days < 3) {
-    return days * payPerDay;
+  if (days < SHORT_TERM) {
+    return days * PAY_PER_DAY;
   }
 
-  if (days >= 7) {
-    return days * payPerDay - bigDiscount;
+  if (days >= LONG_TERM) {
+    return days * PAY_PER_DAY - BIG_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return days * payPerDay - smallDiscount;
+  if (days >= SHORT_TERM) {
+    return days * PAY_PER_DAY - SMALL_DISCOUNT;
   }
 }
 
