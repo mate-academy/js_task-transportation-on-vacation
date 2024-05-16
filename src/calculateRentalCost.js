@@ -13,11 +13,13 @@ function calculateRentalCost(days) {
 
   if (days >= shortTerm && days < longTerm) {
     return noDisc - shortTermDisc;
-  } else if (days >= longTerm) {
-    return noDisc - longTermDisc;
-  } else {
-    return noDisc;
   }
+
+  if (days >= longTerm) {
+    return noDisc - longTermDisc;
+  }
+
+  return noDisc;
 }
 
 module.exports = calculateRentalCost;
