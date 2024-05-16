@@ -9,7 +9,7 @@ function calculateRentalCost(days) {
   const SHORT_TERM = 3;
   const DISCOUNT_7_MORE_DAYS = 50;
   const DISCTOUNT_3_MORE_DAYS = 20;
-  
+
   const basePrice = days * DAY_COST;
 
   if (days >= LONG_TERM) {
