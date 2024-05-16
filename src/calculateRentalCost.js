@@ -13,11 +13,9 @@ function calculateRentalCost(days) {
     return price;
   }
 
-  if (days >= 3 && days <= 6) {
+  if (days < 7) {
     return price - mediumRentTermDiscount;
-  }
-
-  if (days >= 7) {
+  } else {
     return price - longRentTermDiscount;
   }
 }
