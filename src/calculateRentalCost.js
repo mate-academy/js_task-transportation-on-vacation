@@ -4,22 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const price = 40;
-  const shortTerm = 3;
+  const PRICE = 40;
+  const SHORT_TERM = 3;
   const longTerm = 7;
-  const shortTermDisc = 20;
-  const longTermDisc = 50;
-  const noDisc = price * days;
-
-  if (days >= shortTerm && days < longTerm) {
-    return noDisc - shortTermDisc;
-  }
+  const SHORT_TERM_DISC = 20;
+  const LONG_TERM_DISC = 50;
+  const NO_DISC = PRICE * days;
 
   if (days >= longTerm) {
-    return noDisc - longTermDisc;
+    return NO_DISC - LONG_TERM_DISC;
   }
 
-  return noDisc;
+  if (days >= SHORT_TERM && days < longTerm) {
+    return NO_DISC - SHORT_TERM_DISC;
+  }
+
+  return NO_DISC;
 }
 
 module.exports = calculateRentalCost;
