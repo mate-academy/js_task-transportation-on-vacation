@@ -4,22 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const PAY_PER_DAY = 40;
-  const SUM_PER_DAY = days * PAY_PER_DAY;
+  const payPerDay = 40;
+  const SumPerDay = days * payPerDay;
   const BIG_DISCOUNT = 50;
   const SMALL_DISCOUNT = 20;
   const SHORT_TERM = 3;
   const LONG_TERM = 7;
 
   if (days >= LONG_TERM) {
-    return SUM_PER_DAY - BIG_DISCOUNT;
+    return SumPerDay - BIG_DISCOUNT;
   }
 
   if (days >= SHORT_TERM) {
-    return SUM_PER_DAY - SMALL_DISCOUNT;
+    return SumPerDay - SMALL_DISCOUNT;
   }
 
-  return SUM_PER_DAY;
+  return SumPerDay;
 }
 
 module.exports = calculateRentalCost;
