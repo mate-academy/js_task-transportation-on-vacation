@@ -4,22 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const longTermDays = 7;
-  const shortTermDays = 3;
-  const carCostPerDay = 40;
-  const mediumRentTermDiscount = 20;
-  const longRentTermDiscount = 50;
-  const price = carCostPerDay * days;
+  const longTerm = 7;
+  const shortTerm = 3;
+  const longTermDiscount = 50;
+  const mediumTermDiscount = 20;
+  const costPerDay = 40;
+  const basePrice = costPerDay * days;
 
-  if (days >= longTermDays) {
-    return price - longRentTermDiscount;
+  if (days >= longTerm) {
+    return basePrice - longTermDiscount;
   }
 
-  if (days >= shortTermDays) {
-    return price - mediumRentTermDiscount;
+  if (days >= shortTerm) {
+    return basePrice - mediumTermDiscount;
   }
 
-  return price;
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
