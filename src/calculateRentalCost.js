@@ -10,14 +10,20 @@ function calculateRentalCost(days) {
 
   if (days <= 3) {
     amount = days * daylyRent;
+
+    // return amount;
   }
 
   if (days >= 3 && days < 7) {
     amount = days * daylyRent - 20;
+
+    return amount;
   }
 
   if (days >= 7) {
     amount = days * daylyRent - 50;
+
+    // return amount;
   }
 
   return amount;
