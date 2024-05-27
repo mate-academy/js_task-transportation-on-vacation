@@ -4,21 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
-  const cost = 40;
+  const dailyRentalRate = 40;
   const smallDiscount = 20;
   const bigDiscount = 50;
-  let vocationCost = 0;
+  const longTermRental = 7;
+  const shortTermRental = 3;
+  const vacationRentalCost = days * dailyRentalRate;
 
-  if (days >= 7) {
-    vocationCost += days * cost - bigDiscount;
-  } else if (days >= 3) {
-    vocationCost += days * cost - smallDiscount;
-  } else {
-    vocationCost += days * cost;
+  if (days >= longTermRental) {
+    return vacationRentalCost - bigDiscount;
   }
 
-  return vocationCost;
+  if (days >= shortTermRental) {
+    return vacationRentalCost - smallDiscount;
+  }
+
+  return vacationRentalCost;
 }
 
 module.exports = calculateRentalCost;
