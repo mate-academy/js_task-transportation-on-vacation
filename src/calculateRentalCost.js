@@ -5,23 +5,23 @@
  */
 function calculateRentalCost(days) {
   const RENT_COST = 40;
-  const BIG_DISCOUNT = 50;
-  const SMALL_DISCOUNT = 20;
+  const BIG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
 
-  const PERIOD_WITHOUT_DISCOUNT = 2;
-  const PERIOD_WITH_SMALL_DISCOUNT = 7;
+  const SHORT_TERM_RENTAL_THRESHOLD = 3;
+  const LONG_TERM_RENTAL_THRESHOLD = 7;
 
-  let price = days * RENT_COST;
+  const price = days * RENT_COST;
 
-  if (days <= PERIOD_WITHOUT_DISCOUNT) {
-    return price;
+  if (days >= LONG_TERM_RENTAL_THRESHOLD) {
+    return price - BIG_TERM_DISCOUNT;
   }
 
-  if (days < PERIOD_WITH_SMALL_DISCOUNT) {
-    return (price -= SMALL_DISCOUNT);
+  if (days >= SHORT_TERM_RENTAL_THRESHOLD) {
+    return price - SHORT_TERM_DISCOUNT;
   }
 
-  return (price -= BIG_DISCOUNT);
+  return price;
 }
 
 module.exports = calculateRentalCost;
