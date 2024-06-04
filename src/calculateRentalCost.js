@@ -7,21 +7,24 @@
 const DAY_COST_VALUE = 40;
 const THREE_DAYS_OFF_VALUE = 20;
 const SEVEN_DAYS_OFF_VALUE = 50;
+const THREE_DAYS = 3;
+const SEVEN_DAYS = 7;
+const ERROR_MESSAGE = 'Invalid data have been provided.';
 
 function calculateRentalCost(days) {
   const isInvalidData = typeof days !== 'number';
 
   if (isInvalidData) {
-    return 0;
+    throw new Error(ERROR_MESSAGE);
   }
 
   const totalCost = DAY_COST_VALUE * days;
 
-  if (days >= 7) {
+  if (days >= SEVEN_DAYS) {
     return totalCost - SEVEN_DAYS_OFF_VALUE;
   }
 
-  if (days >= 3) {
+  if (days >= THREE_DAYS) {
     return totalCost - THREE_DAYS_OFF_VALUE;
   }
 
