@@ -23,8 +23,4 @@ function calculateRentalCost(numberOfDays) {
   return baseCost;
 }
 
-
-
-
 module.exports = calculateRentalCost;
-
