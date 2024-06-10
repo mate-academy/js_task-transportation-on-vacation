@@ -5,20 +5,17 @@
  */
 function calculateRentalCost(days) {
   const RENT_COST = 40;
+  const DISC_LOW = 20;
+  const DISC_HIGH = 50;
   let discount = 0;
 
-  switch (true) {
-    case days >= 3 && days < 7:
-      discount = 20;
-      break;
-    case days >= 7:
-      discount = 50;
-      break;
+  if (days >= 7) {
+    discount = DISC_HIGH;
+  } else if (days >= 3) {
+    discount = DISC_LOW;
   }
 
-  const TOTAL_COST = days * RENT_COST - discount;
-
-  return TOTAL_COST;
+  return days * RENT_COST - discount;
 }
 
 module.exports = calculateRentalCost;
