@@ -4,19 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const LONG_TIME_DISC = 50;
-  const MIDL_TIME_DISC = 20;
-  const PRICE = 40;
-  const LONG_TIME = 7;
-  const MIDL_TIME = 3;
+  const LONG_TERM_DISC = 50;
+  const MIDL_TERM_DISC = 20;
+  const PRICE_PER_DAY = 40;
+  const LONG_TERM = 7;
+  const MIDL_TERM = 3;
 
-  if (days >= LONG_TIME) {
-    return PRICE * days - LONG_TIME_DISC;
-  } else if (days >= MIDL_TIME) {
-    return PRICE * days - MIDL_TIME_DISC;
-  } else {
-    return PRICE * days;
+  if (days >= LONG_TERM) {
+    return PRICE_PER_DAY * days - LONG_TERM_DISC;
   }
+
+  if (days >= MIDL_TERM) {
+    return PRICE_PER_DAY * days - MIDL_TERM_DISC;
+  }
+
+  return PRICE_PER_DAY * days;
 }
 
 module.exports = calculateRentalCost;
