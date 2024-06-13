@@ -5,14 +5,20 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  const basePrice = days * 40;
+  const dailyRentalCost = 40;
+  const longTermRental = 7;
+  const mediumTermRental = 3;
+  const longTermRentalDiscount = 50;
+  const mediumTermRentalDiscount = 20;
 
-  if (days >= 7) {
-    return basePrice - 50;
+  const basePrice = days * dailyRentalCost;
+
+  if (days >= longTermRental) {
+    return basePrice - longTermRentalDiscount;
   }
 
-  if (days >= 3) {
-    return basePrice - 20;
+  if (days >= mediumTermRental) {
+    return basePrice - mediumTermRentalDiscount;
   }
 
   return basePrice;
