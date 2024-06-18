@@ -12,5 +12,4 @@ function calculateRentalCost(days) {
     return days * 40 - 50;
   }
 }
-
-export default calculateRentalCost;
+module.exports = calculateRentalCost;
