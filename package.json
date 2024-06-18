@@ -26,5 +26,8 @@
   },
   "mateAcademy": {
     "projectType": "javascript"
+  },
+  "dependencies": {
+    "test": "^3.3.0"
   }
 }
