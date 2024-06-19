@@ -12,11 +12,21 @@ function calculateRentalCost(days) {
 
   const priceWithoutDiscount = days * PRICE;
 
-  return days >= LONG_TERM
-    ? priceWithoutDiscount - LONG_DISCOUNT
-    : days >= SHORT_TERM
-      ? priceWithoutDiscount - SHORT_DISCOUNT
-      : priceWithoutDiscount;
+  if (days >= LONG_TERM) {
+    return priceWithoutDiscount - LONG_DISCOUNT;
+  }
+
+  if (days >= SHORT_TERM) {
+    return priceWithoutDiscount - SHORT_DISCOUNT;
+  }
+
+  return priceWithoutDiscount;
+
+  // return days >= LONG_TERM
+  //   ? priceWithoutDiscount - LONG_DISCOUNT
+  //   : days >= SHORT_TERM
+  //     ? priceWithoutDiscount - SHORT_DISCOUNT
+  //     : priceWithoutDiscount;
 }
 
 module.exports = calculateRentalCost;
