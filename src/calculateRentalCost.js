@@ -3,13 +3,20 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  let totalCost = days * 40;
+function calculateRentalCost(numberOfDays) {
+  const DAILY_RENTAL_COST = 40;
+  const DISCOUNT_FOR_SEVEN_DAYS_OR_MORE = 50;
+  const DISCOUNT_FOR_THREE_DAYS_OR_MORE = 20;
+  const DISCOUNT_THRESHOLD_SEVEN_DAYS = 7;
+  const DISCOUNT_THRESHOLD_THREE_DAYS = 3;
+  const totalCost = numberOfDays * DAILY_RENTAL_COST;
 
-  if (days >= 7) {
-    totalCost -= 50;
-  } else if (days >= 3) {
-    totalCost -= 20;
+  if (numberOfDays >= DISCOUNT_THRESHOLD_SEVEN_DAYS) {
+    return totalCost - DISCOUNT_FOR_SEVEN_DAYS_OR_MORE;
+  }
+
+  if (numberOfDays >= DISCOUNT_THRESHOLD_THREE_DAYS) {
+    return totalCost - DISCOUNT_FOR_THREE_DAYS_OR_MORE;
   }
 
   return totalCost;
