@@ -4,20 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const dailyRentalCost = 40;
-  const result = dailyRentalCost * days;
+  const DAILY_RENTAL_COST = 40;
+  const result = DAILY_RENTAL_COST * days;
 
-  const daysForBigDiscount = 7;
-  const bigDiscount = 50;
-  const daysForSmallDiscount = 3;
-  const smallDiscount = 20;
+  const DAYS_FOR_BIG_DISCOUNT = 7;
+  const BIG_DISCOUNT = 50;
+  const DAYS_FOR_SMALL_DISCOUNT = 3;
+  const SMALL_DISCOUNT = 20;
 
-  if (days >= daysForBigDiscount) {
-    return result - bigDiscount;
+  if (days >= DAYS_FOR_BIG_DISCOUNT) {
+    return result - BIG_DISCOUNT;
   }
 
-  if (days >= daysForSmallDiscount) {
-    return result - smallDiscount;
+  if (days >= DAYS_FOR_SMALL_DISCOUNT) {
+    return result - SMALL_DISCOUNT;
   }
 
   return result;
