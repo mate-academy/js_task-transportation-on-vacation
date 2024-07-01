@@ -4,15 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let sumOfDays = 40 * days;
+  const dailyRate = 40;
+  const discountForWeek = 50;
+  const discountForDays = 20;
+  const minDaysForWeekDiscount = 7;
+  const minDaysForDaysDiscount = 3;
 
-  if (days >= 7) {
-    sumOfDays -= 50;
-  } else if (days >= 3) {
-    sumOfDays -= 20;
+  let totalCost = dailyRate * days;
+
+  if (days >= minDaysForWeekDiscount) {
+    totalCost -= discountForWeek;
+  } else if (days >= minDaysForDaysDiscount) {
+    totalCost -= discountForDays;
   }
 
-  return sumOfDays;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
