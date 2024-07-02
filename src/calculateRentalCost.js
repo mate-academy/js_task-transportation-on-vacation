@@ -7,11 +7,13 @@ function calculateRentalCost(days) {
   const carRentPerDay = 40;
   const saleForWeekAndMore = 50;
   const saleForShortTerm = 20;
+  const sevenDaysRent = 7;
+  const threeDaysRent = 3;
   let totalSum = carRentPerDay * days;
 
-  if (days >= 7) {
+  if (days >= sevenDaysRent) {
     totalSum = days * carRentPerDay - saleForWeekAndMore;
-  } else if (days >= 3) {
+  } else if (days >= threeDaysRent) {
     totalSum = days * carRentPerDay - saleForShortTerm;
   }
 
