@@ -11,16 +11,16 @@ const SEVEN_DAYS_RENT = 7;
 const THREE_DAYS_RENT = 3;
 
 function calculateRentalCost(days) {
-  const totalSum = CAR_RENT_PER_DAY * days;
+  const TOTAL_SUM = CAR_RENT_PER_DAY * days;
   if (days >= SEVEN_DAYS_RENT) {
-    return totalSum - SALE_FOR_WEEK_AND_MORE;
+    return TOTAL_SUM - SALE_FOR_WEEK_AND_MORE;
   }
 
   if (days >= THREE_DAYS_RENT) {
-    return totalSum - SALE_FOR_SHORT_TERM;
+    return TOTAL_SUM - SALE_FOR_SHORT_TERM;
   }
 
-  return totalSum;
+  return TOTAL_SUM;
 }
 
 module.exports = calculateRentalCost;
