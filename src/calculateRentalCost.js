@@ -12,14 +12,14 @@ function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const LONG_TERM_DISC = 50;
 
-  let finalPrice = days * NORMAL_PRICE;
+  const finalPrice = days * NORMAL_PRICE;
 
   if (days >= LONG_TERM) {
-    return (finalPrice -= LONG_TERM_DISC);
+    return finalPrice - LONG_TERM_DISC;
   }
 
   if (days >= MID_TERM) {
-    return (finalPrice -= MID_TERM_DISC);
+    return finalPrice - MID_TERM_DISC;
   }
 
   return finalPrice;
