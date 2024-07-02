@@ -5,21 +5,21 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  let amount = 0;
+  const payPerDay = 40;
+  const DAYS_FOR_MAX_DISCOUNT = 7;
+  const DAYS_FOR_MIN_DISCOUNT = 3;
+  const LONG_TERM_DISCOUNT = 50;
+  const MIN_TERM_DISCOUNT = 20;
 
-  for (let i = 0; i <= days - 1; i++) {
-    amount += 40;
+  if (days >= DAYS_FOR_MAX_DISCOUNT) {
+    return payPerDay * days - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= 7) {
-    return amount - 50;
+  if (days >= DAYS_FOR_MIN_DISCOUNT) {
+    return payPerDay * days - MIN_TERM_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return amount - 20;
-  }
-
-  return amount;
+  return payPerDay * days;
 }
 
 module.exports = calculateRentalCost;
