@@ -1,29 +1,26 @@
+const pricePerDay = 40;
+const longPeriodDays = 7;
+const longPeriodDiscount = 50;
+const mediumPeriodDays = 3;
+const mediumPeriodDiscount = 20;
+
 /**
  * @param {number} days
  *
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const pricePerDay = 40;
-  const periodDiscounts = { 3: 20, 7: 50 };
+  const baseTotal = days * pricePerDay;
 
-  const discount = getDiscount(days, periodDiscounts);
+  if (days >= longPeriodDays) {
+    return baseTotal - longPeriodDiscount;
+  }
 
-  return days * pricePerDay - discount;
-}
+  if (days >= mediumPeriodDays) {
+    return baseTotal - mediumPeriodDiscount;
+  }
 
-/**
- * @param {number} days
- * @param {Object} periodDiscounts
- *
- * @return {number}
- */
-function getDiscount(days, periodDiscounts) {
-  const allPeriods = Object.getOwnPropertyNames(periodDiscounts);
-  const viablePeriods = allPeriods.filter((value) => value <= days);
-  const period = Math.max(...viablePeriods);
-
-  return periodDiscounts[period] ?? 0;
+  return baseTotal;
 }
 
 module.exports = calculateRentalCost;
