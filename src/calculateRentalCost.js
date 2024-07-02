@@ -5,7 +5,7 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  const payPerDay = 40;
+  const PAY_PER_DAY = 40;
   const DAYS_FOR_MAX_DISCOUNT = 7;
   const DAYS_FOR_MIN_DISCOUNT = 3;
   const LONG_TERM_DISCOUNT = 50;
