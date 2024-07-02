@@ -12,14 +12,14 @@ function calculateRentalCost(days) {
   const MIN_TERM_DISCOUNT = 20;
 
   if (days >= DAYS_FOR_MAX_DISCOUNT) {
-    return payPerDay * days - LONG_TERM_DISCOUNT;
+    return PAY_PER_DAY * days - LONG_TERM_DISCOUNT;
   }
 
   if (days >= DAYS_FOR_MIN_DISCOUNT) {
-    return payPerDay * days - MIN_TERM_DISCOUNT;
+    return PAY_PER_DAY * days - MIN_TERM_DISCOUNT;
   }
 
-  return payPerDay * days;
+  return PAY_PER_DAY * days;
 }
 
 module.exports = calculateRentalCost;
