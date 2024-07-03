@@ -1,8 +1,8 @@
-const pricePerDay = 40;
-const longPeriodDays = 7;
-const longPeriodDiscount = 50;
-const mediumPeriodDays = 3;
-const mediumPeriodDiscount = 20;
+const PRICE_PER_DAY = 40;
+const LONG_PERIOD_DAYS = 7;
+const LONG_PERIOD_DISCOUNT = 50;
+const MEDIUM_PERIOD_DAYS = 3;
+const MEDIUM_PERIOD_DISCOUNT = 20;
 
 /**
  * @param {number} days
@@ -10,14 +10,14 @@ const mediumPeriodDiscount = 20;
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const baseTotal = days * pricePerDay;
+  const baseTotal = days * PRICE_PER_DAY;
 
-  if (days >= longPeriodDays) {
-    return baseTotal - longPeriodDiscount;
+  if (days >= LONG_PERIOD_DAYS) {
+    return baseTotal - LONG_PERIOD_DISCOUNT;
   }
 
-  if (days >= mediumPeriodDays) {
-    return baseTotal - mediumPeriodDiscount;
+  if (days >= MEDIUM_PERIOD_DAYS) {
+    return baseTotal - MEDIUM_PERIOD_DISCOUNT;
   }
 
   return baseTotal;
