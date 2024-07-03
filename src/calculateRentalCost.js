@@ -21,9 +21,7 @@ function calculateRentalCost(days) {
     return countRent - SHORT_TERM_DISCOUNT;
   }
 
-  if (days >= LONG_TERM) {
-    return countRent - LONG_TERM_DISCOUNT;
-  }
+  return countRent - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
