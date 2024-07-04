@@ -4,13 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const payment = 40;
-  let sum = days * payment;
+  const PAYMENT = 40;
+  const BIGGER_DISCONT = 7;
+  const SMALLER_DISCONT = 3;
+  let sum = days * PAYMENT;
 
-  if (days > 6) {
+  if (days >= BIGGER_DISCONT) {
     sum -= 50;
-  } else if (days > 2) {
+
+    return sum;
+  }
+
+  if (days >= SMALLER_DISCONT) {
     sum -= 20;
+
+    return sum;
   }
 
   return sum;
