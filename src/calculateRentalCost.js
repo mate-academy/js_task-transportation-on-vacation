@@ -3,23 +3,25 @@
  *
  * @return {number}
  */
-const minDaysForDiscount = 3;
-const maxDaysForDiscount = 7;
-const baseDiscountAmount = 20;
-const largeDiscountAmount = 50;
-const dailyRentalRate = 40;
 
 function calculateRentalCost(days) {
+  const minDaysForDiscount = 3;
+  const maxDaysForDiscount = 7;
+  const baseDiscountAmount = 20;
+  const largeDiscountAmount = 50;
+  const dailyRentalRate = 40;
+  const standartRentalCost = days * dailyRentalRate;
+
   if (days < minDaysForDiscount) {
-    return days * dailyRentalRate;
+    return standartRentalCost;
   }
 
-  if (days >= minDaysForDiscount && days < maxDaysForDiscount) {
-    return days * dailyRentalRate - baseDiscountAmount;
+  if (days < maxDaysForDiscount) {
+    return standartRentalCost - baseDiscountAmount;
   }
 
   if (days >= maxDaysForDiscount) {
-    return days * dailyRentalRate - largeDiscountAmount;
+    return standartRentalCost - largeDiscountAmount;
   }
 }
 
