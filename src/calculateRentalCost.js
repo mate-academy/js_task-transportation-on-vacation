@@ -3,18 +3,18 @@
  *
  * @return {number}
  */
-const discountsDays1 = 3;
-const discountsDays2 = 7;
-const discount1 = 20;
-const discount2 = 50;
+const minDaysForDiscount = 3;
+const maxDaysForDiscount = 7;
+const smallDiscountAmount = 20;
+const largeDiscountAmount = 50;
 
 function calculateRentalCost(days) {
-  if (days < discountsDays1) {
+  if (days < minDaysForDiscount) {
     return days * 40;
-  } else if (days >= discountsDays1 && days < discountsDays2) {
-    return days * 40 - discount1;
-  } else if (days >= discountsDays2) {
-    return days * 40 - discount2;
+  } else if (days >= minDaysForDiscount && days < maxDaysForDiscount) {
+    return days * 40 - smallDiscountAmount;
+  } else if (days >= maxDaysForDiscount) {
+    return days * 40 - largeDiscountAmount;
   }
 }
 
