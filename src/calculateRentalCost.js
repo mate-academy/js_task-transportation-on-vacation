@@ -10,17 +10,15 @@ function calculateRentalCost(days) {
   const mediumTerm = 3;
   const mediumTermDiscount = 20;
 
-  let totalRent = 0;
-
   if (days >= longTerm) {
-    totalRent = dayRent * days - longTermDiscount;
-  } else if (days >= mediumTerm) {
-    totalRent = dayRent * days - mediumTermDiscount;
-  } else {
-    totalRent = dayRent * days;
+    return dayRent * days - longTermDiscount;
   }
 
-  return totalRent;
+  if (days >= mediumTerm) {
+    return dayRent * days - mediumTermDiscount;
+  }
+
+  return dayRent * days;
 }
 
 module.exports = calculateRentalCost;
