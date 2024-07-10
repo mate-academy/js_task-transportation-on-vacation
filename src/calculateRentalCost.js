@@ -4,6 +4,10 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  if (days < 0) {
+    return 0;
+  }
+
   const PRICE_PER_DAY = 40;
 
   const SHORT_TERM = 3;
