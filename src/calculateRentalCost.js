@@ -8,8 +8,6 @@ const regularPrice = 40;
 const amountOfDaysForFiftyOff = 7;
 const amountOfDaysForTwenty = 3;
 
-calculateRentalCost(3);
-
 function calculateRentalCost(days) {
   const price = days * regularPrice;
 
