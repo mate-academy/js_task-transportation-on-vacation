@@ -10,7 +10,7 @@ function calculateRentalCost(days) {
   if (days >= 3 && days <= 6) {
     price = price - 20;
   } else if (days >= 7) {
-    price = price - 30;
+    price = price - 50;
   }
 
   return price;
