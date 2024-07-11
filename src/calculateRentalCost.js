@@ -5,18 +5,20 @@
  */
 
 const REGULAR_PRICE = 40;
-const AMOUNT_OF_DAYS_FOR_FIFTY_OFF = 7;
-const AMOUNT_OF_DAYS_FOR_TWENTY_OFF = 3;
+const DAYS_FOR_MAX_DISCOUNT = 7;
+const DAYS_FOR_MIN_DISCOUNT = 3;
+const MAX_DISCOUNT_AMOUNT = 50;
+const MIN_DISCOUNT_AMOUNT = 20;
 
 function calculateRentalCost(days) {
   const price = days * REGULAR_PRICE;
 
-  if (days >= AMOUNT_OF_DAYS_FOR_FIFTY_OFF) {
-    return price - 50;
+  if (days >= DAYS_FOR_MAX_DISCOUNT) {
+    return price - MAX_DISCOUNT_AMOUNT;
   }
 
-  if (days >= AMOUNT_OF_DAYS_FOR_TWENTY_OFF) {
-    return price - 20;
+  if (days >= DAYS_FOR_MIN_DISCOUNT) {
+    return price - MIN_DISCOUNT_AMOUNT;
   }
 
   return price;
