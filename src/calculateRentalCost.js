@@ -5,6 +5,7 @@
  */
 function calculateRentalCost(days) {
   // write code here
+
   const DEFAULT_COST = 40;
   const MEDIUM_TERM = 3;
   const MEDIUM_TERM_DISCOUNT = 20;
