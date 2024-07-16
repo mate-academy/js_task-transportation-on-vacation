@@ -4,19 +4,25 @@
  * @return {number}
  */
 
+const DISCOUNT_THRESHOLD_7_DAYS = 7;
+const DISCOUNT_THRESHOLD_3_DAYS = 3;
+const DISCOUNT_7_DAYS = 50;
+const DISCOUNT_3_DAYS = 20;
+
 function calculateRentalCost(days) {
   const PRICE = 40;
-  const sum = days * PRICE;
 
-  if (days >= 7) {
-    return sum - 50;
+  const totalCost = days * PRICE;
+
+  if (days >= DISCOUNT_THRESHOLD_7_DAYS) {
+    return totalCost - DISCOUNT_7_DAYS;
   }
 
-  if (days >= 3) {
-    return sum - 20;
+  if (days >= DISCOUNT_THRESHOLD_3_DAYS) {
+    return totalCost - DISCOUNT_3_DAYS;
   }
 
-  return sum;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
