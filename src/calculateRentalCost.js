@@ -5,7 +5,7 @@ const MEDIUM_TERM_DAYS = 3;
 const MEDIUM_TERM_DISCOUNT = 20;
 
 /**
- * Calculate the total rental cost based on the number of days.
+
  *
  * @param {number} days - The number of days the car is rented.
  * @return {number} - The total rental cost.
