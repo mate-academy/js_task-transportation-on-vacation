@@ -5,7 +5,6 @@ const MEDIUM_TERM_DAYS = 3;
 const MEDIUM_TERM_DISCOUNT = 20;
 
 /**
-
  *
  * @param {number} days - The number of days the car is rented.
  * @return {number} - The total rental cost.
