@@ -5,21 +5,23 @@
  */
 function calculateRentalCost(days) {
   // The car coste calculator
-  let result = days * 40;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
+  let price = days * 40;
 
-  if (days >= '7') {
-    result -= '50';
+  if (days >= 7) {
+    price -= LONG_TERM_DISCOUNT;
 
-    return result;
+    return price;
   }
 
-  if (days >= '3') {
-    result -= '20';
+  if (days >= 3) {
+    price -= SHORT_TERM_DISCOUNT;
 
-    return result;
+    return price;
   }
 
-  return result;
+  return price;
 }
 
 module.exports = calculateRentalCost;
