@@ -4,13 +4,19 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  //The car coste calculator
+  // The car coste calculator
   let result = days * 40;
 
   if (days >= '7') {
     result -= '50';
-  } else if (days >= '3') {
+
+    return result;
+  }
+
+  if (days >= '3') {
     result -= '20';
+
+    return result;
   }
 
   return result;
