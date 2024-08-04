@@ -6,7 +6,8 @@
  */
 
 function calculateRentalCost(days) {
-  const rentalCost = days * 40;
+  const DAILY_RENTAL_COST = 40;
+  const rentalCost = days * DAILY_RENTAL_COST;
 
   if (days >= 7) {
     return rentalCost - 50;
