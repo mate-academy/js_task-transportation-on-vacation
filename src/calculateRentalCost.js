@@ -4,13 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const dailyRate = 40;
-    let totalCost = days * dailyRate;
+    const DAILY_RATE = 40;
+    const LONG_TERM_RENTAL_DAYS = 7;
+    const LONG_TERM_DISCOUNT = 50;
+    const SHORT_TERM_RENTAL_DAYS = 3;
+    const SHORT_TERM_DISCOUNT = 20;
 
-    if (days >= 7) {
-        totalCost -= 50;
-    } else if (days >= 3) {
-        totalCost -= 20;
+    const totalCost = days * DAILY_RATE;
+
+    if (days >= LONG_TERM_RENTAL_DAYS) {
+        return totalCost - LONG_TERM_DISCOUNT;
+    } 
+    
+    if (days >= SHORT_TERM_RENTAL_DAYS) {
+        return totalCost - SHORT_TERM_DISCOUNT;
     }
 
     return totalCost;
