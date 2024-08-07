@@ -5,19 +5,24 @@
  */
 function calculateRentalCost(days) {
   const dailyRate = 40;
-  let totalCost = days * dailyRate;
+  const totalCost = days * dailyRate;
+  const smallDiscount = 20;
+  const discount = 50;
+  let cost = 0;
 
   if (days < 3) {
     return totalCost;
-  } else if (days < 7) {
-    totalCost = totalCost - 20;
-
-    return totalCost;
-  } else {
-    totalCost = totalCost - 50;
-
-    return totalCost;
   }
+
+  if (days < 7) {
+    cost = totalCost - smallDiscount;
+
+    return cost;
+  }
+
+  cost = totalCost - discount;
+
+  return cost;
 }
 
 module.exports = calculateRentalCost;
