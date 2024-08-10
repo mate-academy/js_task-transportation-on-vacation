@@ -4,8 +4,8 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const carRent = 40;
-  let fullCost = days * carRent;
+  const DAILY_RENTAL_RATE = 40;
+  let fullCost = days * DAILY_RENTAL_RATE;
   const LONG_TERM_DISCOUNT = 50;
   const SHORT_TERM_DISCOUNT = 20;
   const LONG_TERM = 7;
