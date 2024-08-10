@@ -9,14 +9,14 @@ function calculateRentalCost(days) {
   const rentalCost = 40;
   const longTerm = 7;
   const normalTerm = 3;
-  let totalCost = days * rentalCost;
+  const totalCost = days * rentalCost;
 
   if (days >= longTerm) {
-    totalCost -= longTermDiscount;
+    return totalCost - longTermDiscount;
   }
 
-  if (days >= normalTerm && days < longTerm) {
-    totalCost -= normalTermDiscount;
+  if (days >= normalTerm) {
+    return totalCost - normalTermDiscount;
   }
 
   return totalCost;
