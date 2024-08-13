@@ -1,23 +1,26 @@
-name: Test
+name: Manual Workflow
 
-on:
-  pull_request:
-    branches: [ master ]
-
+on: 
+  workflow_dispatch:
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    # Step 1: Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Setup environment
+    - name: Setup up Node.js
+      uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
+        node-version: '20'
+
+    # Step 3: Install dependiencies
+    - name: Install Jest 
+      run: npm install jest
+
+    # Step 4: Run tests 
+    - name: Run tests
+      run: npx jest --coverage
