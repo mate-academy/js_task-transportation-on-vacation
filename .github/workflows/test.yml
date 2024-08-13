@@ -1,12 +1,9 @@
 name: Test
 
-on:
-  pull_request:
-    branches: [ master ]
+on: [workflow_dispatch]
 
 jobs:
-  build:
-
+  my_job:
     runs-on: ubuntu-latest
 
     strategy:
@@ -14,10 +11,16 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node
+      uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install jest
+
+    - name: Run tests
+      run: npx jest
