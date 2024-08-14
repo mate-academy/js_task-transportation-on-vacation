@@ -10,13 +10,15 @@ function calculateRentalCost(days) {
   const SHORT_TERM_DISCOUNT = 20;
   const LONG_TERM_DISCOUNT = 50;
 
+  const regularCost = days * REGULAR_FEE;
+
   switch (true) {
     case days >= LONG_TERM:
-      return days * REGULAR_FEE - LONG_TERM_DISCOUNT;
+      return regularCost - LONG_TERM_DISCOUNT;
     case days >= SHORT_TERM:
-      return days * REGULAR_FEE - SHORT_TERM_DISCOUNT;
+      return regularCost - SHORT_TERM_DISCOUNT;
     default:
-      return days * REGULAR_FEE;
+      return regularCost;
   }
 }
 
