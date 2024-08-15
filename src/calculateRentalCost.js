@@ -14,13 +14,11 @@ function calculateRentalCost(days) {
     return BASE_PRICE;
   }
 
-  if (days >= SHORT_TERM && days < LONG_TERM) {
+  if (days < LONG_TERM) {
     return BASE_PRICE - SHORT_TERM_DISCOUNT;
   }
 
-  if (days >= LONG_TERM) {
-    return BASE_PRICE - LONG_TERM_DISCOUNT;
-  }
+  return BASE_PRICE - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
