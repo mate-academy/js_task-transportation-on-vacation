@@ -8,10 +8,6 @@ function calculateRentalCost(days) {
   const discountUpToSix = 20;
   const discountSevenMore = 50;
 
-  if (days <= 0) {
-    return 'You need to rent for at least one day';
-  }
-
   if (days <= 2) {
     return days * pricePerDay;
   } else if (days >= 3 && days < 7) {
