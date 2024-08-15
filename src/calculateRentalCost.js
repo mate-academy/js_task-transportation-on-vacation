@@ -10,7 +10,9 @@ function calculateRentalCost(days) {
 
   if (days <= 2) {
     return days * pricePerDay;
-  } else if (days >= 3 && days < 7) {
+  }
+
+  if (days < 7) {
     return days * pricePerDay - discountUpToSix;
   }
 
