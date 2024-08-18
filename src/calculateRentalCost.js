@@ -4,7 +4,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const dayCost = 40;
+  const basePrice = 40;
 
   const shortTerm = 3;
   const shortTermDiscount = 20;
@@ -12,7 +12,7 @@ function calculateRentalCost(days) {
   const longTerm = 7;
   const longTermDiscount = 50;
 
-  const total = dayCost * days;
+  const total = basePrice * days;
 
   if (days >= longTerm) {
     return total - longTermDiscount;
