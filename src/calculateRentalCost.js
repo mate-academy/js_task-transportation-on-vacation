@@ -4,21 +4,19 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const dayPrice = 40;
-  let discount = 0;
+  const DISCOUNT = 20;
+  const BIG_DISCOUNT = 50;
+  const baseDayPrice = 40;
+  const defaultCalculation = baseDayPrice * days;
 
   switch (true) {
     case days >= 3 && days < 7:
-      discount = 20;
-      break;
+      return defaultCalculation - DISCOUNT;
     case days >= 7:
-      discount = 50;
-      break;
+      return defaultCalculation - BIG_DISCOUNT;
     default:
-      discount = 0;
+      return defaultCalculation;
   }
-
-  return dayPrice * days - discount;
 }
 
 module.exports = calculateRentalCost;
