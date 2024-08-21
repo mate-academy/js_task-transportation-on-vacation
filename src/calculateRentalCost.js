@@ -3,21 +3,21 @@
  *
  * @return {number}
  */
+const CAR_RENT = 40;
+const SHORT_TERM = 3;
+const LONG_TERM = 7;
+const SHORT_TERM_DISCOUNT = 20;
+const LONG_TERM_DISCOUNT = 50;
+
 function calculateRentalCost(days) {
-  const carRent = 40;
-  const shortTerm = 3;
-  const longTerm = 7;
-  const shortTermDiscount = 20;
-  const longTermDiscount = 50;
+  const total = days * CAR_RENT;
 
-  let total = days * carRent;
-
-  if (days >= longTerm) {
-    return (total -= longTermDiscount);
+  if (days >= LONG_TERM) {
+    return total - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= shortTerm) {
-    return (total -= shortTermDiscount);
+  if (days >= SHORT_TERM) {
+    return total - SHORT_TERM_DISCOUNT;
   }
 
   return total;
