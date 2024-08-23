@@ -10,3 +10,5 @@ function calculateRentalCost(days) {
 
   return totalCost;
 }
+
+console.log(calculateRentalCost(5));
