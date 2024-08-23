@@ -1,10 +1,12 @@
-/**
- * @param {number} days
- *
- * @return {number}
- */
 function calculateRentalCost(days) {
-  // write code here
-}
+  const dailyRate = 40;
+  let totalCost = dailyRate * days;
 
-module.exports = calculateRentalCost;
+  if (days >= 7) {
+    totalCost -= 50; // Additional discount for 7 or more days
+  } else if (days >= 3) {
+    totalCost -= 20; // Basic discount for 3 to 6 days
+  }
+
+  return totalCost;
+}
