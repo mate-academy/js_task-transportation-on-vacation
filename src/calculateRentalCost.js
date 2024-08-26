@@ -9,15 +9,15 @@ function calculateRentalCost(days) {
   const SHORT_TERM_DISCOUNT = 20;
   const FULL_TERM = 7;
   const FULL_TERM_DISCOUNT = 50;
-  let price = days * DAY_RENT_PRICE;
 
-  if (days >= FULL_TERM) {
-    price -= FULL_TERM_DISCOUNT;
-  } else if (days >= SHORT_TERM) {
-    price -= SHORT_TERM_DISCOUNT;
-  }
+  const DISCOUNT =
+    days >= FULL_TERM
+      ? FULL_TERM_DISCOUNT
+      : days >= SHORT_TERM
+        ? SHORT_TERM_DISCOUNT
+        : 0;
 
-  return price;
+  return days * DAY_RENT_PRICE - DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
