@@ -7,19 +7,19 @@ function calculateRentalCost(days) {
   const MIN_DAYS_FOR_DISCOUNT = 3;
   const LONG_TERM = 7;
   const PRICE = 40;
-  let sale = 20;
-
-  if (days >= MIN_DAYS_FOR_DISCOUNT && days < LONG_TERM) {
-    return days * PRICE - sale;
-  }
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
+  const DEFAULT_PRICE = days * PRICE;
 
   if (days >= LONG_TERM) {
-    sale = 50;
-
-    return days * PRICE - sale;
+    return DEFAULT_PRICE - LONG_TERM_DISCOUNT;
   }
 
-  return days * PRICE;
+  if (days >= MIN_DAYS_FOR_DISCOUNT) {
+    return DEFAULT_PRICE - SHORT_TERM_DISCOUNT;
+  }
+
+  return DEFAULT_PRICE;
 }
 
 module.exports = calculateRentalCost;
