@@ -4,12 +4,14 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const BASE_COST = 40;
+
   if (days < 3) {
-    return days * 40;
+    return days * BASE_COST;
   } else if (days < 7) {
-    return days * 40 - 20;
+    return days * BASE_COST - 20;
   } else {
-    return days * 40 - 50;
+    return days * BASE_COST - 50;
   }
 }
 
