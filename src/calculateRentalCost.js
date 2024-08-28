@@ -17,16 +17,17 @@ const BIG_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
   // write code here
+  const dayPrice = PRICE * days;
 
   if (days >= DAYS_BIG_DISCOUNT) {
-    return days * PRICE - BIG_DISCOUNT;
+    return dayPrice - BIG_DISCOUNT;
   }
 
   if (days >= DAYS_SMALL_DISCOUNT) {
-    return days * PRICE - SMALL_DISCOUNT;
+    return dayPrice - SMALL_DISCOUNT;
   }
 
-  return days * PRICE;
+  return dayPrice;
 }
 
 module.exports = calculateRentalCost;
