@@ -10,19 +10,15 @@ const LONG_TERM_DISCOUNT = 50;
 const SHORT_TERM_DISCOUNT = 20;
 
 function calculateRentalCost(days) {
-  let res = 0;
-
-  for (let i = 0; i < days; i++) {
-    res += PRICE_FOR_DAY;
-  }
-
   if (days >= LONG_TERM) {
-    res -= LONG_TERM_DISCOUNT;
-  } else if (days >= SHORT_TERM) {
-    res -= SHORT_TERM_DISCOUNT;
+    return PRICE_FOR_DAY * days - LONG_TERM_DISCOUNT;
   }
 
-  return res;
+  if (days >= SHORT_TERM) {
+    return PRICE_FOR_DAY * days - SHORT_TERM_DISCOUNT;
+  }
+
+  return PRICE_FOR_DAY * days;
 }
 
 module.exports = calculateRentalCost;
