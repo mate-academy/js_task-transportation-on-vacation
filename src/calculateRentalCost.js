@@ -7,7 +7,7 @@ const PRICE_FOR_DAY = 40;
 const SHORT_TERM = 3;
 const LONG_TERM = 7;
 const LONG_TERM_DISCOUNT = 50;
-const SHORT_TERM_DISCOUNT = 50;
+const SHORT_TERM_DISCOUNT = 20;
 
 function calculateRentalCost(days) {
   let res = 0;
