@@ -4,20 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let totalToPay = 0;
-  const DAY_RENT = 40;
-
-  for (let day = 1; day <= days; day++) {
-    totalToPay += DAY_RENT;
-  }
+  const DAY_RENT_PRICE = 40;
+  const DISCOUNT_OVER_6_DAYS = 50;
+  const DISCOUNT_OVER_2_DAYS = 20;
+  let basePrice = days * DAY_RENT_PRICE;
 
   if (days > 6) {
-    totalToPay -= 50;
-  } else if (days > 2) {
-    totalToPay -= 20;
+    return (basePrice -= DISCOUNT_OVER_6_DAYS);
   }
 
-  return totalToPay;
+  if (days > 2) {
+    return (basePrice -= DISCOUNT_OVER_2_DAYS);
+  }
+
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
