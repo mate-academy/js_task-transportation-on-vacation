@@ -13,7 +13,9 @@ function calculateRentalCost(days) {
 
   if (days >= longTerm) {
     totalCost -= longTermDiscount;
-  } else if (days >= shortTerm) {
+  }
+
+  if (days >= shortTerm && days < longTerm) {
     totalCost -= shortTermDiscount;
   }
 
