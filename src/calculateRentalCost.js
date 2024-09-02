@@ -4,7 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  const defaultPrice = 40;
+  const sumPrice = days * defaultPrice;
+  const middleSale = sumPrice - 20;
+  const maxSale = sumPrice - 50;
+
+  if (days >= 7) {
+    return maxSale;
+  }
+
+  if (days >= 3) {
+    return middleSale;
+  }
+
+  return sumPrice;
 }
 
 module.exports = calculateRentalCost;
