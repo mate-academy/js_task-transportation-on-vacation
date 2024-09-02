@@ -4,16 +4,15 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const discountOfSevenDays = 50;
-  const discountOfThreeOrMoreDays = 20;
-  const total = days * 40;
+  const costRentOfPerDay = 40;
+  let totalCost = days * costRentOfPerDay;
 
   if (days >= 7) {
-    return total - discountOfSevenDays;
+    return (totalCost -= 50);
   }
 
-  if (days >= 3 || days >= 6) {
-    return total - discountOfThreeOrMoreDays;
+  if (days >= 3) {
+    return (totalCost -= 20);
   }
 
   return 80;
