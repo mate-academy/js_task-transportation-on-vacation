@@ -9,12 +9,12 @@ function calculateRentalCost(days) {
   let totalCost = days * dailyRate;
 
   if (days >= 7) {
-    totalCost -= 50; // скидка $50, если 7 и более дней
+    totalCost -= 50; 
   } else if (days >= 3) {
-    totalCost -= 20; // скидка $20, если 3 и более дней
+    totalCost -= 20; 
   }
 
   return totalCost;
 }
 
-module.exports = calculateRentalCost; // CommonJS синтаксис экспорта
+module.exports = calculateRentalCost; 
