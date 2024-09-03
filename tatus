@@ -1,0 +1,297 @@
+[33mcommit 54cf694372afb6699b8b60a7313b4d63b1e04381[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Kryvytskyi Volodymyr <v.kryvytskyy@mate.academy>
+Date:   Tue Apr 16 16:55:25 2024 +0300
+
+    Update readme.md
+
+[33mcommit 9de6a3ff307e1535f7943c7621a4e8104542a38e[m
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Wed Mar 13 08:24:31 2024 +0200
+
+    fix node14-20 deps
+
+[33mcommit 7d54a9d90f87e2641381727be9825133fb9f558b[m
+Merge: ff7a3e0 1e4ef2c
+Author: Misha Hrynko <glukym@gmail.com>
+Date:   Fri Mar 1 11:07:13 2024 +0200
+
+    Merge pull request #4007 from mykhalenych/feature/prettier
+    
+    Feature/prettier
+
+[33mcommit 1e4ef2c860176ec32a2c578d2c72efdb69e73aae[m
+Author: mykhalenych <mykhalenych@gmail.com>
+Date:   Fri Mar 1 10:57:34 2024 +0200
+
+    feature/prettier changed .prettierignore
+
+[33mcommit 264d399a281a11be44411dc31a0edac1af9af427[m
+Author: mykhalenych <mykhalenych@gmail.com>
+Date:   Fri Mar 1 10:25:38 2024 +0200
+
+    feature/prettier added prettier, updated packages
+
+[33mcommit ff7a3e0cc936eb7da07267175cfd10085e930784[m
+Author: Misha Hrynko <glukym@gmail.com>
+Date:   Thu Feb 29 15:45:01 2024 +0200
+
+    Update package.json
+
+[33mcommit 1998411383ed36768b27196c3d0172c3c5e32cb4[m
+Merge: 3e85978 8d45594
+Author: Misha Hrynko <glukym@gmail.com>
+Date:   Mon Feb 19 15:52:44 2024 +0200
+
+    Merge pull request #3963 from mate-academy/mgrinko-patch-1
+    
+    Move the description to readme
+
+[33mcommit 8d455945e8d95db69004de9fd1c6bd8153ceff7a[m
+Author: Misha Hrynko <glukym@gmail.com>
+Date:   Mon Feb 19 15:47:16 2024 +0200
+
+    Update readme.md
+
+[33mcommit b9f4d869ec56541b0784e918d4a9d466c79030a8[m
+Author: Misha Hrynko <glukym@gmail.com>
+Date:   Mon Feb 19 15:37:21 2024 +0200
+
+    Update calculateRentalCost.js
+
+[33mcommit 3e859780f583ec7a028f01da5f86f56e66cde6d9[m
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Mon Nov 13 07:59:47 2023 +0200
+
+    use node 14 for tests
+
+[33mcommit f81403d818ce659376e6fe8b2c8807a224bb8f49[m
+Merge: 34c4728 299bc40
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Wed Oct 25 17:09:04 2023 +0300
+
+    Merge pull request #3016 from JoyCoffeeAddict/chore/upgrage_dependencies
+    
+    chore: upgrade dependencies
+
+[33mcommit 299bc40f8451d2c480c611dfe5e10d793c20f590[m
+Author: JoyCoffeeAddict <joy.rzepecka@gmail.com>
+Date:   Mon Jul 24 15:12:00 2023 +0200
+
+    chore: upgrade dependencies
+
+[33mcommit 34c47285d9989805505a06c3b00e49ee697630fb[m
+Merge: 9ca5306 e189cb9
+Author: Polina Romanenko <104590811+PolinaRomanenko@users.noreply.github.com>
+Date:   Mon Jun 5 10:28:33 2023 +0300
+
+    Merge pull request #2810 from mate-academy/revert-2808-develop
+    
+    Revert "Solution"
+
+[33mcommit e189cb951726cea65b3c7e9f0c2c09b7972ff2c2[m
+Author: Polina Romanenko <104590811+PolinaRomanenko@users.noreply.github.com>
+Date:   Mon Jun 5 10:28:17 2023 +0300
+
+    Revert "Solution"
+
+[33mcommit 9ca530690bd8d479781eff8f0f79bf324610ca70[m
+Merge: 3aeeb11 3b1c8bf
+Author: Polina Romanenko <104590811+PolinaRomanenko@users.noreply.github.com>
+Date:   Mon Jun 5 10:27:51 2023 +0300
+
+    Merge pull request #2808 from rvrazovskyi/develop
+    
+    Solution
+
+[33mcommit 3b1c8bf0de84364b9a17c137c4f2b1b912ffdc2e[m
+Author: Ruslan Vrazovskyi <dnkons@gmail.com>
+Date:   Mon Jun 5 00:26:11 2023 +0300
+
+    Solution
+
+[33mcommit 3aeeb11c9c8e4785cb99b1d60be84081031514bf[m
+Merge: 5c8db76 05a5b8c
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Tue May 30 15:18:19 2023 +0300
+
+    Merge pull request #2791 from mate-academy/mgrinko-patch-1
+    
+    Update checklist.md
+
+[33mcommit 05a5b8c7f817cc5f7cdf2dbc9827fffb5de5519a[m
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Tue May 30 15:11:47 2023 +0300
+
+    Update checklist.md
+
+[33mcommit 04733a08ff68c4944fd458470d7d43f8d3d873b8[m
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Tue May 30 15:06:33 2023 +0300
+
+    Update checklist.md
+
+[33mcommit e97b486250372c0a76c274de95f60fb2cd797c66[m
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Tue May 30 14:42:09 2023 +0300
+
+    Update checklist.md
+
+[33mcommit 5fc8ff52847a9a2e92675fd9ed13b5aead3ff544[m
+Author: Misha Grinko <glukym@gmail.com>
+Date:   Tue May 30 14:41:26 2023 +0300
+
+    Update checklist.md
+
+[33mcommit 5c8db762f8fbf3231b754e577964999f07fc3f84[m
+Author: Volodymyr Pavlenko <32794096+solaryasha@users.noreply.github.com>
+Date:   Wed Mar 29 12:19:02 2023 +0300
+
+    Update readme.md
+
+[33mcommit b0b9d9c6b381d55f4ac3222a71f463fd3f37fe39[m
+Merge: 53020c8 273972a
+Author: solaryasha <32794096+solaryasha@users.noreply.github.com>
+Date:   Fri Oct 29 16:05:25 2021 +0300
+
+    Merge pull request #927 from mate-academy/solaryasha-patch-1
+
+[33mcommit 273972ac5f58a2f7c2cd257b14ada7ceb8780b42[m
+Author: solaryasha <32794096+solaryasha@users.noreply.github.com>
+Date:   Fri Oct 29 16:03:54 2021 +0300
+
+    Update checklist.md
+
+[33mcommit 2ac075509787bf16a1e5de35f228cd6721303016[m
+Author: solaryasha <32794096+solaryasha@users.noreply.github.com>
+Date:   Fri Oct 29 15:39:53 2021 +0300
+
+    Update checklist.md
+
+[33mcommit b82f4706e38c6bc7e075a0b794bea62e7bc4aa02[m
+Author: solaryasha <32794096+solaryasha@users.noreply.github.com>
+Date:   Fri Oct 29 15:38:42 2021 +0300
+
+    Create checklist.md
+
+[33mcommit 53020c82502620a1a9db5e1fd6c5c6a6b268ae96[m
+Author: Yurii Holiuk <bionicuss@gmail.com>
+Date:   Thu May 28 17:50:55 2020 +0300
+
+    migrate to mate-scripts
+
+[33mcommit 1444e4814a2ee4e70b55426b119687c825fd0492[m
+Merge: 5eed6fd a208827
+Author: Yurii Holiuk <bionicuss@gmail.com>
+Date:   Thu May 28 09:40:13 2020 +0300
+
+    Merge pull request #221 from mate-academy/revert-2-jv_apr18_ivan_fs
+    
+    Revert "Solution"
+
+[33mcommit a208827fc8f96a8ae75ef1198f0afba72b0f4803[m
+Author: Yurii Holiuk <bionicuss@gmail.com>
+Date:   Thu May 28 09:40:03 2020 +0300
+
+    Revert "Solution"
+
+[33mcommit 5eed6fd91c2f43db825b5c76186b18bb875f0458[m
+Merge: b27b8f9 3ab0421
+Author: Yurii Holiuk <bionicuss@gmail.com>
+Date:   Thu May 28 09:21:47 2020 +0300
+
+    Merge pull request #2 from ivaniuminov/jv_apr18_ivan_fs
+    
+    Solution
+
+[33mcommit b27b8f9e0d9069af52619279067fb23852d0b74c[m
+Author: Den <37452763+Denchepornyuk@users.noreply.github.com>
+Date:   Tue May 19 17:28:33 2020 +0300
+
+    Update readme.md
+
+[33mcommit 83fd4f972f596b4d30c50bad399cf9abb9c655e4[m
+Author: Den <37452763+Denchepornyuk@users.noreply.github.com>
+Date:   Tue May 19 17:25:02 2020 +0300
+
+    Update readme.md
+
+[33mcommit 6ed09b81f48ae1f5e9a2f60cd9852d7d0326d5cc[m
+Author: Den <37452763+Denchepornyuk@users.noreply.github.com>
+Date:   Tue May 19 17:24:45 2020 +0300
+
+    Update readme.md
+
+[33mcommit 7d29952b9b358921c44f46ce02f4e82f3ba5c3e7[m
+Author: Den <37452763+Denchepornyuk@users.noreply.github.com>
+Date:   Tue May 19 17:22:16 2020 +0300
+
+    Update readme.md
+
+[33mcommit 3a207f50f8de9f20665bdb74d07d38fb73d15cdb[m
+Author: Den <37452763+Denchepornyuk@users.noreply.github.com>
+Date:   Tue May 19 17:21:58 2020 +0300
+
+    Update calculateRentalCost.js
+
+[33mcommit bb442aa024def749a7f1fa07ba08d314d49f8399[m
+Author: Vladyslav Polets <46418908+vpolets@users.noreply.github.com>
+Date:   Wed May 6 15:19:34 2020 +0300
+
+    Update readme
+
+[33mcommit bed7dad347c15323ef9cbc06dbc2b89b8bb8fa8c[m
+Author: Vladyslav Polets <46418908+vpolets@users.noreply.github.com>
+Date:   Wed May 6 15:16:09 2020 +0300
+
+    update task
+
+[33mcommit 70b056f5253be5f93c63be70a4eff145b115db09[m
+Author: mgrinko <glukym@gmail.com>
+Date:   Fri Mar 27 17:07:56 2020 +0200
+
+    Naming fix
+
+[33mcommit 3ab04214a1f8bfa2c0c0d287e7c01719475ecf9c[m
+Author: iiuex <iiu@adorsys.com.ua>
+Date:   Wed Jun 19 13:31:57 2019 +0300
+
+    Solution
+
+[33mcommit 2388bdfa0b5a1e877d9c783c4bf839fed898827a[m
+Merge: 25d779e 48439b3
+Author: vpolets <46418908+vpolets@users.noreply.github.com>
+Date:   Wed Jun 12 21:08:05 2019 +0300
+
+    Merge pull request #1 from mate-academy/task
+    
+    add task and tests
+
+[33mcommit 48439b35643c9f6fe6d19b83584b0eb612ab18b8[m
+Author: vpolets <vpolets@gmail.com>
+Date:   Wed Jun 12 17:31:56 2019 +0300
+
+    rename main function
+
+[33mcommit dbbbd157b841313cc00d1330d0243ddcdd540304[m
+Author: vpolets <vpolets@gmail.com>
+Date:   Wed Jun 12 17:29:35 2019 +0300
+
+    updated tests
+
+[33mcommit 5b5bfe892caa0abfa6022a50db82d6fc5c44bf43[m
+Author: vpolets <vpolets@gmail.com>
+Date:   Wed Jun 12 13:22:59 2019 +0300
+
+    fix test description
+
+[33mcommit 58bbc522775e69eb9331d7eb95c40311cef26725[m
+Author: vpolets <vpolets@gmail.com>
+Date:   Wed Jun 12 13:20:32 2019 +0300
+
+    add task and tests
+
+[33mcommit 25d779e92c51874cd6b9017105cc6b03b09e9bd7[m
+Author: vpolets <vpolets@gmail.com>
+Date:   Wed Jun 12 13:17:11 2019 +0300
+
+    init commit
