@@ -4,7 +4,6 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
   const dailyRate = 40;
   let totalCost = days * dailyRate;
 
