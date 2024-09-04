@@ -1,6 +1,6 @@
 'use strict';
 
-const calculateRentalCost = require('./calculateRentalCost ');
+const calculateRentalCost = require('./calculateRentalCost');
 
 test(`Do not add any discount for less than 3 days`, () => {
   expect(calculateRentalCost(2)).toBe(80);
