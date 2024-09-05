@@ -18,5 +18,6 @@ let basePrice = days * PRICE_PER_DAY;
     return basePrice - SHORT_TERM_DISCOUNT;
   }
   return basePrice;
+}
 
 module.exports = calculateRentalCost;
