@@ -16,13 +16,17 @@
   "author": "Mate academy",
   "license": "GPL-3.0",
   "devDependencies": {
+    "@eslint/js": "^9.9.1",
     "@mate-academy/eslint-config": "latest",
-    "@mate-academy/scripts": "^1.8.6",
-    "eslint": "^8.57.0",
+    "@mate-academy/scripts": "^1.9.10",
+    "eslint": "^9.9.1",
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-node": "^11.1.0",
+    "globals": "^15.9.0",
     "jest": "^29.7.0",
-    "prettier": "^3.3.2"
+    "mate-scripts": "0.0.1",
+    "prettier": "^3.3.2",
+    "typescript-eslint": "^8.4.0"
   },
   "mateAcademy": {
     "projectType": "javascript"
