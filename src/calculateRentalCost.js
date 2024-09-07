@@ -11,25 +11,21 @@ function calculateRentalCost(days) {
   const MED_TERM = 6;
   const SHORT_TERM = 3;
 
-  const BASE_PRICE = 80;
-  const SHORT_TERM_DISCOUNT = -20;
-  const MID_TERM_DISCOUNT = -140;
-  const LONG_TERM_DISCOUNT = -150;
+  const BASE_PRICE = 40;
+  const totalPrice = days * BASE_PRICE;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
 
   if (days < SHORT_TERM) {
-    return BASE_PRICE;
+    return totalPrice;
   }
 
   if (days >= SHORT_TERM && days <= MED_TERM) {
-    if (days === SHORT_TERM) {
-      return BASE_PRICE - SHORT_TERM_DISCOUNT;
-    } else if (days === MED_TERM) {
-      return BASE_PRICE - MID_TERM_DISCOUNT;
-    }
+    return totalPrice - SHORT_TERM_DISCOUNT;
   }
 
   if (days >= LONG_TERM) {
-    return BASE_PRICE - LONG_TERM_DISCOUNT;
+    return totalPrice - LONG_TERM_DISCOUNT;
   }
 }
 
