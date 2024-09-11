@@ -20,6 +20,10 @@ get `$20` off your total.
 Implement `calculateRentalCost` function that returns the total amount for different
 number of days.
 
+## Instructions	
+**Read [the guideline](https://mate-academy.github.io/js_task-guideline/) before start**	
+
+## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 Examples:
 ```js
 calculateRentalCost(1); // 40
