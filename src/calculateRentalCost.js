@@ -9,11 +9,13 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return totalVacationCost - LONG_TERM_DISCOUNT;
-  } else if (days >= MEDIUM_TERM) {
-    return totalVacationCost - MEDIUM_TERM_DISCOUNT;
-  } else {
-    return totalVacationCost;
   }
+
+  if (days >= MEDIUM_TERM) {
+    return totalVacationCost - MEDIUM_TERM_DISCOUNT;
+  }
+
+  return totalVacationCost;
 }
 
 module.exports = calculateRentalCost;
