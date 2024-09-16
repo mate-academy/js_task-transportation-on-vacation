@@ -5,15 +5,22 @@
  */
 function calculateRentalCost(days) {
   const rentPerDay = 40;
-  const advanceDiscount = 50;
-  const regularDiscount = 20;
-  const res = rentPerDay * days;
+  const longTerm = 7;
+  const shortTerm = 3;
+  const longTermDiscount = 50;
+  const shortTermDiscount = 20;
 
-  if (days > 2) {
-    return days > 6 ? res - advanceDiscount : res - regularDiscount;
+  const defaultPrice = rentPerDay * days;
+
+  if (days >= longTerm) {
+    return defaultPrice - longTermDiscount;
   }
 
-  return res;
+  if (days >= shortTerm) {
+    return defaultPrice - shortTermDiscount;
+  }
+
+  return defaultPrice;
 }
 
 module.exports = calculateRentalCost;
