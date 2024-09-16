@@ -8,18 +8,18 @@ function calculateRentalCost(days) {
   const discountMoreSevenDays = 50;
   const discountMoreThreeDays = 20;
 
-  let sumForRent = 0;
+  let sumRent = 0;
 
   if (days >= 7) {
-    sumForRent = oneDayRent * days - discountMoreSevenDays;
+    sumRent = oneDayRent * days - discountMoreSevenDays;
 
-    return sumForRent;
+    return sumRent;
   }
 
   if (days >= 3) {
-    sumForRent = oneDayRent * days - discountMoreThreeDays;
+    sumRent = oneDayRent * days - discountMoreThreeDays;
 
-    return sumForRent;
+    return sumRent;
   }
 
   return oneDayRent * days;
