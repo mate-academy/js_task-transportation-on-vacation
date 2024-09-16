@@ -13,8 +13,12 @@ test('Should add the basic discount from 3 to 6 days of rent', () => {
 });
 
 test('Should add the basic discount from 3 to 6 days of rent', () => {
+  console.log(calculateRentalCost(3));
+
   expect(calculateRentalCost(6))
+
     .toBe(220);
+
 });
 
 test('Should add an additional discount for 7 and more days of rent', () => {
