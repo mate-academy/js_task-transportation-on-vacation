@@ -4,7 +4,6 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
   const oneDayRent = 40;
   const discountMoreSevenDays = 50;
   const discountMoreThreeDays = 20;
