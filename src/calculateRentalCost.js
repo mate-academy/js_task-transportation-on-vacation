@@ -12,7 +12,9 @@ function calculateRentalCost(days) {
 
   if (days >= week) {
     return totalCost - longRentalDiscount;
-  } else if (days >= threeDays) {
+  }
+
+  if (days >= threeDays) {
     return totalCost - shortRentalDiscount;
   }
 
