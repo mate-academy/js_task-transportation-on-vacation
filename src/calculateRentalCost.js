@@ -4,9 +4,14 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  console.log('No solution at all');
+  let totalCost = days * 40;
 
-  return 1 + 1;
+  if (days >= 7) {
+    totalCost -= 50;
+  } else if (days >= 3) {
+    totalCost -= 20;
+  }
+
+  return totalCost;
 }
-
 module.exports = calculateRentalCost;
