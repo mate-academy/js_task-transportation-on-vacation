@@ -1,8 +1,10 @@
+'use strict';
 /**
  * @param {number} days
  *
  * @return {number}
  */
+
 function calculateRentalCost(days) {
   let price = days * 40;
 
