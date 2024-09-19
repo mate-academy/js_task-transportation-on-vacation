@@ -16,6 +16,5 @@ function calculateRentalCost(days) {
   }
 
   return totalCost;
-}
 
 module.exports = calculateRentalCost;
