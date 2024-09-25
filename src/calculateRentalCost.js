@@ -6,16 +6,23 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const costForDay = 40;
-  let discount = 0;
+  const COST_FOR_DAY = 40;
+  const LITTLE_DAYS = 3;
+  const LITTLE_DISCOUNT = 20;
+  const BIG_DAYS = 7;
+  const BIG_DISCOUNT = 50;
 
-  if (days >= 7) {
-    discount = 50;
-  } else if (days >= 3) {
-    discount = 20;
+  const TOTAL_COST = days * COST_FOR_DAY;
+
+  if (days >= BIG_DAYS) {
+    return TOTAL_COST - BIG_DISCOUNT;
   }
 
-  return days * costForDay - discount;
+  if (days >= LITTLE_DAYS) {
+    return TOTAL_COST - LITTLE_DISCOUNT;
+  }
+
+  return TOTAL_COST;
 }
 
 module.exports = calculateRentalCost;
