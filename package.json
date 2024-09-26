@@ -1,4 +1,7 @@
 {
+  "jest": {
+    "testEnvironment": "node"
+  },
   "name": "js-task-boilerplate",
   "version": "1.0.0",
   "description": "js task boilerplate",
