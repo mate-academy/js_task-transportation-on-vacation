@@ -4,18 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const count = 40;
-  const discount = count * days;
+  const dailyRentalCount = 40;
+  const totalSum = dailyRentalCount * days;
+  const discountFromTreeDays = 20;
+  const discountFromSevenDays = 50;
 
   if (days >= 3 && days <= 6) {
-    return discount - 20;
+    return totalSum - discountFromTreeDays;
   }
 
   if (days >= 7) {
-    return discount - 50;
+    return totalSum - discountFromSevenDays;
   }
 
-  return count * 2;
+  return totalSum;
 }
 
 module.exports = calculateRentalCost;
