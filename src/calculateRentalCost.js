@@ -3,22 +3,25 @@
  *
  * @return {number}
  */
+
+const BASE_COST = 40;
+const MID_TERM = 3;
+const MID_TERMD_DISCOUNT = 20;
+const LONG_TERM = 7;
+const LONG_TERM_DISCOUNT = 50;
+
 function calculateRentalCost(days) {
-  const baseCost = 40;
-  const midTerm = 3;
-  const midTermDiscount = 20;
-  const longTerm = 7;
-  const longTermDiscount = 50;
+  const costBasis = days * BASE_COST;
 
-  if (days < midTerm) {
-    return days * baseCost;
+  if (days < MID_TERM) {
+    return costBasis;
   }
 
-  if (days >= midTerm && days < longTerm) {
-    return days * baseCost - midTermDiscount;
+  if (days >= MID_TERM && days < LONG_TERM) {
+    return costBasis - MID_TERMD_DISCOUNT;
   }
 
-  return days * baseCost - longTermDiscount;
+  return costBasis - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
