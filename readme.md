@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# Transportation on Vacation
 
 ## Task description:
 
@@ -22,6 +20,3 @@ calculateRentalCost(1); // 40
 calculateRentalCost(3); // 100
 calculateRentalCost(7); // 230
 ```
-=======
-
->>>>>>> ea124394489a34b74dfda75114dd4ce837e9f3bc
