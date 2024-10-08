@@ -3,28 +3,24 @@
  *
  * @return {number}
  */
+const LONG_TERM_DISCOUNT = 50;
+const SHORT_TERM_DISCOUNT = 20;
+const DAILY_RATE = 40;
+const LONG_TERM_DURATION = 7;
+const SHORT_TERM_DURATION = 3;
 
 function calculateRentalCost(days) {
-  const dailyRate = 40;
-  let totalCost = days * dailyRate;
+  const totalCost = days * DAILY_RATE;
 
-  if (days >= 7) {
-    totalCost -= 50;
-  } else if (days >= 3) {
-    totalCost -= 20;
+  if (days >= LONG_TERM_DURATION) {
+    return totalCost - LONG_TERM_DISCOUNT;
+  }
+
+  if (days >= SHORT_TERM_DURATION) {
+    return totalCost - SHORT_TERM_DISCOUNT;
   }
 
   return totalCost;
 }
 
 module.exports = calculateRentalCost;
-
-/*
-Every day you rent the car costs $40. If you rent the
-car for 7 or more days, you get $50 off your total.
-Alternatively, if you rent the car for 3 or more days,
-you get $20 off your total.
-
-Implement calculateRentalCost function that returns
-the total amount for different number of days.
-*/
