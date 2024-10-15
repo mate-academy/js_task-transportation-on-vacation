@@ -6,15 +6,18 @@
 
 const seven = 7;
 const three = 3;
+const saleForThreeDays = 20;
+const saleForSevenDays = 50;
+const startPrice = 40;
 
 function calculateRentalCost(days) {
   if (days >= seven) {
-    return days * 40 - 50;
+    return days * startPrice - saleForSevenDays;
   } else if (days >= three) {
-    return days * 40 - 20;
-  } else {
-    return 80;
+    return days * startPrice - saleForThreeDays;
   }
+
+  return 80;
 }
 
 module.exports = calculateRentalCost;
