@@ -4,20 +4,24 @@
  * @return {number}
  */
 
-const seven = 7;
-const three = 3;
-const saleForThreeDays = 20;
-const saleForSevenDays = 50;
-const startPrice = 40;
+const LONG_TERM_RENTAL = 7;
+const SHORT_TERM_RENTAL = 3;
+const SHORT_TERM_DISCOUNT = 20;
+const LONG_TERM_DISCOUNT = 50;
+const PRICE_OF_ONE_DAY = 40;
 
 function calculateRentalCost(days) {
-  if (days >= seven) {
-    return days * startPrice - saleForSevenDays;
-  } else if (days >= three) {
-    return days * startPrice - saleForThreeDays;
+  let START_PRICE = days * PRICE_OF_ONE_DAY;
+
+  if (days >= LONG_TERM_RENTAL) {
+    return START_PRICE - LONG_TERM_DISCOUNT;
   }
 
-  return startPrice * days;
+  if (days >= SHORT_TERM_RENTAL) {
+    return START_PRICE - SHORT_TERM_DISCOUNT;
+  }
+
+  return START_PRICE;
 }
 
 module.exports = calculateRentalCost;
