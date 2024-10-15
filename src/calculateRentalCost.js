@@ -17,7 +17,7 @@ function calculateRentalCost(days) {
     return days * startPrice - saleForThreeDays;
   }
 
-  return 80;
+  return startPrice * days;
 }
 
 module.exports = calculateRentalCost;
