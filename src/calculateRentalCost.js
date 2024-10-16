@@ -3,18 +3,22 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  const everyDayRent = 40;
-  const discountFor7Days = 50;
-  const discountFor3Days = 20;
-  const minDaysFor7DayDiscount = 7;
-  const minDaysFor3DayDiscount = 3;
-  let totalSum = everyDayRent * days;
 
-  if (days >= minDaysFor7DayDiscount) {
-    totalSum = everyDayRent * days - discountFor7Days;
-  } else if (days >= minDaysFor3DayDiscount) {
-    totalSum = everyDayRent * days - discountFor3Days;
+const EVERY_DAY_RENT = 40;
+const DISCOUNT_FOR_7_DAYS = 50;
+const DISCOUNT_FOR_3_DAYS = 20;
+const MIN_DAYS_FOR_7_DAY_DISCOUNT = 7;
+const MIN_DAYS_FOR_3_DAY_DISCOUNT = 3;
+
+function calculateRentalCost(days) {
+  const totalSum = EVERY_DAY_RENT * days;
+
+  if (days >= MIN_DAYS_FOR_7_DAY_DISCOUNT) {
+    return totalSum - DISCOUNT_FOR_7_DAYS;
+  }
+
+  if (days >= MIN_DAYS_FOR_3_DAY_DISCOUNT) {
+    return totalSum - DISCOUNT_FOR_3_DAYS;
   }
 
   return totalSum;
