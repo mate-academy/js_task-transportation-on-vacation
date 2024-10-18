@@ -1,10 +1,20 @@
-/**
- * @param {number} days
- *
- * @return {number}
- */
+'use strict';
+
 function calculateRentalCost(days) {
-  // write code here
+  if (days <= 0) {
+    return 0;
+  }
+
+  const dailyRate = 40;
+  let total = days * dailyRate;
+
+  if (days >= 7) {
+    total -= 50;
+  } else if (days >= 3) {
+    total -= 20;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
