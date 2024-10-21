@@ -4,16 +4,18 @@
  * @return {number} - The total rental cost.
  */
 function calculateRentalCost(days) {
-  const costPerDay = 40;
-  let totalCost = days * costPerDay;
+  const COST_PER_DAY = 40;
+  const DISCOUNT_7_DAYS = 50;
+  const DISCOUNT_3_DAYS = 20;
+
+  const totalCost = days * COST_PER_DAY;
 
   if (days >= 7) {
-    totalCost -= 50; // Apply $50 discount for 7 or more days
-    return totalCost;
+    return totalCost - DISCOUNT_7_DAYS;
   }
 
   if (days >= 3) {
-    totalCost -= 20; // Apply $20 discount for 3 to 6 days
+    return totalCost - DISCOUNT_3_DAYS;
   }
 
   return totalCost;
