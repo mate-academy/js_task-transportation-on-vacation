@@ -12,17 +12,17 @@ function calculateRentalCost(days) {
 
   const DAY_PRICE = 40;
 
-  const finalPrice = days * DAY_PRICE;
+  const PRICE = days * DAY_PRICE;
 
   if (days >= LONG_TERM) {
-    return finalPrice - LONG_TERM_DISCOUNT;
+    return PRICE - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM) {
-    return finalPrice - SHORT_TERM_DISCOUNT;
+    return PRICE - SHORT_TERM_DISCOUNT;
   }
 
-  return finalPrice;
+  return PRICE;
 }
 
 module.exports = calculateRentalCost;
