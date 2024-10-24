@@ -18,7 +18,9 @@ function calculateRentalCost(days) {
 
     return result;
   } else {
-    return 80;
+    result = days * carPrice;
+
+    return result;
   }
 }
 
