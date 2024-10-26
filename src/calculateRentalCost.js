@@ -14,10 +14,14 @@ function calculateRentalCost(days) {
 
   if (days >= longTermLoan) {
     totalAmount -= longTermDiscount;
-  } else {
-    if (days >= mediumTermLoan) {
-      totalAmount -= mediumTermDiscount;
-    }
+
+    return totalAmount;
+  }
+
+  if (days >= mediumTermLoan) {
+    totalAmount -= mediumTermDiscount;
+
+    return totalAmount;
   }
 
   return totalAmount;
