@@ -20,7 +20,7 @@ function calculateRentalCost(days) {
     return basePrice - DISCOUNT_SHORT_TERM;
   }
 
-  return PRICE_PER_DAY * days;
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
