@@ -5,14 +5,16 @@
  */
 function calculateRentalCost(days) {
   const rentCostForOneDay = 40;
-  const getOff7days = 50;
-  const getOff3days = 20;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
   let totalCost = rentCostForOneDay * days;
 
-  if (days >= 7) {
-    totalCost -= getOff7days;
-  } else if (days >= 3) {
-    totalCost -= getOff3days;
+  if (days >= LONG_TERM) {
+    totalCost -= LONG_TERM_DISCOUNT;
+  } else if (days >= SHORT_TERM) {
+    totalCost -= SHORT_TERM_DISCOUNT;
   }
 
   return totalCost;
