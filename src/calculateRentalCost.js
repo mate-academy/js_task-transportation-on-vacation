@@ -4,18 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const dailyRentalCost = 40;
-  const discountForLongRental = 50;
-  const discountForMediumRental = 20;
-  const minimumDaysForLongRental = 7;
-  const minimumDaysForMediumRental = 3;
+  const DAILY_RENTAL_COST = 40;
+  const DISCOUNT_FOR_LONG_RENTAL = 50;
+  const DISCOUNT_FOR_MEDIUM_RENTAL = 20;
+  const MINIMUM_DAYS_FOR_LONG_RENTAL = 7;
+  const MINIMUM_DAYS_FOR_MEDIUM_RENTAL = 3;
 
-  let cost = dailyRentalCost * days;
+  const cost = DAILY_RENTAL_COST * days;
 
-  if (days >= minimumDaysForLongRental) {
-    cost -= discountForLongRental;
-  } else if (days >= minimumDaysForMediumRental) {
-    cost -= discountForMediumRental;
+  if (days >= MINIMUM_DAYS_FOR_LONG_RENTAL) {
+    return cost - DISCOUNT_FOR_LONG_RENTAL;
+  }
+
+  if (days >= MINIMUM_DAYS_FOR_MEDIUM_RENTAL) {
+    return cost - DISCOUNT_FOR_MEDIUM_RENTAL;
   }
 
   return cost;
