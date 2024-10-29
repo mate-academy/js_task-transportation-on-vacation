@@ -3,19 +3,25 @@
  *
  * @return {number}
  */
+
+const COST_PER_DAY = 40;
+const MEDIUM_PERIOD = 3;
+const MEDIUM_PERIOD_DISCOUNT = 20;
+const LONG_PERIOD = 7;
+const LONG_PERIOD_DISCOUNT = 50;
+
 function calculateRentalCost(days) {
-  const dailyCost = 40;
-  let totalCost = days * dailyCost;
+  const rentalCost = days * COST_PER_DAY;
 
-  if (days >= 7) {
-    totalCost = totalCost - 50;
+  if (days >= LONG_PERIOD) {
+    return rentalCost - LONG_PERIOD_DISCOUNT;
   }
 
-  if (days >= 3 && days < 7) {
-    totalCost = totalCost - 20;
+  if (days >= MEDIUM_PERIOD) {
+    return rentalCost - MEDIUM_PERIOD_DISCOUNT;
   }
 
-  return totalCost;
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
