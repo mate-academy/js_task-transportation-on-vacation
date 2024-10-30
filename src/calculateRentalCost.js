@@ -10,7 +10,6 @@ const MID_TERM = 3;
 const LONG_TERM = 7;
 
 function calculateRentalCost(days) {
-  // write code here
   const FULL_PRICE = COST_PER_DAY * days;
 
   if (days >= LONG_TERM) {
