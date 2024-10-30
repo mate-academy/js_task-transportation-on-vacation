@@ -6,20 +6,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const price = 40;
-  const discountLvl1 = 20;
-  const discountLvl2 = 50;
-  let total = days * price;
+  const PRICE_PER_DAY = 40;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
+  const SHORT_TERM = 3;
 
-  if (days >= 3) {
-    if (days >= 7) {
-      total -= discountLvl2;
-    } else {
-      total -= discountLvl1;
-    }
+  let price = days * PRICE_PER_DAY;
+
+  if (days >= LONG_TERM) {
+    price -= LONG_TERM_DISCOUNT;
+  } else if (days >= SHORT_TERM) {
+    price -= SHORT_TERM_DISCOUNT;
   }
 
-  return total;
+  return price;
 }
 
 module.exports = calculateRentalCost;
