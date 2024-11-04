@@ -4,19 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const price = days * 40;
+  const LONG_LEASE = 7;
+  const LONG_LEASE_DISCONT = 50;
+  const AVERAGE_LEASE = 3;
+  const AVERAGE_LEASE_DISCONT = 20;
+  const PRICCE_FOR_DAY = 40;
+  const price = days * PRICCE_FOR_DAY;
 
-  if (days < 3) {
-    return price;
+  if (days >= LONG_LEASE) {
+    return price - LONG_LEASE_DISCONT;
   }
 
-  if (days < 7) {
-    return price - 20;
+  if (days >= AVERAGE_LEASE) {
+    return price - AVERAGE_LEASE_DISCONT;
   }
 
-  if (days >= 7) {
-    return price - 50;
-  }
+  return price;
 }
 
 module.exports = calculateRentalCost;
