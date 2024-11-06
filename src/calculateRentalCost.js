@@ -8,8 +8,8 @@ function calculateRentalCost(days) {
   const LONG_LEASE_DISCONT = 50;
   const AVERAGE_LEASE = 3;
   const AVERAGE_LEASE_DISCONT = 20;
-  const PRICCE_FOR_DAY = 40;
-  const price = days * PRICCE_FOR_DAY;
+  const PRICE_FOR_DAY = 40;
+  const price = days * PRICE_FOR_DAY;
 
   if (days >= LONG_LEASE) {
     return price - LONG_LEASE_DISCONT;
