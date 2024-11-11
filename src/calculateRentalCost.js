@@ -1,17 +1,22 @@
-/**
- * @param {number} days
- *
- * @return {number}
- */
-function calculateRentalCost(days) {
-  const LONG_TERM = 7;
-  const basePrice = 50;
+const LONG_TERM = 3;
+const BASEPRISE = 40;
+const SELL = 20;
 
-  if (days >= LONG_TERM) {
-    return basePrice - LONG_TERM;
+const GOOD_DAYS = 7;
+const DISCOUNT = 50;
+
+function calculateRentalCost(days) {
+  const fullCost = days * BASEPRISE;
+
+  if (days >= GOOD_DAYS) {
+    return fullCost - DISCOUNT;
   }
 
-  const LONG_TERM = 
+  if (days >= LONG_TERM) {
+    return fullCost - SELL;
+  }
+
+  return fullCost;
 }
 
 module.exports = calculateRentalCost;
