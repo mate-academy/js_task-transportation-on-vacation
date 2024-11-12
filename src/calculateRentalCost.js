@@ -20,6 +20,14 @@ function calculateRentalCost(days) {
     return cost - shortTermDiscount;
   }
 
+  if(days > 6) {
+    return cost - 50;
+  }
+
+  if(days > 2) {
+    return cost - 20;
+  }
+
   return cost;
 }
 
