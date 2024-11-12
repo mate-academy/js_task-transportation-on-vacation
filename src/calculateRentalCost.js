@@ -3,7 +3,6 @@
  *
  * @return {number}
  */
-
 function calculateRentalCost(days) {
   const DAILY_COST = 40;
   const MIN_DAYS_FOR_SHORT_TERM_DISCOUNT = 3;
