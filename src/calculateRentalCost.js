@@ -4,7 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  let TAX_PER_DAY = 40;
+  let LONG_TERMIN = 7;
+  let MIDLE_TERMIN = 3;
+
+  if (days <= 0) {
+    return 0;
+  }
+
+  if (days < MIDLE_TERMIN) {
+    return days * TAX_PER_DAY;
+  } else if (days >= MIDLE_TERMIN && days < LONG_TERMIN) {
+    return days * TAX_PER_DAY - 20;
+  } else {
+    return days * TAX_PER_DAY - 50;
+  }
 }
 
 module.exports = calculateRentalCost;
