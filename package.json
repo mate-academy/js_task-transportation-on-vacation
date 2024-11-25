@@ -11,7 +11,8 @@
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only"
+    "test": "npm run lint && npm run test:only",
+    "deploy": "mate-scripts deploy"
   },
   "author": "Mate academy",
   "license": "GPL-3.0",
