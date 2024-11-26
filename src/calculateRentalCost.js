@@ -5,7 +5,7 @@
  */
 const costRental = 40;
 const mediumTerm = 3;
-const mediumTermDiscound = 20;
+const mediumTermDiscount = 20;
 const longTerm = 7;
 const longTermDiscount = 50;
 
@@ -19,7 +19,7 @@ function calculateRentalCost(days) {
   }
 
   if (days >= mediumTerm) {
-    result = days * costRental - mediumTermDiscound;
+    result = days * costRental - mediumTermDiscount;
 
     return result;
   }
