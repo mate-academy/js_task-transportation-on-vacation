@@ -1,5 +1,12 @@
 # Transportation on Vacation
 
+## Instructions
+**Read [the guideline](https://mate-academy.github.io/js_task-guideline/) before start**
+
+## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
+
+## Task description:
+
 After a hard quarter in the office you decide to get some rest on a vacation. So you
 will book a flight for you and your family and try to leave all the mess behind you.
 
@@ -13,14 +20,13 @@ get `$20` off your total.
 Implement `calculateRentalCost` function that returns the total amount for different
 number of days.
 
+## Instructions	
+**Read [the guideline](https://mate-academy.github.io/js_task-guideline/) before start**	
+
+## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 Examples:
 ```js
 calculateRentalCost(1); // 40
 calculateRentalCost(3); // 100
 calculateRentalCost(7); // 230
 ```
-
-## Instructions
-**Read [the guideline](https://mate-academy.github.io/js_task-guideline/) before start**
-
-## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
