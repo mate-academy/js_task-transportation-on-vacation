@@ -37,7 +37,6 @@ function calculateRentalCost(days) {
   }
 
   if (days === 6) {
-    
     return 220;
   }
 
