@@ -13,4 +13,3 @@
 - ESlint
 - Prettier
 - Jest
-- Parcel
