@@ -6,11 +6,11 @@
 function calculateRentalCost(days) {
   const totalCosts = days * 40;
 
-  if (totalCosts >= 280) {
+  if (days >= 7) {
     return totalCosts - 50;
   }
 
-  if (totalCosts >= 120) {
+  if (days >= 3) {
     return totalCosts - 20;
   }
 
