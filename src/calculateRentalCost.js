@@ -4,6 +4,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  // write code here
   let sum = 40 * days;
   let discount = 0;
 
