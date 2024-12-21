@@ -11,18 +11,15 @@ function calculateRentalCost(days) {
   const SMALL_DISCOUNT = 20;
   const PRICE = 40;
 
-  let sum = PRICE * days;
-  let discount = 0;
-
-  if (days >= SHORT_DAY) {
-    discount = SMALL_DISCOUNT;
-  }
+  const sum = PRICE * days;
 
   if (days >= LONG_DAY) {
-    discount = BIG_DISCOUNT;
+    return sum - BIG_DISCOUNT;
   }
 
-  sum = sum - discount;
+  if (days >= SHORT_DAY) {
+    return sum - SMALL_DISCOUNT;
+  }
 
   return sum;
 }
