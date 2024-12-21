@@ -8,11 +8,11 @@ function calculateRentalCost(days) {
   let discount = 0;
 
   if (days >= 3) {
-    discount += 20;
+    discount = 20;
   }
 
   if (days >= 7) {
-    discount += 30;
+    discount = 50;
   }
 
   sum = sum - discount;
