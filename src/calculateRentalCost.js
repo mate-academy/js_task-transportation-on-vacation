@@ -3,20 +3,20 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  let cost = days * 40;
+function CalculateRentalCost(days) {
+  const dailyCost = 40;
 
-  if (days < 3) {
-    return cost;
-  } else {
-    if (days < 7) {
-      cost = cost - 20;
-    } else {
-      cost = cost - 50;
-    }
+  let totalCost = days * dailyCost;
+
+  if (days >= 3) {
+    totalCost -= 20;
   }
 
-  return cost;
+  if (days >= 7) {
+    totalCost -= 30;
+  }
+
+  return totalCost;
 }
 
-module.exports = calculateRentalCost;
+module.exports = CalculateRentalCost;
