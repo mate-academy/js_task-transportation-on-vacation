@@ -10,9 +10,9 @@ function calculateRentalCost(days) {
     return baseCost - 50;
   } else if (days >= 3) {
     return baseCost - 20;
-  } else {
-    return baseCost;
   }
+
+  return baseCost;
 }
 
 module.exports = calculateRentalCost;
