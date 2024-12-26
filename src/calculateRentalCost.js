@@ -1,3 +1,12 @@
+/**
+ * @param {number} days
+ *
+ * @return {number}
+ */
+function calculateRentalCost(days) {
+  // write code here
+}
+
 const DAILY_RATE = 40;
 const LONG_TERM_RENTAL_DAYS = 7;
 const LONG_TERM_DISCOUNT = 50;
