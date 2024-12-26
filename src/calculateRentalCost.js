@@ -12,11 +12,11 @@ const MID_TERM_DISCOUNT = 20;
 
 const baseCost = numberOfDays * DAILY_RATE;
 
-  if (numberOfDays >= LONG_TERM_RENTAL_DAYS) {
+  if (days >= LONG_TERM_RENTAL_DAYS) {
     return baseCost - LONG_TERM_DISCOUNT;
   }
 
-  if (numberOfDays >= MID_TERM_RENTAL_DAYS) {
+  if (days >= MID_TERM_RENTAL_DAYS) {
     return baseCost - MID_TERM_DISCOUNT;
   }
 
