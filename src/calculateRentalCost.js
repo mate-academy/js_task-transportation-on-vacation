@@ -3,22 +3,16 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  // write code here
+const calculateRentalCost = (days) => {
+  const CAR_COST = 40;
+  const DISCOUNT_3_DAYS = 20;
+  const DISCOUNT_7_DAYS = 50;
+  const RENT = CAR_COST * days;
 
-  let discount = 0;
-  const carCost = 40;
-  const rent = carCost * days;
+  const discount =
+    days >= 7 ? DISCOUNT_7_DAYS : days >= 3 ? DISCOUNT_3_DAYS : 0;
 
-  if (days >= 3) {
-    discount = 20;
-  }
+  return RENT - discount;
+};
 
-  if (days >= 7) {
-    discount = 50;
-  }
-
-  return rent - discount;
-}
-
-module.exports = calculateRentalCost;
+export default calculateRentalCost;
