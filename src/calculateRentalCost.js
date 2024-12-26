@@ -15,4 +15,4 @@ const calculateRentalCost = (days) => {
   return RENT - discount;
 };
 
-export default calculateRentalCost;
+module.exports = calculateRentalCost;
