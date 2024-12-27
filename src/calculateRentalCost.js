@@ -12,13 +12,12 @@ function calculateRentalCost(days) {
 
   const basePrice = days * PRICE_PER_DAY;
 
-  // Логика скидок
   if (days >= LONG_TERM) {
-    return basePrice - LONG_TERM_DISCOUNT; // Скидка $50 для 7 или более дней
+    return basePrice - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM && days < LONG_TERM) {
-    return basePrice - SHORT_TERM_DISCOUNT; // Скидка $20 для 3–6 дней
+    return basePrice - SHORT_TERM_DISCOUNT;
   }
 
   return basePrice;
