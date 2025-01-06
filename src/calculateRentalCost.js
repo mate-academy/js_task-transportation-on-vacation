@@ -4,18 +4,23 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let totalAmount = 0;
-  const carCosts = 40;
+  const PRICE_PER_DAY = 40;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
 
-  if (days < 3) {
-    totalAmount = days * carCosts;
-  } else if (days >= 3 && days < 7) {
-    totalAmount = days * carCosts - 20;
-  } else if (days >= 7) {
-    totalAmount = days * carCosts - 50;
+  const basePrice = days * PRICE_PER_DAY;
+
+  if (days >= LONG_TERM) {
+    return basePrice - LONG_TERM_DISCOUNT;
   }
 
-  return totalAmount;
+  if (days >= SHORT_TERM) {
+    return basePrice - SHORT_TERM_DISCOUNT;
+  }
+
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
