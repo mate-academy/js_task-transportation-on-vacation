@@ -12,15 +12,19 @@ function calculateRentalCost(days) {
 
   if (days >= threeDaysOfRent) {
     discount = 20;
+
+    costs = days * payForDay - discount;
+
+    return costs;
   }
 
   if (days >= sevenDaysOfRent) {
     discount = 50;
+
+    costs = days * payForDay - discount;
+
+    return costs;
   }
-
-  costs = days * payForDay - discount;
-
-  return costs;
 }
 
 module.exports = calculateRentalCost;
