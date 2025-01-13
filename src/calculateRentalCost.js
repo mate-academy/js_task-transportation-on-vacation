@@ -5,20 +5,20 @@
  */
 function calculateRentalCost(days) {
   const costRent = days * 40;
-  let getDiscount;
+  let discount;
 
   if (days >= 7) {
-    getDiscount = costRent - 50;
+    discount = costRent - 50;
 
-    return getDiscount;
+    return discount;
   }
 
   if (days >= 3) {
-    getDiscount = costRent - 20;
+    discount = costRent - 20;
 
-    return getDiscount;
+    return discount;
   }
-  
+
   return costRent;
 }
 
