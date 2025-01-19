@@ -9,17 +9,17 @@ function calculateRentalCost(days) {
 
   let price = days * carRent;
 
-  if (price = 80){
+  if (price === 80){
     return 80;
   }
-  if (price = 120){
+  if (price === 120){
     return 100;
   }
-  if (price = 240){
+  if (price === 240){
     return 220;
   }
-  if (price = 280){
-    return 230
+  if (price === 280){
+    return 230;
   }
 
 
