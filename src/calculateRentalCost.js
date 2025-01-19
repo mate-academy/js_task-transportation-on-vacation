@@ -4,8 +4,6 @@
  */
 function calculateRentalCost(days) {
   const carRent = 40;
-  const longTermDiscount = 50;
-  const shortTermDiscount = 20;
 
   let price = days * carRent;
 
