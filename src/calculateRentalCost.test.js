@@ -1,4 +1,4 @@
-'use strict';
+'JSA';
 
 const calculateRentalCost = require('./calculateRentalCost');
 
