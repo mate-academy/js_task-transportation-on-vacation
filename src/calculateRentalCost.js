@@ -11,15 +11,17 @@ function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const SHORT_TERM = 3;
 
+  let basePrice = days * PRISCE_PER_DAY;
+
   if (days >= LONG_TERM) {
-    return days * PRISCE_PER_DAY - LONG_TERM_DISCONT;
+    return basePrice - LONG_TERM_DISCONT;
   }
 
   if (days >= SHORT_TERM) {
-    return days * PRISCE_PER_DAY - SHORT_TERM_DISCONT;
+    return basePrice - SHORT_TERM_DISCONT;
   }
 
-  return days * PRISCE_PER_DAY;
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
