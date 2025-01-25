@@ -5,21 +5,19 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  const DAILY_RATE = 40;
-  const DISCOUNT_7_DAYS = 50;
-  const DISCOUNT_3_DAYS = 20;
+  const PRISCE_PER_DAY = 40;
+  const LONG_TERM_DISCONT = 50;
+  const SHORT_TERM_DISCONT = 20;
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
 
-  const totalCost = days * DAILY_RATE;
-
-  if (days >= 7) {
-    return totalCost - DISCOUNT_7_DAYS; // Знижка для 7 і більше днів
+  if (days >= LONG_TERM) {
+    return days * PRISCE_PER_DAY - LONG_TERM_DISCONT;
+  } else if (days >= SHORT_TERM) {
+    return days * PRISCE_PER_DAY - SHORT_TERM_DISCONT;
+  } else {
+    return days * PRISCE_PER_DAY;
   }
-
-  if (days >= 3) {
-    return totalCost - DISCOUNT_3_DAYS; // Знижка для 3 і більше днів
-  }
-
-  return totalCost;
 }
 
 module.exports = calculateRentalCost;
