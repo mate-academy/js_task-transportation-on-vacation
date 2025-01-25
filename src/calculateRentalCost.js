@@ -13,11 +13,13 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return days * PRISCE_PER_DAY - LONG_TERM_DISCONT;
-  } else if (days >= SHORT_TERM) {
-    return days * PRISCE_PER_DAY - SHORT_TERM_DISCONT;
-  } else {
-    return days * PRISCE_PER_DAY;
   }
+
+  if (days >= SHORT_TERM) {
+    return days * PRISCE_PER_DAY - SHORT_TERM_DISCONT;
+  }
+
+  return days * PRISCE_PER_DAY;
 }
 
 module.exports = calculateRentalCost;
