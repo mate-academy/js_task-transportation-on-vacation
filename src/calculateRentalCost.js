@@ -5,13 +5,18 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  const dailyRate = 40;
-  let totalCost = days * dailyRate;
+  const DAILY_RATE = 40;
+  const DISCOUNT_7_DAYS = 50;
+  const DISCOUNT_3_DAYS = 20;
+
+  const totalCost = days * DAILY_RATE;
 
   if (days >= 7) {
-    totalCost -= 50; // Discount for 7 or more days
-  } else if (days >= 3) {
-    totalCost -= 20; // Discount for 3 or more days
+    return totalCost - DISCOUNT_7_DAYS; // Знижка для 7 і більше днів
+  }
+
+  if (days >= 3) {
+    return totalCost - DISCOUNT_3_DAYS; // Знижка для 3 і більше днів
   }
 
   return totalCost;
