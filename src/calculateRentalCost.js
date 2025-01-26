@@ -11,9 +11,9 @@ function calculateRentalCost(days) {
   const mediumTermDiscount = 20;
 
   if (days >= mediumTerm) {
-    return days >= longTerm
-      ? baseRentalCost - longTermDiscount
-      : baseRentalCost - mediumTermDiscount;
+    return days >= mediumTerm && days < longTerm
+      ? baseRentalCost - mediumTermDiscount
+      : baseRentalCost - longTermDiscount;
   }
 
   return baseRentalCost;
