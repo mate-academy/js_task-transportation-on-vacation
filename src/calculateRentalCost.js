@@ -6,20 +6,20 @@
 function calculateRentalCost(days) {
   // write code here
 
-  const perDay = 40;
-  const longDay = 7;
-  const shortDay = 3;
-  const discLongDay = 50;
-  const discShortDay = 20;
+  const DAILY_RENTAL_RATE = 40;
+  const LONG_TERM_RENTAL_DAYS = 7;
+  const SHORT_TERM_RENTAL_DAYS = 3;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
 
-  const total = days * perDay;
+  const total = days * DAILY_RENTAL_RATE;
 
-  if (days >= longDay) {
-    return total - discLongDay;
+  if (days >= LONG_TERM_RENTAL_DAYS) {
+    return total - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= shortDay && days < longDay) {
-    return total - discShortDay;
+  if (days >= SHORT_TERM_RENTAL_DAYS && days < LONG_TERM_RENTAL_DAYS) {
+    return total - SHORT_TERM_DISCOUNT;
   }
 
   return total;
