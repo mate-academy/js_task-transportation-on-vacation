@@ -17,9 +17,7 @@ function calculateRentalCost(days) {
     return total - sale;
   }
 
-  if (days < 3) {
-    return total;
-  }
+  return total;
 }
 
 module.exports = calculateRentalCost;
