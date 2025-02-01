@@ -17,6 +17,6 @@ function calculateRentalCost(days) {
   }
 
   return costVacationCar;
+  // hello
 }
-
 module.exports = calculateRentalCost;
