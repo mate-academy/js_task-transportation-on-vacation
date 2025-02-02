@@ -6,8 +6,8 @@
 function calculateRentalCost(days) {
   const LONG_TERM = 7;
   const LONG_TERM_DISCOUNT = 50;
-  const SHERT_TERM = 3;
-  const SHERT_TERM_DISCOUNT = 20;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
   const basic = days * 40;
 
   let sum = 0;
@@ -18,8 +18,8 @@ function calculateRentalCost(days) {
     return sum;
   }
 
-  if (days >= SHERT_TERM) {
-    sum = basic - SHERT_TERM_DISCOUNT;
+  if (days >= SHORT_TERM) {
+    sum = basic - SHORT_TERM_DISCOUNT;
 
     return sum;
   }
