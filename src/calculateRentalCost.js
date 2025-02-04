@@ -6,12 +6,14 @@
 
 function calculateRentalCost(days) {
   const rent = 40;
+  const discMin = 20;
+  const discMax = 50;
   let discount = 0;
 
   if (days >= 7) {
-    discount = 50;
+    discount = discMax;
   } else if (days >= 3) {
-    discount = 20;
+    discount = discMin;
   }
 
   return days * rent - discount;
