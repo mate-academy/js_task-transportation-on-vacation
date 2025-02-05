@@ -7,9 +7,9 @@ function calculateRentalCost(days) {
   let totalCost = days * 40;
 
   if (days >= 7) {
-    totalCost -= 50;
+    totalCost = totalCoast - 50;
   } else if (days >= 30) {
-    totalCost -= 20;
+    totalCost = totalCoast - 20;
   }
   return totalCost;
 }
