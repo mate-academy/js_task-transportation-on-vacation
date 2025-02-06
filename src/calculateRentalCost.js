@@ -12,12 +12,12 @@ function calculateRentalCost(days) {
   let price = days * REGULAR_COST;
 
   if (days >= LONG_TERM) {
-    price -= LONG_TERM_DISCOUNT;
-  } else if (days >= MIDDLE_TERM) {
-    price -= MIDDLE_TERM_DISCOUNT;
+    return price - LONG_TERM_DISCOUNT;
   }
-
-  return price;
+  
+  if (days >= MIDDLE_TERM) {
+    return price - MIDDLE_TERM_DISCOUNT;
+  }
 }
 
 module.exports = calculateRentalCost;
