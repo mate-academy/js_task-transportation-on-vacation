@@ -1,13 +1,15 @@
-
 function calculateRentalCost(days) {
-  let totalCost = days * 40;
+  let cost = days * DAILY_RATE;
 
-  if (days >= 7) {
-    totalCost = totalCoast - 50;
-  } else if (days >= 30) {
-    totalCost = totalCoast - 20;
+  if (days >= 30) {
+    cost -= DISCOUNT_7_DAYS;
+  } else if (days >= 7) {
+    cost -= DISCOUNT_7_DAYS;
+  } else if (days >= 3) {
+    cost -= DISCOUNT_3_DAYS;
   }
-  return totalCost;
+
+  return cost;
 }
 
 module.exports = calculateRentalCost;
