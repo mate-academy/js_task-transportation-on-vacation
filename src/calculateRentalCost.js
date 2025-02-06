@@ -1,14 +1,11 @@
 function calculateRentalCost(days) {
-  let cost = days * DAILY_RATE;
+  let cost = days * 40;
 
-  if (days >= 30) {
-    cost -= DISCOUNT_7_DAYS;
-  } else if (days >= 7) {
-    cost -= DISCOUNT_7_DAYS;
+  if (days >= 7) {
+    cost = cost - 50;
   } else if (days >= 3) {
-    cost -= DISCOUNT_3_DAYS;
+    cost = cost - 20;
   }
-
   return cost;
 }
 
