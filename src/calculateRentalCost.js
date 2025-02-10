@@ -5,12 +5,18 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  let cost = days * 40;
+  const COST_PER_DAY = 40;
+  const DISCOUNT_FOR_3_PLUS_DAYS = 20;
+  const DISCOUNT_FOR_7_PLUS_DAYS = 50;
+  const MEDIUM_TERM_RENTAL = 3;
+  const LONG_TERM_RENTAL = 7;
 
-  if (days >= 7) {
-    cost -= 50;
-  } else if (days >= 3) {
-    cost -= 20;
+  let cost = days * COST_PER_DAY;
+
+  if (days >= LONG_TERM_RENTAL) {
+    cost -= DISCOUNT_FOR_7_PLUS_DAYS;
+  } else if (days >= MEDIUM_TERM_RENTAL) {
+    cost -= DISCOUNT_FOR_3_PLUS_DAYS;
   }
 
   return cost;
