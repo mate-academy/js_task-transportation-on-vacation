@@ -5,17 +5,17 @@
  */
 function calculateRentalCost(days) {
   const perDay = 40;
-  let totalLocation;
+  let totalCost;
 
   if (days >= 7) {
-    totalLocation = perDay * days - 50;
+    totalCost = perDay * days - 50;
   } else if (days >= 3) {
-    totalLocation = perDay * days - 20;
+    totalCost = perDay * days - 20;
   } else {
-    totalLocation = perDay * days;
+    totalCost = perDay * days;
   }
 
-  return totalLocation;
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
