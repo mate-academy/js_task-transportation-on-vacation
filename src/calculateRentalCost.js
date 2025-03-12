@@ -4,7 +4,6 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  function calculateRentalCost(days) {
     const shortRentSale=20
     const longRentSale=50
     const daysPrice=40
@@ -21,6 +20,5 @@ function calculateRentalCost(days) {
   
   
   }
-}
 
 module.exports = calculateRentalCost;
