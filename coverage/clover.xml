@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1742387594717" clover="3.2.0">
+  <project timestamp="1742387594717" name="All files">
+    <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1" elements="7" coveredelements="5" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="calculateRentalCost.js" path="C:\Users\den_h\Desktop\hello-world\new_mod_MateAc\js_task-transportation-on-vacation\src\calculateRentalCost.js">
+      <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="7" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
