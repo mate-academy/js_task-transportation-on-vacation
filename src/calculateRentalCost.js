@@ -1,3 +1,8 @@
+ * @param {number} days
+ *
+ * @return {number}
+ */
+
 function calculateRentalCost(days) {
   const PRICE_PER_DAY = 40;
   const LONG_RENT = 7;
@@ -18,3 +23,4 @@ function calculateRentalCost(days) {
   return basePrice;
 }
 
+module.exports = calculateRentalCost;
