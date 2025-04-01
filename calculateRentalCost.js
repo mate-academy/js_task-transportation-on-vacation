@@ -5,8 +5,10 @@ function calculateRentalCost(days) {
     const DAYS_SMALL = 3;
     const DAYS_LARGE = 7;
     
-    if (days >= DAYS_LARGE) return days * DAILY_COST - DISCOUNT_LARGE;
-    if (days >= DAYS_SMALL) return days * DAILY_COST - DISCOUNT_SMALL;
+    const totalCost = days * DAILY_COST;
     
-    return days * DAILY_COST;
+    if (days >= DAYS_LARGE) return totalCost - DISCOUNT_LARGE;
+    if (days >= DAYS_SMALL) return totalCost - DISCOUNT_SMALL;
+    
+    return totalCost;
 }
