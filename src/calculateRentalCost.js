@@ -1,14 +1,20 @@
 function calculateRentalCost(days) {
-    const DAILY_COST = 40;
-    const DISCOUNT_SMALL = 20;
-    const DISCOUNT_LARGE = 50;
-    const DAYS_SMALL = 3;
-    const DAYS_LARGE = 7;
+  const PRICE_PER_DAY = 40;
+  const LONG_RENT = 7;
+  const LONG_RENT_DISCOUNT = 50;
+  const SHORT_RENT = 3;
+  const SHORT_RENT_DISCOUNT = 20;
 
-    let totalCost = days * DAILY_COST;
+  const basePrice = days * PRICE_PER_DAY;
 
-    if (days >= DAYS_LARGE) return totalCost - DISCOUNT_LARGE;
-    if (days >= DAYS_SMALL) return totalCost - DISCOUNT_SMALL;
-    
-    return totalCost;
+  if (days >= LONG_RENT) {
+    return basePrice - LONG_RENT_DISCOUNT;
+  }
+
+  if (days >= SHORT_RENT) {
+    return basePrice - SHORT_RENT_DISCOUNT;
+  }
+
+  return basePrice;
 }
+
