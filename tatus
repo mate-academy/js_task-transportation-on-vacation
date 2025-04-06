@@ -1,0 +1,48 @@
+[33mb1a3d0d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Update test.yml
+[33ma8aec09[m Merge pull request #4495 from mate-academy/node20
+[33mc6a94ab[m add latest deps
+[33m54cf694[m Update readme.md
+[33m9de6a3f[m fix node14-20 deps
+[33m7d54a9d[m Merge pull request #4007 from mykhalenych/feature/prettier
+[33m1e4ef2c[m feature/prettier changed .prettierignore
+[33m264d399[m feature/prettier added prettier, updated packages
+[33mff7a3e0[m Update package.json
+[33m1998411[m Merge pull request #3963 from mate-academy/mgrinko-patch-1
+[33m8d45594[m Update readme.md
+[33mb9f4d86[m Update calculateRentalCost.js
+[33m3e85978[m use node 14 for tests
+[33mf81403d[m Merge pull request #3016 from JoyCoffeeAddict/chore/upgrage_dependencies
+[33m299bc40[m chore: upgrade dependencies
+[33m34c4728[m Merge pull request #2810 from mate-academy/revert-2808-develop
+[33me189cb9[m Revert "Solution"
+[33m9ca5306[m Merge pull request #2808 from rvrazovskyi/develop
+[33m3b1c8bf[m Solution
+[33m3aeeb11[m Merge pull request #2791 from mate-academy/mgrinko-patch-1
+[33m05a5b8c[m Update checklist.md
+[33m04733a0[m Update checklist.md
+[33me97b486[m Update checklist.md
+[33m5fc8ff5[m Update checklist.md
+[33m5c8db76[m Update readme.md
+[33mb0b9d9c[m Merge pull request #927 from mate-academy/solaryasha-patch-1
+[33m273972a[m Update checklist.md
+[33m2ac0755[m Update checklist.md
+[33mb82f470[m Create checklist.md
+[33m53020c8[m migrate to mate-scripts
+[33m1444e48[m Merge pull request #221 from mate-academy/revert-2-jv_apr18_ivan_fs
+[33ma208827[m Revert "Solution"
+[33m5eed6fd[m Merge pull request #2 from ivaniuminov/jv_apr18_ivan_fs
+[33mb27b8f9[m Update readme.md
+[33m83fd4f9[m Update readme.md
+[33m6ed09b8[m Update readme.md
+[33m7d29952[m Update readme.md
+[33m3a207f5[m Update calculateRentalCost.js
+[33mbb442aa[m Update readme
+[33mbed7dad[m update task
+[33m70b056f[m Naming fix
+[33m3ab0421[m Solution
+[33m2388bdf[m Merge pull request #1 from mate-academy/task
+[33m48439b3[m rename main function
+[33mdbbbd15[m updated tests
+[33m5b5bfe8[m fix test description
+[33m58bbc52[m add task and tests
+[33m25d779e[m init commit
