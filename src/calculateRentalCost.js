@@ -4,7 +4,6 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  
   const COST_PER_DAY = 40;
   const DISCOUNT_FOR_3_DAYS = 20;
   const DISCOUNT_FOR_7_DAYS = 50;
@@ -13,10 +12,12 @@ function calculateRentalCost(days) {
 
   let total = days * COST_PER_DAY;
 
-  if (days >= MIN_DAYS_FOR_LARGE_DISCOUNT) {
-    total -= DISCOUNT_FOR_7_DAYS;
-  } else if (days >= MIN_DAYS_FOR_SMALL_DISCOUNT) {
+  if (days >= MIN_DAYS_FOR_SMALL_DISCOUNT) {
     total -= DISCOUNT_FOR_3_DAYS;
+  }
+
+  if (days >= MIN_DAYS_FOR_LARGE_DISCOUNT) {
+    total -= DISCOUNT_FOR_7_DAYS - DISCOUNT_FOR_3_DAYS;
   }
 
   return total;
