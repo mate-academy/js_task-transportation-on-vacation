@@ -3,6 +3,7 @@
  *
  * @return {number}
  */
+//test
 function calculateRentalCost(days) {
   // write code here
 }
