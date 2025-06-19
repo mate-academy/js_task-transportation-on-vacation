@@ -11,11 +11,11 @@ function calculateRentalCost(days) {
 
   let total = 40 * days;
 
-  if (days >= process.env.MAXIMUM_DISCOUNT) {
+  if ( days >= parseInt( process.env.MAXIMUM_DISCOUNT ) ) {
     return total -= 50;
   }
 
-  if (days >= process.env.MINIMUM_DISCOUNT) {
+  if ( days >= parseInt( process.env.MINIMUM_DISCOUNT ) ) {
     return total -= 20;
   }
 
