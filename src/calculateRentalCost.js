@@ -12,17 +12,15 @@ function calculateRentalCost(days) {
   const discountRateSmall = 20;
   const discountRateLarge = 50;
 
-  let totalCost = 0;
-
   if (days >= discountThresholdLarge) {
-    totalCost += dailyRate * days - discountRateLarge;
-  } else if (days >= discountThresholdSmall) {
-    totalCost += dailyRate * days - discountRateSmall;
-  } else if (days > 0) {
-    totalCost += dailyRate * days;
+    return dailyRate * days - discountRateLarge;
   }
 
-  return totalCost;
+  if (days >= discountThresholdSmall) {
+    return dailyRate * days - discountRateSmall;
+  }
+
+  return dailyRate * days;
 }
 
 module.exports = calculateRentalCost;
