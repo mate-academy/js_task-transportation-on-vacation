@@ -4,19 +4,23 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  if (days === 3) {
-    return 100;
+  
+  const everyDayRent = 40;
+  const longDays = 7;
+  const longDaysDiscount = 50;
+  const fewDays = 3;
+  const fewDaysDiscount = 20;
+
+  let totalPrice = days * everyDayRent;
+
+  if (days >= longDays) {
+    return totalPrice - longDaysDiscount;
   }
 
-  if (days === 6) {
-    return 220;
+  if (days >= fewDays) {
+    return totalPrice - fewDaysDiscount;
   }
 
-  if (days === 7) {
-    return 230;
-  }
-
-  return 80;
+  return totalPrice;
 }
 
-module.exports = calculateRentalCost;
