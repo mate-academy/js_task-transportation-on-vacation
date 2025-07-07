@@ -5,10 +5,6 @@
  */
 
 function calculateRentalCost(days) {
-  if (days < 0) {
-    throw new Error('Provide a correct number of days');
-  }
-
   const DAILY_RATE = 40;
   const SHORT_TERM = 3;
   const LONG_TERM = 7;
