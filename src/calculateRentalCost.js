@@ -11,7 +11,7 @@ function calculateRentalCost(days) {
   const SHORT_TERM = 3;
   const SHORT_TERM_DISCOUNT = 20;
 
-  if (days < 3) {
+  if (days < SHORT_TERM) {
     return days * basePrice;
   }
 
