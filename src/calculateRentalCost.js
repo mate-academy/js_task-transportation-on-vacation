@@ -5,17 +5,29 @@
  */
 function calculateRentalCost(days) {
 
+const pricePerDay = 40
+
+const longTime = 7
+
+const longTimeDiscount = 50
+
+const shortTime = 3
+
+const shorTimeDiscount = 20
+
+
+
 if(days <= 0){
   return 0
 }
-if(days < 3){
-  return days*40
+if(days < shortTime){
+  return days*pricePerDay
 }
-if(days >= 3 && days < 7){   
-  return (days*40) - 20 
+if(days >= shortTime && days < longTime){   
+  return (days*pricePerDay) - shorTimeDiscount
 }
 else{
-  return (days*40) - 50
+  return (days*pricePerDay) - longTimeDiscount
 }
 }
 
