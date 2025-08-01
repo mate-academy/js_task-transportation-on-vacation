@@ -4,7 +4,6 @@
  * @return {number}
  */
 
-let totalAmount = 0;
 const DAY_RENT = 40;
 const DISCOUNT_7_DAYS = 50;
 const DISCOUNT_3_DAYS = 20;
@@ -13,6 +12,8 @@ function calculateRentalCost(days) {
   if (days < 1) {
     return 0;
   }
+
+  let totalAmount = 0;
 
   if (days < 3) {
     totalAmount = DAY_RENT * days;
