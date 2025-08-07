@@ -1,7 +1,7 @@
 # Transportation on Vacation
 
 ## Instructions
-**Read [the guideline](https://mate-academy.github.io/js_task-guideline/) before start**
+**Read [the guideline](https:/gi/mate-academy.github.io/js_task-guideline/) before start**
 
 ## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
