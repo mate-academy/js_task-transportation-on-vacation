@@ -4,29 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let totalCost = 0;
+  const LONG_TERM_RENTAL_DAYS = 7;
+  const SHORT_TERM_RENTAL_DAYS = 3;
+
   const LONG_TERM_DISCOUNT = 50;
-  const SHIRT_TERM_DISCOUNT = 20;
-  const PRICE = 40;
+  const SHORT_TERM_DISCOUNT = 20;
+  const PRICE_PER_DAY = 40;
+  const totalCost = days * PRICE_PER_DAY;
 
-  if (days >= 7) {
-    for (let i = 0; i < days; i++) {
-      totalCost += PRICE;
-    }
-
+  if (days >= LONG_TERM_RENTAL_DAYS) {
     return totalCost - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= 3) {
-    for (let i = 0; i < days; i++) {
-      totalCost += PRICE;
-    }
-
-    return totalCost - SHIRT_TERM_DISCOUNT;
-  }
-
-  for (let i = 0; i < days; i++) {
-    totalCost += PRICE;
+  if (days >= SHORT_TERM_RENTAL_DAYS) {
+    return totalCost - SHORT_TERM_DISCOUNT;
   }
 
   return totalCost;
