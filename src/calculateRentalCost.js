@@ -3,16 +3,21 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  const rentalDayPrice = 40;
 
-  if (days >= 3 && days <= 6) {
-    return rentalDayPrice * days - 20;
-  } else if (days >= 7) {
-    return rentalDayPrice * days - 50;
+function calculateRentalCost(days) {
+  const RENTAL_FOR_DAY = 40;
+  const DISCOUNT_3_DAYS = 20;
+  const DISCOUNT_7_DAYS = 50;
+  const DISCOUNT_3_DAYS_THRESHOLD = 3;
+  const DISCOUNT_7_DAYS_THRESHOLD = 7;
+
+  if (days >= DISCOUNT_3_DAYS_THRESHOLD && days < DISCOUNT_7_DAYS_THRESHOLD) {
+    return RENTAL_FOR_DAY * days - DISCOUNT_3_DAYS;
+  } else if (days >= DISCOUNT_7_DAYS_THRESHOLD) {
+    return RENTAL_FOR_DAY * days - DISCOUNT_7_DAYS;
   }
 
-  return rentalDayPrice * days;
+  return RENTAL_FOR_DAY * days;
 }
 
 module.exports = calculateRentalCost;
