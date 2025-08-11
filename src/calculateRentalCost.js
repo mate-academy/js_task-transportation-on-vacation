@@ -5,19 +5,20 @@
  */
 function calculateRentalCost(days) {
   const COST_PER_DAY = 40;
-  const TOTAL_COST = COST_PER_DAY * days;
-  const DISCOUNT_ONE = TOTAL_COST - 50;
-  const DISCOUNT_TWO = TOTAL_COST - 20;
+  const DISCOUNT_FOR_7_DAYS = 50;
+  const DISCOUNT_THRESHOLD_7_DAYS = 7;
+  const DISCOUNT_FOR_3_DAYS = 20;
+  const DISCOUNT_THRESHOLD_3_DAYS = 3;
 
-  if (days >= 7) {
-    return DISCOUNT_ONE;
+  if (days >= DISCOUNT_THRESHOLD_7_DAYS) {
+    return days * COST_PER_DAY - DISCOUNT_FOR_7_DAYS;
   }
 
-  if (days >= 3) {
-    return DISCOUNT_TWO;
+  if (days >= DISCOUNT_THRESHOLD_3_DAYS) {
+    return days * COST_PER_DAY - DISCOUNT_FOR_3_DAYS;
   }
 
-  return TOTAL_COST;
+  return days * COST_PER_DAY;
 }
 
 module.exports = calculateRentalCost;
