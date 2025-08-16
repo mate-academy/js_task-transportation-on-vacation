@@ -8,19 +8,21 @@ function calculateRentalCost(days) {
     return 0;
   }
 
-  const basicPricePerDay = 40;
-  const shortTermDiscount = 20;
-  const longTermDiscount = 50;
+  const BASIC_PRICE_PER_DAY = 40;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
 
-  if (days < 3) {
-    return basicPricePerDay * days;
+  if (days < SHORT_TERM) {
+    return BASIC_PRICE_PER_DAY * days;
   }
 
-  if (days < 7) {
-    return basicPricePerDay * days - shortTermDiscount;
+  if (days < LONG_TERM) {
+    return BASIC_PRICE_PER_DAY * days - SHORT_TERM_DISCOUNT;
   }
 
-  return basicPricePerDay * days - longTermDiscount;
+  return BASIC_PRICE_PER_DAY * days - LONG_TERM_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
