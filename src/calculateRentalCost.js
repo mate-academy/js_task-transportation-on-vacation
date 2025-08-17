@@ -3,13 +3,19 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  let rentalCost = days * 40;
+const dailyRate = 40;
+const discountFor7Days = 50;
+const discountFor3Days = 20;
+const treeDayThreshold = 3;
+const sevenDayThreshold = 7;
 
-  if (days >= 3 && days <= 6) {
-    rentalCost = rentalCost - 20;
-  } else if (days >= 7) {
-    rentalCost = rentalCost - 50;
+function calculateRentalCost(days) {
+  let rentalCost = days * dailyRate;
+
+  if (days >= treeDayThreshold && days <= 6) {
+    rentalCost = rentalCost - discountFor3Days;
+  } else if (days >= sevenDayThreshold) {
+    rentalCost = rentalCost - discountFor7Days;
   }
 
   return rentalCost;
