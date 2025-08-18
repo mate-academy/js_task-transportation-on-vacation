@@ -10,7 +10,9 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return days * dailyCostCarRental - longTermDiscount;
-  } else if (days >= 3) {
+  }
+
+  if (days >= 3) {
     return days * dailyCostCarRental - shortTermDiscount;
   }
 
