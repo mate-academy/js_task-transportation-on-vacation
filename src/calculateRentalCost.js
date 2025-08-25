@@ -3,19 +3,25 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  const rentalCost = days * 40;
-  let finalRentalCost = 0;
 
-  if (days >= 7) {
-    finalRentalCost = rentalCost - 50;
-  } else if (days >= 3) {
-    finalRentalCost = rentalCost - 20;
-  } else {
-    finalRentalCost = rentalCost;
+const dailyRate = 40;
+const sevenDaysDiscount = 50;
+const threeDaysDiscount = 20;
+const minDaysBigDiscount = 7;
+const minDaysSmallDiscount = 3;
+
+function calculateRentalCost(days) {
+  const rentalCost = days * dailyRate;
+
+  if (days >= minDaysBigDiscount) {
+    return rentalCost - sevenDaysDiscount;
   }
 
-  return finalRentalCost;
+  if (days >= minDaysSmallDiscount) {
+    return rentalCost - threeDaysDiscount;
+  } else {
+    return rentalCost;
+  }
 }
 
 module.exports = calculateRentalCost;
