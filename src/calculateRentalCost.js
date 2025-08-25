@@ -19,9 +19,9 @@ function calculateRentalCost(days) {
 
   if (days >= minDaysSmallDiscount) {
     return rentalCost - threeDaysDiscount;
-  } else {
-    return rentalCost;
   }
+
+  return rentalCost;
 }
 
 module.exports = calculateRentalCost;
