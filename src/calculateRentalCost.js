@@ -3,25 +3,29 @@
  *
  * @return {number}
  */
-const rentOfDay = 40;
-let rentTotaly = 0;
+const DAILY_RATE = 40;
+const MID_TERM_THRESHOLD = 3;
+const LONG_TERM_THRESHOLD = 7;
+const MID_TERM_DISCOUNT = 20;
+const LONG_TERM_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  rentTotaly = days * rentOfDay;
+  let totalCost = 0;
+  const baseCost = days * DAILY_RATE;
 
-  if (days >= 7) {
-    rentTotaly = days * rentOfDay - 50;
+  if (days >= LONG_TERM_THRESHOLD) {
+    totalCost = baseCost - LONG_TERM_DISCOUNT;
 
-    return rentTotaly;
+    return totalCost;
   }
 
-  if (days >= 3) {
-    rentTotaly = days * rentOfDay - 20;
+  if (days >= MID_TERM_THRESHOLD) {
+    totalCost = baseCost - MID_TERM_DISCOUNT;
 
-    return rentTotaly;
+    return totalCost;
   }
 
-  return rentTotaly;
+  return baseCost;
 }
 
 module.exports = calculateRentalCost;
