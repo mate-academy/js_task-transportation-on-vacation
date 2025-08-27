@@ -18,7 +18,7 @@ function calculateRentalCost(days) {
     return days * DAILY_RATE - SHORT_TERM_DISCOUNT;
   }
 
-  if (days < SHORT_TERM_DISCOUNT) {
+  if (days < SHORT_TERM_THRESHOLD) {
     return days * DAILY_RATE;
   }
 }
