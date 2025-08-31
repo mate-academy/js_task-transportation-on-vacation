@@ -16,16 +16,14 @@ function calculateRentalCost(days) {
       cost += 40;
     }
   }
-
   /*  for (let i = 1; i <= days; i++) {
     if (i >= 7) {
-      cost += 50;
+      cost += 10;
     } else if (i >= 3) {
       cost += 20;
     } else if (i < 3) {
       cost += 40;
     }
-  }
 */
 
   return cost;
