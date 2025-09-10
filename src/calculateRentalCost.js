@@ -9,11 +9,13 @@ function calculateRentalCost(days) {
   const rentalCostWithoutDiscount = days * rentPricePerDay;
   const threeDaysDiscount = 20;
   const sevenDaysDiscount = 50;
+  const minDiscountPeriod = 3;
+  const maxDiscountPeriod = 7;
   let rentalCost;
 
-  if (days < 3) {
+  if (days < minDiscountPeriod) {
     rentalCost = rentalCostWithoutDiscount;
-  } else if (days >= 3 && days < 7) {
+  } else if (days >= minDiscountPeriod && days < maxDiscountPeriod) {
     rentalCost = rentalCostWithoutDiscount - threeDaysDiscount;
   } else {
     rentalCost = rentalCostWithoutDiscount - sevenDaysDiscount;
