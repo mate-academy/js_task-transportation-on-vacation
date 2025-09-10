@@ -1,25 +1,25 @@
 /**
- * @param {number} days
+ * @param {number} numberOfDays
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  const SHORT_TERM = 2;
-  const LONG_TERM = 7;
-  const PRICE_RENTAL = 40;
-  const BIG_DISCOUNT = 50;
-  const SMALL_DISCOUNT = 20;
-  const PRICE_FOR_CLIENT = days * PRICE_RENTAL;
+function calculateRentalCost(numberOfDays) {
+  const MEDIUM_TERM_THRESHOLD = 3;
+  const LONG_TERM_THRESHOLD = 7;
+  const DAILY_RATE = 40;
+  const LONG_TERM_DISCOUNT = 50;
+  const MEDIUM_TERM_DISCOUNT = 20;
+  const basePrice = numberOfDays * DAILY_RATE;
 
-  if (days >= LONG_TERM) {
-    return PRICE_FOR_CLIENT - BIG_DISCOUNT;
+  if (numberOfDays >= LONG_TERM_THRESHOLD) {
+    return basePrice - LONG_TERM_DISCOUNT;
   }
 
-  if (days > SHORT_TERM) {
-    return PRICE_FOR_CLIENT - SMALL_DISCOUNT;
+  if (numberOfDays >= MEDIUM_TERM_THRESHOLD) {
+    return basePrice - MEDIUM_TERM_DISCOUNT;
   }
 
-  return PRICE_FOR_CLIENT;
+  return basePrice;
 }
 
 module.exports = calculateRentalCost;
