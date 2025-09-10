@@ -4,24 +4,24 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const discount = 20;
-  const bigDiscount = 50;
-  const rentalPrice = 40;
-  const minRentlDays = 3;
-  const midRentlDays = 6;
-  const maxRentDays = 7;
+  const DISCOUNT = 20;
+  const BIG_DISCOUNT = 50;
+  const RENTAL_PRICE = 40;
+  const MIN_RENT_DAYS = 3;
+  const MID_RENT_DAYS = 6;
+  const MAX_RENT_DAYS = 7;
   //
 
-  if (days < minRentlDays) {
-    return rentalPrice * days;
+  if (days < MIN_RENT_DAYS) {
+    return RENTAL_PRICE * days;
   }
 
-  if (days >= minRentlDays && days <= midRentlDays) {
-    return rentalPrice * days - discount;
+  if (days >= MIN_RENT_DAYS && days <= MID_RENT_DAYS) {
+    return RENTAL_PRICE * days - DISCOUNT;
   }
 
-  if (days >= maxRentDays) {
-    return rentalPrice * days - bigDiscount;
+  if (days >= MAX_RENT_DAYS) {
+    return RENTAL_PRICE * days - BIG_DISCOUNT;
   }
 }
 
