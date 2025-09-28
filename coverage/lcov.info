@@ -1,0 +1,17 @@
+TN:
+SF:src/calculateRentalCost.js
+FN:6,calculateRentalCost
+FNF:1
+FNH:1
+FNDA:1,calculateRentalCost
+DA:7,1
+DA:8,1
+DA:11,0
+DA:14,1
+LF:4
+LH:3
+BRDA:7,0,0,1
+BRDA:7,0,1,0
+BRF:2
+BRH:1
+end_of_record
