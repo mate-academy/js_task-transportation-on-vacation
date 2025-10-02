@@ -6,7 +6,7 @@
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
-    "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss,js}'",
+    "format": "cross-env-shell prettier --ignore-path .prettierignore --write 'src/**/*.{html,css,scss,js}'",
     "lint": "npm run format && mate-scripts lint",
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",
