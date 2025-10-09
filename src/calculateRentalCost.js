@@ -10,17 +10,17 @@ function calculateRentalCost(days) {
   const SECOND_DISCOUNT = 50;
   const COST_PER_DAY = 40;
 
-  let finalDiscount = 0;
-
-  if (days >= NUMBER_OF_DAYS_FOR_FIRST_DISCOUNT) {
-    finalDiscount = FIRST_DISCOUNT;
-  }
+  const baseCost = COST_PER_DAY * days;
 
   if (days >= NUMBER_OF_DAYS_FOR_SECOND_DISCOUNT) {
-    finalDiscount = SECOND_DISCOUNT;
+    return baseCost - SECOND_DISCOUNT;
   }
 
-  return COST_PER_DAY * days - finalDiscount;
+  if (days >= NUMBER_OF_DAYS_FOR_FIRST_DISCOUNT) {
+    return baseCost - FIRST_DISCOUNT;
+  }
+
+  return baseCost;
 }
 
 module.exports = calculateRentalCost;
