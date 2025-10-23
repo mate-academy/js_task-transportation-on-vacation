@@ -10,14 +10,14 @@ function calculateRentalCost(days) {
   const SHORT_TERM_THRESHOLD = 3;
   const MEDIUM_TERM_THRESHOLD = 6;
   const LONG_TERM_THRESHOLD = 7;
-  let totalCost = days * DAILY_RATE;
+  const totalCost = days * DAILY_RATE;
 
   if (days >= LONG_TERM_THRESHOLD) {
-    totalCost -= LONG_TERM_DISCOUNT;
+    return totalCost - LONG_TERM_DISCOUNT;
   }
 
   if (days >= SHORT_TERM_THRESHOLD && days <= MEDIUM_TERM_THRESHOLD) {
-    totalCost -= MEDIUM_TERM_DISCOUNT;
+    return totalCost - MEDIUM_TERM_DISCOUNT;
   }
 
   return totalCost;
