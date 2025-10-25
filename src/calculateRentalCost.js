@@ -4,14 +4,18 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const SMALL_PERIOD = 3;
+  const LONG_PERIOD = 7;
   const mediumTermRentDiscount = 20;
   const longTermRentDiscount = 50;
   const basePriceRent = 40;
   const basePrice = days * basePriceRent;
 
-  if (days >= 3 && days <= 6) {
+  if (days >= SMALL_PERIOD && days < LONG_PERIOD) {
     return basePrice - mediumTermRentDiscount;
-  } else if (days >= 7) {
+  }
+
+  if (days >= LONG_PERIOD) {
     return basePrice - longTermRentDiscount;
   }
 
