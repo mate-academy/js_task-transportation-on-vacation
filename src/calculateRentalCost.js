@@ -4,12 +4,18 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let result = days * 40;
+  const price = 40;
+  const discountSmall = 20;
+  const discountBig = 50;
+  const minDay = 3;
+  const moreDay = 7;
 
-  if (days >= 7) {
-    result = result - 50;
-  } else if (days >= 3) {
-    result = result - 20;
+  let result = days * price;
+
+  if (days >= moreDay) {
+    result = result - discountBig;
+  } else if (days >= minDay) {
+    result = result - discountSmall;
   }
 
   return result;
