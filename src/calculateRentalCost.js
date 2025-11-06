@@ -4,7 +4,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  const dailyRate = 40;
+  let totalCost = days * dailyRate;
+
+  if (days >= 7) {
+    totalCost -= 50; // Apply $50 discount for rentals of 7 or more days
+  } else if (days >= 3) {
+    totalCost -= 20; // Apply $20 discount for rentals of 3 or more days
+  }
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
