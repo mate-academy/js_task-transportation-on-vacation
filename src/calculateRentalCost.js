@@ -10,15 +10,17 @@ const DISCOUNT_SMALL = 20;
 const DISCOUNT_BIG = 50;
 
 function calculateRentalCost(days) {
-  let total = days * DAILY_RATE;
+  const TOTAL = days * DAILY_RATE;
 
   if (days >= DISCOUNT_THRESHOLD_BIG) {
-    total -= DISCOUNT_BIG;
-  } else if (days >= DISCOUNT_THRESHOLD_SMALL) {
-    total -= DISCOUNT_SMALL;
+    return TOTAL - DISCOUNT_BIG;
   }
 
-  return total;
+  if (days >= DISCOUNT_THRESHOLD_SMALL) {
+    return TOTAL - DISCOUNT_SMALL;
+  }
+
+  return TOTAL;
 }
 
 module.exports = calculateRentalCost;
