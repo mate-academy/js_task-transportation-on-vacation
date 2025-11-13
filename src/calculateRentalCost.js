@@ -5,18 +5,18 @@
  */
 
 const calculateRentalCost = (days) => {
-  const oneDay = 40;
-  const sumDays = days * oneDay;
+  const DAILY_RENTAL_COST = 40;
+  const SUM_RENTAL_COST = days * DAILY_RENTAL_COST;
 
   if (days >= 7) {
-    return sumDays - 50;
+    return SUM_RENTAL_COST - 50;
   }
 
   if (days >= 3) {
-    return sumDays - 20;
+    return SUM_RENTAL_COST - 20;
   }
 
-  return sumDays;
+  return SUM_RENTAL_COST;
 };
 
 module.exports = calculateRentalCost;
