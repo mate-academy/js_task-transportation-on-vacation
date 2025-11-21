@@ -1,26 +1,26 @@
-# Transportation on Vacation
+# Transporte nas Férias
 
-## Instructions
-**Read [the guideline](https://mate-academy.github.io/js_task-guideline/) before start**
+## Instruções
+**Leia [o guia](https://mate-academy.github.io/js_task-guideline/) antes de começar**
 
-## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
+## ❗️❗️❗️ NÃO SE ESQUEÇA DE REVISAR SEU CÓDIGO COM A [LISTA DE VERIFICAÇÃO](checklist.md) ANTES DE ENVIAR SEU PULL REQUEST❗️❗️❗️
 
-## Task description:
+## Descrição da tarefa:
 
-After a hard quarter in the office you decide to get some rest on a vacation. So you
-will book a flight for you and your family and try to leave all the mess behind you.
+Após um trimestre difícil no escritório, você decide descansar e tirar férias. Então,
+você reservará um voo para você e sua família e tentará deixar toda a confusão para trás.
 
-You will need a rental car in order for you to get around in your vacation. The
-manager of the car rental makes you some good offers.
+Você precisará alugar um carro para se locomover durante as férias.
+O gerente da locadora de veículos lhe faz algumas boas ofertas.
 
-Every day you rent the car costs `$40`. If you rent the car for `7` or more days, you
-get `$50` off your total. Alternatively, if you rent the car for `3` or more days,you
-get `$20` off your total.
+Cada dia de aluguel do carro custa US$ 40. Se você alugar o carro por `7` dias ou mais, você
+recebe um desconto de `$50` no total. Alternativamente, se você alugar o carro por `3` dias ou mais, você
+recebe um desconto de `$20` no total.
 
-Implement `calculateRentalCost` function that returns the total amount for different
-number of days.
+Implemente a função `calculateRentalCost` que retorna o valor total para diferentes
+números de dias.
 
-Examples:
+Exemplos:
 ```js
 calculateRentalCost(1); // 40
 calculateRentalCost(3); // 100
