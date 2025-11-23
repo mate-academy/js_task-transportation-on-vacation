@@ -4,19 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const smallSale = 20;
-  const bigSale = 50;
-  const dayRent = 40;
+  const SMALL_DISCOUNT = 20;
+  const BIG_DISCOUNT = 50;
+  const DAY_RENT = 40;
+  const MEDIUM_TERM = 3;
+  const LONG_TERM = 7;
 
-  if (days < 3) {
-    return days * dayRent;
+  if (days < MEDIUM_TERM) {
+    return days * DAY_RENT;
   }
 
-  if (days >= 3 && days < 7) {
-    return days * dayRent - smallSale;
+  if (days >= MEDIUM_TERM && days < LONG_TERM) {
+    return days * DAY_RENT - SMALL_DISCOUNT;
   }
 
-  return days * dayRent - bigSale;
+  return days * DAY_RENT - BIG_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
