@@ -4,15 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const valorAluguel = 40;
+  const dailyRate = 40;
+  const discountFor3To6Days = 20;
+  const discountFor7OrMoreDays = 50;
+  const noDiscount = 2;
+  const minTwentyDiscount = 3;
+  const maxTwentyDiscount = 6;
 
-  if (days <= 2) {
-    return valorAluguel * days;
-  } else if (days >= 3 && days <= 6) {
-    return valorAluguel * days - 20;
-  } else {
-    return valorAluguel * days - 50;
+  if (days <= noDiscount) {
+    return dailyRate * days;
   }
+
+  if (days >= minTwentyDiscount && days <= maxTwentyDiscount) {
+    return dailyRate * days - discountFor3To6Days;
+  }
+
+  return dailyRate * days - discountFor7OrMoreDays;
 }
 
 module.exports = calculateRentalCost;
