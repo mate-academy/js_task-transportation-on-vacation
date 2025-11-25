@@ -20,6 +20,11 @@ get `$20` off your total.
 Implement `calculateRentalCost` function that returns the total amount for different
 number of days.
 
+
+
+
+
+
 Examples:
 ```js
 calculateRentalCost(1); // 40
