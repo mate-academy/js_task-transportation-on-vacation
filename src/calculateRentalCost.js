@@ -5,8 +5,9 @@
  */
 function calculateRentalCost(days) {
   // write code here
+  const COST_PER_DAY = 40;
   const numberOfDays = days;
-  const basePrice = numberOfDays * 40;
+  const basePrice = numberOfDays * COST_PER_DAY;
   const LONG_TERM = 7;
   const SHORT_TERM = 3;
   const LONG_TERM_DISCOUNT = 50;
