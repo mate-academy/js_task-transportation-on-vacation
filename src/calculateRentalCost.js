@@ -4,21 +4,25 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const rentPerDay = 40;
-  const amountPerAll = rentPerDay * days;
-  const saleOfMinDays = amountPerAll - 20;
-  const saleOfMaxDays = amountPerAll - 50;
+  const SHORT_TERM_THRESHOLD = 3;
+  const LONG_TERM_THRESHOLD = 7;
+  const DAILY_RENT = 40;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
+  const totalCostBeforeDiscount = DAILY_RENT * days;
+  const shortDiscountedTotal = totalCostBeforeDiscount - SHORT_TERM_DISCOUNT;
+  const longTermDiscountedTotal = totalCostBeforeDiscount - LONG_TERM_DISCOUNT;
 
-  if (days < 3) {
-    return amountPerAll;
+  if (days < SHORT_TERM_THRESHOLD) {
+    return totalCostBeforeDiscount;
   }
 
-  if (days >= 3 && days < 7) {
-    return saleOfMinDays;
+  if (days >= SHORT_TERM_THRESHOLD && days < LONG_TERM_THRESHOLD) {
+    return shortDiscountedTotal;
   }
 
-  if (days > 6) {
-    return saleOfMaxDays;
+  if (days >= LONG_TERM_THRESHOLD) {
+    return longTermDiscountedTotal;
   }
 }
 
