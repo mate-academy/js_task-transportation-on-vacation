@@ -10,10 +10,6 @@ function calculateRentalCost(days) {
   const SHORT_DAY_DISCOUNT = 20;
   const SHORT_DAY = 3;
 
-  if (days === 0) {
-    return 0;
-  }
-
   let discont = 0;
 
   if (days >= LONG_DAY) {
