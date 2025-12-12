@@ -12,10 +12,12 @@ function calculateRentalCost(days) {
 
   let currentDiscount = 0;
 
+  if (days >= MID_TERM) {
+    currentDiscount = MID_DISCOUNT;
+  }
+
   if (days >= LONG_TERM) {
     currentDiscount = BIG_DISCOUNT;
-  } else if (days >= MID_TERM) {
-    currentDiscount = MID_DISCOUNT;
   }
 
   return days * DAY_RENT - currentDiscount;
