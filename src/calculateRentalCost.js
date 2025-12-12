@@ -9,18 +9,17 @@ function calculateRentalCost(days) {
   const BIG_DISCOUNT = 50;
   const LONG_TERM = 7;
   const MID_TERM = 3;
-
-  let currentDiscount = 0;
-
-  if (days >= MID_TERM) {
-    currentDiscount = MID_DISCOUNT;
-  }
+  const PRICE_NO_DISCOUNT = DAY_RENT * days;
 
   if (days >= LONG_TERM) {
-    currentDiscount = BIG_DISCOUNT;
+    return PRICE_NO_DISCOUNT - BIG_DISCOUNT;
   }
 
-  return days * DAY_RENT - currentDiscount;
+  if (days >= MID_TERM) {
+    return PRICE_NO_DISCOUNT - MID_DISCOUNT;
+  }
+
+  return PRICE_NO_DISCOUNT;
 }
 
 module.exports = calculateRentalCost;
