@@ -8,7 +8,7 @@ function calculateRentalCost(days) {
   const threeDays = 3;
   const sevenDays = 7;
   const price = 40;
-  const discountFisrtLevel = 50;
+  const discountFirstLevel = 50;
   const discountSecondLevel = 20;
 
   if (days > zeroDays && days < threeDays) {
@@ -16,17 +16,13 @@ function calculateRentalCost(days) {
   }
 
   if (days >= threeDays && days < sevenDays) {
-    let result = price * days;
-
-    result = result - discountSecondLevel;
+    const result = price * days - discountSecondLevel;
 
     return result;
   }
 
-  if (days >= 7) {
-    let result = price * days;
-
-    result = result - discountFisrtLevel;
+  if (days >= sevenDays) {
+    const result = price * days - discountFirstLevel;
 
     return result;
   }
