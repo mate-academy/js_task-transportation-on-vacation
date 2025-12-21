@@ -7,14 +7,19 @@ function calculateRentalCost(days) {
   const dailyRentalCost = 40;
   const rabatAfterOneWeek = 50;
   const rabatAfterThreeDays = 20;
+  const minDaysForMediumDiscount = 3;
+  const minDaysForWeeklyDiscount = 7;
+  const maxDaysForMediumDiscount = 6;
 
-  if(days < 3){
+  if (days < minDaysForMediumDiscount) {
     return days * dailyRentalCost;
   }
-  if(days >= 3 && days < 7){
+
+  if (days >= minDaysForMediumDiscount && days <= maxDaysForMediumDiscount) {
     return days * dailyRentalCost - rabatAfterThreeDays;
   }
-  if(days >= 7){
+
+  if (days >= minDaysForWeeklyDiscount) {
     return days * dailyRentalCost - rabatAfterOneWeek;
   }
 }
