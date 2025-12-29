@@ -8,12 +8,14 @@ function calculateRentalCost(days) {
   const money = days * dailyRent;
   const mediumDiscount = 20;
   const largeDiscount = 50;
+  const mediumDiscountStartFrom = 6;
+  const largeDiscountStartFrom = 6;
 
-  if (days < 3) {
+  if (days < mediumDiscountStartFrom) {
     return money;
   }
 
-  if (days <= 6) {
+  if (days <= largeDiscountStartFrom) {
     return money - mediumDiscount;
   }
 
