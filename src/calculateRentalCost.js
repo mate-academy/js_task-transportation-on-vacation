@@ -14,9 +14,9 @@ function calculateRentalCost(days) {
   let rentTotal = RENT_PER_DAY * days;
 
   if (days >= LONG_TERM) {
-    rentTotal = rentTotal - LONG_TERM_DISCOUNT;
+    return rentTotal - LONG_TERM_DISCOUNT;
   } else if (days >= SHORT_TERM) {
-    rentTotal = rentTotal - SHORT_TERM_DISCOUNT;
+    return rentTotal - SHORT_TERM_DISCOUNT;
   }
 
   return rentTotal;
