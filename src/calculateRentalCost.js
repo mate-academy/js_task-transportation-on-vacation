@@ -6,18 +6,22 @@
 function calculateRentalCost(days) {
   // write code here
 
-  const price = 40;
-  const discountValueFirst = 20;
-  const discountValueSecond = 50;
-  let discount = 0;
+  const BASIC_PRICE = 40;
+  const DISCOUNT_AMOUNT_3_DAYS = 20;
+  const DISCOUNT_AMOUNT_7_DAYS = 50;
+  const AMOUNT_RENTAL_3_DAYS = 3;
+  const AMOUNT_RENTAL_7_DAYS = 7;
+  const CALC_FORMULA = days * BASIC_PRICE;
 
-  if (days >= 7) {
-    discount = discountValueSecond;
-  } else if (days >= 3) {
-    discount = discountValueFirst;
+  if (days >= AMOUNT_RENTAL_7_DAYS) {
+    return CALC_FORMULA - DISCOUNT_AMOUNT_7_DAYS;
   }
 
-  return price * days - discount;
+  if (days >= AMOUNT_RENTAL_3_DAYS) {
+    return CALC_FORMULA - DISCOUNT_AMOUNT_3_DAYS;
+  }
+
+  return CALC_FORMULA;
 }
 
 module.exports = calculateRentalCost;
