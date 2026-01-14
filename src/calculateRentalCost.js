@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * After a hard quarter in the office you decide
@@ -29,15 +29,19 @@
 
 function calculateRentalCost(days) {
   // write code here
-  const total = days * 40;
+  const costPerDay = 40;
+  const total = days * costPerDay;
+  const LONG_TERM = 7;
+  const MEDIUM_TERM = 3;
+
   let discount = 0;
 
-  if (days >= 3) {
-    discount = 20;
+  if (days >= LONG_TERM) {
+    discount = 50;
   }
 
-  if (days >= 7) {
-    discount = 50;
+  if (days >= MEDIUM_TERM) {
+    discount = 20;
   }
 
   return total - discount;
