@@ -5,19 +5,21 @@
  */
 
 const dayCost = 40;
+const longTermDiscountDays = 7;
+const midTermDiscountDays = 3;
 
 function calculateRentalCost(days) {
-  const fullConst = days * dayCost;
+  const baseConst = days * dayCost;
 
-  if (days >= 7) {
-    return fullConst - 50;
+  if (days >= longTermDiscountDays) {
+    return baseConst - 50;
   }
 
-  if (days >= 3) {
-    return fullConst - 20;
-  } else {
-    return fullConst;
+  if (days >= midTermDiscountDays) {
+    return baseConst - 20;
   }
+
+  return baseConst;
 }
 
 module.exports = calculateRentalCost;
