@@ -7,16 +7,18 @@
 const dayCost = 40;
 const longTermDiscountDays = 7;
 const midTermDiscountDays = 3;
+const longTermDiscount = 50;
+const midTermDiscount = 20;
 
 function calculateRentalCost(days) {
   const baseConst = days * dayCost;
 
   if (days >= longTermDiscountDays) {
-    return baseConst - 50;
+    return baseConst - longTermDiscount;
   }
 
   if (days >= midTermDiscountDays) {
-    return baseConst - 20;
+    return baseConst - midTermDiscount;
   }
 
   return baseConst;
