@@ -14,12 +14,14 @@ function calculateRentalCost(days) {
 
   result = carRent * days;
 
-  if (days >= firstDiscountDays) {
-    result = result - firstDiscount;
+  if (days >= secondDiscountDays) {
+    result = result - secondDiscount;
+
+    return result;
   }
 
-  if (days >= secondDiscountDays) {
-    result = result + firstDiscount - secondDiscount;
+  if (days >= firstDiscountDays) {
+    result = result - firstDiscount;
   }
 
   return result;
