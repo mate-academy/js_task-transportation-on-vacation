@@ -5,16 +5,18 @@
  */
 function calculateRentalCost(days) {
   const Price = 40;
-  const shotTermDiscount = 20;
+  const ShotTermDiscount = 20;
   const LongTermDiscount = 50;
   const AllPrice = Price * days;
+  const LongTermDays = 7;
+  const ShotTermDays = 3;
 
-  if (days >= 7) {
+  if (days >= LongTermDays) {
     return AllPrice - LongTermDiscount;
   }
 
-  if (days >= 3) {
-    return AllPrice - shotTermDiscount;
+  if (days >= ShotTermDays) {
+    return AllPrice - ShotTermDiscount;
   }
 
   return AllPrice;
