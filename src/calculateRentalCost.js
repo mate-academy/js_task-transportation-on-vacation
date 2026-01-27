@@ -3,7 +3,7 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) { 
+function calculateRentalCost(days) {
   const basePrice = 40;
   const shortTermDiscount = 20;
   const longTermDiscount = 50;
