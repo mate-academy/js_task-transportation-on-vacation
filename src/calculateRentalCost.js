@@ -4,21 +4,23 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const rentOneDay = 40;
-  const rentSevenDays = 50;
-  const rentThreeDays = 20;
+  const DAILY_PRICE = 40;
+  const SEVEVEN_DAYS_DISCOUNT = 50;
+  const THREE_DAYS_DISCOUNT = 20;
+  const DAYS_SHORT_TERM = 3;
+  const DAYS_LONG_TERM = 7;
   let rentFullPrice = 0;
 
   for (let i = 0; i < days; i++) {
-    rentFullPrice += rentOneDay;
+    rentFullPrice += DAILY_PRICE;
   }
 
-  if (days > 2 && days < 7) {
-    rentFullPrice -= rentThreeDays;
+  if (days >= DAYS_SHORT_TERM && days < DAYS_LONG_TERM) {
+    rentFullPrice -= THREE_DAYS_DISCOUNT;
   }
 
-  if (days >= 7) {
-    rentFullPrice -= rentSevenDays;
+  if (days >= DAYS_LONG_TERM) {
+    rentFullPrice -= SEVEVEN_DAYS_DISCOUNT;
   }
 
   return rentFullPrice;
