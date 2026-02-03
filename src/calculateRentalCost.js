@@ -3,22 +3,23 @@
  *
  * @return {number}
  */
-const day_cost = 40;
-const discount_7 = 50;
-const discount_3 = 20;
-const min_days_for_7day_disc = 7;
-const min_days_for_3day_disc = 3;
+const dayCost = 40;
+const discount7 = 50;
+const discount3 = 20;
+const minDaysFor7DayDisc = 7;
+const minDaysFor3DayDisc = 3;
 
 function calculateRentalCost(days) {
-  const result = days * day_cost;
+  const result = days * dayCost;
 
-  if (days >= min_days_for_7day_disc) {
-    return result - discount_7;
+  if (days >= minDaysFor7DayDisc) {
+    return result - discount7;
   }
 
-  if (days >= min_days_for_3day_disc) {
-    return result - discount_3;
+  if (days >= minDaysFor3DayDisc) {
+    return result - discount3;
   }
+
   return result;
 }
 
