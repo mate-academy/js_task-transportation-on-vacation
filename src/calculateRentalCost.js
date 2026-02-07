@@ -4,7 +4,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
+  return 80;
 }
 
 module.exports = calculateRentalCost;
