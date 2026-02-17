@@ -4,25 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const dayCost = 40;
-  let sumCost = 0;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+  const DAY_COST = 40;
 
-  if (days <= 2) {
-    sumCost = dayCost * days;
-
-    return sumCost;
+  if (days < SHORT_TERM) {
+    return DAY_COST * days;
   }
 
-  if (days >= 7) {
-    sumCost = dayCost * days - 50;
-
-    return sumCost;
+  if (days >= LONG_TERM) {
+    return DAY_COST * days - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= 3) {
-    sumCost = dayCost * days - 20;
-
-    return sumCost;
+  if (days >= SHORT_TERM) {
+    return DAY_COST * days - SHORT_TERM_DISCOUNT;
   }
 }
 
