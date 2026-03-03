@@ -5,14 +5,18 @@
  */
 function calculateRentalCost(days) {
   const dailyCost = 40;
+  const longTerm = 7;
+  const mediumTerm = 3;
 
-  if (days >= 7) {
+  if (days >= longTerm) {
     return dailyCost * days - 50;
-  } else if (days >= 3) {
-    return dailyCost * days - 20;
-  } else {
-    return days * dailyCost;
   }
+
+  if (days >= mediumTerm) {
+    return dailyCost * days - 20;
+  }
+
+  return days * dailyCost;
 }
 
 module.exports = calculateRentalCost;
