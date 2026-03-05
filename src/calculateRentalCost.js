@@ -5,15 +5,17 @@
  */
 function calculateRentalCost(days) {
   const dayPrice = 40;
-  const threePlusDaysOff = 20;
-  const sevenPlusDaysOff = 50;
+  const shortStayMinimum = 3;
+  const longStayMinimum = 7;
+  const shortStayOff = 20;
+  const longStayOff = 50;
 
-  if (days > 6) {
-    return dayPrice * days - sevenPlusDaysOff;
+  if (days >= longStayMinimum) {
+    return dayPrice * days - longStayOff;
   }
 
-  if (days > 2) {
-    return dayPrice * days - threePlusDaysOff;
+  if (days > shortStayMinimum) {
+    return dayPrice * days - shortStayOff;
   }
 
   return dayPrice * days;
