@@ -14,7 +14,7 @@ function calculateRentalCost(days) {
     return dayPrice * days - longStayOff;
   }
 
-  if (days > shortStayMinimum) {
+  if (days >= shortStayMinimum) {
     return dayPrice * days - shortStayOff;
   }
 
