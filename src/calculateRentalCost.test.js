@@ -21,3 +21,7 @@ test('Should add an additional discount for 7 and more days of rent', () => {
   expect(calculateRentalCost(7))
     .toBe(230);
 });
+
+test('should calculate cost for a 1-day rental', () => {
+  expect(calculateRentalCost(1)).toBe(40);
+});
