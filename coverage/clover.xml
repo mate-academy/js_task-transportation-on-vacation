@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1773157004159" clover="3.2.0">
+  <project timestamp="1773157004159" name="All files">
+    <metrics statements="13" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1" elements="18" coveredelements="14" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
+    <file name="calculateRentalCost.js" path="D:\Projects\Mate_Academy\jawa-extended\vacation\js_task-transportation-on-vacation\src\calculateRentalCost.js">
+      <metrics statements="13" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="36" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="40" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
