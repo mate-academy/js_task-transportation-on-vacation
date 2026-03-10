@@ -29,18 +29,19 @@ const shortTerm = 3;
 const longTermDiscount = 50;
 const shortTermDiscount = 20;
 const carPerDayCost = 40;
-let totalAmount = '';
 
 function calculateRentalCost(days) {
+  const basePrice = days * carPerDayCost;
+
   if (days >= longTerm) {
-    totalAmount = days * carPerDayCost - longTermDiscount;
-  } else if (days >= shortTerm) {
-    totalAmount = days * carPerDayCost - shortTermDiscount;
-  } else {
-    totalAmount = days * carPerDayCost;
+    return basePrice - longTermDiscount;
   }
 
-  return totalAmount;
+  if (days >= shortTerm) {
+    return basePrice - shortTermDiscount;
+  } else {
+    return basePrice;
+  }
 }
 
 module.exports = calculateRentalCost;
