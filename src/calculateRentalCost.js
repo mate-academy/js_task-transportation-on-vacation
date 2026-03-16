@@ -4,7 +4,8 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const total = days * 40;
+  const costPerDay = 40;
+  const total = days * costPerDay;
   const daysForDiscount = 3;
   const discount = 20;
   const daysForBigDiscount = 7;
