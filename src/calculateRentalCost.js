@@ -4,16 +4,23 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  if (days >= 1 && days < 3) {
-    return days * 40;
+  const DaysWithDiscount = 40;
+  const SmullDiscount = 20;
+  const BigDiscount = 50;
+  const OneDay = 1;
+  const Freedays = 3;
+  const SevenDays = 7;
+
+  if (days >= OneDay && days < Freedays) {
+    return days * DaysWithDiscount;
   }
 
-  if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+  if (days >= Freedays && days < SevenDays) {
+    return days * DaysWithDiscount - SmullDiscount;
   }
 
-  if (days >= 7) {
-    return days * 40 - 50;
+  if (days >= SevenDays) {
+    return days * DaysWithDiscount - BigDiscount;
   }
 }
 
