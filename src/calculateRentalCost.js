@@ -2,18 +2,19 @@ function calculateRentalCost(days) {
   const PRICE_OF_DAY = 40;
   const MIN_DISCOUNT = 20;
   const MAX_DISCOUNT = 50;
+  const SHORT_DAY_RENTAL = 3;
+  const LONG_DAY_RENTAL = 7;
+  const PRICE_ALL_DAYS = PRICE_OF_DAY * days;
 
-  if (days >= 7) {
-    return days * PRICE_OF_DAY - MAX_DISCOUNT;
+  if (days >= LONG_DAY_RENTAL) {
+    return PRICE_ALL_DAYS - MAX_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return days * PRICE_OF_DAY - MIN_DISCOUNT;
+  if (days >= SHORT_DAY_RENTAL) {
+    return PRICE_ALL_DAYS - MIN_DISCOUNT;
   }
 
-  if (days === 1 || days === 2) {
-    return PRICE_OF_DAY * days;
-  }
+  return PRICE_ALL_DAYS;
 }
 
 module.exports = calculateRentalCost;
