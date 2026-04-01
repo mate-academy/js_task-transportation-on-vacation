@@ -3,6 +3,7 @@
  *
  * @return {number}
  */
+
 function calculateRentalCost(days) {
   // write code here
   const basePrice = 40;
