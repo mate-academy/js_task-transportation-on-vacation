@@ -8,18 +8,14 @@ function calculateRentalCost(days) {
   const PRICE = 40;
   const WEEK_DISCOUNT = { period: 7, discount: 50 };
   const SHORT_TIME_DISCOUNT = { period: 3, discount: 20 };
-  let total = PRICE * days;
+  const total = PRICE * days;
 
   if (days >= WEEK_DISCOUNT.period) {
-    total = total - WEEK_DISCOUNT.discount;
-
-    return total;
+    return total - WEEK_DISCOUNT.discount;
   }
 
   if (days >= SHORT_TIME_DISCOUNT.period) {
-    total = total - SHORT_TIME_DISCOUNT.discount;
-
-    return total;
+    return total - SHORT_TIME_DISCOUNT.discount;
   }
 
   return total;
