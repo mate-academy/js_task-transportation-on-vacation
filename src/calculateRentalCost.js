@@ -4,17 +4,19 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const rentForDays = days;
-  const total = 40 * days;
+  const LONG_TERM = days;
+  const TOTAL_DAYS = 40 * days;
 
-  if (days < 3) {
-    return total;
+  if (LONG_TERM < 3) {
+    return TOTAL_DAYS;
   }
 
-  if (rentForDays >= 7) {
-    return total - 50;
-  } else if (rentForDays >= 3 || rentForDays <= 6) {
-    return total - 20;
+  if (LONG_TERM >= 7) {
+    return TOTAL_DAYS - 50;
+  }
+
+  if (LONG_TERM >= 3 || LONG_TERM <= 6) {
+    return TOTAL_DAYS - 20;
   }
 }
 
