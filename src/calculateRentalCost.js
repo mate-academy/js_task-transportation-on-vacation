@@ -6,6 +6,8 @@
 const lightDiscount = 20;
 const fullDiscount = 50;
 const rentPrice = 40;
+const LONG_TERM_DAYS = 7;
+const SHORT_TERM_DAYS = 3;
 
 function calculateRentalCost(days) {
   if (!Number.isFinite(days) || days <= 0) {
@@ -14,11 +16,11 @@ function calculateRentalCost(days) {
 
   const total = days * rentPrice;
 
-  if (days >= 7) {
+  if (days >= LONG_TERM_DAYS) {
     return total - fullDiscount;
   }
 
-  if (days >= 3) {
+  if (days >= SHORT_TERM_DAYS) {
     return total - lightDiscount;
   }
 
