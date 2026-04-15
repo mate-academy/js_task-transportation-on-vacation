@@ -11,6 +11,10 @@ function calculateRentalCost(days) {
   const discountMediumTerm = 20;
   const discountLongTerm = 50;
 
+  if (typeof days !== 'number' || days <= 0) {
+    return 0;
+  }
+
   if (days < mediumTerm) {
     return days * pricePerDay;
   }
@@ -22,8 +26,6 @@ function calculateRentalCost(days) {
   if (days >= longTerm) {
     return days * pricePerDay - discountLongTerm;
   }
-
-  return calculateRentalCost();
 }
 
 module.exports = calculateRentalCost;
