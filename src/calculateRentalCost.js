@@ -13,11 +13,13 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return days * BASE_PRICE - LONG_TERM_DISCOUNT;
-  } else if (days >= BASE_TERM) {
-    return days * BASE_PRICE - MIN_TERM_DISCOUNT;
-  } else {
-    return days * BASE_PRICE;
   }
+
+  if (days >= BASE_TERM) {
+    return days * BASE_PRICE - MIN_TERM_DISCOUNT;
+  }
+
+  return days * BASE_PRICE;
 }
 
 module.exports = calculateRentalCost;
