@@ -4,15 +4,19 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const priceDay = 40;
-  let total;
+  const PRICE_DAY = 40;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+  const total = PRICE_DAY * days;
 
-  total = priceDay * days;
+  if (days >= LONG_TERM) {
+    return total - LONG_TERM_DISCOUNT;
+  }
 
-  if (days >= 7) {
-    total = total - 50;
-  } else if (days >= 3) {
-    total = total - 20;
+  if (days >= SHORT_TERM) {
+    return total - SHORT_TERM_DISCOUNT;
   }
 
   return total;
