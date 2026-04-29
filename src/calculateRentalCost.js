@@ -12,11 +12,13 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM) {
     return days * DAILY_PRICE - LONG_TERM_DISCOUNT;
-  } else if (days >= SHORT_TERM) {
-    return days * DAILY_PRICE - SHORT_TERM_DISCOUNT;
-  } else {
-    return days * DAILY_PRICE;
   }
+
+  if (days >= SHORT_TERM) {
+    return days * DAILY_PRICE - SHORT_TERM_DISCOUNT;
+  }
+
+  return days * DAILY_PRICE;
 }
 
 module.exports = calculateRentalCost;
