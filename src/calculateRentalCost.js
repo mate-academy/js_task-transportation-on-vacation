@@ -3,13 +3,22 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  const total = days * 40;
+// Константы выносим наверх для удобного управления тарифами
+const PRICE_PER_DAY = 40;
+const LONG_TERM = 7;
+const LONG_TERM_DISCOUNT = 50;
+const MEDIUM_TERM = 3;
+const MEDIUM_TERM_DISCOUNT = 20;
 
-  if (days >= 7) {
-    return total - 50;
-  } else if (days >= 3) {
-    return total - 20;
+function calculateRentalCost(days) {
+  const total = days * PRICE_PER_DAY;
+
+  if (days >= LONG_TERM) {
+    return total - LONG_TERM_DISCOUNT;
+  }
+
+  if (days >= MEDIUM_TERM) {
+    return total - MEDIUM_TERM_DISCOUNT;
   }
 
   return total;
