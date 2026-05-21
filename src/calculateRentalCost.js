@@ -14,7 +14,9 @@ function calculateRentalCost(days) {
 
   if (days >= LONG_TERM_RENT_DAYS) {
     return basePrice - LONG_TERM_RENT_DISCOUNT;
-  } else if (days >= SHORT_TERM_RENT_DAYS) {
+  }
+
+  if (days >= SHORT_TERM_RENT_DAYS) {
     return basePrice - SHORT_TERM_RENT_DISCOUNT;
   }
 
