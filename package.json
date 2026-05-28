@@ -2,6 +2,17 @@
   "name": "js-task-boilerplate",
   "version": "1.0.0",
   "description": "js task boilerplate",
+  "homepage": "https://github.com/MykolaMovin/js_task-transportation-on-vacation#readme",
+  "bugs": {
+    "url": "https://github.com/MykolaMovin/js_task-transportation-on-vacation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MykolaMovin/js_task-transportation-on-vacation.git"
+  },
+  "license": "GPL-3.0",
+  "author": "Mate academy",
+  "type": "commonjs",
   "main": "src/calculateRentalCost.js",
   "scripts": {
     "init": "mate-scripts init",
@@ -13,11 +24,9 @@
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },
-  "author": "Mate academy",
-  "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "latest",
-    "@mate-academy/scripts": "^1.8.6",
+    "@mate-academy/scripts": "^2.1.3",
     "eslint": "^8.57.0",
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-node": "^11.1.0",
