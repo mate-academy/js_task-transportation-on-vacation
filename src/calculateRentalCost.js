@@ -20,6 +20,7 @@ function calculateRentalCost(days) {
   } else {
     return TOTAL_COST - HIGH_DISCOUNT;
   }
+
   // write code here
 }
 
