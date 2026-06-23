@@ -5,11 +5,11 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  if (days > 1 && days < 3) {
+  if (days < 3) {
     return 40 * days;
   }
 
-  if (days > 2 && days < 7) {
+  if (days < 7) {
     return 40 * days - 20;
   }
 
