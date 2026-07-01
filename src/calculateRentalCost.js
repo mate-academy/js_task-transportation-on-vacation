@@ -7,11 +7,6 @@ const DAILY_RATE = 40;
 const MID_TERM_DISCOUNT = 20;
 const LONG_TERM_DISCOUNT = 50;
 
-/**
- * @param {number} days
- *
- * @return {number}
- */
 function calculateRentalCost(days) {
   if (days < 3) {
     return days * DAILY_RATE;
