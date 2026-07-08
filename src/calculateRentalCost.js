@@ -8,15 +8,21 @@
 
 /* eslint-disable prettier/prettier */
 function calculateRentalCost(days) {
-  let total = days * 40;
+  const SHORT_TERM = 3;
+  const LONG_TERM = 7;
+  const SHORT_TERM_DISCOUNT = 20;
+  const LONG_TERM_DISCOUNT = 50;
+  const DAILY_RATE = 40;
 
-  if (days >= 7) {
-    total -= 50;
-  } else if (days >= 3) {
-    total -= 20;
+  if (days >= LONG_TERM) {
+    return days * DAILY_RATE - LONG_TERM_DISCOUNT;
   }
 
-  return total;
+  if (days >= SHORT_TERM) {
+    return days * DAILY_RATE - SHORT_TERM_DISCOUNT;
+  }
+
+  return days * DAILY_RATE;
 }
 
 module.exports = calculateRentalCost;
