@@ -1,10 +1,22 @@
+'use strict';
+
 /**
  * @param {number} days
  *
  * @return {number}
  */
+
+/* eslint-disable prettier/prettier */
 function calculateRentalCost(days) {
-  // write code here
+  let total = days * 40;
+
+  if (days >= 7) {
+    total -= 50;
+  } else if (days >= 3) {
+    total -= 20;
+  }
+
+  return total;
 }
 
 module.exports = calculateRentalCost;
