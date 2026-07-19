@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1784481807613" clover="3.2.0">
+  <project timestamp="1784481807613" name="All files">
+    <metrics statements="10" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1" elements="15" coveredelements="9" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+    <file name="calculateRentalCost.js" path="C:\projects\js_task-transportation-on-vacation\src\calculateRentalCost.js">
+      <metrics statements="10" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="11" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
