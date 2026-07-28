@@ -8,12 +8,12 @@ function calculateRentalCost(days) {
   const shortTermDiscount = 20;
   const longTermDiscount = 50;
 
-  if (days === 2) {
-    return days * daysCost;
-  } else if (days >= 3 && days <= 6) {
-    return days * daysCost - shortTermDiscount;
-  } else if (days >= 7) {
+  if (days >= 7) {
     return days * daysCost - longTermDiscount;
+  }
+
+  if (days >= 3) {
+    return days * daysCost - shortTermDiscount;
   }
 
   return days * daysCost;
