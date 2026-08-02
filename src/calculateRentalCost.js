@@ -3,20 +3,23 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  const tierOneOff = 20;
-  const tierTwoOff = 50;
-  const totalCost = days * 40;
+function calculateRentalCost(numberOfDays) {
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
 
-  if (days >= 7) {
-    return totalCost - tierTwoOff;
+  const totalPrice = numberOfDays * 40;
+
+  if (numberOfDays >= LONG_TERM) {
+    return totalPrice - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return totalCost - tierOneOff;
+  if (numberOfDays >= SHORT_TERM) {
+    return totalPrice - SHORT_TERM_DISCOUNT;
   }
 
-  return totalCost;
+  return totalPrice;
 }
 
 module.exports = calculateRentalCost;
