@@ -4,22 +4,26 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const rentForDay = 40;
+  const SHORT_TERM = 3;
 
-  const smallDiscount = 20;
+  const LONG_TERM = 7;
 
-  const bigDiscount = 50;
+  const RENT_FOR_DAY = 40;
 
-  if (days < 3) {
-    return days * rentForDay;
+  const SMALL_DISCOUNT = 20;
+
+  const BIG_DISCOUNT = 50;
+
+  if (days < SHORT_TERM) {
+    return days * RENT_FOR_DAY;
   }
 
-  if (days <= 6) {
-    return days * rentForDay - smallDiscount;
+  if (days < LONG_TERM) {
+    return days * RENT_FOR_DAY - SMALL_DISCOUNT;
   }
 
-  if (days >= 7) {
-    return days * rentForDay - bigDiscount;
+  if (days >= LONG_TERM) {
+    return days * RENT_FOR_DAY - BIG_DISCOUNT;
   }
 }
 
