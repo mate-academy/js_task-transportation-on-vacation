@@ -3,22 +3,25 @@
  *
  * @return {number}
  */
+
 const PRICE = 40;
-const BASIC_DISCOUNT = 20;
-const LONG_DISCOUNT = 50;
+const BASIC_DISCOUNT_AMOUNT = 20;
+const LONG_DISCOUNT_AMOUNT = 50;
+const BASIC_DISCOUNT_START = 3;
+const LONG_DISCOUNT_START = 7;
 
 function calculateRentalCost(days) {
   const total = days * PRICE;
 
-  if (days < 3) {
+  if (days < BASIC_DISCOUNT_START) {
     return total;
   }
 
-  if (days < 7) {
-    return total - BASIC_DISCOUNT;
+  if (days < LONG_DISCOUNT_START) {
+    return total - BASIC_DISCOUNT_AMOUNT;
   }
 
-  return total - LONG_DISCOUNT;
+  return total - LONG_DISCOUNT_AMOUNT;
 }
 
 module.exports = calculateRentalCost;
