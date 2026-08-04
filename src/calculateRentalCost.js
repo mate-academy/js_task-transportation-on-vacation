@@ -3,12 +3,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  let rent = days * 40;
+  const DAILY_RATE = 40;
+  const LONG_TERM_THRESHOLD = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const MID_TERM_THRESHOLD = 3;
+  const MID_TERM_DISCOUNT = 20;
 
-  if (days >= 7) {
-    rent -= 50;
-  } else if (days >= 3) {
-    rent -= 20;
+  const rent = days * DAILY_RATE;
+
+  if (days >= LONG_TERM_THRESHOLD) {
+    return rent - LONG_TERM_DISCOUNT;
+  }
+
+  if (days >= MID_TERM_THRESHOLD) {
+    return rent - MID_TERM_DISCOUNT;
   }
 
   return rent;
