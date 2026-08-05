@@ -3,13 +3,21 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-   let total = days * 40;
+const BASE_PRICE = 40;
+const LONG_TERM_DAYS = 7;
+const LONG_TERM_DISCOUNT_AMOUNT = 50;
+const SHORT_TERM_DAYS = 3;
+const SHORT_TERM_DISCOUNT_AMOUNT = 20;
 
-  if (days >= 7) {
-    total -= 50;
-  } else if (days >= 3) {
-    total -= 20;
+function calculateRentalCost(days) {
+  const total = days * BASE_PRICE;
+
+  if (days >= LONG_TERM_DAYS) {
+    return total - LONG_TERM_DISCOUNT_AMOUNT;
+  }
+
+  if (days >= SHORT_TERM_DAYS) {
+    return total - SHORT_TERM_DISCOUNT_AMOUNT;
   }
 
   return total;
