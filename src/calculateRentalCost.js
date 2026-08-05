@@ -4,19 +4,22 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const rental = 40;
-  const sum = rental * days;
-  let result = 0;
+  const DAILY_RENTAL_PRICE = 40;
+  const LONG_TERM = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM = 3;
+  const SHORT_TERM_DISCOUNT = 20;
+  const totalCost = DAILY_RENTAL_PRICE * days;
 
-  if (days >= 3 && days < 7) {
-    result = sum - 20;
-  } else if (days >= 7) {
-    result = sum - 50;
-  } else {
-    result = sum;
+  if (days >= LONG_TERM) {
+    return totalCost - LONG_TERM_DISCOUNT;
   }
 
-  return result;
+  if (days >= SHORT_TERM) {
+    return totalCost - SHORT_TERM_DISCOUNT;
+  }
+
+  return totalCost;
 }
 
 module.exports = calculateRentalCost;
