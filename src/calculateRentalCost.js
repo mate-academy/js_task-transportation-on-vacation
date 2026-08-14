@@ -12,11 +12,13 @@ const shortVacationSale = 20;
 function calculateRentalCost(days) {
   if (days >= shortTerm && days < longTerm) {
     return rentalCost * days - shortVacationSale;
-  } else if (days >= longTerm) {
-    return rentalCost * days - longVacationSale;
-  } else {
-    return rentalCost * days;
   }
+
+  if (days >= longTerm) {
+    return rentalCost * days - longVacationSale;
+  }
+
+  return rentalCost * days;
 }
 
 // write code here
