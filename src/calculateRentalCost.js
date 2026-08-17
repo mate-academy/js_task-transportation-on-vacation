@@ -4,15 +4,17 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const longTerm = 7;
+  const shortTerm = 3;
   const rentalPriceDaily = 40;
   const litleDiscount = 20;
   const largeDiscount = 50;
 
-  if (days >= 7) {
+  if (days >= longTerm) {
     return days * rentalPriceDaily - largeDiscount;
   }
 
-  if (days >= 3) {
+  if (days >= shortTerm) {
     return days * rentalPriceDaily - litleDiscount;
   }
 
