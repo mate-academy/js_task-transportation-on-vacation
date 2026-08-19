@@ -3,7 +3,6 @@
  *
  * @return {number}
  */
-
 const DAILY_RATE = 40;
 const LONG_TERM = 7;
 const LONG_TERM_DISCOUNT = 50;
