@@ -1,15 +1,17 @@
-/**
- * @param {number} days
- *
- * @return {number}
- */
-function calculateRentalCost(days) {
-  let result = days * 40;
+const BASE_DAILY_PRICE = 40;
+const LONG_TERM_THRESHOLD = 7;
+const LONG_TERM_DISCOUNT = 50;
+const MID_TERM_THRESHOLD = 3;
+const MID_TERM_DISCOUNT = 20;
 
-  if (days >= 7) {
-    result = result - 50;
-  } else if (days >= 3) {
-    result = result - 20;
+function calculateRentalCost(days) {
+  const result = days * BASE_DAILY_PRICE;
+
+  if (days >= LONG_TERM_THRESHOLD) {
+    return (result = result - LONG_TERM_DISCOUNT);
+  }
+  if (days >= MID_TERM_THRESHOLD) {
+    return (result = result - MID_TERM_DISCOUNT);
   }
 
   return result;
