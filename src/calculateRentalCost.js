@@ -5,11 +5,12 @@ const MID_TERM_THRESHOLD = 3;
 const MID_TERM_DISCOUNT = 20;
 
 function calculateRentalCost(days) {
-  const result = days * BASE_DAILY_PRICE;
+  let result = days * BASE_DAILY_PRICE;
 
   if (days >= LONG_TERM_THRESHOLD) {
     return (result = result - LONG_TERM_DISCOUNT);
   }
+
   if (days >= MID_TERM_THRESHOLD) {
     return (result = result - MID_TERM_DISCOUNT);
   }
