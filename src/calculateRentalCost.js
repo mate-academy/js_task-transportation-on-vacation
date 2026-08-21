@@ -4,14 +4,19 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // O custo base é de $40 por dia
-  let totalCost = days * 40;
+  const DAILY_RATE = 40;
+const LONG_TERM_THRESHOLD = 7;
+const LONG_TERM_DISCOUNT = 50;
+const SHORT_TERM_THRESHOLD = 3;
+const SHORT_TERM_DISCOUNT = 20;
 
-  // Verifica qual desconto aplicar baseado na quantidade de dias
-  if (days >= 7) {
-    totalCost -= 50; // $50 de desconto para 7 dias ou mais
-  } else if (days >= 3) {
-    totalCost -= 20; // $20 de desconto para 3 dias ou mais
+function calculateRentalCost(days) {
+  const totalCost = days * DAILY_RATE;
+
+  if (days >= LONG_TERM_THRESHOLD) {
+    totalCost -= LONG_TERM_DISCOUNT;
+  } else if (days >= SHORT_TERM_THRESHOLD) {
+    totalCost -= SHORT_TERM_DISCOUNT;
   }
 
   return totalCost;
