@@ -13,14 +13,14 @@ function calculateRentalCost(days) {
   const shortRent = 3;
   const shortRentDiscount = 20;
 
-  let rentCosts = days * oneDayCost;
+  const rentCosts = days * oneDayCost;
 
   if (days >= longRent) {
-    rentCosts -= longRentDiscount;
+    return rentCosts - longRentDiscount;
   }
 
   if (days >= shortRent && days < longRent) {
-    rentCosts -= shortRentDiscount;
+    return rentCosts - shortRentDiscount;
   }
 
   return rentCosts;
