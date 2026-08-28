@@ -3,21 +3,25 @@
  *
  * @return {number}
  */
+const dailyRate = 40;
+
 function calculateRentalCost(days) {
-  if (days === 2) {
-    return 80;
+  if (days >= 7) {
+    const result1 = dailyRate * days - 50;
+
+    return result1;
   }
 
-  if (days === 3) {
-    return 100;
+  if (days >= 3) {
+    const result2 = dailyRate * days - 20;
+
+    return result2;
   }
 
-  if (days === 6) {
-    return 220;
-  }
+  if (days < 3) {
+    const result3 = dailyRate * days;
 
-  if (days === 7) {
-    return 230;
+    return result3;
   }
 }
 
