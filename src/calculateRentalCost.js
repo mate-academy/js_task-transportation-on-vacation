@@ -4,24 +4,26 @@
  * @return {number}
  */
 const dailyRate = 40;
+const LONG_TERM_THRESHOLD = 7;
+const LONG_TERM_DISCOUNT = 50;
+const SHORT_TERM_THRESHOLD = 3;
+const SHORT_TERM_DISCOUNT = 20;
 
 function calculateRentalCost(days) {
-  if (days >= 7) {
-    const result1 = dailyRate * days - 50;
+  if (days >= LONG_TERM_THRESHOLD) {
+    const costWithLongTermDiscount = dailyRate * days - LONG_TERM_DISCOUNT;
 
-    return result1;
+    return costWithLongTermDiscount;
   }
 
-  if (days >= 3) {
-    const result2 = dailyRate * days - 20;
+  if (days >= SHORT_TERM_THRESHOLD) {
+    const costWithShortTermDiscount = dailyRate * days - SHORT_TERM_DISCOUNT;
 
-    return result2;
+    return costWithShortTermDiscount;
   }
 
-  if (days < 3) {
-    const result3 = dailyRate * days;
-
-    return result3;
+  if (days < SHORT_TERM_THRESHOLD) {
+    return dailyRate * days;
   }
 }
 
