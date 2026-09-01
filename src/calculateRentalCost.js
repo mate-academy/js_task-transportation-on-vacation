@@ -10,7 +10,7 @@ const SHORT_TERM_DISCOUNT = 20;
  * @param {number} days - The number of days the car is rented.
  * @returns {number} The total rental cost.
  */
-export function calculateRentalCost(days) {
+function calculateRentalCost(days) {
   const baseCost = days * DAILY_PRICE;
 
   if (days >= LONG_TERM_THRESHOLD) {
@@ -23,3 +23,5 @@ export function calculateRentalCost(days) {
 
   return baseCost;
 }
+
+module.exports = calculateRentalCost;
