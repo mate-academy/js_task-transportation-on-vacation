@@ -4,22 +4,23 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const total = days * 40;
-  const bigVacation = 7;
-  const bigVacationDiscount = 50;
-  const normVacation = 3;
-  const normVacationDiscount = 20;
-  const smallVacation = 1;
+  const dailyRate = 40;
+  const maximumDays = 7;
+  const maximumDaysDiscount = 50;
+  const normDays = 3;
+  const normDaysDiscount = 20;
+  const minimumDays = 1;
+  const total = days * dailyRate;
 
-  if (days >= bigVacation) {
-    return total - bigVacationDiscount;
+  if (days >= maximumDays) {
+    return total - maximumDaysDiscount;
   }
 
-  if (days >= normVacation) {
-    return total - normVacationDiscount;
+  if (days >= normDays) {
+    return total - normDaysDiscount;
   }
 
-  if (days >= smallVacation) {
+  if (days >= minimumDays) {
     return total;
   }
 }
