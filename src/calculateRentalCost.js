@@ -7,11 +7,13 @@ function calculateRentalCost(days) {
   const dailyRate = 40;
   const longTermDiscount = 50;
   const shortTermDiscount = 20;
+  const mediumTermThreshold = 3;
+  const longTermThreshold = 7;
   let cost = days * dailyRate;
 
-  if (days >= 7) {
+  if (days >= longTermThreshold) {
     cost -= longTermDiscount;
-  } else if (days >= 3) {
+  } else if (days >= mediumTermThreshold) {
     cost -= shortTermDiscount;
   }
 
