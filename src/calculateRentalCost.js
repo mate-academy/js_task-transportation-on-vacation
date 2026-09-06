@@ -21,6 +21,6 @@ function calculateRentalCost(days) {
     }
 
     return basePrice;
+}
 
 module.exports = calculateRentalCost;
-  }
