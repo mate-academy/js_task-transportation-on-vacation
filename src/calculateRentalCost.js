@@ -3,18 +3,25 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  let cost = 0;
 
-  if (days < 3) {
-    cost = days * 40;
-  } else if (days >= 3 && days <= 6) {
-    cost = days * 40 - 20;
-  } else if (days >= 7) {
-    cost = days * 40 - 50;
+const dailyRate = 40;
+const discountFor3To6Days = 20;
+const discountFor7OrMoreDays = 50;
+const basicDiscountStartDay = 3;
+const additionalDiscountStartDay = 7;
+
+function calculateRentalCost(days) {
+  if (days < basicDiscountStartDay) {
+    return days * dailyRate;
   }
 
-  return cost;
+  if (days >= basicDiscountStartDay && days < additionalDiscountStartDay) {
+    return days * dailyRate - discountFor3To6Days;
+  }
+
+  if (days >= additionalDiscountStartDay) {
+    return days * dailyRate - discountFor7OrMoreDays;
+  }
 }
 
 module.exports = calculateRentalCost;
