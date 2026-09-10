@@ -4,20 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  if (days < 0) {
-    return 'Number of days cannot be negative';
-  }
+  const DAILY_RATE = 40;
+  const DISCOUNT_3_DAYS = 20;
+  const DISCOUNT_7_DAYS = 50;
 
   if (days > 0 && days < 3) {
-    return days * 40;
+    return days * DAILY_RATE;
   }
 
   if (days >= 3 && days < 7) {
-    return days * 40 - 20;
+    return days * DAILY_RATE - DISCOUNT_3_DAYS;
   }
 
   if (days >= 7) {
-    return days * 40 - 50;
+    return days * DAILY_RATE - DISCOUNT_7_DAYS;
   }
 }
 
