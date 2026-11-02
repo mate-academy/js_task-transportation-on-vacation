@@ -1,26 +1,21 @@
-const DAYS_WEEK = 7;
-const DAYS_SIX = 6;
-const DAYS_THREE = 3;
-
-const PRICE_WEEK = 230;
-const PRICE_SIX = 220;
-const PRICE_THREE = 100;
-const PRICE_DEFAULT = 80;
+const DAILY_RATE = 40;
+const LONG_TERM = 7;
+const LONG_TERM_DISCOUNT = 50;
+const MID_TERM = 3;
+const MID_TERM_DISCOUNT = 20;
 
 function calculateRentalCost(days) {
-  if (days === DAYS_WEEK) {
-    return PRICE_WEEK;
+  const total = days * DAILY_RATE;
+
+  if (days >= LONG_TERM) {
+    return total - LONG_TERM_DISCOUNT;
   }
 
-  if (days === DAYS_SIX) {
-    return PRICE_SIX;
+  if (days >= MID_TERM) {
+    return total - MID_TERM_DISCOUNT;
   }
 
-  if (days === DAYS_THREE) {
-    return PRICE_THREE;
-  }
-
-  return PRICE_DEFAULT;
+  return total;
 }
 
 module.exports = calculateRentalCost;
