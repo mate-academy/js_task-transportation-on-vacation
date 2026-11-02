@@ -1,14 +1,20 @@
 'use strict';
 
-function calculateRentalCost(days) {
-  const total = days * 40;
+const BASE_DAILY_RATE = 40;
+const LONG_TERM_DAYS = 7;
+const LONG_TERM_DISCOUNT = 50;
+const MEDIUM_TERM_DAYS = 3;
+const MEDIUM_TERM_DISCOUNT = 20;
 
-  if (days >= 7) {
-    return total - 50;
+function calculateRentalCost(days) {
+  const total = days * BASE_DAILY_RATE;
+
+  if (days >= LONG_TERM_DAYS) {
+    return total - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return total - 20;
+  if (days >= MEDIUM_TERM_DAYS) {
+    return total - MEDIUM_TERM_DISCOUNT;
   }
 
   return total;
