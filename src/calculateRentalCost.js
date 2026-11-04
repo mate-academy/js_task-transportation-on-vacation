@@ -9,12 +9,15 @@ function calculateRentalCost(days) {
   let result = days * 40;
   const longTerm = 50;
   const shortTerm = 20;
+  const sevenDays = 7;
+  const treeDays = 3;
+  const sixDays = 6;
 
-  if (days >= 7) {
+  if (days >= sevenDays) {
     result -= longTerm;
   }
 
-  if (days >= 3 && days <= 6) {
+  if (days >= treeDays && days <= sixDays) {
     result -= shortTerm;
   }
 
