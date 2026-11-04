@@ -1,24 +1,26 @@
 /**
- * @param {number} days
+ * @param {number} term
  *
  * @return {number}
  */
 
-const carRentCost = 40;
-const carRentDiscount3days = 20;
-const carRentDiscount7days = 50;
+const SHORT_TERM = 3;
+const LONG_TERM = 7;
+const BASE_DAILY_RATE = 40;
+const SHORT_TERM_DISCOUNT = 20;
+const LONG_TERM_DISCOUNT = 50;
 
-function calculateRentalCost(days) {
-  if (days < 3) {
-    return days * carRentCost;
+function calculateRentalCost(term) {
+  if (term < SHORT_TERM) {
+    return term * BASE_DAILY_RATE;
   }
 
-  if (days < 7) {
-    return days * carRentCost - carRentDiscount3days;
+  if (term < LONG_TERM) {
+    return term * BASE_DAILY_RATE - SHORT_TERM_DISCOUNT;
   }
 
-  if (days >= 7) {
-    return days * carRentCost - carRentDiscount7days;
+  if (term >= LONG_TERM) {
+    return term * BASE_DAILY_RATE - LONG_TERM_DISCOUNT;
   }
 }
 
