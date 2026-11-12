@@ -3,13 +3,22 @@
  *
  * @return {number}
  */
-function calculateRentalCost(days) {
-  let totalCost = days * 40;
 
-  if (days >= 7) {
-    totalCost -= 50;
-  } else if (days >= 3) {
-    totalCost -= 20;
+function calculateRentalCost(days) {
+  const DAILY_RATE = 40;
+  const MEDIUM_RENTAL_DAYS = 3;
+  const MEDIUM_RENTAL_DISCOUNT = 20;
+  const LONG_RENTAL_DAYS = 7;
+  const LONG_RENTAL_DISCOUNT = 50;
+
+  const totalCost = days * DAILY_RATE;
+
+  if (days >= LONG_RENTAL_DAYS) {
+    return totalCost - LONG_RENTAL_DISCOUNT;
+  }
+
+  if (days >= MEDIUM_RENTAL_DAYS) {
+    return totalCost - MEDIUM_RENTAL_DISCOUNT;
   }
 
   return totalCost;
