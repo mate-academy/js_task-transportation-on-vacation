@@ -7,3 +7,4 @@ node_modules
 
 # MacOS
 .DS_Store
+.github/workflows/test.yml-template
