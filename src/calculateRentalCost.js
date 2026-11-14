@@ -4,14 +4,20 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  let sum = 0;
+
   if (days < 3) {
-    return 80;
-  } else if (days >= 3 && days < 6) {
-    return 100;
-  } else if (days >= 6 && days < 7) {
-    return 220;
+    sum = days * 40;
+
+    return sum;
+  } else if (days >= 3 && days < 7) {
+    sum = days * 40 - 20;
+
+    return sum;
   } else {
-    return 230;
+    sum = days * 40 - 50;
+
+    return sum;
   }
 }
 
