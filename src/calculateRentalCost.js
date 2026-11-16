@@ -1,11 +1,20 @@
+/**
+ * @param {number} days
+ *
+ * @return {number}
+ */
 function calculateRentalCost(days) {
-const totalCost = days * 40;
-if (days >= 7) {
-return totalCost - 50;
+  const totalCost = days * 40;
+
+  if (days >= 7) {
+    return totalCost - 50;
+  }
+
+  if (days >= 3) {
+    return totalCost - 20;
+  }
+
+  return totalCost;
 }
-if (days >= 3) {
-return totalCost - 20;
-}
-return totalCost;
-}
+
 module.exports = calculateRentalCost;
