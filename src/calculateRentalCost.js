@@ -5,15 +5,21 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  let cost = days * 40;
+  const DAILYRATE = 40;
+  const LONG_TERM_DISCOUNT = 7;
+  const SHORT_TERM_DISCOUNT = 3;
 
-  if (days >= 7) {
-    cost -= 50;
-  } else if (days >= 3) {
-    cost -= 20;
+  const basicCost = days * DAILYRATE;
+
+  if (days >= LONG_TERM_DISCOUNT) {
+    return basicCost - 50;
   }
 
-  return cost;
+  if (days >= SHORT_TERM_DISCOUNT) {
+    return basicCost - 20;
+  }
+
+  return basicCost;
 }
 
 module.exports = calculateRentalCost;
