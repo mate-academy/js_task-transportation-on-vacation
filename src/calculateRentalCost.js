@@ -4,6 +4,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  // write code here
   if (days === 7) {
     return 230;
   }
