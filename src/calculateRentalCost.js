@@ -19,10 +19,14 @@ function calculateRentalCost(days) {
     totalPrice = pricePerCar * days - discountForThreeDays;
 
     return totalPrice;
-  } else {
+  }
+
+  if (days === 2) {
     totalPrice = pricePerCar + pricePerCar;
 
     return totalPrice;
+  } else {
+    return pricePerCar;
   }
 }
 
