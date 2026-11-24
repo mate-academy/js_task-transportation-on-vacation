@@ -7,18 +7,17 @@ function calculateRentalCost(days) {
   const dayRental = 40;
   const sevenDaysOff = 50;
   const threeDaysOff = 20;
+  const BASIC_DISCOUNT_DAYS = 3;
+  const ADDITIONAL_DISCOUNT_DAYS = 7;
 
-  if (days < 3) {
+  if (days < BASIC_DISCOUNT_DAYS) {
     return days * dayRental;
   }
 
-  if (days >= 3 && days < 7) {
+  if (days >= BASIC_DISCOUNT_DAYS && days < ADDITIONAL_DISCOUNT_DAYS) {
     return days * dayRental - threeDaysOff;
   }
 
-  if (days >= 7) {
-    return days * dayRental - sevenDaysOff;
-  }
+  return days * dayRental - sevenDaysOff;
 }
-
 module.exports = calculateRentalCost;
